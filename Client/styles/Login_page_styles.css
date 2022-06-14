@@ -1,0 +1,159 @@
+.Login_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fef9f8;
+  border: 1px solid #fef9f8;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding: 0;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.Login_section > img {
+  margin: 20px;
+}
+.Login_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  padding-left: 40px;
+  width: 50%;
+}
+.Login_content > h2 {
+  margin-bottom: -25px;
+  font-size: 25px;
+}
+.Login_content > h6 {
+  font-size: 18px;
+  font-weight: 500;
+}
+input {
+  max-width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ef9273;
+  border-radius: 5px;
+}
+#username {
+  margin-bottom: 30px;
+}
+input:focus {
+  border: 2px solid #0d0d0d;
+}
+.Login_section > div > label {
+  font-size: 18px;
+  font-weight: 500;
+}
+.Login_content > a {
+  text-decoration-color: #333;
+  align-self: flex-end;
+  color: #333;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 1000;
+  margin-bottom: 20px;
+}
+.user_admin_option {
+  display: flex;
+  flex-direction: row;
+}
+.user_admin_option > label {
+  align-self: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+.user_admin_option > input[type=radio] {
+  align-self: center;
+  margin-top: 18px;
+  margin-right: 1%;
+  accent-color: #ef9273;
+}
+#as_user {
+  margin-left: 10%;
+}
+#as_admin {
+  margin-left: 25%;
+}
+.Login_content > button {
+  max-width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  background-color: #ef9273;
+  border: 1px solid #ef9273;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+p {
+  align-self: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+.Login_content > p > a {
+  text-decoration-color: #333;
+  align-self: flex-end;
+  color: #333;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 1000;
+}
+.Login_content > h5 {
+  font-size: 16px;
+  font-weight: 700;
+}
+@media only screen and (max-width: 400px) {
+  .Login_section {
+    flex-direction: column-reverse;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -25px;
+  }
+  .Login_section > img {
+    width: 340px;
+    height: 250px;
+  }
+  .Login_content {
+    padding-left: 0;
+    width: 80%;
+    font-size: 12px;
+  }
+  .Login_content > h2 {
+    font-size: 18px;
+    margin-bottom: -10px;
+  }
+  .Login_content > h6 {
+    font-size: 12px;
+  }
+  .Login_section > div > label {
+    font-size: 12px;
+  }
+  input {
+    padding: 10px;
+  }
+  .Login_content > a {
+    font-size: 12px;
+  }
+  .user_admin_option > label {
+    font-size: 12px;
+  }
+  .Login_content > button {
+    font-size: 18px;
+    padding: 10px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .Login_content > p > a {
+    font-size: 12px;
+  }
+  .Login_content > h5 {
+    font-size: 11px;
+  }
+}
