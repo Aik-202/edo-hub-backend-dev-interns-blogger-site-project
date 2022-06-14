@@ -21,13 +21,26 @@ p {
   flex-direction: row;
   justify-content: space-between;
 }
-.inside_header > img {
+.inside_header > h1 > img {
   background-color: transparent;
-  margin-top: 7px;
   padding: 0;
   padding-left: 10px;
   width: 50px;
   height: 50px;
+  margin-top: -10px;
+}
+.inside_header > h1 > span{
+  font-family: 'Brush Script MT', cursive;
+  text-shadow: 2px 2px 2px #aaa;
+  margin: 0;
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
+.logo {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
 }
 #bars { 
   display: none;
@@ -36,12 +49,6 @@ p {
   padding-bottom: -10px;
   margin-top: 12px;
   margin-right: 10px;
-}
-#logo {
-  align-self: flex-start;
-  font-family: 'Brush Script MT', cursive;
-  text-shadow: 2px 2px 2px #aaa;
-  margin-left: -20px;
 }
 .headers_list {
   align-self: flex-end;
@@ -57,6 +64,7 @@ p {
   padding-top: 5px;
 }
 .headers_list > li > a {
+  font-size: 15px;
   font-weight: 500;
   color: #0d0d0d;
   text-decoration: none;
@@ -122,11 +130,14 @@ p {
   border: 1px solid #fef9f8;
   margin-top: -30px;
   margin-bottom: 20px;
+  padding-left: 30px;
   padding: 10px;
+  padding-bottom: 20px;
 }
 .main_content > img {
   align-self: flex-end;
   padding-right: 10px;
+  width: 550px;
 }
 .main_content > div {
   align-self: flex-start;
@@ -136,24 +147,24 @@ p {
   margin-top: 10%;
 }
 .main_content > div > h3 {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 1000;
   margin-bottom: 0;
 }
 .main_content > div > p {
   margin-left: 10px;
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 5%;
   line-height: 1.5em;
   font-weight: 700;
-  max-width: 70%;
+  max-width: 60%;
 }
 .main_content > div > button {
   align-self: flex-start;
   padding: 12px;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #ef9273;
   border: 1px solid #ef9273;
   border-radius: 5px;
@@ -273,7 +284,7 @@ p {
   margin-bottom: 0;
 }
 .footer > h5 {
-  font-size: 30px;
+  font-size: 25px;
   margin-left: 1%;
 }
 .footer > ul {
@@ -286,7 +297,7 @@ p {
 .footer > ul > li {
   align-self: center;
   list-style-type: none;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
   margin-right: 15%;
 }

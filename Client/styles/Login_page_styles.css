@@ -13,6 +13,7 @@
 }
 .Login_section > img {
   margin: 20px;
+  width: 600px;
 }
 .Login_content {
   display: flex;
