@@ -64,11 +64,16 @@ p {
   padding-top: 5px;
 }
 .headers_list > li > a {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 500;
   color: #0d0d0d;
   text-decoration: none;
   text-decoration-color: none;
+}
+#home{
+  text-transform: uppercase;
+  border-bottom: 2px solid #ef9273;
+  padding-bottom: 10px;
 }
 #login {
   border: 1px solid #fef9f8;
@@ -79,7 +84,7 @@ p {
   border-radius: 10px;
   text-transform: uppercase;
   color: #333;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 500;
 }
 #sign_up {
@@ -91,7 +96,7 @@ p {
   border-radius: 10px;
   text-transform: uppercase;
   color: #333;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 500;
 }
 #accessibility {
@@ -215,11 +220,11 @@ p {
   padding-left: 12px;
   padding-right: 12px;
   margin-left: 20px;
-  font-size: 15px;
+  font-size: 12px;
   background-color: #ef9273;
   border: 1px solid #ef9273;
   border-radius: 5px;
-  font-weight: 700;
+  font-weight: 900;
   color: #333;
 }
 .inside_sub_contents_container > button:focus {
@@ -256,7 +261,7 @@ p {
   justify-content: space-between;
   background-color: #ef9273;
   border: 1px solid #ef9273;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   padding: 20px;
   word-spacing: 0.05em;

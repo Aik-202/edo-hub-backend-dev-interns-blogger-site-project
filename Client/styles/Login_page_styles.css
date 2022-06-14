@@ -13,7 +13,7 @@
 }
 .Login_section > img {
   margin: 20px;
-  width: 600px;
+  width: 500px;
 }
 .Login_content {
   display: flex;
@@ -25,14 +25,14 @@
 }
 .Login_content > h2 {
   margin-bottom: -25px;
-  font-size: 25px;
+  font-size: 20px;
 }
 .Login_content > h6 {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
 }
 input {
-  max-width: 100%;
+  max-width: 70%;
   padding: 15px;
   margin-top: 15px;
   margin-bottom: 20px;
@@ -46,17 +46,17 @@ input:focus {
   border: 2px solid #0d0d0d;
 }
 .Login_section > div > label {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
 }
 .Login_content > a {
   text-decoration-color: #333;
-  align-self: flex-end;
   color: #333;
   font-style: italic;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 1000;
-  margin-bottom: 20px;
+  margin-left: 50%;
+  max-width: 25%;
 }
 .user_admin_option {
   display: flex;
@@ -64,7 +64,7 @@ input:focus {
 }
 .user_admin_option > label {
   align-self: center;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
 }
 .user_admin_option > input[type=radio] {
@@ -80,9 +80,9 @@ input:focus {
   margin-left: 25%;
 }
 .Login_content > button {
-  max-width: 100%;
+  max-width: 75%;
   padding: 15px;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #ef9273;
   border: 1px solid #ef9273;
   border-radius: 10px;
@@ -92,20 +92,20 @@ input:focus {
   margin-bottom: 20px;
 }
 p {
-  align-self: center;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
+  margin-left: 25%;
 }
 .Login_content > p > a {
   text-decoration-color: #333;
   align-self: flex-end;
   color: #333;
   font-style: italic;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 1000;
 }
 .Login_content > h5 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
 }
 @media only screen and (max-width: 400px) {
