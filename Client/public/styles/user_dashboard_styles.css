@@ -16,7 +16,7 @@ body{
     height: 100%;
     border-right: 1px solid #fef9f8;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 
-    0 6px 20px 0 rgba(0,0,0,0.19);
+    0 6px 20px 0 rgba(0,0,0,0.19)
 }
 .side_bar1 > div {
     display: flex;
@@ -86,6 +86,12 @@ body{
     font-size: 16px;
     font-weight: 1000;
 }
+#home_list{
+    color: #0d0d0d;
+}
+#home_list > a{
+    color: #0d0d0d;
+}
 .navigation > li:hover{
     border-left: 3px solid #fef9f8;
     background-color: #be8673;
@@ -102,6 +108,13 @@ body{
     max-width: 50%;
     margin-left: 22%;
     margin-top: 5%;
+}
+.home_content > div{
+    background-color: #fef9f8;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 
+    0 6px 20px 0 rgba(0,0,0,0.19);
+    border: 1px solid #fef9f8;
+    padding: 10px;
 }
 .side_bar2{
     display: flex;
