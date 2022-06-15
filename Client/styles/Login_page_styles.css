@@ -23,6 +23,11 @@
   padding-left: 40px;
   width: 50%;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .Login_content > h2 {
   margin-bottom: -25px;
   font-size: 20px;
@@ -49,7 +54,7 @@ input:focus {
   font-size: 15px;
   font-weight: 500;
 }
-.Login_content > a {
+.Login_content > form > a {
   text-decoration-color: #333;
   color: #333;
   font-style: italic;
@@ -79,7 +84,7 @@ input:focus {
 #as_admin {
   margin-left: 25%;
 }
-.Login_content > button {
+.Login_content > form > button {
   max-width: 75%;
   padding: 15px;
   font-size: 18px;
@@ -108,6 +113,18 @@ p {
   font-size: 15px;
   font-weight: 700;
 }
+@media only screen and (max-width: 1200px) {
+  input {
+    max-width: 100%;
+  }
+  .Login_content > form > a {
+    max-width: 50%;
+    margin-left: 58%;
+  }
+  .Login_content > form > button {
+    max-width: 100%;
+  }
+}
 @media only screen and (max-width: 400px) {
   .Login_section {
     flex-direction: column-reverse;
@@ -117,7 +134,7 @@ p {
     margin-top: -25px;
   }
   .Login_section > img {
-    width: 340px;
+    width: 320px;
     height: 250px;
   }
   .Login_content {
@@ -138,13 +155,13 @@ p {
   input {
     padding: 10px;
   }
-  .Login_content > a {
+  .Login_content > form > a {
     font-size: 12px;
   }
   .user_admin_option > label {
     font-size: 12px;
   }
-  .Login_content > button {
+  .Login_content > form > button {
     font-size: 18px;
     padding: 10px;
   }
