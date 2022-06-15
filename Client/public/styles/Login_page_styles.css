@@ -1,3 +1,6 @@
+#home{
+  border: none;
+}
 .Login_section {
   display: flex;
   flex-direction: row;
@@ -70,7 +73,7 @@ input:focus {
 .user_admin_option > label {
   align-self: center;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 900;
 }
 .user_admin_option > input[type=radio] {
   align-self: center;

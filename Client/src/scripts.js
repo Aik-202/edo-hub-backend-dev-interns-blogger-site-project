@@ -17,3 +17,4 @@ const menuClose = () => {
   xmark.style.display = "none"
   bars.style.display = "block";
 }
+ 
