@@ -17,4 +17,8 @@ const menuClose = () => {
   xmark.style.display = "none"
   bars.style.display = "block";
 }
- 
+
+//const darkMode = () => {
+ // document.getElementById("light_mode").setAttribute("href", "/styles/darktheme.css")
+ // console.log('Theme Changed!!')
+//}
