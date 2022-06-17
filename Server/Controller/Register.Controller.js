@@ -1,7 +1,7 @@
 const path=require('path');
 
 function RegisterRouterGetFunction(req,res){
-    //
+    res.sendFile(path.join(__dirname, '..', 'Client', 'public', 'Register_page.html',));
 }
 
 function RegisterRouterPostFunction (req,res){
