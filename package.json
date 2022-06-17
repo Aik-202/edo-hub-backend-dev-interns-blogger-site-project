@@ -1,0 +1,23 @@
+{
+  "name": "edo-hub-backend-dev-interns-blogger-site-project",
+  "version": "1.0.0",
+  "description": "A blog site, where users can publish, unpublish, delete e.t.c posts, with one admin that manages the user activities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NICKY-TECH/edo-hub-backend-dev-interns-blogger-site-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NICKY-TECH/edo-hub-backend-dev-interns-blogger-site-project/issues"
+  },
+  "homepage": "https://github.com/NICKY-TECH/edo-hub-backend-dev-interns-blogger-site-project#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1"
+  }
+}
