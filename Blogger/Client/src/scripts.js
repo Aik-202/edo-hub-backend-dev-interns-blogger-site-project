@@ -31,12 +31,28 @@ const pageSwitch = (id) => {
   const followers = document.getElementById('followers');
   const publish = document.getElementById('publish');
   if(id == stories_link){
-    id.style.color = "blue";
+    home.style.display = "none";
+    stories.style.display = "flex";
+    stats.style.display = "none";
+    followers.style.display = "none";
+    publish.style.display = "none";
   } else if(id == stats_link){
-    id.style.color = "green";
+    home.style.display = "none";
+    stories.style.display = "none";
+    stats.style.display = "flex";
+    followers.style.display = "none";
+    publish.style.display = "none";
   } else if(id == followers_link){
-    id.style.color = "purple";
+    home.style.display = "none";
+    stories.style.display = "none";
+    stats.style.display = "none";
+    followers.style.display = "flex";
+    publish.style.display = "none";
   } else if(id == publish_link){
-    id.style.color = "red";
+    home.style.display = "none";
+    stories.style.display = "none";
+    stats.style.display = "none";
+    followers.style.display = "none";
+    publish.style.display = "flex";
   }
 }
