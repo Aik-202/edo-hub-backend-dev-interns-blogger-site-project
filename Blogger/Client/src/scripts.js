@@ -31,7 +31,6 @@ const pageSwitch = (id) => {
   const followers = document.getElementById('followers');
   const publish = document.getElementById('publish');
   if(id == home_link){
-    id.style.color = "red"
     home.style.display = "flex";
     stories.style.display = "none";
     stats.style.display = "none";
