@@ -30,7 +30,13 @@ const pageSwitch = (id) => {
   const stats = document.getElementById('stats');
   const followers = document.getElementById('followers');
   const publish = document.getElementById('publish');
-  if(id == stories_link){
+  if(id == home_link){
+    home.style.display = "flex";
+    stories.style.display = "none";
+    stats.style.display = "none";
+    followers.style.display = "none";
+    publish.style.display = "none";
+  } else if(id == stories_link){
     home.style.display = "none";
     stories.style.display = "flex";
     stats.style.display = "none";
