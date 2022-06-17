@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/user_dashboard_styles.css">
     <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1-web/css/all.css">
+    <script src="../src/scripts.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -29,19 +30,32 @@
             <a href="">Edit profile</a>
         </div>
         <ul class="navigation">
-            <li id="home_list"><i class="fa-solid fa-home"></i><a href="index.html">Home</a></li>
-            <li><i class="fa-solid fa-edit"></i><a href="">Stories</a></li>
-            <li><i class="fa-solid fa-chart-bar"></i><a href="">Stats</a></li>
-            <li><i class="fa-solid fa-users"></i><a href="">Followers</a></li>
-            <li><i class="fa-solid fa-location-arrow"></i><a href="">Publish</a></li>
+            <li id="home_list"><i class="fa-solid fa-home"></i><a href="#Home"id="home_link" onclick="pageSwitch(document.getElementById('hpme_link'))">Home</a></li>
+            <li><i class="fa-solid fa-edit"></i><a href="#stories" id="stories_link" onclick="pageSwitch(document.getElementById('stories_link'))">Stories</a></li>
+            <li><i class="fa-solid fa-chart-bar"></i><a href="#stats" id="stats_link" onclick="pageSwitch(document.getElementById('stats_link'))">Stats</a></li>
+            <li><i class="fa-solid fa-users"></i><a href="#followers" id="followers_link" onclick="pageSwitch(document.getElementById('followers_link'))">Followers</a></li>
+            <li><i class="fa-solid fa-location-arrow"></i><a href="#publish" id="publish_link" onclick="pageSwitch(document.getElementById('publish_link'))">Publish</a></li>
         </ul>
     </section>
 
-    <section class="home_content">
+    <section class="content" id="Home">
         <div class="home_heading">
             <a href="">Following</a>
             <a href="">Recommended</a>
         </div>
+    </section>
+
+    <section class="content" id="stories" style="display: none;">
+        <h2>Stories</h2>
+    </section>
+
+    <section class="content" id="stats" style="display: none;">
+    </section>
+
+    <section class="content" id="followers" style="display: none;">
+    </section>
+
+    <section class="content" id="publish" style="display: none;">
     </section>
 
     <section class="side_bar2">

@@ -22,3 +22,21 @@ const menuClose = () => {
  // document.getElementById("light_mode").setAttribute("href", "/styles/darktheme.css")
  // console.log('Theme Changed!!')
 //}
+
+//for user dashboard
+const pageSwitch = (id) => {
+  const home = document.getElementById('Home');
+  const stories = document.getElementById('stories');
+  const stats = document.getElementById('stats');
+  const followers = document.getElementById('followers');
+  const publish = document.getElementById('publish');
+  if(id == stories_link){
+    id.style.color = "blue";
+  } else if(id == stats_link){
+    id.style.color = "green";
+  } else if(id == followers_link){
+    id.style.color = "purple";
+  } else if(id == publish_link){
+    id.style.color = "red";
+  }
+}

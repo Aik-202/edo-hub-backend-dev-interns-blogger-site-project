@@ -116,8 +116,8 @@ body{
 }
 .navigation > li > a:hover{
     color: #0d0d0d;
-}
-.home_content{
+} 
+.content{
     display: flex;
     flex-direction: column;
     max-width: 50%;
