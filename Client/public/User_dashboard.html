@@ -10,7 +10,17 @@
     <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1-web/css/all.css">
 </head>
 <body>
-
+    <header class="header">
+        <div class="inside_header">
+          <h1 class="logo"><img src="./images/l1.png" alt="" width="30px" height="30px"><span>BLOGGER</span></h1>
+          <ul class="headers_list">
+            <li><a id="accessibility"> <i class= "fas fa-moon"></i> Dark Mode </a> </li>
+            <li><a id="accessibility2"><b>tT</b> Increase Font</a></li>
+          </ul>
+          <i class="fa-solid fa-bars" id="bars" onclick="menuDrop()"></i>
+          <i class="fa-solid fa-xmark" id="xmark" onclick="menuClose()"></i>
+        </div>
+    </header>
     <section class="side_bar1">
         <div>
             <img src="./images/i11.png" alt="" width="80px" height="80px">
@@ -26,6 +36,14 @@
             <li><i class="fa-solid fa-location-arrow"></i><a href="">Publish</a></li>
         </ul>
     </section>
+
+    <section class="home_content">
+        <div class="home_heading">
+            <a href="">Following</a>
+            <a href="">Recommended</a>
+        </div>
+    </section>
+
     <section class="side_bar2">
         <input type="search" name="search_box" placeholder="Search">
         <p><i class="fa-solid fa-circle" style="color: green; font-size: 12px; padding-right: 5px;"></i>What We're Reading Today</p>    
