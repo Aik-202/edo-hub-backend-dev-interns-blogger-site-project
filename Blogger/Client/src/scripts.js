@@ -36,47 +36,13 @@ const menuClose = () => {
 // function for user dashboard
 const pageSwitch = (id) => {  
   if(id == edit_profile){
-    editProfile.style.display = "flex";
-    id.style.color = "#0d0d0d";
-    id.style.fontStyle = "normal";
-    id.style.fontSize = "16px";
-    id.style.fontWeight = "700";
-    id.style.textDecoration = "underline";
-    home.style.display = "none";
-    stories.style.display = "none";
-    stats.style.display = "none";
-    followers.style.display = "none";
-    publish.style.display = "none";
+    edit();
   } else if(id == home_link){
     backArrow();
   } else if(id == stories_link){
-    editProfile.style.display = "none";
-    editLink.style.color = "#333";
-    editLink.style.fontStyle = "italic";
-    editLink.style.fontSize = "12px";
-    editLink.style.fontWeight = "500";
-    editLink.style.textDecoration = "none";
-    home.style.display = "none";
-    homeList.style.color = "#333";
-    homeIcon.style.color = "#333";
-    stories.style.display = "flex";
-    stats.style.display = "none";
-    followers.style.display = "none";
-    publish.style.display = "none";
+    story();
   } else if(id == stats_link){
-    editProfile.style.display = "none";
-    editLink.style.color = "#333";
-    editLink.style.fontStyle = "italic";
-    editLink.style.fontSize = "12px";
-    editLink.style.fontWeight = "500";
-    editLink.style.textDecoration = "none";
-    home.style.display = "none";
-    homeList.style.color = "#333";
-    homeIcon.style.color = "#333";
-    stories.style.display = "none";
-    stats.style.display = "flex";
-    followers.style.display = "none";
-    publish.style.display = "none";
+    stat();
   } else if(id == followers_link){
     editProfile.style.display = "none";
     editLink.style.color = "#333";
@@ -92,23 +58,11 @@ const pageSwitch = (id) => {
     followers.style.display = "flex";
     publish.style.display = "none";
   } else if(id == publish_link){
-    editProfile.style.display = "none";
-    editLink.style.color = "#333";
-    editLink.style.fontStyle = "italic";
-    editLink.style.fontSize = "12px";
-    editLink.style.fontWeight = "500";
-    editLink.style.textDecoration = "none";
-    home.style.display = "none";
-    homeList.style.color = "#333";
-    homeIcon.style.color = "#333";
-    stories.style.display = "none";
-    stats.style.display = "none";
-    followers.style.display = "none";
-    publish.style.display = "flex";
+    publishf();
   }
 }
 
-//For left arrow button in the user dashboard
+//For left arrow button, edit, stories, stats and publish in the user dashboard
 const backArrow = () => {
   editProfile.style.display = "none";
   editLink.style.color = "#333";
@@ -123,4 +77,62 @@ const backArrow = () => {
   stats.style.display = "none";
   followers.style.display = "none";
   publish.style.display = "none";
+}
+
+const edit = () => {
+  editProfile.style.display = "flex";
+  editLink.style.color = "#0d0d0d";
+  editLink.style.fontStyle = "normal";
+  editLink.style.fontSize = "16px";
+  editLink.style.fontWeight = "700";
+  editLink.style.textDecoration = "underline";
+  home.style.display = "none";
+  stories.style.display = "none";
+  stats.style.display = "none";
+  followers.style.display = "none";
+  publish.style.display = "none";
+}
+const story = () => {
+  editProfile.style.display = "none";
+  editLink.style.color = "#333";
+  editLink.style.fontStyle = "italic";
+  editLink.style.fontSize = "12px";
+  editLink.style.fontWeight = "500";
+  editLink.style.textDecoration = "none";
+  home.style.display = "none";
+  homeList.style.color = "#333";
+  homeIcon.style.color = "#333";
+  stories.style.display = "flex";
+  stats.style.display = "none";
+  followers.style.display = "none";
+  publish.style.display = "none";
+}
+const stat = () => {
+  editProfile.style.display = "none";
+  editLink.style.color = "#333";
+  editLink.style.fontStyle = "italic";
+  editLink.style.fontSize = "12px";
+  editLink.style.fontWeight = "500";
+  editLink.style.textDecoration = "none";
+  home.style.display = "none";
+  homeList.style.color = "#333";
+  homeIcon.style.color = "#333";
+  stories.style.display = "none";
+  stats.style.display = "flex";
+  followers.style.display = "none";
+  publish.style.display = "none";
+}
+const publishf = () => {
+  editProfile.style.display = "none";editLink.style.color = "#333";
+  editLink.style.fontStyle = "italic";
+  editLink.style.fontSize = "12px";
+  editLink.style.fontWeight = "500";
+  editLink.style.texDecoration = "none";
+  home.style.display = "none";
+  homeList.style.color = "#333";
+  homeIcon.style.color = "#333";
+  stories.style.display = "none";
+  stats.style.display = "none";
+  followers.style.display = "none";
+  publish.style.display = "flex";
 }
