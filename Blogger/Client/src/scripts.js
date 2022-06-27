@@ -28,10 +28,46 @@ const menuClose = () => {
   bars.style.display = "block";
 }
 
-//const darkMode = () => {
- // document.getElementById("light_mode").setAttribute("href", "/styles/darktheme.css")
- // console.log('Theme Changed!!')
-//}
+const darkMode = (id) => {
+  let element = document.body;
+  let header = document.getElementsByClassName("header");
+  let headerList = document.getElementsByClassName("header_link");
+  let button = document.getElementsByTagName("button");
+  let main = document.getElementsByClassName("main_content");
+  let section = document.getElementsByClassName("inside_sub_contents_container");
+  let footer = document.getElementsByClassName("footer");
+  let faq = document.getElementsByClassName("questions_answers");
+  let faqQuestions = document.getElementsByClassName("questions_answers_container");
+ 
+  element.classList.toggle("dark_theme");
+  console.log('Theme Changed!!');
+
+  for(i = 0; i < header.length; i++){
+    header[i].classList.toggle("dark_theme");
+  }
+  for(i = 0; i < headerList.length; i++){
+    headerList[i].classList.toggle("dark_theme_headers_list");
+  }
+  for(i = 0; i < button.length; i++){
+    button[i].classList.toggle("dark_theme_button");
+    console.log("done");
+  }
+  for(i = 0; i < main.length; i++){
+    main[i].classList.toggle("dark_theme");
+  }
+  for(i = 0; i < section.length; i++){
+    section[i].classList.toggle("dark_theme");
+  }
+  for(i = 0; i < faq.length; i++){
+    faq[i].classList.toggle("dark_theme");
+  }
+  for(i = 0; i < faqQuestions.length; i++){
+    faqQuestions[i].classList.toggle("dark_theme_faq");
+  }
+  for(i = 0; i < footer.length; i++){
+    footer[i].classList.toggle("dark_theme");
+  }
+}
 
 // function for user dashboard
 const pageSwitch = (id) => {  
@@ -135,4 +171,8 @@ const publishf = () => {
   stats.style.display = "none";
   followers.style.display = "none";
   publish.style.display = "flex";
+}
+
+const accordionDrop = () => {
+  
 }

@@ -16,12 +16,12 @@
     <div class="inside_header">
       <h1 class="logo"><img src="./images/l1.png" alt="" width="80px" height="80px"><span>BLOGGER</span></h1>
       <ul class="headers_list">
-        <li><a href="Home.html" id="home">Home</a></li>
-        <li><a href="#">Publications</a></li>
-        <li><a href="Login_page.html" id="login">Login</a></li>
-        <li><a href="Register_page.html" id="sign_up">Sign Up</a></li>
-        <li><a id="accessibility" onclick="darkMode()"> <i class= "fas fa-moon"></i> Dark Mode </a> </li>
-        <li><a id="accessibility2"><b>tT</b> Increase Font</a></li>
+        <li><a href="Home.html" id="home" class= "header_link">Home</a></li>
+        <li><a href="#" class= "header_link">Publications</a></li>
+        <li><a href="Login_page.html" id="login" class= "header_link">Login</a></li>
+        <li><a href="Register_page.html" id="sign_up" class= "header_link">Sign Up</a></li>
+      <li><a id="accessibility" class= "header_link" onclick="darkMode(document.getElementById('accessibility'))"> <i class= "fas fa-moon"></i> Dark Mode </a> </li>
+        <li><a id="accessibility2" class= "header_link"><b>tT</b> Increase Font</a></li>
       </ul>
       <i class="fa-solid fa-bars" id="bars" onclick="menuDrop()"></i>
       <i class="fa-solid fa-xmark" id="xmark" onclick="menuClose()"></i>
@@ -76,7 +76,7 @@
     <h4>Frequently Asked Questions <i class="fa-solid fa-circle-question"></i></h4>
     <div class="questions_answers_container contentContainer">
       <h6>1.) What is BLOGGER?
-       <i class="fa-solid fa-plus"></i>
+       <i class="fa-solid fa-plus" onclick="accordionDrop()"></i>
        <i class="fa-solid fa-xmark"></i>
       </h6>
       <div class="answers_container content">
