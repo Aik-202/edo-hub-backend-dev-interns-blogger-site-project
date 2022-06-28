@@ -40,10 +40,9 @@ const darkMode = (id) => {
   let faqQuestions = document.getElementsByClassName("questions_answers_container");
  
   element.classList.toggle("dark_theme");
-  console.log('Theme Changed!!');
-
+  
   for(i = 0; i < header.length; i++){
-    header[i].classList.toggle("dark_theme");
+    header[i].classList.toggle("dark_theme_header");
   }
   for(i = 0; i < headerList.length; i++){
     headerList[i].classList.toggle("dark_theme_headers_list");
@@ -53,20 +52,20 @@ const darkMode = (id) => {
     console.log("done");
   }
   for(i = 0; i < main.length; i++){
-    main[i].classList.toggle("dark_theme");
+    main[i].classList.toggle("dark_theme_container");
   }
   for(i = 0; i < section.length; i++){
-    section[i].classList.toggle("dark_theme");
+    section[i].classList.toggle("dark_theme_container");
   }
   for(i = 0; i < faq.length; i++){
-    faq[i].classList.toggle("dark_theme");
+    faq[i].classList.toggle("dark_theme_container");
   }
   for(i = 0; i < faqQuestions.length; i++){
     faqQuestions[i].classList.toggle("dark_theme_faq");
   }
   for(i = 0; i < footer.length; i++){
     footer[i].classList.toggle("dark_theme");
-  }
+  } 
 }
 
 // function for user dashboard
