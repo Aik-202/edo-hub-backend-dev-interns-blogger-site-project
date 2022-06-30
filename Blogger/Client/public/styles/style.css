@@ -1,5 +1,5 @@
 * {
-  transition: 2s;
+  transition: 1s;
 }
 body {
   background-color: white;
@@ -309,6 +309,7 @@ button:focus {
 .questions_answers_container > h6 > i:last-child {
   display: none;
 }
+
 .answers_container {
   display: none;
   align-self: center;
@@ -316,11 +317,12 @@ button:focus {
   padding: 15px;
   border: 1px solid #fef9f8;
   background-color: #fef9f8;
-  line-height: 1.5em;
-  font-size: 14px;
-  font-weight: 500;
-  margin-top: 10px;
+  line-height: 1.8em;
+  font-size: 13px;
+  font-weight: 600;
+  
 }
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -427,20 +429,7 @@ button:focus {
   border: 1px solid #353839;
 }
 
-.dark_theme #accessibility>span{
-  visibility: hidden;
-  position: relative;
- }
 
-.dark_theme #accessibility>span:after {
-  visibility: visible;
-  position: absolute;
-  top: 0;
-  left: 2px;
-  right: 2px;
-  content: 'Light mode';
-  width: 150%;
-}
 
 .dark_theme #accessibility2 {
   border: 1px solid #353839;
@@ -466,6 +455,9 @@ button:focus {
 .dark_theme h1>span {
   text-shadow: none;
 }
+
+
+
 
 @media only screen and (max-width: 1280px){
   .sub_contents {
@@ -512,9 +504,11 @@ button:focus {
   }
   .first_insider {
     margin-bottom: 5%;
+    max-width: 100%;
   }
   .second_insider {
     margin-bottom: 2%;
+    max-width: 100%;
   }
   .inside_sub_contents_container{
     max-width: 40%;

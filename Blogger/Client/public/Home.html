@@ -20,7 +20,7 @@
         <li><a href="#" class= "header_link">Publications</a></li>
         <li><a href="Login_page.html" id="login" class= "header_link">Login</a></li>
         <li><a href="Register_page.html" id="sign_up" class= "header_link">Sign Up</a></li>
-        <li><a id="accessibility" class= "header_link" onclick="darkMode(document.getElementById('accessibility'))"> <i class= "fas fa-moon"></i> <span>Dark Mode</span> </a> </li>
+        <li><a id="accessibility" class= "header_link" onclick="darkMode(document.getElementById('accessibility'))"> <i class= "fas fa-moon"></i> <span id="mode">Dark Mode</span> </a> </li>
         <li><a id="accessibility2" class= "header_link"><b>tT</b> Increase Font</a></li>
       </ul>
       <i class="fa-solid fa-bars" id="bars" onclick="menuDrop()"></i>
@@ -78,12 +78,12 @@
   
   <section class="questions_answers">
     <h4>Frequently Asked Questions <i class="fa-solid fa-circle-question"></i></h4>
-    <div class="questions_answers_container contentContainer">
+    <div class="questions_answers_container" id="container1">
       <h6>1.) What is BLOGGER?
-       <i class="fa-solid fa-plus" onclick="accordionDrop()"></i>
-       <i class="fa-solid fa-xmark"></i>
+       <i class="fa-solid fa-plus" id="plus1" onclick="accordionDrop(document.getElementById('plus1'))"></i>
+       <i class="fa-solid fa-xmark" id="xmark1" onclick="accordionClose(document.getElementById('xmark1'))"></i>
       </h6>
-      <div class="answers_container content">
+      <div class="answers_container" id="content1">
         BLOGGER is a blog site, where not only the admin can post contents, but the users can also post their 
         thoughts on all topics! users can follow others, comment and engage post. It's a open for everyone!. 
         We do not offer services for marketing of products, users can only post their thoughts and engage 
@@ -91,12 +91,12 @@
       </div>
     </div>
     
-     <div class="questions_answers_container contentContainer">
+     <div class="questions_answers_container" id="container2">
       <h6>2.) What are the aims of BLOGGER
-       <i class="fa-solid fa-plus"></i>
-       <i class="fa-solid fa-xmark"></i>
+       <i class="fa-solid fa-plus" id="plus2" onclick="accordionDrop(document.getElementById('plus2'))"></i>
+       <i class="fa-solid fa-xmark" id="xmark2" onclick="accordionClose(document.getElementById('xmark2'))"></i>
       </h6>
-      <div class="answers_container content">
+      <div class="answers_container" id="content2">
         The aims of BLOGGER are as follows: <br />
         - It provides a plateform for everyone to network and connect with like-minded individuals. <br />
         - It gives users an opportunity to share their thoughts on certain topics and also engage other publications. <br />
@@ -105,24 +105,24 @@
       </div>
     </div>
     
-     <div class="questions_answers_container contentContainer">
+     <div class="questions_answers_container" id="container3">
       <h6 id="question3">3.) Is BLOGGER a safe space to share my thoughts?
-       <i class="fa-solid fa-plus"></i>
-       <i class="fa-solid fa-xmark"></i>
+       <i class="fa-solid fa-plus" id="plus3" onclick="accordionDrop(document.getElementById('plus3'))"></i>
+       <i class="fa-solid fa-xmark" id="xmark3" onclick="accordionClose(document.getElementById('xmark3'))"></i>
       </h6>
-      <div class="answers_container content">
+      <div class="answers_container" id="content3">
         Of course! BLOGGER offers you privacy, that is only your followers will get to see your post. You can 
         also report offensive posts and comments and the admin will review your. If user is found guilty, 
         they'll loose access to their account permanently.
       </div>
     </div>
     
-     <div class="questions_answers_container contentContainer">
+     <div class="questions_answers_container" id="container4">
       <h6 id="question4">4.) Terms and conditions of BLOGGER?
-       <i class="fa-solid fa-plus"></i>
-       <i class="fa-solid fa-xmark"></i>
+       <i class="fa-solid fa-plus" id="plus4" onclick="accordionDrop(document.getElementById('plus4'))"></i>
+       <i class="fa-solid fa-xmark" id="xmark4" onclick="accordionClose(document.getElementById('xmark4'))"></i>
       </h6>
-      <div class="answers_container content">
+      <div class="answers_container " id="content4">
         BLOGGER is a safe space for everyone to freely express themselves, so we intend to continue keeping 
         this space safe!. Offensive post and comments will not be taken lightly, on report by another user, 
         the offender will loose access to this platform. On registering with BLOGGER, you have agreed to accept 

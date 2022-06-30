@@ -1,18 +1,38 @@
 //hamburger menu variables 
-const menu = document.getElementById("menu");
-const xmark = document.getElementById("xmark");
-const bars = document.getElementById("bars");
+let menu = document.getElementById("menu");
+let xmark = document.getElementById("xmark");
+let bars = document.getElementById("bars");
   
 // variables for user dashboard
-const editProfile = document.getElementById('editp');
-const editLink = document.getElementById("edit_profile")
-const home = document.getElementById('Home');
-const homeList = document.getElementById('home_link');
-const homeIcon = document.getElementById('home_icon');
-const stories = document.getElementById('stories');
-const stats = document.getElementById('stats');
-const followers = document.getElementById('followers');
-const publish = document.getElementById('publish');
+let editProfile = document.getElementById('editp');
+let editLink = document.getElementById("edit_profile")
+let home = document.getElementById('Home');
+let homeList = document.getElementById('home_link');
+let homeIcon = document.getElementById('home_icon');
+let stories = document.getElementById('stories');
+let stats = document.getElementById('stats');
+let followers = document.getElementById('followers');
+let publish = document.getElementById('publish');
+
+let element = document.body;
+let header = document.getElementsByClassName("header");
+let headerList = document.getElementsByClassName("header_link");
+let button = document.getElementsByTagName("button");
+let main = document.getElementsByClassName("main_content");
+let section = document.getElementsByClassName("inside_sub_contents_container");
+let footer = document.getElementsByClassName("footer");
+let faq = document.getElementsByClassName("questions_answers");
+let faqQuestions = document.getElementsByClassName("questions_answers_container");
+let mode = document.getElementById("mode")
+
+let content1 = document.getElementById("content1");
+let content2 = document.getElementById("content2");
+let content3 = document.getElementById("content3");
+let content4 = document.getElementById("content4");
+let container1 = document.getElementById("container1");
+let container2 = document.getElementById("container2");
+let container3 = document.getElementById("container3");
+let container4 = document.getElementById("container4");
 
 // function for hamburger menu open
 const menuDrop = () => {
@@ -29,17 +49,9 @@ const menuClose = () => {
 }
 
 const darkMode = (id) => {
-  let element = document.body;
-  let header = document.getElementsByClassName("header");
-  let headerList = document.getElementsByClassName("header_link");
-  let button = document.getElementsByTagName("button");
-  let main = document.getElementsByClassName("main_content");
-  let section = document.getElementsByClassName("inside_sub_contents_container");
-  let footer = document.getElementsByClassName("footer");
-  let faq = document.getElementsByClassName("questions_answers");
-  let faqQuestions = document.getElementsByClassName("questions_answers_container");
- 
   element.classList.toggle("dark_theme");
+  
+
   
   for(i = 0; i < header.length; i++){
     header[i].classList.toggle("dark_theme_header");
@@ -49,7 +61,6 @@ const darkMode = (id) => {
   }
   for(i = 0; i < button.length; i++){
     button[i].classList.toggle("dark_theme_button");
-    console.log("done");
   }
   for(i = 0; i < main.length; i++){
     main[i].classList.toggle("dark_theme_container");
@@ -68,6 +79,12 @@ const darkMode = (id) => {
   } 
 }
 
+if (mode.outerText === "Light Mode") {
+ console.log(mode.outerText);
+ }else {
+  //console.log(mode);
+}
+            
 // function for user dashboard
 const pageSwitch = (id) => {  
   if(id == edit_profile){
@@ -172,6 +189,47 @@ const publishf = () => {
   publish.style.display = "flex";
 }
 
-const accordionDrop = () => {
+
+const accordionDrop = (id) => {
+  if(id == plus1) {
+    displayContent(container1,content1,id, id.nextElementSibling)
+  }else if(id == plus2) {
+    displayContent(container2,content2,id, id.nextElementSibling)
+  }else if(id == plus3) {
+    displayContent(container3,content3,id, id.nextElementSibling)
+  }else if(id == plus4) {
+    displayContent(container4,content4,id, id.nextElementSibling)
+  }
+}
+
+const displayContent = (container,content, plus, xmark) => {
+  content.style.display = "block";
+  plus.style.display = "none";
+  xmark.style.display = "block";
+  container.style.backgroundColor = "#fef9f8"
+}
+
+const accordionClose = (id) => {
+  if(id == xmark1) {
+    hideContent(container1,content1,id.previousElementSibling,id)
+  }else if(id == xmark2) {
+    hideContent(container2,content2,id.previousElementSibling,id)
+  }else if(id == xmark3) {
+    hideContent(container3,content3,id.previousElementSibling,id)
+  }else if(id == xmark4) {
+    hideContent(container4,content4,id.previousElementSibling,id)
+  }
+}
+
+const hideContent = (container,content, plus, xmark) => {
+  content.style.display = "none";
+  plus.style.display = "block";
+  xmark.style.display = "none";
+  container.style.backgroundColor = "#ef9273"
   
 }
+
+//console.log(acess.innerText)
+
+
+ 
