@@ -3,17 +3,7 @@ let menu = document.getElementById("menu");
 let xmark = document.getElementById("xmark");
 let bars = document.getElementById("bars");
   
-// variables for user dashboard
-let editProfile = document.getElementById('editp');
-let editLink = document.getElementById("edit_profile")
-let home = document.getElementById('Home');
-let homeList = document.getElementById('home_link');
-let homeIcon = document.getElementById('home_icon');
-let stories = document.getElementById('stories');
-let stats = document.getElementById('stats');
-let followers = document.getElementById('followers');
-let publish = document.getElementById('publish');
-
+// variables for dark mode
 let element = document.body;
 let header = document.getElementsByClassName("header");
 let headerList = document.getElementsByClassName("header_link");
@@ -48,10 +38,50 @@ const menuClose = () => {
   bars.style.display = "block";
 }
 
+//accordion
+const accordionDrop = (id) => {
+  if(id == plus1) {
+    displayContent(container1,content1,id, id.nextElementSibling)
+  }else if(id == plus2) {
+    displayContent(container2,content2,id, id.nextElementSibling)
+  }else if(id == plus3) {
+    displayContent(container3,content3,id, id.nextElementSibling)
+  }else if(id == plus4) {
+    displayContent(container4,content4,id, id.nextElementSibling)
+  }
+}
+
+const displayContent = (container,content, plus, xmark) => {
+  content.style.display = "block";
+  plus.style.display = "none";
+  xmark.style.display = "block";
+  container.classList.remove("close");
+  container.classList.add("open");
+}
+
+const accordionClose = (id) => {
+  if(id == xmark1) {
+    hideContent(container1,content1,id.previousElementSibling,id)
+  }else if(id == xmark2) {
+    hideContent(container2,content2,id.previousElementSibling,id)
+  }else if(id == xmark3) {
+    hideContent(container3,content3,id.previousElementSibling,id)
+  }else if(id == xmark4) {
+    hideContent(container4,content4,id.previousElementSibling,id)
+  }
+}
+
+const hideContent = (container,content, plus, xmark) => {
+  content.style.display = "none";
+  plus.style.display = "block";
+  xmark.style.display = "none";
+  container.classList.remove("open");
+  container.classList.add("close");  
+}
+
+//darkmode
 const darkMode = (id) => {
   element.classList.toggle("dark_theme");
-  
-
   
   for(i = 0; i < header.length; i++){
     header[i].classList.toggle("dark_theme_header");
@@ -79,157 +109,32 @@ const darkMode = (id) => {
   } 
 }
 
-if (mode.outerText === "Light Mode") {
- console.log(mode.outerText);
- }else {
-  //console.log(mode);
-}
-            
-// function for user dashboard
-const pageSwitch = (id) => {  
-  if(id == edit_profile){
-    edit();
-  } else if(id == home_link){
-    backArrow();
-  } else if(id == stories_link){
-    story();
-  } else if(id == stats_link){
-    stat();
-  } else if(id == followers_link){
-    editProfile.style.display = "none";
-    editLink.style.color = "#333";
-    editLink.style.fontStyle = "italic";
-    editLink.style.fontSize = "12px";
-    editLink.style.fontWeight = "500";
-    editLink.style.textDecoration = "none";
-    home.style.display = "none";
-    homeList.style.color = "#333";
-    homeIcon.style.color = "#333";
-    stories.style.display = "none";
-    stats.style.display = "none";
-    followers.style.display = "flex";
-    publish.style.display = "none";
-  } else if(id == publish_link){
-    publishf();
+
+//userdashboard
+const nav = document.querySelectorAll(".nav");
+const content = document.querySelectorAll(".content");
+console.log(content)
+for( let i = 0; i < nav.length; i++){
+  nav[i].addEventListener("click", () => {
+  if(i == 0){
+    nav[i].classList.add("editp-active");
+    content[i].classList.add("content-active");
+  }else {
+    nav[i].classList.add("nav-active");
+    content[i].classList.add("content-active");
   }
-}
-
-//For left arrow button, edit, stories, stats and publish in the user dashboard
-const backArrow = () => {
-  editProfile.style.display = "none";
-  editLink.style.color = "#333";
-  editLink.style.fontStyle = "italic";
-  editLink.style.fontSize = "12px";
-  editLink.style.fontWeight = "500";
-  editLink.style.textDecoration = "none";
-  home.style.display = "flex";
-  homeList.style.color = "#0d0d0d";
-  homeIcon.style.color = "#0d0d0d";
-  stories.style.display = "none";
-  stats.style.display = "none";
-  followers.style.display = "none";
-  publish.style.display = "none";
-}
-
-const edit = () => {
-  editProfile.style.display = "flex";
-  editLink.style.color = "#0d0d0d";
-  editLink.style.fontStyle = "normal";
-  editLink.style.fontSize = "16px";
-  editLink.style.fontWeight = "700";
-  editLink.style.textDecoration = "underline";
-  home.style.display = "none";
-  stories.style.display = "none";
-  stats.style.display = "none";
-  followers.style.display = "none";
-  publish.style.display = "none";
-}
-const story = () => {
-  editProfile.style.display = "none";
-  editLink.style.color = "#333";
-  editLink.style.fontStyle = "italic";
-  editLink.style.fontSize = "12px";
-  editLink.style.fontWeight = "500";
-  editLink.style.textDecoration = "none";
-  home.style.display = "none";
-  homeList.style.color = "#333";
-  homeIcon.style.color = "#333";
-  stories.style.display = "flex";
-  stats.style.display = "none";
-  followers.style.display = "none";
-  publish.style.display = "none";
-}
-const stat = () => {
-  editProfile.style.display = "none";
-  editLink.style.color = "#333";
-  editLink.style.fontStyle = "italic";
-  editLink.style.fontSize = "12px";
-  editLink.style.fontWeight = "500";
-  editLink.style.textDecoration = "none";
-  home.style.display = "none";
-  homeList.style.color = "#333";
-  homeIcon.style.color = "#333";
-  stories.style.display = "none";
-  stats.style.display = "flex";
-  followers.style.display = "none";
-  publish.style.display = "none";
-}
-const publishf = () => {
-  editProfile.style.display = "none";editLink.style.color = "#333";
-  editLink.style.fontStyle = "italic";
-  editLink.style.fontSize = "12px";
-  editLink.style.fontWeight = "500";
-  editLink.style.texDecoration = "none";
-  home.style.display = "none";
-  homeList.style.color = "#333";
-  homeIcon.style.color = "#333";
-  stories.style.display = "none";
-  stats.style.display = "none";
-  followers.style.display = "none";
-  publish.style.display = "flex";
-}
-
-
-const accordionDrop = (id) => {
-  if(id == plus1) {
-    displayContent(container1,content1,id, id.nextElementSibling)
-  }else if(id == plus2) {
-    displayContent(container2,content2,id, id.nextElementSibling)
-  }else if(id == plus3) {
-    displayContent(container3,content3,id, id.nextElementSibling)
-  }else if(id == plus4) {
-    displayContent(container4,content4,id, id.nextElementSibling)
+  for( let j = 0; j < nav.length; j++){
+    if(nav[j] !== nav[i]){
+      if(i == 0){
+        nav[j].classList.remove("editp-active");
+        content[j].classList.remove("content-active");
+      }else {
+        nav[j].classList.remove("nav-active");
+        content[j].classList.remove("content-active");
+      }
+    }
   }
+  });
 }
-
-const displayContent = (container,content, plus, xmark) => {
-  content.style.display = "block";
-  plus.style.display = "none";
-  xmark.style.display = "block";
-  container.style.backgroundColor = "#fef9f8"
-}
-
-const accordionClose = (id) => {
-  if(id == xmark1) {
-    hideContent(container1,content1,id.previousElementSibling,id)
-  }else if(id == xmark2) {
-    hideContent(container2,content2,id.previousElementSibling,id)
-  }else if(id == xmark3) {
-    hideContent(container3,content3,id.previousElementSibling,id)
-  }else if(id == xmark4) {
-    hideContent(container4,content4,id.previousElementSibling,id)
-  }
-}
-
-const hideContent = (container,content, plus, xmark) => {
-  content.style.display = "none";
-  plus.style.display = "block";
-  xmark.style.display = "none";
-  container.style.backgroundColor = "#ef9273"
-  
-}
-
-//console.log(acess.innerText)
-
 
  

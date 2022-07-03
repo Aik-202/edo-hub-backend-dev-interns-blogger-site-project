@@ -317,7 +317,7 @@ button:focus {
   padding: 15px;
   border: 1px solid #fef9f8;
   background-color: #fef9f8;
-  line-height: 1.8em;
+  line-height: 2.2em;
   font-size: 13px;
   font-weight: 600;
   
@@ -379,9 +379,30 @@ button:focus {
   margin-left: 12%;
 }
 
+.open {
+  background-color: #fef9f8;
+}
+
+.close{
+  background-color: #ef9273;
+} 
+
 .dark_theme {
   background-color: black;
   color: white;
+}
+
+.dark_theme .answers_container{
+  background-color: #1b1b1bd8;
+  border: none;
+}
+
+.dark_theme .open{
+  background-color:#1b1b1bd8;
+}
+
+.dark_theme .close{
+  background-color:#353535;
 }
 
 .dark_theme_header {
@@ -429,7 +450,20 @@ button:focus {
   border: 1px solid #353839;
 }
 
+.dark_theme #accessibility>span{
+  visibility: hidden;
+  position: relative;
+ }
 
+.dark_theme #accessibility>span:after {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 2px;
+  right: 2px;
+  content: 'Light Mode';
+  width: 150%;
+}
 
 .dark_theme #accessibility2 {
   border: 1px solid #353839;
@@ -455,9 +489,6 @@ button:focus {
 .dark_theme h1>span {
   text-shadow: none;
 }
-
-
-
 
 @media only screen and (max-width: 1280px){
   .sub_contents {
