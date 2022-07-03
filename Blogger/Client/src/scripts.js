@@ -113,6 +113,7 @@ const darkMode = (id) => {
 //userdashboard
 const nav = document.querySelectorAll(".nav");
 const content = document.querySelectorAll(".content");
+const collapse = document.getElementById("collapse");
 console.log(content)
 for( let i = 0; i < nav.length; i++){
   nav[i].addEventListener("click", () => {
@@ -136,5 +137,11 @@ for( let i = 0; i < nav.length; i++){
   }
   });
 }
+  collapse.addEventListener("click", () => {
+    const sideBar = document.getElementById("side_bar1").classList.add("collapse");
+    for( let i = 0; i < content.length; i++){
+      content[i].style.marginLeft = "10%"
+    }
+  });
 
  
