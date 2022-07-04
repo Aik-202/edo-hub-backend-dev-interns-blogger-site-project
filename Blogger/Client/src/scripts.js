@@ -1,5 +1,14 @@
 //session
-
+const session = () => {
+  if(element.classList == "dark_theme"){
+    let dark = localStorage.getItem("mode");
+    console.log(dark)
+  } else {
+    localStorage.setItem("mode","lightmode");
+    let light = localStorage.getItem("mode");
+    console.log(light)
+  }
+}
 
 //hamburger menu variables 
 let menu = document.getElementById("menu");
@@ -78,17 +87,9 @@ let element = document.body;
 //darkmode
 const darkMode = () => {
   element.classList.toggle("dark_theme");
+  localStorage.setItem("mode","darkmode");
+  session();
 }
-if(element.classList == "dark_theme"){
-  localStorage.setItem("mode2","darkmode");
-  let dark = localStorage.getItem("mode2");
-  console.log(dark)
-} else {
-  localStorage.setItem("mode1","lightmode");
-  let light = localStorage.getItem("mode1");
-  console.log(light)
-}
-
 
 //userdashboard
 const nav = document.querySelectorAll(".nav");
