@@ -476,7 +476,7 @@ button:focus {
   box-shadow: inset 2px 2px 5px black, inset -2px -2px 5px black;
 }
 
-.dark_theme h1>img {
+/* .dark_theme h1>img {
   background-color: black;
   border-radius: 60%;
   border-bottom-left-radius: 80%;
@@ -484,7 +484,7 @@ button:focus {
   border-bottom-right-radius: 80%;
   width: 50px;
   height: 45px;
-}
+} */
 
 .dark_theme h1>span {
   text-shadow: none;

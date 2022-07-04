@@ -117,6 +117,40 @@ p {
   font-size: 15px;
   font-weight: 700;
 }
+
+.dark_theme .Login_section {
+  background-color: #1b1b1bd8;
+  border: 1px solid #1b1b1bd8;
+}
+
+.dark_theme .Login_content > form > button{
+  background-color: #353839;
+  border: 1px solid #353839;
+  color: white;
+}
+
+.dark_theme .user_admin_option > input[type=radio] {
+  accent-color: #353839;
+}
+
+.dark_theme .Login_content > form > a {
+  color: #ef9273;
+  text-decoration-color: #ef9273;
+}
+
+.dark_theme input {
+  border: 2px solid #353839;
+}
+
+.dark_theme .Login_content > p > a {
+  color: #ef9273;
+  text-decoration-color: #ef9273;
+}
+
+.dark_theme #home {
+  border-bottom: none;
+}
+
 @media only screen and (max-width: 1200px) {
   input {
     max-width: 100%;

@@ -2,27 +2,6 @@
 let menu = document.getElementById("menu");
 let xmark = document.getElementById("xmark");
 let bars = document.getElementById("bars");
-  
-// variables for dark mode
-let element = document.body;
-let header = document.getElementsByClassName("header");
-let headerList = document.getElementsByClassName("header_link");
-let button = document.getElementsByTagName("button");
-let main = document.getElementsByClassName("main_content");
-let section = document.getElementsByClassName("inside_sub_contents_container");
-let footer = document.getElementsByClassName("footer");
-let faq = document.getElementsByClassName("questions_answers");
-let faqQuestions = document.getElementsByClassName("questions_answers_container");
-let mode = document.getElementById("mode")
-
-let content1 = document.getElementById("content1");
-let content2 = document.getElementById("content2");
-let content3 = document.getElementById("content3");
-let content4 = document.getElementById("content4");
-let container1 = document.getElementById("container1");
-let container2 = document.getElementById("container2");
-let container3 = document.getElementById("container3");
-let container4 = document.getElementById("container4");
 
 // function for hamburger menu open
 const menuDrop = () => {
@@ -37,6 +16,17 @@ const menuClose = () => {
   xmark.style.display = "none"
   bars.style.display = "block";
 }
+  
+// variables for accordion
+let content1 = document.getElementById("content1");
+let content2 = document.getElementById("content2");
+let content3 = document.getElementById("content3");
+let content4 = document.getElementById("content4");
+let container1 = document.getElementById("container1");
+let container2 = document.getElementById("container2");
+let container3 = document.getElementById("container3");
+let container4 = document.getElementById("container4");
+
 
 //accordion
 const accordionDrop = (id) => {
@@ -78,6 +68,17 @@ const hideContent = (container,content, plus, xmark) => {
   container.classList.remove("open");
   container.classList.add("close");  
 }
+
+// variables for dark mode
+let element = document.body;
+let header = document.getElementsByClassName("header");
+let headerList = document.getElementsByClassName("header_link");
+let button = document.getElementsByTagName("button");
+let main = document.getElementsByClassName("main_content");
+let section = document.getElementsByClassName("inside_sub_contents_container");
+let footer = document.getElementsByClassName("footer");
+let faq = document.getElementsByClassName("questions_answers");
+let faqQuestions = document.getElementsByClassName("questions_answers_container");
 
 //darkmode
 const darkMode = (id) => {
