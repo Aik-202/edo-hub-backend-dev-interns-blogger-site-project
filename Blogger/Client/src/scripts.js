@@ -114,6 +114,7 @@ const darkMode = (id) => {
 const nav = document.querySelectorAll(".nav");
 const content = document.querySelectorAll(".content");
 const collapse = document.getElementById("collapse");
+const show = document.getElementById("show");
 console.log(content)
 for( let i = 0; i < nav.length; i++){
   nav[i].addEventListener("click", () => {
@@ -139,9 +140,20 @@ for( let i = 0; i < nav.length; i++){
 }
   collapse.addEventListener("click", () => {
     const sideBar = document.getElementById("side_bar1").classList.add("collapse");
+    collapse.style.display = "none"
+    show.style.display = "block"
     for( let i = 0; i < content.length; i++){
       content[i].style.marginLeft = "10%"
     }
   });
+
+  show.addEventListener("click", () => {
+    const sideBar = document.getElementById("side_bar1").classList.remove("collapse");
+    collapse.style.display = "block"
+    show.style.display = "none"
+    for( let i = 0; i < content.length; i++){
+      content[i].style.marginLeft = "23%"
+    }
+  });  
 
  

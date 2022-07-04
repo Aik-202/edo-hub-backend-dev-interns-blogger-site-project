@@ -18,9 +18,17 @@ body {
   flex-direction: flex-start;
   margin-bottom: 0
 }
-.inside_header > .fa-bars {
+.inside_header > .fa-xmark {
   top: 30px;
   left: 22%;
+  position: fixed;
+  font-size: 20px;
+  color: #0d0d0d;
+}
+.inside_header > .fa-bars {
+  display: none;
+  top: 35px;
+  left: 10%;
   position: fixed;
   font-size: 20px;
   color: #0d0d0d;
