@@ -451,6 +451,26 @@ content > button:focus {
   color: #0d0d0d;
 }
 
+.Login_section {
+  margin-top: 5%;
+}
+
+.Login_section > img {
+  width: 380px;
+}
+
+.Login_content > form {
+  margin-top: 15%;
+}
+
+.Login_content > form > button{
+  width: 95%;
+}
+
+.Login_content > h2 {
+  margin-top: -10%;
+}
+
 .content-active {
   display: flex;
 }
