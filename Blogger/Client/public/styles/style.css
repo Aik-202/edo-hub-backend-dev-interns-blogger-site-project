@@ -397,36 +397,43 @@ button:focus {
   border: none;
 }
 
-.dark_theme .open{
-  background-color:#1b1b1bd8;
-}
-
-.dark_theme .close{
-  background-color:#353535;
-}
-
-.dark_theme_header {
+.dark_theme .header {
   background-color: black;
   color: white;
 }
 
-.dark_theme_container{
+.dark_theme .main_content{
   background-color: #1b1b1bd8;
   border: 1px solid #1b1b1bd8;
 }
 
-.dark_theme_button {
+.dark_theme .inside_sub_contents_container{
+  background-color: #1b1b1bd8;
+  border: 1px solid #1b1b1bd8;
+}
+
+.dark_theme button {
   background-color: #353839;
   border: 1px solid #353839;
   color: white;
 }
 
-.dark_theme_faq {
+.dark_theme .questions_answers{
+  background-color: #1b1b1bd8;
+  border: 1px solid #1b1b1bd8;
+}
+
+.dark_theme .questions_answers_container {
   background-color: #353535;
   border: 1px solid #353535;
 }
 
-.dark_theme_headers_list {
+.dark_theme .header_link {
+  color: white;
+}
+
+.dark_theme footer {
+  background-color: black;
   color: white;
 }
 
@@ -488,6 +495,14 @@ button:focus {
 
 .dark_theme h1>span {
   text-shadow: none;
+}
+
+.dark_theme .open{
+  background-color:#1b1b1bd8;
+}
+
+.dark_theme .close{
+  background-color:#353535;
 }
 
 @media only screen and (max-width: 1280px){
@@ -583,7 +598,11 @@ button:focus {
     font-size: 30px;
   }
   .inside_sub_contents_container > h3 {
+    align-self: center;
     font-size: 18px;
+  }
+  .inside_sub_contents_container > p{
+    align-self: center;
   }
 }
 @media only screen and (max-width: 400px){
@@ -606,6 +625,16 @@ button:focus {
     margin-top: 18px;
     margin-right: 10px;
   }
+   .first_insider {
+     flex-direction: column;
+     margin: 10px;
+     max-width: 95%;
+   }
+   .second_insider {
+     flex-direction: column;
+     margin: 10px;
+     max-width: 95%;
+   }
   .inside_header > img {
     width: 30px;
     height: 30px;
@@ -674,17 +703,30 @@ button:focus {
   .sub_contents{
     flex-direction: column;
     overflow-x: hidden;
+    margin-left: 10px;
   }
   .inside_sub_contents_container{
     margin: 15px;
     margin-bottom: 30px;
-    align-items: center;
+    max-width: 88.5%;
+    margin-left: 5%;
+  }
+  .first_insider>div:last-child {
+    margin-left: 5%;
+  }
+   .second_insider>div:last-child {
+    margin-left: 5%;
+  }
+  .second_insider>div:first-child {
+    margin-left: 5%;
   }
   .inside_sub_contents_container > h3 {
+    align-self: center;
     margin-left: -5px;
     font-size: 15px;
   }
   .inside_sub_contents_container > p{
+    align-self: center;
     font-size: 11px;
   }
   .inside_sub_contents_container > button {
@@ -706,7 +748,11 @@ button:focus {
     align-self: flex-start;
     width: 100%;
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 700;
+  }
+  .answers_container {
+    font-size: 11px;
+    font-weight: 700;
   }
   .footer > h5 {
     font-size: 15px;
@@ -736,4 +782,10 @@ button:focus {
   .socials > img:first-child {
     margin-left: 10%;
   }
+}
+.dark_theme #bars {
+  color: white;
+}
+.dark_theme #xmark {
+  color: white;
 }

@@ -1,3 +1,6 @@
+//session
+
+
 //hamburger menu variables 
 let menu = document.getElementById("menu");
 let xmark = document.getElementById("xmark");
@@ -69,45 +72,21 @@ const hideContent = (container,content, plus, xmark) => {
   container.classList.add("close");  
 }
 
-// variables for dark mode
+// variable for dark mode
 let element = document.body;
-let header = document.getElementsByClassName("header");
-let headerList = document.getElementsByClassName("header_link");
-let button = document.getElementsByTagName("button");
-let main = document.getElementsByClassName("main_content");
-let section = document.getElementsByClassName("inside_sub_contents_container");
-let footer = document.getElementsByClassName("footer");
-let faq = document.getElementsByClassName("questions_answers");
-let faqQuestions = document.getElementsByClassName("questions_answers_container");
 
 //darkmode
-const darkMode = (id) => {
+const darkMode = () => {
   element.classList.toggle("dark_theme");
-  
-  for(i = 0; i < header.length; i++){
-    header[i].classList.toggle("dark_theme_header");
-  }
-  for(i = 0; i < headerList.length; i++){
-    headerList[i].classList.toggle("dark_theme_headers_list");
-  }
-  for(i = 0; i < button.length; i++){
-    button[i].classList.toggle("dark_theme_button");
-  }
-  for(i = 0; i < main.length; i++){
-    main[i].classList.toggle("dark_theme_container");
-  }
-  for(i = 0; i < section.length; i++){
-    section[i].classList.toggle("dark_theme_container");
-  }
-  for(i = 0; i < faq.length; i++){
-    faq[i].classList.toggle("dark_theme_container");
-  }
-  for(i = 0; i < faqQuestions.length; i++){
-    faqQuestions[i].classList.toggle("dark_theme_faq");
-  }
-  for(i = 0; i < footer.length; i++){
-    footer[i].classList.toggle("dark_theme");
-  } 
+}
+if(element.classList == "dark_theme"){
+  localStorage.setItem("mode2","darkmode");
+  let dark = localStorage.getItem("mode2");
+  console.log(dark)
+} else {
+  localStorage.setItem("mode1","lightmode");
+  let light = localStorage.getItem("mode1");
+  console.log(light)
 }
 
 
