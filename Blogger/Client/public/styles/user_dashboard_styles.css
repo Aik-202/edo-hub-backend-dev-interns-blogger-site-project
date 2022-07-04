@@ -56,7 +56,17 @@ body {
 }
 
 h1 > i {
+  font-size: 25px;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+h2 {
   font-size: 22px;
+  font-weight: 500;
 }
 
 .side_bar1 {
@@ -176,8 +186,25 @@ h1 > i {
   margin-left: 23%;
   margin-right: 0;
   margin-top: 5%;
+  font-family: "Nunito", sans-serif;
 }
 
+.content > button {
+  align-self: flex-end;
+  margin-right: 5%;
+  margin-top: 2%;
+  border-radius: 10%;
+  font-size: 12px;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  font-weight: 900;
+}
+content > button:focus {
+  background-color: #fef9f8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 #editp {
   margin-top: 100px;
 }
@@ -371,6 +398,37 @@ h1 > i {
   font-size: 15px;
   font-weight: 500;
 } */
+
+.write-post-title {
+  margin-bottom: 2rem;
+}
+.write-post-title > input {
+  width: 70%;
+  display: block;
+  margin: auto;
+  padding: 1rem 0.5rem;
+  font-size: 3rem;
+  outline: none;
+  background-color: inherit;
+
+  border: none;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.write-post-body > textarea {
+  width: 60%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  display: block;
+  margin: auto;
+  border: none;
+  font-size: 2rem;
+  resize: none;
+  outline: none;
+  background-color: inherit;
+}
+.write-post-content {
+  margin-top: 2rem;
+}
 
 .nav-active {
   border-left: 3px solid #fef9f8;
