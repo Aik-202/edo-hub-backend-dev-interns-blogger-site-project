@@ -1,160 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/Login_page_styles.css">
-    <link rel="stylesheet" href="./styles/user_dashboard_styles.css">
-    <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1-web/css/all.css">
-    <script src="../src/scripts.js" defer></script>
-    <script src="../src/user_dashboard.js" defer></script>
-</head>
-<body>
-    <header class="header">
-        <div class="inside_header">
-          <h1 class="logo"><img src="./images/l1.png" alt="" width="30px" height="30px"><span>BLOGGER</span></h1>
-          <i class="fa-solid fa-xmark" id="collapse"></i>
-          <i class="fa-solid fa-bars" id="show"></i>
-          <ul class="headers_list">
-            <li><a id="accessibility" class= "header_link" onclick="darkMode()"> <i class= "fas fa-moon"></i> <span id="mode">Dark Mode</span> </a> </li>
-            <li><a id="accessibility2"><b>tT</b> Increase Font</a></li>
-          </ul>
-        </div>
-    </header>
-    <section class="side_bar1" id="side_bar1">
-        <div class="welcome">
-            <img src="./images/i11.png" alt="" width="80px" height="80px" id="edit">
-            <div>
-               <h6>Welcome Assurance</h6>
-               <!--<p>Just starting web development, HTML and CSS</p>
-            -->
-               <a class="nav" id="edit_profile">Edit profile</a>
-            </div>
-        </div>
-        <ul class="navigation">
-            <li class="nav nav-active" id="home_list"><i class="fa-solid fa-home" id="home_icon"></i><a id="home_link">Dashboard</a></li>
-            <li  class="nav"><i class="fa-solid fa-edit"></i><a id="stories_link">Stories</a></li>
-            <li  class="nav"><i class="fa-solid fa-chart-bar"></i><a id="stats_link">Summary</a></li>
-            <li  class="nav" id="followers_list"><i class="fa-solid fa-users"></i><a id="followers_link">Followers</a></li>
-            <li  class="nav" id="publish_list"><i class="fa-solid fa-location-arrow"></i><a id="publish_link">Publish</a></li>
-            <li  class="nav"><i class="fa-solid fa-rocket"></i><a href="#" id="sign_out">Sign Out</a></li>
-        </ul>
-    </section>
 
-    <section class="content" id="editp">
-        <h1>Edit Profile</h1>
-        <!--<h2>Edit Profile</h2>-->
-        <div>
-          <output></output>
-          <input id="upload_image" type="file" accept="image/jpeg,image/png,image/jpg" style="display: none;">
-          <div class="image_options" id="image_options" style="display: none;">
-            <button>Choose another image</button>
-            <button>Upload image</button>
-          </div>
-          <img src="./images/i11.png" alt="" width="80px" height="80px">
-          <i class="fa-solid fa-camera" id="camera"></i>
-          <ul>
-            <li>2 Followers</li>
-            <li>4 Following</li>
-          </ul>
-          <!--<label for="username">Your Name</label>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/Login_page_styles.css">
+  <link rel="stylesheet" href="./styles/user_dashboard_styles.css">
+  <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1-web/css/all.css">
+  <script src="../src/scripts.js" defer></script>
+  <script src="../src/user_dashboard.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="inside_header">
+      <h1 class="logo"><img src="./images/l1.png" alt="" width="30px" height="30px"><span>BLOGGER</span></h1>
+      <i class="fa-solid fa-xmark" id="collapse"></i>
+      <i class="fa-solid fa-bars" id="show"></i>
+      <ul class="headers_list">
+        <li><a id="accessibility" class="header_link" onclick="darkMode()"> <i class="fas fa-moon"></i> <span
+              id="mode">Dark Mode</span> </a> </li>
+        <li><a id="accessibility2"><b>tT</b> Increase Font</a></li>
+      </ul>
+    </div>
+  </header>
+  <section class="side_bar1" id="side_bar1">
+    <div class="welcome">
+      <img src="./images/i11.png" alt="" width="80px" height="80px" id="edit">
+      <div>
+        <h6>Welcome Assurance</h6>
+        <!--<p>Just starting web development, HTML and CSS</p>
+            -->
+        <a class="nav" id="edit_profile">Edit profile</a>
+      </div>
+    </div>
+    <ul class="navigation">
+      <li class="nav nav-active" id="home_list"><i class="fa-solid fa-home" id="home_icon"></i><a
+          id="home_link">Dashboard</a></li>
+      <li class="nav"><i class="fa-solid fa-edit"></i><a id="stories_link">Stories</a></li>
+      <li class="nav"><i class="fa-solid fa-chart-bar"></i><a id="stats_link">Summary</a></li>
+      <li class="nav" id="followers_list"><i class="fa-solid fa-users"></i><a id="followers_link">Followers</a></li>
+      <li class="nav" id="publish_list"><i class="fa-solid fa-location-arrow"></i><a id="publish_link">Publish</a></li>
+      <li class="nav"><i class="fa-solid fa-rocket"></i><a href="#" id="sign_out">Sign Out</a></li>
+    </ul>
+  </section>
+
+  <section class="content" id="editp">
+    <h1>Edit Profile</h1>
+    <!--<h2>Edit Profile</h2>-->
+    <div>
+      <output></output>
+      <input id="upload_image" type="file" accept="image/jpeg,image/png,image/jpg" style="display: none;">
+      <div id="image_options" style="display: none;">
+        <button class="options">Choose another image</button>
+        <button class="options">Upload image</button>
+      </div>
+      <i class="fa-solid fa-camera" id="camera"></i>
+      <ul>
+        <li>2 Followers</li>
+        <li>4 Following</li>
+      </ul>
+      <!--<label for="username">Your Name</label>
           <input type="text" name="username" id="username" />
           <label for="username">Username</label>
           <input type="text" name="username" id="username" />-->
-          <h3>Name: <span>Assurance Ikogwe</span><i class="fa-solid fa-pen"></i></h3>
-          <h3>About: <span>Just starting web development, HTML and CSS</span><i class="fa-solid fa-pen"></i></h3>
+      <h3>Name: <span>Assurance Ikogwe</span><i class="fa-solid fa-pen"></i></h3>
+      <h3>About: <span>Just starting web development, HTML and CSS</span><i class="fa-solid fa-pen"></i></h3>
+    </div>
+  </section>
+
+  <section class="content content-active" id="Home">
+    <h1><i class="fa-solid fa-home" id="home_icon"></i> Dashboard</h1>
+    <div class="home_heading">
+      <a href="">Following</a>
+      <a href="">Recommended</a>
+    </div>
+  </section>
+
+  <section class="content">
+    <h2><i class="fa-solid fa-edit"></i> Stories</h2>
+  </section>
+
+  <section class="content">
+    <h1><i class="fa-solid fa-chart-bar"></i> Account Summary</h1>
+    <h2>Created account 21st of June 2021</h2>
+    <div class="stat_row">
+      <div>
+        <h4>26</h4>
+        <h3>Stories</h3>
+      </div>
+      <div>
+        <h4>6</h4>
+        <h3>Drafts</h3>
+      </div>
+      <div>
+        <h4>16</h4>
+        <h3>Bookmarks</h3>
+      </div>
+    </div>
+    <div class="stat_row">
+      <div>
+        <h4>16</h4>
+        <h3>Bookmarks</h3>
+      </div>
+      <div>
+        <h4>16</h4>
+        <h3>Likes</h3>
+      </div>
+      <div>
+        <h4>15</h4>
+        <h3>Comments</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="content">
+    <h1><i class="fa-solid fa-users"></i> Followers</h1>
+  </section>
+
+  <section class="content">
+    <button>PUBLISH</button>
+    <section class="write-post">
+      <h1>Write a Post</h1>
+      <div class="write-post-content">
+        <div class="write-post-title">
+          <input type="text" placeholder="Title" />
         </div>
-    </section>
-
-    <section class="content content-active" id="Home">
-        <h1><i class="fa-solid fa-home" id="home_icon"></i> Dashboard</h1>
-        <div class="home_heading">
-            <a href="">Following</a>
-            <a href="">Recommended</a>
+        <div class="write-post-body">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Write a post"></textarea>
         </div>
+      </div>
     </section>
+  </section>
 
-    <section class="content">
-        <h2><i class="fa-solid fa-edit"></i> Stories</h2>
+  <section class="content">
+    <section class="Login_section">
+      <div class="Login_content">
+        <h2>SIGN OUT</h2>
+        <form action="" method="" accept-charset="utf-8">
+          <label for="username">Your Username</label>
+          <input type="text" name="getusername" id="getusername" placeholder="Assurance" />
+          <button type="submit">SIGN OUT</button>
+        </form>
+        <h5>You will be redirected to the Blogger's Home page.</h5>
+      </div>
+      <img src="./images/i10.png" alt="" width="250px" height="450px" />
     </section>
+  </section>
 
-    <section class="content">
-        <h1><i class="fa-solid fa-chart-bar"></i> Account Summary</h1>
-        <h2>Created account 21st of June 2021</h2>
-        <div class="stat_row">
-          <div>
-             <h4>26</h4>
-             <h3>Stories</h3>
-          </div>
-          <div>
-             <h4>6</h4>
-             <h3>Drafts</h3>
-          </div>
-          <div>
-            <h4>16</h4>
-            <h3>Bookmarks</h3>
-         </div>
-        </div>
-        <div class="stat_row">
-            <div>
-                <h4>16</h4>
-                <h3>Bookmarks</h3>
-             </div>
-          <div>
-             <h4>16</h4>
-             <h3>Likes</h3>
-          </div>
-          <div>
-            <h4>15</h4>
-            <h3>Comments</h3>
-         </div>
-        </div>
-    </section>
-
-    <section class="content">
-        <h1><i class="fa-solid fa-users"></i> Followers</h1>
-    </section>
-
-    <section class="content">
-        <button>PUBLISH</button>
-        <section class="write-post">
-            <h1>Write a Post</h1>
-            <div class="write-post-content">
-              <div class="write-post-title">
-                <input type="text" placeholder="Title" />
-              </div>
-              <div class="write-post-body">
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="10"
-                  placeholder="Write a post"
-                ></textarea>
-              </div>
-            </div>
-          </section>
-    </section>
-
-    <section class="content">
-        <section class="Login_section">
-            <div class="Login_content">
-              <h2>SIGN OUT</h2>
-               <form action="" method="" accept-charset="utf-8">
-                <label for="username">Your Username</label>
-                <input type="text" name="getusername" id="getusername" placeholder="Assurance"  />
-                <button type="submit">SIGN OUT</button>
-              </form>
-              <h5>You will be redirected to the Blogger's Home page.</h5>
-            </div>
-            <img src="./images/i10.png" alt="" width="250px" height="450px"/>
-          </section>
-    </section>
-
-    <!--
+  <!--
     <section class="side_bar2">
         <input type="search" name="search_box" placeholder="Search">
         <p><i class="fa-solid fa-circle" style="color: green; font-size: 12px; padding-right: 5px;"></i>What We're Reading Today</p>    
@@ -162,6 +159,7 @@
     </section>
     -->
 
-    
+
 </body>
+
 </html>

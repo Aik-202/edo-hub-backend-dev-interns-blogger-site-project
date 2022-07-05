@@ -256,23 +256,11 @@ content>button:focus {
   padding: 10px;
 }
 
-#image_options>button:first-child{
+#image_options>button:first-child {
   margin-right: 10px;
 }
 
-#editp>div>img{
-  width: 300px;
-  height: 300px;
-  align-self: center;
-  background-color: white;
-  border-radius: 50%;
-  margin-top: 10px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#editp>div>output{
-  display: none;
+#editp>div>output {
   width: 300px;
   height: 300px;
   align-self: center;
@@ -604,10 +592,10 @@ content>button:focus {
   border-left: 3px solid #5a5f61;
   background-color: #333;
   color: white;
-} 
+}
 
-.dark_theme #edit_profile{
-  color: #ef9273;
+.dark_theme #edit_profile {
+  color: #757575;
 }
 
 .dark_theme #home_list {
@@ -628,7 +616,7 @@ content>button:focus {
   border-bottom-color: #353839;
 }
 
-.dark_theme .home_heading>a{
+.dark_theme .home_heading>a {
   color: white;
 }
 
@@ -640,15 +628,15 @@ content>button:focus {
   background-color: #1b1b1bd8;
 }
 
-.dark_theme .stat_row>div>h3{
+.dark_theme .stat_row>div>h3 {
   color: white;
 }
 
-.dark_theme .stat_row>div>h4{
+.dark_theme .stat_row>div>h4 {
   color: white;
 }
 
-.dark_theme .write-post-title>input::placeholder{
+.dark_theme .write-post-title>input::placeholder {
   color: white;
 }
 
@@ -664,6 +652,7 @@ content>button:focus {
   border: 1px solid #353839;
   color: white;
 }
+
 @media only screen and (max-width: 1200px) {
   /*
    .logo>span {
@@ -684,10 +673,10 @@ content>button:focus {
      width: 100%;
    }
  */
- }
- 
- @media only screen and (max-width: 400px) {
- /*
+}
+
+@media only screen and (max-width: 400px) {
+  /*
    .inside_header > .fa-xmark {
      display: none;
    }
@@ -902,4 +891,4 @@ content>button:focus {
     color: #0d0d0d;
   }
   */
- }
+}

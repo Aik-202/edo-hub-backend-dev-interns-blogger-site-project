@@ -16,7 +16,7 @@ const menuClose = () => {
   xmark.style.display = "none"
   bars.style.display = "block";
 }
-  
+
 // variables for accordion
 let content1 = document.getElementById("content1");
 let content2 = document.getElementById("content2");
@@ -30,18 +30,18 @@ let container4 = document.getElementById("container4");
 
 //accordion
 const accordionDrop = (id) => {
-  if(id == plus1) {
-    displayContent(container1,content1,id, id.nextElementSibling)
-  }else if(id == plus2) {
-    displayContent(container2,content2,id, id.nextElementSibling)
-  }else if(id == plus3) {
-    displayContent(container3,content3,id, id.nextElementSibling)
-  }else if(id == plus4) {
-    displayContent(container4,content4,id, id.nextElementSibling)
+  if (id == plus1) {
+    displayContent(container1, content1, id, id.nextElementSibling)
+  } else if (id == plus2) {
+    displayContent(container2, content2, id, id.nextElementSibling)
+  } else if (id == plus3) {
+    displayContent(container3, content3, id, id.nextElementSibling)
+  } else if (id == plus4) {
+    displayContent(container4, content4, id, id.nextElementSibling)
   }
 }
 
-const displayContent = (container,content, plus, xmark) => {
+const displayContent = (container, content, plus, xmark) => {
   content.style.display = "block";
   plus.style.display = "none";
   xmark.style.display = "block";
@@ -50,23 +50,23 @@ const displayContent = (container,content, plus, xmark) => {
 }
 
 const accordionClose = (id) => {
-  if(id == xmark1) {
-    hideContent(container1,content1,id.previousElementSibling,id)
-  }else if(id == xmark2) {
-    hideContent(container2,content2,id.previousElementSibling,id)
-  }else if(id == xmark3) {
-    hideContent(container3,content3,id.previousElementSibling,id)
-  }else if(id == xmark4) {
-    hideContent(container4,content4,id.previousElementSibling,id)
+  if (id == xmark1) {
+    hideContent(container1, content1, id.previousElementSibling, id)
+  } else if (id == xmark2) {
+    hideContent(container2, content2, id.previousElementSibling, id)
+  } else if (id == xmark3) {
+    hideContent(container3, content3, id.previousElementSibling, id)
+  } else if (id == xmark4) {
+    hideContent(container4, content4, id.previousElementSibling, id)
   }
 }
 
-const hideContent = (container,content, plus, xmark) => {
+const hideContent = (container, content, plus, xmark) => {
   content.style.display = "none";
   plus.style.display = "block";
   xmark.style.display = "none";
   container.classList.remove("open");
-  container.classList.add("close");  
+  container.classList.add("close");
 }
 
 // variable for dark mode
@@ -77,19 +77,16 @@ const darkMode = () => {
   element.classList.toggle("dark_theme");
   //set theme
   var theme
-  if(element.classList == "dark_theme"){
-  theme = "DARK"
+  if (element.classList == "dark_theme") {
+    theme = "DARK"
   } else {
-  theme = "LIGHT"
+    theme = "LIGHT"
   }
   localStorage.setItem("pageTheme", JSON.stringify(theme));
 }
 
 let getTheme = JSON.parse(localStorage.getItem("pageTheme"));
 
-if (getTheme === "DARK"){
+if (getTheme === "DARK") {
   element.classList.toggle("dark_theme");
 }
-  
-
- 

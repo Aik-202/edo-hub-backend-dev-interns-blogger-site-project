@@ -50,7 +50,6 @@ const uploadImage = document.getElementById("upload_image");
 const camera = document.getElementById("camera");
 const imageOptions = document.getElementById("image_options");
 camera.addEventListener("click", () => {
-    uploadImage.previousElementSibling.style.display = "block"
     uploadImage.style.display = "block"
     camera.style.display = "none"
     camera.previousElementSibling.style.display = "none"
@@ -65,3 +64,17 @@ uploadImage.addEventListener("change", () => {
     uploadImage.style.display = "none";
     imageOptions.style.display = "block";
 });
+
+const Options = document.querySelectorAll(".options");
+for (let i = 0; i < Options.length; i++) {
+    Options[i].addEventListener("click", () => {
+        if (i == 0) {
+            uploadImage.style.display = "block";
+            imageOptions.style.display = "none";
+        } else if (i == 1) {
+            uploadImage.style.display = "none";
+            imageOptions.style.display = "none";
+            camera.style.display = "block";
+        }
+    })
+}

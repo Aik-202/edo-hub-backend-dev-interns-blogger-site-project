@@ -1,6 +1,7 @@
-#home{
+#home {
   border: none;
 }
+
 .Login_section {
   display: flex;
   flex-direction: row;
@@ -12,13 +13,15 @@
   margin-right: 30px;
   margin-bottom: 30px;
   padding: 0;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.Login_section > img {
+
+.Login_section>img {
   margin: 20px;
   padding-right: 20px;
   width: 500px;
 }
+
 .Login_content {
   display: flex;
   flex-direction: column;
@@ -27,19 +30,23 @@
   padding-left: 40px;
   width: 50%;
 }
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.Login_content > h2 {
+
+.Login_content>h2 {
   margin-bottom: -25px;
   font-size: 20px;
 }
-.Login_content > h6 {
+
+.Login_content>h6 {
   font-size: 15px;
   font-weight: 500;
 }
+
 input {
   max-width: 70%;
   padding: 15px;
@@ -48,17 +55,21 @@ input {
   border: 2px solid #ef9273;
   border-radius: 5px;
 }
+
 #username {
   margin-bottom: 30px;
 }
+
 input:focus {
   border: 2px solid #0d0d0d;
 }
-.Login_content > form > label {
+
+.Login_content>form>label {
   font-size: 15px;
   font-weight: 500;
 }
-.Login_content > form > a {
+
+.Login_content>form>a {
   text-decoration-color: #333;
   color: #333;
   font-style: italic;
@@ -67,28 +78,34 @@ input:focus {
   margin-left: 50%;
   max-width: 25%;
 }
+
 .user_admin_option {
   display: flex;
   flex-direction: row;
 }
-.user_admin_option > label {
+
+.user_admin_option>label {
   align-self: center;
   font-size: 15px;
   font-weight: 900;
 }
-.user_admin_option > input[type=radio] {
+
+.user_admin_option>input[type=radio] {
   align-self: center;
   margin-top: 18px;
   margin-right: 1%;
   accent-color: #ef9273;
 }
+
 #as_user {
   margin-left: 10%;
 }
+
 #as_admin {
   margin-left: 25%;
 }
-.Login_content > form > button {
+
+.Login_content>form>button {
   max-width: 75%;
   padding: 15px;
   font-size: 18px;
@@ -100,12 +117,14 @@ input:focus {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 p {
   font-size: 15px;
   font-weight: 500;
   margin-left: 25%;
 }
-.Login_content > p > a {
+
+.Login_content>p>a {
   text-decoration-color: #333;
   align-self: flex-end;
   color: #333;
@@ -113,7 +132,8 @@ p {
   font-size: 15px;
   font-weight: 1000;
 }
-.Login_content > h5 {
+
+.Login_content>h5 {
   font-size: 15px;
   font-weight: 700;
 }
@@ -123,17 +143,17 @@ p {
   border: 1px solid #1b1b1bd8;
 }
 
-.dark_theme .Login_content > form > button{
+.dark_theme .Login_content>form>button {
   background-color: #353839;
   border: 1px solid #353839;
   color: white;
 }
 
-.dark_theme .user_admin_option > input[type=radio] {
+.dark_theme .user_admin_option>input[type=radio] {
   accent-color: #353839;
 }
 
-.dark_theme .Login_content > form > a {
+.dark_theme .Login_content>form>a {
   color: #ef9273;
   text-decoration-color: #ef9273;
 }
@@ -142,7 +162,7 @@ p {
   border: 2px solid #353839;
 }
 
-.dark_theme .Login_content > p > a {
+.dark_theme .Login_content>p>a {
   color: #ef9273;
   text-decoration-color: #ef9273;
 }
@@ -155,14 +175,17 @@ p {
   input {
     max-width: 100%;
   }
-  .Login_content > form > a {
+
+  .Login_content>form>a {
     max-width: 50%;
     margin-left: 58%;
   }
-  .Login_content > form > button {
+
+  .Login_content>form>button {
     max-width: 100%;
   }
 }
+
 @media only screen and (max-width: 400px) {
   .Login_section {
     flex-direction: column-reverse;
@@ -171,46 +194,58 @@ p {
     margin-right: 10px;
     margin-top: -25px;
   }
-  .Login_section > img {
+
+  .Login_section>img {
     width: 320px;
     height: 250px;
   }
+
   .Login_content {
     padding-left: 0;
     width: 80%;
     font-size: 12px;
   }
-  .Login_content > h2 {
+
+  .Login_content>h2 {
     font-size: 18px;
     margin-bottom: -10px;
   }
-  .Login_content > h6 {
+
+  .Login_content>h6 {
     font-size: 12px;
   }
-  .Login_content > form > label {
+
+  .Login_content>form>label {
     font-size: 12px;
     font-weight: 500;
   }
+
   input {
     padding: 10px;
   }
-  .Login_content > form > a {
+
+  .Login_content>form>a {
     font-size: 12px;
   }
-  .user_admin_option > label {
+
+  .user_admin_option>label {
     font-size: 12px;
   }
-  .Login_content > form > button {
+
+  .Login_content>form>button {
     font-size: 15px;
     padding: 10px;
   }
+
   p {
     font-size: 12px;
   }
-  .Login_content > p > a {
+
+  .Login_content>p>a {
     font-size: 12px;
   }
-  .Login_content > h5 {
+
+  .Login_content>h5 {
     font-size: 11px;
   }
 }
