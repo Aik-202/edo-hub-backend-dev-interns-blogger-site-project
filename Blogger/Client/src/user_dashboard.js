@@ -55,10 +55,11 @@ camera.addEventListener("click", () => {
     camera.previousElementSibling.style.display = "none"
 })
 uploadImage.addEventListener("change", () => {
+    const file = uploadImage.files[0]
     const reader = new FileReader();
     reader.addEventListener("load", () => {
         const imageUrl = reader.result;
         uploadImage.previousElementSibling.style.backgroundImage = `url(${imageUrl})`;
     });
-    reader.readAsDataURL(this.files[0]);
+    reader.readAsDataURL(file);
 });
