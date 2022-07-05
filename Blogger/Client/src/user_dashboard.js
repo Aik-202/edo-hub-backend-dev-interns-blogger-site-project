@@ -48,6 +48,7 @@ show.addEventListener("click", () => {
 
 const uploadImage = document.getElementById("upload_image");
 const camera = document.getElementById("camera");
+const imageOptions = document.getElementById("image_options");
 camera.addEventListener("click", () => {
     uploadImage.previousElementSibling.style.display = "block"
     uploadImage.style.display = "block"
@@ -55,11 +56,12 @@ camera.addEventListener("click", () => {
     camera.previousElementSibling.style.display = "none"
 })
 uploadImage.addEventListener("change", () => {
-    const file = uploadImage.files[0]
     const reader = new FileReader();
     reader.addEventListener("load", () => {
         const imageUrl = reader.result;
         uploadImage.previousElementSibling.style.backgroundImage = `url(${imageUrl})`;
     });
-    reader.readAsDataURL(file);
+    reader.readAsDataURL(uploadImage.files[0]);
+    uploadImage.style.display = "none";
+    imageOptions.style.display = "block";
 });
