@@ -84,20 +84,25 @@ for (let i = 0; i < Options.length; i++) {
             uploadImage.style.display = "none";
             imageOptions.style.display = "none";
             camera.style.display = "block";
-            //local storage
-            var uploadedImage
-            if (Options[i].classList.toggle = "success") {
-                uploadedImage = "upload success";
-            } else {
-                uploadedImage = "upload failure";
-            }
-            localStorage.setItem("uploadStatus", JSON.stringify(uploadedImage));
 
         }
     });
 }
 
-const getUploadStatus = JSON.parse(localStorage.getItem("uploadStatus"));
-if(getUploadStatus === "upload success"){
-    uploadImage.previousElementSibling.style.backgroundImage = `url(${imageUrl})`;
-}
+
+
+
+
+
+ //local storage
+//  var uploadedImage
+//  if (Options[i].classList.toggle = "success") {
+//      uploadedImage = "upload success";
+//  } else {
+//      uploadedImage = "upload failure";
+//  }
+//  localStorage.setItem("uploadStatus", JSON.stringify(uploadedImage));
+// const getUploadStatus = JSON.parse(localStorage.getItem("uploadStatus"));
+// if(getUploadStatus === "upload success"){
+//     uploadImage.previousElementSibling.style.backgroundImage = `url(${imageUrl})`;
+// }
