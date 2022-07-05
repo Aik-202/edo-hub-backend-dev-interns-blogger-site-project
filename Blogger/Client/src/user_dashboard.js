@@ -46,14 +46,20 @@ show.addEventListener("click", () => {
     }
 });
 
+//variables for uploading image 
 const uploadImage = document.getElementById("upload_image");
 const camera = document.getElementById("camera");
 const imageOptions = document.getElementById("image_options");
+
+//showing options for uploading image 
 camera.addEventListener("click", () => {
-    uploadImage.style.display = "block"
-    camera.style.display = "none"
-    camera.previousElementSibling.style.display = "none"
-})
+    uploadImage.style.display = "block";
+    camera.style.display = "none";
+    camera.previousElementSibling.style.display = "none";
+});
+
+
+//upload image with FileReader
 uploadImage.addEventListener("change", () => {
     const reader = new FileReader();
     reader.addEventListener("load", () => {
@@ -65,6 +71,7 @@ uploadImage.addEventListener("change", () => {
     imageOptions.style.display = "block";
 });
 
+//choosing another image or uploading image to account
 const Options = document.querySelectorAll(".options");
 for (let i = 0; i < Options.length; i++) {
     Options[i].addEventListener("click", () => {
@@ -72,9 +79,25 @@ for (let i = 0; i < Options.length; i++) {
             uploadImage.style.display = "block";
             imageOptions.style.display = "none";
         } else if (i == 1) {
+            Options[i].classList.toggle = "success"
+            //insert function that uploads image to cloudinary and stores it in user account on our database
             uploadImage.style.display = "none";
             imageOptions.style.display = "none";
             camera.style.display = "block";
+            //local storage
+            var uploadedImage
+            if (Options[i].classList.toggle = "success") {
+                uploadedImage = "upload success";
+            } else {
+                uploadedImage = "upload failure";
+            }
+            localStorage.setItem("uploadStatus", JSON.stringify(uploadedImage));
+
         }
-    })
+    });
+}
+
+const getUploadStatus = JSON.parse(localStorage.getItem("uploadStatus"));
+if(getUploadStatus === "upload success"){
+    uploadImage.previousElementSibling.style.backgroundImage = `url(${imageUrl})`;
 }
