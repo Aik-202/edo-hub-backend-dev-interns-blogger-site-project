@@ -347,6 +347,77 @@ content>div>button:focus {
   color: #0d0d0d;
 }
 
+
+.story_card {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ef9273;
+  padding: 15px;
+  padding-top: 0;
+  padding-left: 15%;
+  max-width: 85%;
+}
+
+.user_data {
+  display: flex;
+  flex-direction: row;
+  max-width: 60%;
+}
+
+.user_data > img {
+  border-radius: 90%;
+  width: 45px;
+  height: 45px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.user_data > h5 {
+  align-self: center;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+p{
+  margin: 0;
+}
+
+.story_info {
+  display: flex;
+  flex-direction: row;
+  max-width: 60%;
+}
+
+.story_info > img {
+  align-self: center;
+  padding: 20px;
+  margin: 20px;
+  padding-top: 0;
+  margin-top: 0;
+  padding-right: 0;
+  margin-right: 0;
+  width: 120px;
+  height: 120px;
+}
+
+.story_info > div {
+  margin-bottom: 30px;
+}
+
+.story_engage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 18px;
+  justify-content: space-between;
+  max-width: 40%;
+}
+
+.story_engage > i > span {
+  font-size: 15px;
+  padding-left: 10px;
+}
+
 #stats>h1 {
   margin-top: 10%;
 }
@@ -658,7 +729,6 @@ content>div>button:focus {
   border: 1px solid #353839;
   color: white;
 }
-
 @media only screen and (max-width: 1200px) {
   /*
    .logo>span {
