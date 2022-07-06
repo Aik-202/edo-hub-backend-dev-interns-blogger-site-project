@@ -48,6 +48,7 @@ show.addEventListener("click", () => {
 
 //variables for uploading image 
 const uploadImage = document.getElementById("upload_image");
+const edit = document.querySelectorAll("#edit");
 const camera = document.getElementById("camera");
 const imageOptions = document.getElementById("image_options");
 
@@ -65,6 +66,9 @@ uploadImage.addEventListener("change", () => {
     reader.addEventListener("load", () => {
         const imageUrl = reader.result;
         uploadImage.previousElementSibling.style.backgroundImage = `url(${imageUrl})`;
+        for(i=0; i < edit.length; i++){
+            edit[i].setAttribute("src", imageUrl);
+        }
     });
     reader.readAsDataURL(uploadImage.files[0]);
     uploadImage.style.display = "none";

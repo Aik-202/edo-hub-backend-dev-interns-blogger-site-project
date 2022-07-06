@@ -203,7 +203,13 @@ h2 {
   font-family: "Nunito", sans-serif;
 }
 
-.content>button {
+.publish_options {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.content>div>button {
   align-self: flex-end;
   margin-right: 5%;
   margin-top: 2%;
@@ -216,7 +222,7 @@ h2 {
   font-weight: 900;
 }
 
-content>button:focus {
+content>div>button:focus {
   background-color: #fef9f8;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
