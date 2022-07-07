@@ -29,8 +29,14 @@ for (let i = 0; i < nav.length; i++) {
 //collapse dashboard
 collapse.addEventListener("click", () => {
     const sideBar = document.getElementById("side_bar1").classList.add("collapse");
+    const logoText = document.getElementById("logo_text");
+    logoText.style.display = "none"
     collapse.style.display = "none"
-    show.style.display = "block"
+    logoText.previousElementSibling.style.width = "45px";
+    logoText.previousElementSibling.style.height = "40px";
+    logoText.previousElementSibling.style.marginLeft = "12px"
+    show.style.display = "block";
+    show.style.marginLeft = "-20px";
     for (let i = 0; i < content.length; i++) {
         content[i].style.marginLeft = "10%"
     }
@@ -39,7 +45,12 @@ collapse.addEventListener("click", () => {
 //show full dashboard
 show.addEventListener("click", () => {
     const sideBar = document.getElementById("side_bar1").classList.remove("collapse");
+    const logoText = document.getElementById("logo_text");
     collapse.style.display = "block"
+    logoText.style.display = "block"
+    logoText.previousElementSibling.style.width = "40px";
+    logoText.previousElementSibling.style.height = "35px";
+    logoText.previousElementSibling.style.marginLeft = "0"
     show.style.display = "none"
     for (let i = 0; i < content.length; i++) {
         content[i].style.marginLeft = "23%"

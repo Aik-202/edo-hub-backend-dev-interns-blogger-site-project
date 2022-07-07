@@ -47,12 +47,14 @@ body {
 }
 
 .logo>img {
-  width: 50px;
-  height: 40px;
+  width: 40px;
+  height: 35px;
 }
 
 .logo>span {
+  display: block;
   font-size: 20px;
+  margin-top: -4px;
 }
 
 .headers_list>li {
@@ -777,12 +779,15 @@ p {
 
 .collapse .navigation>li>i {
   align-self: center;
+  font-weight: 750;
 }
 
 .collapse .navigation>li>a {
   font-size: 12px;
   padding: 0;
+  padding-top: 5px;
   padding-left: 10px;
+  font-weight: 200;
   overflow: hidden;
   word-wrap: nowrap;
   text-overflow: ellipsis;

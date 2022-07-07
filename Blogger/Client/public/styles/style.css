@@ -45,7 +45,7 @@ button:focus {
   height: 50px;
   margin-top: -10px;
   border: 1px solid transparent;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 .logo>span {
@@ -303,6 +303,7 @@ button:focus {
 }
 
 .inside_sub_contents_container>img {
+  padding: 10px;
   margin-left: 0;
   margin-right: 0;
 }
@@ -555,23 +556,14 @@ button:focus {
   background-color: #353535;
 }
 
-@media only screen and (max-width: 1280px) {
-  .sub_contents {
-    margin-left: 5px;
-  }
+ @media only screen and (max-width: 1280px) {
 
-  /*.first_insider>div{
-    width: 80%;
-  }
-  .second_insider>div{
-    width: 50%;
-  }*/
   .first_insider {
     width: 280%;
   }
 
   .second_insider {
-    width: 280%;
+    width: 50%;
   }
 
   .first_insider>div:first-child {
@@ -596,7 +588,10 @@ button:focus {
   }
 
   .inside_sub_contents_container>img {
-    width: 100%;
+    width: inherit;
+  }
+  .first_insider > div > img{
+    width: 95%;
   }
 }
 
