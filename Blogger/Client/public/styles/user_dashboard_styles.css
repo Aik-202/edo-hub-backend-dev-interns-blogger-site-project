@@ -369,8 +369,13 @@ content>div>button:focus {
   padding: 15px;
   padding-top: 0;
   padding-left: 5%;
+  padding-bottom: 2%;
   margin-top: 10px;
-  max-width: 82%;
+  max-width: 86%;
+}
+
+.followers_post_card:first-child {
+  margin-top: 2%;
 }
 
 .followers_post_card:last-child {
