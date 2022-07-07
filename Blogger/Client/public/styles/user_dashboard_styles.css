@@ -319,6 +319,19 @@ content>div>button:focus {
   padding: 10px;
 }
 
+.Home>input {
+  align-self: center;
+  border: 2px solid #ef9273;
+  border-radius: 5px;
+  padding: 15px;
+  color: #0d0d0d;
+  font-size: 15px;
+  font-weight: 500;
+  width: 50%;
+  margin-bottom: 5%;
+  margin-top: 2%;
+}
+
 .home_heading {
   display: flex;
   flex-direction: row;
@@ -416,8 +429,22 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   font-size: 18px;
   max-width: 60%;
+}
+
+.views{
+  margin-left: 5%;
+  font-size: 15px;
+}
+
+.story_engage > p > i {
+  align-self: center;
+}
+
+.story_engage > p > span {
+  margin-left: 5px;
 }
 
 .story_engage_icons>i>span {
@@ -896,6 +923,10 @@ p {
 
 .dark_theme .following {
   border-bottom: 1px solid #353839;
+}
+
+.dark_theme .Home>input {
+  border: 2px solid #353839;
 }
 
 @media only screen and (max-width: 1200px) {
