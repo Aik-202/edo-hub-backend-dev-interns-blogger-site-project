@@ -438,22 +438,23 @@ p {
   max-width: 60%;
 }
 
-.views{
+.views {
   margin-left: 5%;
   font-size: 15px;
 }
 
-.followers_story_engage > p > i {
+.followers_story_engage>p>i {
   align-self: center;
 }
 
-.followers_story_engage > p > span {
+.followers_story_engage>p>span {
   margin-left: 5px;
 }
 
 .followers_story_engage_icons>i>span {
   font-size: 15px;
   padding-left: 10px;
+  cursor: context-menu;
 }
 
 .followers_story_engage_icons {
@@ -464,6 +465,91 @@ p {
   margin-left: 20%;
 }
 
+/* .descriptions{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  margin-left: 30%;
+  margin-bottom: 10px;
+}
+.descriptions > p{
+  display: none;
+  align-self: flex-end;
+  border: 1px solid #ef9273;
+  background-color: #ef9273;
+  color: #333;
+  border-radius: 2px;
+  padding: 5px;
+} */
+
+.descriptions {
+  display: none;
+  margin-top: -4%;
+  margin-left: -3%;
+  position: absolute;
+  padding: 5px;
+  border-radius: 2px;
+  border: 1px solid #ef9273;
+  background-color: #ef9273;
+  color: #333;
+  font-weight: 800;
+}
+
+.descriptions>p {
+  color: #333;
+  font-weight: 640;
+}
+
+.descriptions>p::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #ef9273 transparent transparent transparent;
+}
+
+#like {
+  margin-left: -1%;
+}
+
+#report {
+  margin-left: -20px;
+}
+
+#block {
+  margin-left: -15px;
+}
+
+#delete {
+  margin-left: -20px;
+}
+
+.fa-comment:hover #comments {
+  display: block;
+}
+
+.fa-thumbs-up:hover #like {
+  display: block;
+}
+
+.fa-bookmark:hover #bookmarks {
+  display: block;
+}
+
+.fa-triangle-exclamation:hover #report {
+  display: block;
+}
+
+.fa-ban:hover #block {
+  display: block;
+}
+
+.fa-trash-can:hover #delete {
+  display: block;
+}
 
 .story_card {
   display: flex;
@@ -536,22 +622,24 @@ p {
   max-width: 60%;
 }
 
-.views{
+.views {
+  width: 20%;
   margin-left: 5%;
   font-size: 15px;
 }
 
-.story_engage > p > i {
+.story_engage>p>i {
   align-self: center;
 }
 
-.story_engage > p > span {
+.story_engage>p>span {
   margin-left: 5px;
 }
 
 .story_engage_icons>i>span {
   font-size: 15px;
   padding-left: 10px;
+  cursor: context-menu;
 }
 
 .story_engage_icons {
@@ -742,7 +830,7 @@ p {
   font-weight: 500;
 }
 
-.followers > ul {
+.followers>ul {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -752,7 +840,7 @@ p {
   font-weight: 550;
 }
 
-.followers > ul > li {
+.followers>ul>li {
   margin: 10px;
   margin-top: 0;
   list-style-type: none;
@@ -762,11 +850,11 @@ p {
   border-bottom: 1px solid #ef9273;
 }
 
-.follow > h3 {
+.follow>h3 {
   font-weight: 500;
 }
 
-.follow > div {
+.follow>div {
   display: flex;
   flex-direction: row;
   margin: 10px;
@@ -774,7 +862,7 @@ p {
   padding-right: 20px;
 }
 
-.follow > div > img {
+.follow>div>img {
   align-items: flex-start;
   width: 30px;
   height: 30px;
@@ -782,13 +870,13 @@ p {
   margin-right: 2%;
 }
 
-.follow > div > p {
+.follow>div>p {
   align-self: center;
   margin-right: 2%;
   width: 100%;
 }
 
-.follow > div > button{
+.follow>div>button {
   align-self: center;
   border-radius: 5px;
   padding: 5px;
@@ -802,11 +890,11 @@ p {
   border-bottom: 1px solid #ef9273;
 }
 
-.following > h3 {
+.following>h3 {
   font-weight: 500;
 }
 
-.following > div {
+.following>div {
   display: flex;
   flex-direction: row;
   margin: 10px;
@@ -814,7 +902,7 @@ p {
   padding-right: 20px;
 }
 
-.following > div > img {
+.following>div>img {
   align-items: flex-start;
   width: 30px;
   height: 30px;
@@ -822,13 +910,13 @@ p {
   margin-right: 2%;
 }
 
-.following > div > p {
+.following>div>p {
   align-self: center;
   margin-right: 2%;
   width: 100%;
 }
 
-.following > div > button{
+.following>div>button {
   align-self: center;
   border-radius: 5px;
   padding: 5px;
@@ -837,7 +925,7 @@ p {
   font-weight: 550;
 }
 
-.recommend > h3 {
+.recommend>h3 {
   font-weight: 500;
 }
 
@@ -845,7 +933,7 @@ p {
   padding: 10px;
 }
 
-.recommend > div {
+.recommend>div {
   display: flex;
   flex-direction: row;
   margin: 10px;
@@ -853,7 +941,7 @@ p {
   padding-right: 20px;
 }
 
-.recommend > div > img {
+.recommend>div>img {
   align-items: flex-start;
   width: 30px;
   height: 30px;
@@ -861,13 +949,13 @@ p {
   margin-right: 2%;
 }
 
-.recommend > div > p {
+.recommend>div>p {
   align-self: center;
   margin-right: 2%;
   width: 100%;
 }
 
-.recommend > div > button{
+.recommend>div>button {
   align-self: center;
   border-radius: 5px;
   padding: 5px;
