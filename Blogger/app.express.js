@@ -71,7 +71,8 @@ expressApi.use(bodyParser.urlencoded({
     extended:true
 }));
 expressApi.use(express.json());
-expressApi.use(express.static(path.join(__dirname,'..','Client','public')));
+expressApi.use(express.static(path.join(__dirname,'.','Client','public')));
+expressApi.use(express.static(path.join(__dirname,'.','src','public')));
 
 
 
