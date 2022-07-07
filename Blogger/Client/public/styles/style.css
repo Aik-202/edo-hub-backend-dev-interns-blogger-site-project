@@ -49,10 +49,9 @@ button:focus {
 }
 
 .logo>span {
-  font-family: 'Brush Script MT', cursive;
-  text-shadow: 2px 2px 2px #aaa;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;
-  margin-top: -5px;
+  margin-top: -3px;
   margin-bottom: 20px;
 }
 

@@ -47,8 +47,8 @@ body {
 }
 
 .logo>img {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 40px;
 }
 
 .logo>span {
@@ -617,12 +617,132 @@ p {
   align-items: flex-end;
   justify-content: end;
   margin-right: 10%;
+  font-size: 14px;
+  font-weight: 550;
 }
 
 .followers > ul > li {
   margin: 10px;
   margin-top: 0;
   list-style-type: none;
+}
+
+.follow {
+  border-bottom: 1px solid #ef9273;
+}
+
+.follow > h3 {
+  font-weight: 500;
+}
+
+.follow > div {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px;
+  padding-right: 20px;
+}
+
+.follow > div > img {
+  align-items: flex-start;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 2%;
+}
+
+.follow > div > p {
+  align-self: center;
+  margin-right: 2%;
+  width: 100%;
+}
+
+.follow > div > button{
+  align-self: center;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 550;
+}
+
+.following {
+  padding: 10px;
+  border-bottom: 1px solid #ef9273;
+}
+
+.following > h3 {
+  font-weight: 500;
+}
+
+.following > div {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px;
+  padding-right: 20px;
+}
+
+.following > div > img {
+  align-items: flex-start;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 2%;
+}
+
+.following > div > p {
+  align-self: center;
+  margin-right: 2%;
+  width: 100%;
+}
+
+.following > div > button{
+  align-self: center;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 550;
+}
+
+.recommend > h3 {
+  font-weight: 500;
+}
+
+.recommend {
+  padding: 10px;
+}
+
+.recommend > div {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px;
+  padding-right: 20px;
+}
+
+.recommend > div > img {
+  align-items: flex-start;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 2%;
+}
+
+.recommend > div > p {
+  align-self: center;
+  margin-right: 2%;
+  width: 100%;
+}
+
+.recommend > div > button{
+  align-self: center;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 550;
 }
 
 .content-active {
@@ -763,6 +883,14 @@ p {
 
 .dark_theme .story_card:last-child {
   border-bottom: none;
+}
+
+.dark_theme .follow {
+  border-bottom: 1px solid #353839;
+}
+
+.dark_theme .following {
+  border-bottom: 1px solid #353839;
 }
 
 @media only screen and (max-width: 1200px) {
