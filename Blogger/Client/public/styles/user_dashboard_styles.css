@@ -362,6 +362,103 @@ content>div>button:focus {
   color: #0d0d0d;
 }
 
+.followers_post_card {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ef9273;
+  padding: 15px;
+  padding-top: 0;
+  padding-left: 5%;
+  margin-top: 10px;
+  max-width: 82%;
+}
+
+.followers_post_card:last-child {
+  border-bottom: none;
+}
+
+.followers_data {
+  display: flex;
+  flex-direction: row;
+  max-width: 60%;
+}
+
+.followers_data>img {
+  border-radius: 90%;
+  width: 45px;
+  height: 45px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.followers_data>h5 {
+  align-self: center;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+p {
+  margin: 0;
+}
+
+.followers_story_info {
+  display: flex;
+  flex-direction: row;
+  max-width: 80%;
+}
+
+.followers_story_info>img {
+  align-self: center;
+  padding: 20px;
+  margin: 20px;
+  padding-top: 0;
+  margin-top: 0;
+  padding-right: 0;
+  margin-right: 0;
+  width: 150px;
+  height: 120px;
+  border-radius: 2px;
+}
+
+.followers_story_info>div {
+  margin-bottom: 30px;
+}
+
+.followers_story_engage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  max-width: 60%;
+}
+
+.views{
+  margin-left: 5%;
+  font-size: 15px;
+}
+
+.followers_story_engage > p > i {
+  align-self: center;
+}
+
+.followers_story_engage > p > span {
+  margin-left: 5px;
+}
+
+.followers_story_engage_icons>i>span {
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.followers_story_engage_icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: 20%;
+}
+
 
 .story_card {
   display: flex;
