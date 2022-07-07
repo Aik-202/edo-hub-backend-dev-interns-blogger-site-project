@@ -355,7 +355,12 @@ content>div>button:focus {
   padding: 15px;
   padding-top: 0;
   padding-left: 15%;
-  max-width: 85%;
+  margin-top: 10px;
+  max-width: 82%;
+}
+
+.story_card:last-child {
+  border-bottom: none;
 }
 
 .user_data {
@@ -364,7 +369,7 @@ content>div>button:focus {
   max-width: 60%;
 }
 
-.user_data > img {
+.user_data>img {
   border-radius: 90%;
   width: 45px;
   height: 45px;
@@ -372,23 +377,23 @@ content>div>button:focus {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.user_data > h5 {
+.user_data>h5 {
   align-self: center;
   padding: 5px;
   padding-left: 10px;
 }
 
-p{
+p {
   margin: 0;
 }
 
 .story_info {
   display: flex;
   flex-direction: row;
-  max-width: 60%;
+  max-width: 80%;
 }
 
-.story_info > img {
+.story_info>img {
   align-self: center;
   padding: 20px;
   margin: 20px;
@@ -396,11 +401,12 @@ p{
   margin-top: 0;
   padding-right: 0;
   margin-right: 0;
-  width: 120px;
+  width: 150px;
   height: 120px;
+  border-radius: 2px;
 }
 
-.story_info > div {
+.story_info>div {
   margin-bottom: 30px;
 }
 
@@ -409,13 +415,20 @@ p{
   flex-direction: row;
   align-items: center;
   font-size: 18px;
-  justify-content: space-between;
-  max-width: 40%;
+  max-width: 60%;
 }
 
-.story_engage > i > span {
+.story_engage_icons>i>span {
   font-size: 15px;
   padding-left: 10px;
+}
+
+.story_engage_icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: 20%;
 }
 
 #stats>h1 {
@@ -729,6 +742,15 @@ p{
   border: 1px solid #353839;
   color: white;
 }
+
+.dark_theme .story_card {
+  border-bottom: 1px solid #353839;
+}
+
+.dark_theme .story_card:last-child {
+  border-bottom: none;
+}
+
 @media only screen and (max-width: 1200px) {
   /*
    .logo>span {
