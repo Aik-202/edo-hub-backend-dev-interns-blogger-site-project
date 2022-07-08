@@ -51,7 +51,7 @@ for (let i = 0; i < heading.length; i++) {
 
 const storyHeading = document.getElementsByClassName('story_headings');
 const storiesPost = document.getElementById('stories');
-const bookmarkPost = document.getElementById('bookmarks');
+const bookmarkPost = document.getElementById('Bookmarks');
 for (let i = 0; i < storyHeading.length; i++) {
     storyHeading[i].addEventListener("click", () => {
         if (i === 0) {
@@ -171,6 +171,11 @@ for (let i = 0; i < regular.length; i++) {
         }
     });
 }
+
+const card = document.getElementById("story_card");
+const bookmark = document.getElementById("Bookmarks");
+const clonedNode = card.cloneNode(true);
+bookmark.appendChild(clonedNode);
 
 
 //local storage
