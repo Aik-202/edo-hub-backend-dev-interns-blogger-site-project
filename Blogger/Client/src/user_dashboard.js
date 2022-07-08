@@ -29,21 +29,21 @@ for (let i = 0; i < nav.length; i++) {
 const heading = document.getElementsByClassName('headings');
 const followersPost = document.getElementById('followers_post');
 const recommendedPost = document.getElementById('recommended_post');
-for(let i = 0; i < heading.length; i++) {
+for (let i = 0; i < heading.length; i++) {
     heading[i].addEventListener("click", () => {
-        if(i === 0){
+        if (i === 0) {
             heading[1].classList.remove("heading-active");
             heading[1].classList.add("heading-unactive");
             heading[i].classList.add("heading-active");
-            followersPost.style.display ="block";
+            followersPost.style.display = "block";
             recommendedPost.style.display = "none";
         }
-        if(i === 1){
+        if (i === 1) {
             heading[0].classList.remove("heading-active");
             heading[0].classList.add("heading-unactive");
             heading[i].classList.remove("heading-unactive")
             heading[i].classList.add("heading-active");
-            followersPost.style.display ="none";
+            followersPost.style.display = "none";
             recommendedPost.style.display = "block";
         }
     });
@@ -100,7 +100,7 @@ uploadImage.addEventListener("change", () => {
     reader.addEventListener("load", () => {
         const imageUrl = reader.result;
         uploadImage.previousElementSibling.style.backgroundImage = `url(${imageUrl})`;
-        for(i=0; i < edit.length; i++){
+        for (i = 0; i < edit.length; i++) {
             edit[i].setAttribute("src", imageUrl);
         }
     });
@@ -128,9 +128,19 @@ for (let i = 0; i < Options.length; i++) {
 }
 
 const regular = document.querySelectorAll(".fa-regular");
-for(let i = 0; i < regular.length; i++){
+const thumbs = document.getElementById("thumbs")
+for (let i = 0; i < regular.length; i++) {
     regular[i].addEventListener("click", () => {
         regular[i].classList.toggle("fa-solid");
+        if (thumbs) {
+            let like = Number(regular[i].firstElementChild.innerHTML);
+            like++;
+            regular[i].firstElementChild.innerHTML = like
+            regular[i].addEventListener("click", () => {
+                like--;
+                regular[i].firstElementChild.innerHTML = like
+            })
+        }
     });
 }
 
