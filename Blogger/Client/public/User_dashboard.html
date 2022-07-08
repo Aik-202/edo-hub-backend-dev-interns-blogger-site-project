@@ -76,10 +76,10 @@
   <section class="content content-active Home">
     <input type="search" name="search_box" placeholder="Search">
     <div class="home_heading">
-      <a href="">Following</a>
-      <a href="">Recommended</a>
+      <a class="headings heading-active">Following</a>
+      <a class="headings heading-unactive">Recommended</a>
     </div>
-    <section class="followers_post">
+    <section class="followers_post" id="followers_post">
       <div class="followers_post_card">
         <div class="followers_data">
           <img src="./images/i11.png" alt="" width="80px" height="80px" id="edit">
@@ -257,7 +257,7 @@
         </div>
       </div>
     </section>
-    <section class="followers_post">
+    <section class="recommended_post" id="recommended_post" style="display: none;">
       <div class="followers_post_card">
         <div class="followers_data">
           <img src="./images/i11.png" alt="" width="80px" height="80px" id="edit">
@@ -346,7 +346,7 @@
           </div>
         </div>
       </div>
-      <div class="recommended_followers_post_card" style="display: none;">
+      <div class="followers_post_card">
         <div class="followers_data">
           <img src="./images/i11.png" alt="" width="80px" height="80px" id="edit">
           <h5>Lorem ipsum</h5>
@@ -631,32 +631,44 @@
   </section>
 
   <section class="content followers">
-    <h1>Followers</h1>
+    <h1>Follow List</h1>
     <ul>
       <li>2 Followers</li>
       <li>4 Following</li>
     </ul>
     <div class="follow">
-      <h3>Friends</h3>
+      <h3>Followers</h3>
       <div>
         <img src="./images/image.jpg" alt="" width="80px" height="80px">
         <p>Lorem ipsum</p>
-        <button>Follow</button>
+        <div>
+          <button>Block</button>
+          <button>Follow</button>
+        </div>
       </div>
       <div>
         <img src="./images/image.jpg" alt="" width="80px" height="80px">
         <p>Lorem ipsum</p>
+        <div>
+          <button>Block</button>
+          <button>Unfollow</button>
+        </div>
+      </div>
+      <div>
+        <img src="./images/image.jpg" alt="" width="80px" height="80px">
+        <p>Lorem ipsum</p>
+       <div>
+        <button>Block</button>
         <button>Unfollow</button>
+       </div>
       </div>
       <div>
         <img src="./images/image.jpg" alt="" width="80px" height="80px">
         <p>Lorem ipsum</p>
-        <button>Unfollow</button>
-      </div>
-      <div>
-        <img src="./images/image.jpg" alt="" width="80px" height="80px">
-        <p>Lorem ipsum</p>
+        <div>
+          <button>Block</button>
         <button>Follow</button>
+        </div>
       </div>
     </div>
     <div class="following">

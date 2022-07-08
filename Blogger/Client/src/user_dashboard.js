@@ -26,6 +26,29 @@ for (let i = 0; i < nav.length; i++) {
     });
 }
 
+const heading = document.getElementsByClassName('headings');
+const followersPost = document.getElementById('followers_post');
+const recommendedPost = document.getElementById('recommended_post');
+for(let i = 0; i < heading.length; i++) {
+    heading[i].addEventListener("click", () => {
+        if(i === 0){
+            heading[1].classList.remove("heading-active");
+            heading[1].classList.add("heading-unactive");
+            heading[i].classList.add("heading-active");
+            followersPost.style.display ="block";
+            recommendedPost.style.display = "none";
+        }
+        if(i === 1){
+            heading[0].classList.remove("heading-active");
+            heading[0].classList.add("heading-unactive");
+            heading[i].classList.remove("heading-unactive")
+            heading[i].classList.add("heading-active");
+            followersPost.style.display ="none";
+            recommendedPost.style.display = "block";
+        }
+    });
+}
+
 //collapse dashboard
 collapse.addEventListener("click", () => {
     const sideBar = document.getElementById("side_bar1").classList.add("collapse");
@@ -34,9 +57,9 @@ collapse.addEventListener("click", () => {
     collapse.style.display = "none"
     logoText.previousElementSibling.style.width = "45px";
     logoText.previousElementSibling.style.height = "40px";
-    logoText.previousElementSibling.style.marginLeft = "12px"
+    logoText.previousElementSibling.style.marginLeft = "5px"
     show.style.display = "block";
-    show.style.marginLeft = "-20px";
+    show.style.marginLeft = "-30px";
     for (let i = 0; i < content.length; i++) {
         content[i].style.marginLeft = "10%"
     }
@@ -104,12 +127,15 @@ for (let i = 0; i < Options.length; i++) {
     });
 }
 
+const regular = document.querySelectorAll(".fa-regular");
+for(let i = 0; i < regular.length; i++){
+    regular[i].addEventListener("click", () => {
+        regular[i].classList.toggle("fa-solid");
+    });
+}
 
 
-
-
-
- //local storage
+//local storage
 //  var uploadedImage
 //  if (Options[i].classList.toggle = "success") {
 //      uploadedImage = "upload success";
