@@ -533,6 +533,41 @@ p {
   display: block;
 }
 
+.story_heading {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  border-bottom: 1px solid #ef9273;
+  width: 90%;
+}
+
+.story_headings {
+  font-size: 15px;
+  margin: 10px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #0d0d0d;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.story_heading>a:last-child {
+  margin-left: 20px;
+}
+
+.story_headings:hover {
+  color: #0d0d0d;
+}
+
+.story_heading-unactive {
+  color: #757575;
+}
+
+.story_heading-active{
+  color: #0d0d0d;
+  font-weight: 550;
+}
+
 .story_card {
   display: flex;
   flex-direction: column;
