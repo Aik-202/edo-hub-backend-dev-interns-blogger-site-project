@@ -9,7 +9,7 @@ const OAuth2 = google.auth.OAuth2;
 const modelForRegistration=require(path.join('..','Model','userDetails.model.js'));
 const saltRounds=10;
 const filedot=modelForRegistration.register;
-console.log(filedot);
+
 
 
 
@@ -30,7 +30,7 @@ if(!errorMessage.isEmpty()){
 const formDetails= req.body;
 const findEmail=formDetails.email;
 const emailAdd=formDetails.email;
-console.log(req.body.password);
+
 filedot.find({emailAddress:emailAdd},(error,data)=>{
     if(error){
         console.log(error)

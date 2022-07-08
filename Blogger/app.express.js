@@ -48,7 +48,7 @@ if (expressApi.get('env') === 'production') {
 expressApi.use(session(sessionVar));
 
 
-console.log(expire)
+
 const bodyParser=require('body-parser');
 
 
