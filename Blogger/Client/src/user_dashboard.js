@@ -128,18 +128,23 @@ for (let i = 0; i < Options.length; i++) {
 }
 
 const regular = document.querySelectorAll(".fa-regular");
-const thumbs = document.getElementById("thumbs")
+const thumbs = document.querySelectorAll("#thumbs");
+const likes = document.querySelectorAll("#like");
 for (let i = 0; i < regular.length; i++) {
     regular[i].addEventListener("click", () => {
         regular[i].classList.toggle("fa-solid");
-        if (thumbs) {
-            let like = Number(regular[i].firstElementChild.innerHTML);
-            like++;
-            regular[i].firstElementChild.innerHTML = like
-            regular[i].addEventListener("click", () => {
-                like--;
-                regular[i].firstElementChild.innerHTML = like
-            })
+        for (let j = 0; j < thumbs.length; j++) {
+            if (regular[i] == thumbs[j]) {
+                let like = Number(regular[i].firstElementChild.innerHTML);
+                like++;
+                regular[i].firstElementChild.innerHTML = like;
+                likes[j].firstElementChild.innerHTML = "Unlike";
+                regular[i].addEventListener("click", () => {
+                    like--;
+                    regular[i].firstElementChild.innerHTML = like;
+                    likes[j].firstElementChild.innerHTML = "Like";
+                })
+            }
         }
     });
 }
