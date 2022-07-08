@@ -49,6 +49,29 @@ for (let i = 0; i < heading.length; i++) {
     });
 }
 
+const storyHeading = document.getElementsByClassName('story_headings');
+const storiesPost = document.getElementById('stories');
+const bookmarkPost = document.getElementById('bookmarks');
+for (let i = 0; i < storyHeading.length; i++) {
+    storyHeading[i].addEventListener("click", () => {
+        if (i === 0) {
+            storyHeading[1].classList.remove("story_heading-active");
+            storyHeading[1].classList.add("story_heading-unactive");
+            storyHeading[i].classList.add("story_heading-active");
+            storiesPost.style.display = "block";
+            bookmarkPost.style.display = "none";
+        }
+        if (i === 1) {
+            storyHeading[0].classList.remove("story_heading-active");
+            storyHeading[0].classList.add("story_heading-unactive");
+            storyHeading[i].classList.remove("story_heading-unactive")
+            storyHeading[i].classList.add("story_heading-active");
+            storiesPost.style.display = "none";
+            bookmarkPost.style.display = "block";
+        }
+    });
+}
+
 //collapse dashboard
 collapse.addEventListener("click", () => {
     const sideBar = document.getElementById("side_bar1").classList.add("collapse");
