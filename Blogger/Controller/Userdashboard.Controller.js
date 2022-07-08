@@ -10,7 +10,7 @@ const authenticate=(req,res,next)=>{
 }
 
 function getUserDashboard(req,res){
-res.sendFile(path.join(__dirname,'..','..','Client','public','User_dashboard.html'));
+res.sendFile(path.join(__dirname,'..','Client','public','User_dashboard.html'));
 }
 module.exports={
     getUserDashboard,

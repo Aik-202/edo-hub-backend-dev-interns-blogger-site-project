@@ -4,7 +4,7 @@ dotenv.config(path.join(__dirname,'.env'));
 
 
 function getForgetPassword(req,res){
-    res.redirect('/forgotpassword');
+    res.sendFile(path.join(__dirname,'..','Client','public','Forgot_password.html'));
     }
 function PostForgetPassword(req,res){
     // redirect the user to a page that tells him/her to check their email for a link ('check your email we just sent you a link')

@@ -5,7 +5,7 @@ function getAdminDashboard(req,res){
 
            console.log(error);
         }
-        res.sendFile(path.join(__dirname,'..','..','Client','public','Admin_dashboard.html'));
+        res.sendFile(path.join(__dirname,'..','Client','public','Admin_dashboard.html'));
     });
   
 }
