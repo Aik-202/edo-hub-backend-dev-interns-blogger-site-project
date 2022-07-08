@@ -1,4 +1,6 @@
 const path=require('path');
+const dotenv=require('dotenv');
+dotenv.config(path.join(__dirname,'.env'));
 const bcrypt=require('bcrypt');
 const nodemailer = require("nodemailer");
 const {validationResult}=require('express-validator');
@@ -12,7 +14,7 @@ console.log(filedot);
 
 
 function RegisterRouterGetFunction(req,res){
-  res.sendFile(path.join(__dirname,'..','..','Client','public','Register_page.html'));
+  res.sendFile(path.join(__dirname,'..','Client','public','Register_page.html'));
 }
 
 async function RegisterRouterPostFunction (req,res){

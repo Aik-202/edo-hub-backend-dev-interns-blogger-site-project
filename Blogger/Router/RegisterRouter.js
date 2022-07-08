@@ -12,7 +12,7 @@ RegisterRouter.get('/',RegisterControllerFile.RegisterRouterGetFunction)
 
 RegisterRouter.post('/',[
     check('email','Invalid Email').isEmail(),
-    check('user_password','Please, provide a password that is greater than 8 and less than 16').isLength({
+    check('user_password','Please, enter a password that is greater than 8 and less than 16 characters').isLength({
         min:8,
         max:16
     })

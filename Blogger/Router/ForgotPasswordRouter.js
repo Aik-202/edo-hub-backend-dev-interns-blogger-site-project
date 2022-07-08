@@ -1,6 +1,6 @@
 const express=require('express');
 const path=require('path');
-const ForgetPasswordControllerFile= require(path.join(__dirname,'..','Controller','ForgetPassword.Controller.js'));
+const ForgetPasswordControllerFile= require(path.join(__dirname,'..','Controller','ForgotPassword.Controller.js'));
 
 const forgetPasswordRouter=express.Router();
 

@@ -1,3 +1,8 @@
+const path=require('path');
+const dotenv=require('dotenv');
+dotenv.config(path.join(__dirname,'.env'));
+
+
 function getForgetPassword(req,res){
     res.redirect('/forgotpassword');
     }

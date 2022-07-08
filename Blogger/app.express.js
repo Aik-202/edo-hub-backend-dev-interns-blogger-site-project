@@ -1,9 +1,9 @@
+const path=require('path');
 const dotenv =require('dotenv')
-dotenv.config('../.env');
+dotenv.config(path.join(__dirname,'.env'));
 
 const express=require('express');
 
-const path=require('path');
 
 const expressApi=express();
 

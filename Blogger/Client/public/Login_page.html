@@ -42,16 +42,16 @@
     <div class="Login_content">
       <h2>WELCOME BACK</h2>
       <h6>Please login to continue</h6>
-      <form action="" method="" accept-charset="utf-8">
+      <form action="/Login" method="POST" accept-charset="utf-8">
         <label for="username">Enter Your Username</label>
         <input type="text" name="username" id="username" />
-        <label for="user's_password">Enter Your Password</label>
+        <label for="user_password">Enter Your Password</label>
         <a href="email_confirmation.html">Forgot Password?</a>
-        <input type="password" name="user's_password" id="user's_password" />
+        <input type="password" name="user_password" id="user's_password" />
         <div class="user_admin_option">
-          <input type="radio" id="as_user" name="privilege" checked="">
+          <input type="radio" id="as_user" name="privilege" checked=""  value="User">
           <label for="as_user">User</label><br>
-          <input type="radio" id="as_admin" name="privilege">
+          <input type="radio" id="as_admin" name="privilege" value="Admin">
           <label for="as_admin">Admin</label>
         </div>
         <button type="submit">LOGIN</button>
