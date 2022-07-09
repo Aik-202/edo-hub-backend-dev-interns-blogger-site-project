@@ -152,6 +152,7 @@ for (let i = 0; i < Options.length; i++) {
 
 const regular = document.querySelectorAll(".fa-regular");
 const thumbs = document.querySelectorAll("#thumbs");
+const markBook = document.getElementById("markbook");
 const likes = document.querySelectorAll("#like");
 for (let i = 0; i < regular.length; i++) {
     regular[i].addEventListener("click", () => {
@@ -168,16 +169,16 @@ for (let i = 0; i < regular.length; i++) {
                     likes[j].firstElementChild.innerHTML = "Like";
                 })
             }
+            if (regular[i] == markBook) {
+                const followersPost = document.getElementById('followers_post_card');
+                const bookmark = document.getElementById("Bookmarks");
+                const clonedNode = followersPost.cloneNode(true);
+                return bookmark.appendChild(clonedNode);
+            }
         }
     });
 }
-
-const card = document.getElementById("story_card");
-const bookmark = document.getElementById("Bookmarks");
-const clonedNode = card.cloneNode(true);
-bookmark.appendChild(clonedNode);
-
-
+     
 //local storage
 //  var uploadedImage
 //  if (Options[i].classList.toggle = "success") {
