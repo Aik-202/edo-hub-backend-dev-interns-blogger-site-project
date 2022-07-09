@@ -4,7 +4,7 @@ const bcrypt=require('bcrypt');
 const express=require('express');
 const app=express();
 
-const userDetails=require(path.join(__dirname,'..','Model','userDetails.model.js'));
+const userDetails=require(path.join('..','Model','userDetails.model.js'));
 const documentCheck=userDetails.register;
 
 
@@ -55,6 +55,7 @@ function LoginRouterPostFunction(req,res){
         }
     })
 }
+
     
 module.exports={
     LoginRouterGetFunction,

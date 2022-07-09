@@ -7,6 +7,8 @@ const express=require('express');
 
 const expressApi=express();
 
+const cookieParser=require('cookie-parser');
+
 
 
 let count=0;
@@ -71,8 +73,9 @@ expressApi.use(bodyParser.urlencoded({
     extended:true
 }));
 expressApi.use(express.json());
+expressApi.use(cookieParser());
 expressApi.use(express.static(path.join(__dirname,'.','Client','public')));
-expressApi.use(express.static(path.join(__dirname,'.','src','public')));
+
 
 
 
