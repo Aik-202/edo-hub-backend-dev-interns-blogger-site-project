@@ -1,6 +1,7 @@
 const express=require('express');
+const path=require('path');
 
-const LoginControllerFile= require('../Controller/Login.Controller.js');
+const LoginControllerFile= require(path.join(__dirname,'..','Controller','Login.Controller.js'));
 
 const LoginRouter=express.Router();
 
