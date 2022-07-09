@@ -1,37 +1,36 @@
-require('dotenv').config()
-const express=require('express');
-const bodyParser=require('body-parser');
 const path=require('path');
 
-const app=express();
+const apiExpress=require(path.join(__dirname,'.','./app.express'));
 
-const LoginRouterFile=require('./Router/LoginRouter');
-const HomeRouterFile=require('./Router/HomeRouter');
-const RegisterRouterFile=require('./Router/RegisterRouter');
+const server=require('http').createServer(apiExpress.expressApi);
 
-app.use(bodyParser.urlencoded({
-    extended:true
-}));
-app.use(express.json());
-
-//app.set('view engine','hbs');
-//app.set('views', path.join(__dirname,'..','Client','views'));
-
-app.use(express.static(path.join(__dirname,'.','Client','public')));
-
-app.use('/Login',LoginRouterFile.LoginRouter);
-
-app.use('/Home',HomeRouterFile.HomeRouter);
-
-app.use('/Register',RegisterRouterFile.RegisterRouter);
+const {Server}=require('socket.io')
+const io=new Server(server);
 
 
-app.listen('5000',()=>{
+
+const sockets=require(path.join(__dirname,'.','socket'));
+
+
+
+sockets.socketOperations(io);
+
+
+
+
+server.listen('8000',()=>{
     console.log('server running');
 });
 
-app.get('*', (req, res) =>{
-    res.json({
-        error: "page not found"
-    })
-})
+
+
+
+
+
+
+
+
+
+
+
+

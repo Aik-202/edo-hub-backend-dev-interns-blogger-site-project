@@ -1,6 +1,7 @@
 const express=require('express');
+const path=require('path');
 
-const HomeControllerFile= require('../Controller/Home.Controller.js');
+const HomeControllerFile= require(path.join('..','Controller','Home.Controller.js'));
 
 const HomeRouter=express.Router();
 
