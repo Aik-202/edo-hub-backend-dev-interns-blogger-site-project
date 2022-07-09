@@ -1199,6 +1199,10 @@ p {
   border-color: #353839 transparent transparent transparent;
 }
 
+.dark_theme .story>input{
+  border: 2px solid #353839;
+}
+
 .dark_theme .story_heading-unactive {
   color: #757575;
 }
