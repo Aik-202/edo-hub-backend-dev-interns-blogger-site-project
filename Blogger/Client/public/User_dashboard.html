@@ -17,11 +17,8 @@
 <body>
   <header class="header">
     <div class="inside_header">
-      <h1 class="logo"><img src="./images/logo2.png" alt="" width="30px" height="30px"><span
-          id="logo_text">BLOGGER</span></h1>
-      <i class="fa-solid fa-xmark" id="collapse"></i>
-      <i class="fa-solid fa-bars" id="show"></i>
       <ul class="headers_list">
+        <h1 class="logo" id="logo"><img src="./images/logo2.png" alt="" width="30px" height="30px"><span id="logo_text">BLOGGER</span></h1>
         <li><a id="accessibility" class="header_link" onclick="darkMode()"> <i class="fas fa-moon"></i> <span
               id="mode">Dark Mode</span> </a> </li>
         <li><a id="accessibility2"><b>tT</b> Increase Font</a></li>
@@ -29,6 +26,12 @@
     </div>
   </header>
   <section class="side_bar1" id="side_bar1">
+    <div>
+      <i class="fa-solid fa-xmark" id="collapse"></i>
+      <i class="fa-solid fa-bars" id="show"></i>
+      <h1 class="logo"><img src="./images/logo2.png" alt="" width="30px" height="30px"><span
+          id="logo_text">BLOGGER</span></h1>
+    </div>
     <div class="welcome">
       <img src="./images/i11.png" alt="" width="80px" height="80px" id="edit">
       <div>
@@ -604,7 +607,7 @@
     <section class="Bookmarks" id="Bookmarks" style="display: none;"></section>
   </section>
 
-  <section class="content">
+  <section class="content stat">
     <h1>Account Summary</h1>
     <h2>Created account 21st of June 2021</h2>
     <div class="stat_row">
@@ -638,7 +641,7 @@
   </section>
 
   <section class="content followers">
-    <h1>Follow List</h1>
+    <h1>Assurance Ikogwe</h1>
     <ul>
       <li>2 Followers</li>
       <li>4 Following</li>
@@ -664,17 +667,17 @@
       <div>
         <img src="./images/image.jpg" alt="" width="80px" height="80px">
         <p>Lorem ipsum</p>
-       <div>
-        <button>Block</button>
-        <button>Unfollow</button>
-       </div>
+        <div>
+          <button>Block</button>
+          <button>Unfollow</button>
+        </div>
       </div>
       <div>
         <img src="./images/image.jpg" alt="" width="80px" height="80px">
         <p>Lorem ipsum</p>
         <div>
           <button>Block</button>
-        <button>Follow</button>
+          <button>Follow</button>
         </div>
       </div>
     </div>
@@ -731,7 +734,7 @@
     </div>
   </section>
 
-  <section class="content">
+  <section class="content Publish">
     <div class="publish_options">
       <button>SCHEDULE PUBLISH</button>
       <button>PUBLISH NOW</button>
@@ -771,8 +774,8 @@
         <a href="">See the full list</a>
     </section>
     -->
-     <script src="/socket.io/socket.io.js"></script>
-    <script src="../src/UserdashRoute.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="../src/UserdashRoute.js"></script>
 
 
 </body>
