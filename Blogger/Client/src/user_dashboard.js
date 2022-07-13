@@ -1,3 +1,5 @@
+// comments = document.querySelectorAll(".comment")
+// console.log(comments.length)
 //userdashboard navigation
 const nav = document.querySelectorAll(".nav");
 const content = document.querySelectorAll(".content");
@@ -82,7 +84,7 @@ collapse.addEventListener("click", () => {
     logoText.previousElementSibling.style.height = "40px";
     logoText.previousElementSibling.style.marginLeft = "5px"
     show.style.display = "block";
-    show.style.marginLeft = "-30px";
+    show.style.marginLeft = "-165px";
     for (let i = 0; i < content.length; i++) {
         content[i].style.marginLeft = "10%"
     }
@@ -149,6 +151,8 @@ for (let i = 0; i < Options.length; i++) {
         }
     });
 }
+
+// var numberOfLikes = []
 
 const regular = document.querySelectorAll(".fa-regular");
 const thumbs = document.querySelectorAll("#thumbs");

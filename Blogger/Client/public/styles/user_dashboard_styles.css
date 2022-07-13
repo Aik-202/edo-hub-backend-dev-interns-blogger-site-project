@@ -6,14 +6,10 @@ body {
 
 .header {
   background-color: transparent;
-  position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  top: 0;
-  left: 75%;
-  width: 100%;
-  height: 7.95%;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .inside_header {
@@ -200,7 +196,7 @@ h2 {
   flex-direction: column;
   margin-left: 23%;
   margin-right: 0;
-  margin-top: 5%;
+  margin-top: -2%;
   font-family: "Nunito", sans-serif;
 }
 
@@ -434,6 +430,7 @@ p {
   justify-content: space-between;
   font-size: 18px;
   max-width: 60%;
+  cursor: pointer;
 }
 
 .views {
@@ -531,6 +528,65 @@ p {
 .fa-trash-can:hover #delete {
   display: block;
 }
+
+.add_comment{
+  /* display: none; */
+  max-width: 80%;
+  margin-top: 20px;
+  align-self: center;
+}
+
+.comment{
+  display: flex;
+  flex-direction: column;
+}
+
+.comment>div {
+  display: flex;
+  flex-direction: row;
+}
+
+.comment>div>img{
+  align-self: center;
+  border-radius: 90%;
+  width: 35px;
+  height: 35px;
+  margin-right: 2%;
+}
+
+.comment>div>p {
+  align-self: center;
+}
+
+#users_comment {
+  font-size: 13px;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.comment_reaction{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.comment_reaction > p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 5%;
+}
+
+.comment_reaction > i {
+  margin-right: 5%;
+}
+
+.comment_reaction > i > span {
+  font-size: 13px;
+  margin-left: 8px;
+}
+
 
 .story_heading {
   display: flex;
@@ -649,6 +705,7 @@ p {
   justify-content: space-between;
   font-size: 18px;
   max-width: 60%;
+  cursor: pointer;
 }
 
 .views {
@@ -978,6 +1035,10 @@ p {
   padding-left: 5px;
 }
 
+.collapse .logo>span {
+  display: none;
+}
+
 .collapse .welcome {
   margin-left: -8%;
 }
@@ -1020,6 +1081,14 @@ p {
 }
 
 .dark_theme .inside_header>.fa-xmark {
+  color: white;
+}
+
+.dark_theme .fa-xmark {
+  color: white;
+}
+
+.dark_theme #show{
   color: white;
 }
 
@@ -1275,26 +1344,6 @@ p {
     margin-top: -6%;
     margin-left: -3.5%;
   }
-
-  /*
-   .logo>span {
-     margin-top: -5px;
-   }
- 
-   .side_bar1 {
-     margin-top: -50px;
-     width: 21%;
-     margin-right: 5%;
-   }
- 
-   .content {
-     margin-top: -40px;
-   }
- 
-   .navigation>li {
-     width: 100%;
-   }
- */
 }
 
 @media only screen and (max-width: 400px) {
