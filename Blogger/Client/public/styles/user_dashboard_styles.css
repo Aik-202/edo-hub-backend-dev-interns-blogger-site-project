@@ -587,6 +587,37 @@ p {
   margin-left: 8px;
 }
 
+.add_comment>form {
+  position: fixed;
+  bottom: 10px;
+  border: 1px solid #ef9273;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: white;
+  padding: 0;
+  width: 50%;
+  max-width: 50%;
+}
+
+.add_comment> form> textarea {
+  bottom: 0;
+  max-width: 100%;
+  width: 100%;
+  border: none;
+  padding-left: 12px;
+  padding-top: 10px;
+  margin: 0;
+  resize: none;
+}
+
+.add_comment> form> button {
+  align-self: center;
+  border: none;
+  background-color: transparent;
+}
 
 .story_heading {
   display: flex;
@@ -1233,6 +1264,16 @@ p {
 
 .dark_theme .story_heading-active {
   color: white;
+}
+
+.dark_theme .add_comment>form {
+  border: 1px solid #353535;
+}
+
+.dark_theme .add_comment>form>button {
+  color: blue;
+  font-weight: 700;
+  font-size: 15px;
 }
 
 #logo {
