@@ -587,7 +587,7 @@ p {
   margin-left: 8px;
 }
 
-.add_comment>form {
+.comment_input {
   position: fixed;
   bottom: 10px;
   border: 1px solid #ef9273;
@@ -602,7 +602,7 @@ p {
   max-width: 50%;
 }
 
-.add_comment> form> textarea {
+.comment_input> textarea {
   bottom: 0;
   max-width: 100%;
   width: 100%;
@@ -613,10 +613,15 @@ p {
   resize: none;
 }
 
-.add_comment> form> button {
+.comment_input > button {
   align-self: center;
   border: none;
   background-color: transparent;
+}
+
+.comment_input > button:focus{
+  box-shadow: none;
+  background-color: none;
 }
 
 .story_heading {
@@ -1270,11 +1275,11 @@ p {
   color: white;
 }
 
-.dark_theme .add_comment>form {
+.dark_theme .comment_input {
   border: 1px solid #353535;
 }
 
-.dark_theme .add_comment>form>button {
+.dark_theme .comment_input>button {
   color: blue;
   font-weight: 700;
   font-size: 15px;

@@ -155,6 +155,8 @@ for (let i = 0; i < Options.length; i++) {
 // var numberOfLikes = []
 
 const addComment = document.querySelectorAll(".add_comment");
+const sendComment = document.querySelectorAll(".send_comment");
+const actualComment = document.querySelectorAll(".comment")
 const comments = document.querySelectorAll(".fa-comment")
 const regular = document.querySelectorAll(".fa-regular");
 const thumbs = document.querySelectorAll("#thumbs");
@@ -183,6 +185,9 @@ for (let i = 0; i < regular.length; i++) {
             }
             if (regular[i] == comments[j]){
                 addComment[j].classList.toggle("add_comment-active");
+                sendComment[j].addEventListener("click", () => {
+                    addComment[j].appendChild(actualComment[j].cloneNode(true));
+                });
             }
         }
     });
