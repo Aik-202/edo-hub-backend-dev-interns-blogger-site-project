@@ -154,6 +154,8 @@ for (let i = 0; i < Options.length; i++) {
 
 // var numberOfLikes = []
 
+const addComment = document.querySelectorAll(".add_comment");
+const comments = document.querySelectorAll(".fa-comment")
 const regular = document.querySelectorAll(".fa-regular");
 const thumbs = document.querySelectorAll("#thumbs");
 const markBook = document.getElementById("markbook");
@@ -178,6 +180,9 @@ for (let i = 0; i < regular.length; i++) {
                 const bookmark = document.getElementById("Bookmarks");
                 const clonedNode = followersPost.cloneNode(true);
                 return bookmark.appendChild(clonedNode);
+            }
+            if (regular[i] == comments[j]){
+                addComment[j].classList.toggle("add_comment-active");
             }
         }
     });

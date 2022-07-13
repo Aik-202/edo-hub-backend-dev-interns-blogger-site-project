@@ -530,7 +530,7 @@ p {
 }
 
 .add_comment{
-  /* display: none; */
+  display: none;
   max-width: 80%;
   margin-top: 20px;
   align-self: center;
@@ -1058,6 +1058,10 @@ p {
   font-size: 13px;
   font-weight: 600;
   color: #0d0d0d;
+}
+
+.add_comment-active{
+  display: block;
 }
 
 .collapse {
