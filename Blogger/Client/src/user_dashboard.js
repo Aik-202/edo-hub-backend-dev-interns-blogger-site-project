@@ -107,7 +107,7 @@ show.addEventListener("click", () => {
 
 //variables for uploading image 
 const uploadImage = document.getElementById("upload_image");
-const edit = document.querySelectorAll("#edit");
+const edit = document.querySelectorAll(".edit");
 const camera = document.getElementById("camera");
 const imageOptions = document.getElementById("image_options");
 
@@ -162,6 +162,8 @@ const regular = document.querySelectorAll(".fa-regular");
 const thumbs = document.querySelectorAll("#thumbs");
 const markBook = document.getElementById("markbook");
 const likes = document.querySelectorAll("#like");
+const userImage = document.getElementById("user_image");
+const userName = document.getElementById("user_name");
 for (let i = 0; i < regular.length; i++) {
     regular[i].addEventListener("click", () => {
         regular[i].classList.toggle("fa-solid");
@@ -186,7 +188,10 @@ for (let i = 0; i < regular.length; i++) {
             if (regular[i] == comments[j]){
                 addComment[j].classList.toggle("add_comment-active");
                 sendComment[j].addEventListener("click", () => {
-                    addComment[j].appendChild(actualComment[j].cloneNode(true));
+                    userComment = actualComment[j].cloneNode(true)
+                    addComment[j].appendChild(userComment);
+                    userComment.firstElementChild.firstElementChild.src = userImage.src;
+                    userComment.firstElementChild.firstElementChild.nextElementSibling.innerHTML = userName.innerHTML;
                 });
             }
         }
