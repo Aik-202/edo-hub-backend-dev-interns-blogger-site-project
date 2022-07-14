@@ -188,6 +188,7 @@ for (let i = 0; i < regular.length; i++) {
             }
             if (regular[i] == comments[j]){
                 addComment[j].classList.toggle("add_comment-active");
+                // addComment[j--].classList.remove("add_comment-active");
                 sendComment[j].addEventListener("click", () => {
                     if(commentInput[j].firstElementChild.value){
                         userComment = actualComment[j].cloneNode(true)
@@ -196,6 +197,10 @@ for (let i = 0; i < regular.length; i++) {
                         userComment.firstElementChild.firstElementChild.nextElementSibling.innerHTML = userName.innerHTML;
                         userComment.firstElementChild.nextElementSibling.innerHTML = commentInput[j].firstElementChild.value;
                         userComment.lastElementChild.lastElementChild.style.display = "block";
+                        userComment.lastElementChild.lastElementChild.addEventListener("click", () =>{
+                            addComment[j].removeChild(userComment);
+                        });
+                        commentInput[j].firstElementChild.value = "";
                     } else {
                         var pos = 20;
                         const move = () => {
