@@ -624,6 +624,10 @@ p {
   background-color: none;
 }
 
+.add_comment>div:last-child {
+  color: green;
+}
+
 .story_heading {
   display: flex;
   flex-direction: row;
@@ -1283,6 +1287,12 @@ p {
   color: blue;
   font-weight: 700;
   font-size: 15px;
+}
+
+.dark_theme .comment_input > button:focus{
+  box-shadow: none;
+  background-color: transparent;
+  border: none;
 }
 
 #logo {
