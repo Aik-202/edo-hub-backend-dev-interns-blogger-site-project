@@ -159,6 +159,7 @@ const sendComment = document.querySelectorAll(".send_comment");
 const actualComment = document.querySelectorAll(".comment")
 const comments = document.querySelectorAll(".fa-comment")
 const regular = document.querySelectorAll(".fa-regular");
+const commentInput = document.querySelectorAll(".comment_input");
 const thumbs = document.querySelectorAll("#thumbs");
 const markBook = document.getElementById("markbook");
 const likes = document.querySelectorAll("#like");
@@ -192,6 +193,7 @@ for (let i = 0; i < regular.length; i++) {
                     addComment[j].appendChild(userComment);
                     userComment.firstElementChild.firstElementChild.src = userImage.src;
                     userComment.firstElementChild.firstElementChild.nextElementSibling.innerHTML = userName.innerHTML;
+                    userComment.firstElementChild.nextElementSibling.innerHTML = commentInput[j].firstElementChild.value;
                 });
             }
         }
