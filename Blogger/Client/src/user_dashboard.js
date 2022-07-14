@@ -189,11 +189,26 @@ for (let i = 0; i < regular.length; i++) {
             if (regular[i] == comments[j]){
                 addComment[j].classList.toggle("add_comment-active");
                 sendComment[j].addEventListener("click", () => {
-                    userComment = actualComment[j].cloneNode(true)
-                    addComment[j].appendChild(userComment);
-                    userComment.firstElementChild.firstElementChild.src = userImage.src;
-                    userComment.firstElementChild.firstElementChild.nextElementSibling.innerHTML = userName.innerHTML;
-                    userComment.firstElementChild.nextElementSibling.innerHTML = commentInput[j].firstElementChild.value;
+                    if(commentInput[j].firstElementChild.value){
+                        userComment = actualComment[j].cloneNode(true)
+                        addComment[j].appendChild(userComment);
+                        userComment.firstElementChild.firstElementChild.src = userImage.src;
+                        userComment.firstElementChild.firstElementChild.nextElementSibling.innerHTML = userName.innerHTML;
+                        userComment.firstElementChild.nextElementSibling.innerHTML = commentInput[j].firstElementChild.value;
+                        userComment.lastElementChild.lastElementChild.style.display = "block";
+                    } else {
+                        var pos = 20;
+                        const move = () => {
+                            pos= pos + 5
+                            commentInput[j].style.bottom = pos+"px";
+                            commentInput[j].style.bottom = pos+"px";
+                            if (pos >= 30){
+                                clearInterval(timer);
+                                commentInput[j].style.bottom = "10px";
+                            }
+                        }
+                        var timer = setInterval(move,500);
+                    }
                 });
             }
         }

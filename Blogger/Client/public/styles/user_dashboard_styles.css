@@ -628,6 +628,10 @@ p {
   color: green;
 }
 
+.comment_reaction>i:last-child{
+  display: none;
+}
+
 .story_heading {
   display: flex;
   flex-direction: row;
