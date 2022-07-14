@@ -1077,6 +1077,10 @@ p {
   display: block;
 }
 
+.cloned>div:last-child>i:last-child{
+  display: block;
+}
+
 .collapse {
   width: 6%;
   padding-top: -92%;

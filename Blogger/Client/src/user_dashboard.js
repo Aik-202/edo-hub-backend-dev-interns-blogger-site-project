@@ -189,18 +189,25 @@ for (let i = 0; i < regular.length; i++) {
             if (regular[i] == comments[j]){
                 addComment[j].classList.toggle("add_comment-active");
                 // addComment[j--].classList.remove("add_comment-active");
+                var count = 0
                 sendComment[j].addEventListener("click", () => {
+                    count = count + 1
                     if(commentInput[j].firstElementChild.value){
                         userComment = actualComment[j].cloneNode(true)
+                        userComment.classList.add("cloned")
+                        userComment.lastElementChild.lastElementChild.classList.add("delete_cloned");
                         addComment[j].appendChild(userComment);
                         userComment.firstElementChild.firstElementChild.src = userImage.src;
                         userComment.firstElementChild.firstElementChild.nextElementSibling.innerHTML = userName.innerHTML;
                         userComment.firstElementChild.nextElementSibling.innerHTML = commentInput[j].firstElementChild.value;
-                        userComment.lastElementChild.lastElementChild.style.display = "block";
-                        userComment.lastElementChild.lastElementChild.addEventListener("click", () =>{
-                            addComment[j].removeChild(userComment);
-                        });
                         commentInput[j].firstElementChild.value = "";
+                        let deleteComment = document.querySelectorAll(".delete_cloned");    
+                        let cloned = document.querySelectorAll(".cloned");
+                        for(let k = 0; k < deleteComment.length; k++){ 
+                            deleteComment[k].addEventListener("click", () =>{
+                            cloned[k].remove();
+                            });
+                        }             
                     } else {
                         var pos = 20;
                         const move = () => {
