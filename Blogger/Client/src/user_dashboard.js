@@ -1,5 +1,6 @@
 // comments = document.querySelectorAll(".comment")
 // console.log(comments.length)
+
 //userdashboard navigation
 const nav = document.querySelectorAll(".nav");
 const content = document.querySelectorAll(".content");
@@ -165,6 +166,8 @@ const markBook = document.getElementById("markbook");
 const likes = document.querySelectorAll("#like");
 const userImage = document.getElementById("user_image");
 const userName = document.getElementById("user_name");
+var count = 0
+var k = 0
 for (let i = 0; i < regular.length; i++) {
     regular[i].addEventListener("click", () => {
         regular[i].classList.toggle("fa-solid");
@@ -187,11 +190,15 @@ for (let i = 0; i < regular.length; i++) {
                 return bookmark.appendChild(clonedNode);
             }
             if (regular[i] == comments[j]){
-                addComment[j].classList.toggle("add_comment-active");
-                // addComment[j--].classList.remove("add_comment-active");
-                var count = 0
+                addComment[j].classList.toggle("add_comment-active")
+                for(let k = 0; k < addComment.length; k++){
+                    if(addComment[k] !== addComment[j] && addComment[k].classList.contains("add_comment-active")){
+                        addComment[k].classList.remove("add_comment-active")
+                        comments[k].classList.remove("fa-solid")
+                    }
+                }
+                
                 sendComment[j].addEventListener("click", () => {
-                    count = count + 1
                     if(commentInput[j].firstElementChild.value){
                         userComment = actualComment[j].cloneNode(true)
                         userComment.classList.add("cloned")
