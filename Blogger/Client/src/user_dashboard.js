@@ -190,11 +190,11 @@ for (let i = 0; i < regular.length; i++) {
                 return bookmark.appendChild(clonedNode);
             }
             if (regular[i] == comments[j]){
-                addComment[j].classList.toggle("add_comment-active")
+                addComment[j].classList.toggle("add_comment-active");
                 for(let k = 0; k < addComment.length; k++){
                     if(addComment[k] !== addComment[j] && addComment[k].classList.contains("add_comment-active")){
-                        addComment[k].classList.remove("add_comment-active")
-                        comments[k].classList.remove("fa-solid")
+                        addComment[k].classList.remove("add_comment-active");
+                        comments[k].classList.remove("fa-solid");
                     }
                 }
                 
