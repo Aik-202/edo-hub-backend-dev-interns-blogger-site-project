@@ -157,6 +157,7 @@ for (let i = 0; i < Options.length; i++) {
 
 const addComment = document.querySelectorAll(".add_comment");
 const sendComment = document.querySelectorAll(".send_comment");
+console.log(sendComment)
 const actualComment = document.querySelectorAll(".comment")
 const comments = document.querySelectorAll(".fa-comment")
 const regular = document.querySelectorAll(".fa-regular");
@@ -190,6 +191,7 @@ for (let i = 0; i < regular.length; i++) {
                 return bookmark.appendChild(clonedNode);
             }
             if (regular[i] == comments[j]){
+
                 addComment[j].classList.toggle("add_comment-active");
                 for(let k = 0; k < addComment.length; k++){
                     if(addComment[k] !== addComment[j] && addComment[k].classList.contains("add_comment-active")){
