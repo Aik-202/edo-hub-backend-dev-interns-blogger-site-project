@@ -234,7 +234,7 @@ for (let i = 0; i < regular.length; i++) {
 }
 
 const addReply = document.querySelectorAll(".add_reply")
-const replyReaction = document.querySelectorAll(".reply_reaction");
+const commentReaction = document.querySelectorAll(".comment_reaction");
 const replies = document.querySelectorAll(".replies")
 for(let i = 0; i < replies.length; i++){
     replies[i].addEventListener("click", () => {
