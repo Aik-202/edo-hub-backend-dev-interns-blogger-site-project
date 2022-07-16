@@ -157,7 +157,6 @@ for (let i = 0; i < Options.length; i++) {
 
 const addComment = document.querySelectorAll(".add_comment");
 const sendComment = document.querySelectorAll(".send_comment");
-console.log(sendComment)
 const actualComment = document.querySelectorAll(".comment")
 const comments = document.querySelectorAll(".fa-comment")
 const regular = document.querySelectorAll(".fa-regular");
