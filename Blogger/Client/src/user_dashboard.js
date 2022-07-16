@@ -166,8 +166,6 @@ const markBook = document.getElementById("markbook");
 const likes = document.querySelectorAll("#like");
 const userImage = document.getElementById("user_image");
 const userName = document.getElementById("user_name");
-var count = 0
-var k = 0
 for (let i = 0; i < regular.length; i++) {
     regular[i].addEventListener("click", () => {
         regular[i].classList.toggle("fa-solid");
@@ -232,6 +230,15 @@ for (let i = 0; i < regular.length; i++) {
                 });
             }
         }
+    });
+}
+
+const addReply = document.querySelectorAll(".add_reply")
+const replyReaction = document.querySelectorAll(".reply_reaction");
+const replies = document.querySelectorAll(".replies")
+for(let i = 0; i < replies.length; i++){
+    replies[i].addEventListener("click", () => {
+        addReply[i].classList.toggle("add_reply-active");
     });
 }
      

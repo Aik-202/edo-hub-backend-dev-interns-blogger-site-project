@@ -1189,6 +1189,10 @@ p {
   display: block;
 }
 
+.add_reply-active{
+  display: flex;
+}
+
 .cloned>div:last-child>i:last-child{
   display: block;
 }
