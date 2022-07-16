@@ -530,14 +530,14 @@ p {
   display: block;
 }
 
-.add_comment{
+.add_comment {
   display: none;
   max-width: 80%;
   margin-top: 20px;
   align-self: center;
 }
 
-.comment{
+.comment {
   display: flex;
   flex-direction: column;
 }
@@ -547,7 +547,7 @@ p {
   flex-direction: row;
 }
 
-.comment>div>img{
+.comment>div>img {
   align-self: center;
   border-radius: 90%;
   width: 35px;
@@ -565,7 +565,7 @@ p {
   font-weight: 400;
 }
 
-.comment_reaction{
+.comment_reaction {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -573,26 +573,22 @@ p {
   cursor: pointer;
 }
 
-.comment_reaction > p {
+.comment_reaction>p {
   font-size: 14px;
   font-weight: 400;
   margin-right: 5%;
 }
 
-.comment_reaction > i {
+.comment_reaction>i {
   margin-right: 5%;
 }
 
-.comment_reaction > i > span {
+.comment_reaction>i>span {
   font-size: 13px;
   margin-left: 8px;
 }
 
 .comment_input {
-  position: fixed;
-  bottom: 10px;
-  border: 1px solid #ef9273;
-  border-radius: 5px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -601,9 +597,13 @@ p {
   padding: 0;
   width: 50%;
   max-width: 50%;
+  position: fixed;
+  bottom: 10px;
+  border: 1px solid #ef9273;
+  border-radius: 5px;
 }
 
-.comment_input> textarea {
+.comment_input>textarea {
   bottom: 0;
   max-width: 100%;
   width: 100%;
@@ -614,13 +614,13 @@ p {
   resize: none;
 }
 
-.comment_input > button {
+.comment_input>button {
   align-self: center;
   border: none;
   background-color: transparent;
 }
 
-.comment_input > button:focus{
+.comment_input>button:focus {
   box-shadow: none;
   background-color: none;
 }
@@ -629,12 +629,12 @@ p {
   color: green;
 }
 
-.comment_reaction>i:last-child{
+.comment_reaction>i:last-child {
   display: none;
 }
 
 
-.add_reply{
+.add_reply {
   display: none;
   flex-direction: column;
   margin-top: 20px;
@@ -644,7 +644,7 @@ p {
   padding-bottom: 12px;
 }
 
-.reply{
+.reply {
   display: flex;
   flex-direction: column;
 }
@@ -654,7 +654,7 @@ p {
   flex-direction: row;
 }
 
-.reply>div>img{
+.reply>div>img {
   align-self: center;
   border-radius: 90%;
   width: 30px;
@@ -676,7 +676,7 @@ p {
   font-weight: 400;
 }
 
-.reply_reaction{
+.reply_reaction {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -684,27 +684,23 @@ p {
   cursor: pointer;
 }
 
-.reply_reaction > p {
+.reply_reaction>p {
   font-size: 12px;
   font-weight: 400;
   margin-right: 5%;
 }
 
-.reply_reaction > i {
+.reply_reaction>i {
   margin-right: 5%;
 }
 
-.reply_reaction > i > span {
+.reply_reaction>i>span {
   font-size: 11px;
   margin-left: 8px;
 }
 
 .reply_input {
-  position: fixed;
-  bottom: 10px;
-  border: 1px solid #ef9273;
-  border-radius: 5px;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
@@ -712,9 +708,13 @@ p {
   padding: 0;
   width: 50%;
   max-width: 50%;
+  position: fixed;
+  bottom: 10px;
+  border: 1px solid #ef9273;
+  border-radius: 5px;
 }
 
-.reply_input> textarea {
+.reply_input>textarea {
   bottom: 0;
   max-width: 100%;
   width: 100%;
@@ -725,13 +725,13 @@ p {
   resize: none;
 }
 
-.reply_input > button {
+.reply_input>button {
   align-self: center;
   border: none;
   background-color: transparent;
 }
 
-.reply_input > button:focus{
+.reply_input>button:focus {
   box-shadow: none;
   background-color: none;
 }
@@ -740,7 +740,7 @@ p {
   color: green;
 }
 
-.reply_reaction>i:last-child{
+.reply_reaction>i:last-child {
   display: none;
 }
 
@@ -1185,15 +1185,15 @@ p {
   color: #0d0d0d;
 }
 
-.add_comment-active{
+.add_comment-active {
   display: block;
 }
 
-.add_reply-active{
+.add_reply-active {
   display: flex;
 }
 
-.cloned>div:last-child>i:last-child{
+.cloned>div:last-child>i:last-child {
   display: block;
 }
 
@@ -1256,7 +1256,7 @@ p {
   color: white;
 }
 
-.dark_theme #show{
+.dark_theme #show {
   color: white;
 }
 
@@ -1413,7 +1413,23 @@ p {
   font-size: 15px;
 }
 
-.dark_theme .comment_input > button:focus{
+.dark_theme .comment_input>button:focus {
+  box-shadow: none;
+  background-color: transparent;
+  border: none;
+}
+
+.dark_theme .reply_input {
+  border: 1px solid #353535;
+}
+
+.dark_theme .reply_input>button {
+  color: blue;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.dark_theme .reply_input>button:focus {
   box-shadow: none;
   background-color: transparent;
   border: none;
