@@ -306,18 +306,19 @@ function customAlert(alert_message){
 
 //creating the input and label fields to enable users set date and time to schedule posts  
     let labelElement1 = document.createElement("label");
-    let schedulerLabel1 = document.appendChild(labelElement1);
     let inputFieldElement1 = document.createElement("input");
-    let schedulerInput1 = document.appendChild(inputFieldElement1);
     let labelElement2 = document.createElement("label");
-    let schedulerLabel2 = document.appendChild(labelElement2);
     let inputFieldElement2 = document.createElement("input");
-    let schedulerInput2 = document.appendChild(inputFieldElement2);
     
-    // scheduler.appendChild(schedulerLabel1);
-    // scheduler.appendChild(schedulerInput1);
-    // scheduler.appendChild(schedulerLabel2);
-    // scheduler.appendChild(schedulerInput2);
+    scheduler.appendChild(labelElement1);
+    scheduler.appendChild(inputFieldElement1);
+    scheduler.appendChild(labelElement2);
+    scheduler.appendChild(inputFieldElement2);
+
+    labelElement1.textContent = "Set Date";
+    labelElement2.textContent = "Set Time";
+    inputFieldElement1.type = "date";
+    inputFieldElement2.type = "time";
 //creating the buttons for the alert message    
 }
 
