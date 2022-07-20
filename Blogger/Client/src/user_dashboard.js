@@ -198,6 +198,7 @@ for (let i = 0; i < regular.length; i++) {
                 }
                 
                 sendComment[j].addEventListener("click", () => {
+                    const date = new Date();
                     if(commentInput[j].firstElementChild.value){
                         userComment = actualComment[j].cloneNode(true)
                         userComment.classList.add("cloned")
@@ -206,6 +207,7 @@ for (let i = 0; i < regular.length; i++) {
                         userComment.firstElementChild.firstElementChild.src = userImage.src;
                         userComment.firstElementChild.firstElementChild.nextElementSibling.innerHTML = userName.innerHTML;
                         userComment.firstElementChild.nextElementSibling.innerHTML = commentInput[j].firstElementChild.value;
+                        userComment.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.innerHTML = date.toDateString();
                         commentInput[j].firstElementChild.value = "";
                         let deleteComment = document.querySelectorAll(".delete_cloned");    
                         let cloned = document.querySelectorAll(".cloned");
@@ -241,18 +243,8 @@ for(let i = 0; i < replies.length; i++){
     replies[i].addEventListener("click", () => {
         addReply[i].classList.toggle("add_reply-active");
         commentInput[i].style.display = "none";
-        replyInput[i].style.display = "none";
-        replies[i].nextElementSibling.nextElementSibling.addEventListener("click", () => {
-            if(replies[i].nextElementSibling.nextElementSibling.innerHTML = "Reply"){
-                addReply[i].classList.toggle("add_reply-active");
-                commentInput[i].style.display = "none";
-                replyInput[i].style.display = "flex";
-                replies[i].nextElementSibling.nextElementSibling.innerHTML = "Exit reply";
-            } else if(replies[i].nextElementSibling.nextElementSibling.innerHTML = "Exit reply"){
-                replyInput[i].style.display = "none";
-                replies[i].nextElementSibling.nextElementSibling.innerHTML = "Reply";
-            }
-        });
+        replyInput[i].style.display = "flex";
+        replies[i].nextElementSibling.nextElementSibling.innerHTML = "Exit reply";
     });
     replies[i].nextElementSibling.nextElementSibling.addEventListener("click", () => {
         commentInput[i].style.display = "none";
@@ -267,7 +259,72 @@ for(let i = 0; i < replies.length; i++){
         }
     });
 }
-     
+
+const fixSchedule = document.getElementById("schedule");
+
+schedule.addEventListener("click", () => {
+  alert("Welcome, please set the date and time you wish to publish your post");
+});
+
+window.alert = function(alert_message){
+    customAlert(alert_message) //custom function to replace the native alert box function
+  } 
+
+//the custom function  
+function customAlert(alert_message){
+    let alertTitle = "BLOGGER SCHEDULER";  //title of alert box
+    let alertButtonText1 = "SET DATE";           //text for the alert box button1
+    let alertButtonText2 = "EXIT";           //text for the alert box button2
+    let alertexist = document.getElementById("alert_container"); //checking if the alert_container id exists
+    
+    if(alertexist){
+        return;
+    }
+
+//creating a div for the alert message and adding it to the body and setting it's class and id name 
+    let body = document.querySelector("body");
+    let divForAlertContainer = document.createElement("div");
+    let alertContainer = body.appendChild(divForAlertContainer);
+    alertContainer.id = "alert_container";
+    alertContainer.className = "alert_container";
+
+//creating the actual alert box and appending it to the alert_container
+    let divForAlertBox = document.createElement("div");
+    let scheduler = alertContainer.appendChild(divForAlertBox);
+    scheduler.className = "scheduler";
+
+//creating the title element h1 for the alert message
+    let alertHeaderTag = document.createElement("h1");
+    let schedulerTitle = scheduler.appendChild(alertHeaderTag);
+    let alertTitleText = document.createTextNode(alertTitle); 
+    schedulerTitle.appendChild(alertTitleText);
+
+//creating the actual alert message   
+    let alertWelcomeElement = document.createElement("p");
+    let alertWelcome = scheduler.appendChild(alertWelcomeElement);
+    alertWelcome.textContent = alert_message;
+
+//creating the input and label fields to enable users set date and time to schedule posts  
+    let labelElement1 = document.createElement("label");
+    let schedulerLabel1 = document.appendChild(labelElement1);
+    let inputFieldElement1 = document.createElement("input");
+    let schedulerInput1 = document.appendChild(inputFieldElement1);
+    let labelElement2 = document.createElement("label");
+    let schedulerLabel2 = document.appendChild(labelElement2);
+    let inputFieldElement2 = document.createElement("input");
+    let schedulerInput2 = document.appendChild(inputFieldElement2);
+    
+    // scheduler.appendChild(schedulerLabel1);
+    // scheduler.appendChild(schedulerInput1);
+    // scheduler.appendChild(schedulerLabel2);
+    // scheduler.appendChild(schedulerInput2);
+//creating the buttons for the alert message    
+}
+
+
+
+
+
 //local storage
 //  var uploadedImage
 //  if (Options[i].classList.toggle = "success") {

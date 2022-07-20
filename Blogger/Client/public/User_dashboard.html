@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="./styles/Login_page_styles.css">
   <link rel="stylesheet" href="./styles/user_dashboard_styles.css">
   <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1-web/css/all.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="../src/scripts.js" defer></script>
   <script src="../src/user_dashboard.js" defer></script>
 </head>
@@ -4224,21 +4227,33 @@
   </section>
 
   <section class="content Publish">
-    <div class="publish_options">
-      <button>SCHEDULE PUBLISH</button>
-      <button>PUBLISH NOW</button>
+    <div class="publish_heading">
+      <a class="publish_headings publish_heading-active">Publish Post</a>
+      <a class="publish_headings publish_heading-unactive">Scheduled Post</a>
     </div>
-    <section class="write-post">
-      <h1>Write a Post</h1>
-      <div class="write-post-content">
-        <div class="write-post-title">
-          <input type="text" placeholder="Title" />
-        </div>
-        <div class="write-post-body">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Write a post"></textarea>
-        </div>
+
+    <section class="publish_post">
+      <div class="publish_options">
+        <button id="schedule">SCHEDULE PUBLISH</button>
+        <button>PUBLISH NOW</button>
       </div>
+      <section class="write-post">
+        <h1>Write a Post</h1>
+        <div class="write-post-content">
+          <div class="write-post-title">
+            <input type="text" placeholder="Title" />
+          </div>
+          <div class="write-post-body">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Write a post"></textarea>
+          </div>
+        </div>
+      </section>
     </section>
+
+    <section class="scheduled_post"></section>
+
+
+
   </section>
 
   <section class="content">
@@ -4256,13 +4271,7 @@
     </section>
   </section>
 
-  <!--
-    <section class="side_bar2">
-        <input type="search" name="search_box" placeholder="Search">
-        <p><i class="fa-solid fa-circle" style="color: green; font-size: 12px; padding-right: 5px;"></i>What We're Reading Today</p>    
-        <a href="">See the full list</a>
-    </section>
-    -->
+
   <script src="/socket.io/socket.io.js"></script>
   <script src="../src/UserdashRoute.js"></script>
 
