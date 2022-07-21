@@ -315,11 +315,33 @@ function customAlert(alert_message){
     scheduler.appendChild(labelElement2);
     scheduler.appendChild(inputFieldElement2);
 
-    labelElement1.textContent = "Set Date";
-    labelElement2.textContent = "Set Time";
+    labelElement1.textContent = "Set Publishing Date";
+    labelElement2.textContent = "Set Publishing Time";
     inputFieldElement1.type = "date";
     inputFieldElement2.type = "time";
-//creating the buttons for the alert message    
+
+//creating the buttons for the alert message  
+    let buttonElementContainer = document.createElement("div")   
+    let buttonElement1 = document.createElement("button");
+    let buttonElement2 = document.createElement("button");
+
+    buttonElementContainer.className = "button_container";
+    buttonElement1.id = "set_date";
+    buttonElement2.id = "exit";
+
+    scheduler.appendChild(buttonElementContainer);
+    buttonElementContainer.appendChild(buttonElement1);
+    buttonElementContainer.appendChild(buttonElement2);
+
+    buttonElementText1 = document.createTextNode(alertButtonText1);
+    buttonElementText2 = document.createTextNode(alertButtonText2);
+    
+    buttonElement1.appendChild(buttonElementText1);
+    buttonElement2.appendChild(buttonElementText2);
+
+    buttonElement2.addEventListener("click", () => {
+        body.removeChild(alertContainer);
+    })
 }
 
 
