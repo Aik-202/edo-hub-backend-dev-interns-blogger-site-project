@@ -10,9 +10,6 @@
   <link rel="stylesheet" href="./styles/Login_page_styles.css">
   <link rel="stylesheet" href="./styles/user_dashboard_styles.css">
   <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1-web/css/all.css">
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="../src/scripts.js" defer></script>
   <script src="../src/user_dashboard.js" defer></script>
 </head>
@@ -74,17 +71,25 @@
         <li>2 Followers</li>
         <li>4 Following</li>
       </ul>
-      <!--<label for="username">Your Name</label>
-          <input type="text" name="username" id="username" />
-          <label for="username">Username</label>
-          <input type="text" name="username" id="username" />-->
-      <h3>Name: <span>Assurance Ikogwe</span><i class="fa-solid fa-pen"></i></h3>
-      <h3>About: <span>Just starting web development, HTML and CSS</span><i class="fa-solid fa-pen"></i></h3>
+      <div class="edit-name">
+        <label for="name">Name : </label>
+        <input type="text" name="name" id="name" place/>
+        <i class="fa-solid fa-pen"></i>
+      </div>
+      <div class="edit-about">
+        <label for="about">About : </label>
+        <input type="text" name="about" id="about" />
+        <i class="fa-solid fa-pen"></i>
+      </div>
+
+      <!-- <h3>Name: <span>Assurance Ikogwe</span><i class="fa-solid fa-pen"></i></h3>
+      <h3>About: <span>Just starting web development, HTML and CSS</span><i class="fa-solid fa-pen"></i></h3> -->
+
     </div>
   </section>
 
   <!--html for home section-->
-  <section class="content content-active Home">
+  <section class="content content-active Home" id="Home">
     <input type="search" name="search_box" placeholder="Search">
     <div class="home_heading">
       <a class="headings heading-active">Following</a>
@@ -4244,7 +4249,7 @@
             <input type="text" placeholder="Title" />
           </div>
           <div class="write-post-body">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Write a post"></textarea>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Write content here"></textarea>
           </div>
         </div>
       </section>
