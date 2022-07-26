@@ -1988,10 +1988,20 @@ p {
     display: none;
   }
 
+  .navigation>li:hover{
+    border-left: none;
+    background-color: transparent;
+  }
+
+  #followers_list {
+    display: none;
+  }
+
   .content {
     margin: 10px;
     margin-bottom: 25%;
   }
+
 
   #editp>div>output {
     width: 150px;
@@ -2014,8 +2024,8 @@ p {
     padding: 8px;
   }
 
-  #editp>div>ul>li {
-    font-size: 12px;
+  #editp>div>ul {
+    display: none;
   }
 
   .edit-name>label {
@@ -2205,11 +2215,23 @@ p {
   }
 
   .followers {
-    margin-top: -25px;
+    margin-top: -70px;
+  }
+
+  .followers > h1 {
+    display: none;
   }
 
   .followers>ul {
     margin-right: 0;
+  }
+
+  .followers>ul>li{
+    font-size: 12px;
+  }
+
+  .follow>h3 {
+    font-size: 15px;
   }
 
   .follow>div {
@@ -2229,7 +2251,7 @@ p {
   }
 
   .follow>div>div>button {
-    font-size: 12px;
+    font-size: 10px;
     padding: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -2243,6 +2265,10 @@ p {
     margin-left: 10%;
   }
 
+  .following>h3 {
+    font-size: 15px;
+  }
+
   .following>div {
     padding-right: 0;
     padding-left: 0;
@@ -2250,10 +2276,14 @@ p {
   }
 
   .following>div>button {
-    font-size: 12px;
+    font-size: 10px;
     padding: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
+  }
+
+  .recommend>h3 {
+    font-size: 15px;
   }
 
   .recommend>div {
@@ -2263,7 +2293,7 @@ p {
   }
 
   .recommend>div>button {
-    font-size: 12px;
+    font-size: 10px;
     padding: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -2333,7 +2363,7 @@ p {
 
   .button_container {
     margin-top: 5%;
-    width: 50%;
+    width: 55%;
   }
 
   .button_container>button {
@@ -2345,5 +2375,28 @@ p {
 
   #set_date {
     margin-right: 30px;
+  }
+
+  .nav-active{
+    border-left: none;
+    background-color: transparent;
+  }
+
+  .nav-active>i{
+    color: white;
+  }
+
+  .dark_theme .nav-active>i{
+    color: #ef9273;
+  }
+
+  .dark_theme  .nav-active{
+    border-left: none;
+    background-color: transparent;
+  }
+
+  .dark_theme   .navigation>li:hover{
+    border-left: none;
+    background-color: transparent;
   }
 }

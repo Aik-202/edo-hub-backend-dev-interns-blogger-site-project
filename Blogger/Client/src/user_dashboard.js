@@ -7,14 +7,9 @@ const show = document.getElementById("show");
 for (let i = 0; i < nav.length; i++) {
     nav[i].addEventListener("click", () => {
         if (i == 0) {
-            if(window.width <= 400){
-                nav[i].classList.add("editp-active");
-                content[i].classList.add("content-active");
-                console.log(window.width);
-            } else{
-                nav[i].classList.add("editp-active");
-                content[i].classList.add("content-active");
-            }     
+            nav[i].classList.add("editp-active");
+            content[i].classList.add("content-active");
+            
         } else {
             nav[i].classList.add("nav-active");
             content[i].classList.add("content-active");
@@ -34,9 +29,16 @@ for (let i = 0; i < nav.length; i++) {
     // link to profile by clicking on user image
     userImage.addEventListener("click", () => {
         if (i == 0) {
-            nav[i].classList.add("editp-active");
-            content[i].classList.add("content-active");
-        } else {
+            if(window.innerWidth <= 400){
+                nav[i].classList.add("editp-active");
+                content[i].classList.add("content-active");
+                content[4].classList.add("content-active");
+            } else{
+                nav[i].classList.add("editp-active");
+                content[i].classList.add("content-active");
+            }
+        } else if (i !== 0 && i !== 4) {
+            nav[i].classList.remove("nav-active");
             content[i].classList.remove("content-active");
         }
     });
