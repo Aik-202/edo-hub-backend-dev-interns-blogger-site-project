@@ -48,7 +48,7 @@
       <li class="nav nav-active" id="home_list"><i class="fa-solid fa-house" id="home_icon"></i><a
           id="home_link">Home</a></li>
       <li class="nav"><i class="fa-solid fa-edit"></i><a id="stories_link">Stories</a></li>
-      <li class="nav"><i class="fa-solid fa-chart-bar"></i><a id="stats_link">Summary</a></li>
+      <li class="nav"><i class="fa-solid fa-chart-line"></i><a id="stats_link">Summary</a></li>
       <li class="nav" id="followers_list"><i class="fa-solid fa-users"></i><a id="followers_link">Followers</a></li>
       <li class="nav" id="publish_list"><i class="fa-solid fa-paper-plane"></i><a id="publish_link">Publish</a></li>
       <li class="nav"><i class="fa-solid fa-rocket"></i><a href="#" id="sign_out">Sign Out</a></li>
@@ -73,17 +73,16 @@
       </ul>
       <div class="edit-name">
         <label for="name">Name : </label>
-        <input type="text" name="name" id="name" place/>
-        <i class="fa-solid fa-pen"></i>
+        <input type="text" name="name" id="name" place />
+        <i class="fa-solid fa-pen-alt"></i>
+        <i class="fa-solid fa-save"></i>
       </div>
       <div class="edit-about">
         <label for="about">About : </label>
         <input type="text" name="about" id="about" />
-        <i class="fa-solid fa-pen"></i>
+        <i class="fa-solid fa-pen-alt"></i>
+        <i class="fa-solid fa-save"></i>
       </div>
-
-      <!-- <h3>Name: <span>Assurance Ikogwe</span><i class="fa-solid fa-pen"></i></h3>
-      <h3>About: <span>Just starting web development, HTML and CSS</span><i class="fa-solid fa-pen"></i></h3> -->
 
     </div>
   </section>
@@ -4237,7 +4236,7 @@
       <a class="publish_headings publish_heading-unactive">Scheduled Post</a>
     </div>
 
-    <section class="publish_post">
+    <section class="publish_post" id="publish_post">
       <div class="publish_options">
         <button id="schedule">SCHEDULE PUBLISH</button>
         <button>PUBLISH NOW</button>
@@ -4255,7 +4254,7 @@
       </section>
     </section>
 
-    <section class="scheduled_post"></section>
+    <section class="scheduled_post" id="scheduled_post"></section>
 
 
 

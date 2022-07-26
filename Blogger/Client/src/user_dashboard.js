@@ -1,8 +1,7 @@
 //userdashboard navigation
 const nav = document.querySelectorAll(".nav");
 const content = document.querySelectorAll(".content");
-const editProfile = document.getElementById("editp");
-const home = document.getElementById("Home");
+const userImage = document.getElementById("user_image");
 const collapse = document.getElementById("collapse");
 const show = document.getElementById("show");
 for (let i = 0; i < nav.length; i++) {
@@ -24,6 +23,15 @@ for (let i = 0; i < nav.length; i++) {
                     content[j].classList.remove("content-active");
                 }
             }
+        }
+    });
+    // link to profile by clicking on user image
+    userImage.addEventListener("click", () => {
+        if (i == 0) {
+            nav[i].classList.add("editp-active");
+            content[i].classList.add("content-active");
+        } else {
+            content[i].classList.remove("content-active");
         }
     });
 }
@@ -60,7 +68,6 @@ show.addEventListener("click", () => {
 });
 
 //userdashboard edit profile; changing username
-const userImage = document.getElementById("user_image");
 const userName = document.getElementById("user_name");
 const user = document.getElementById("name");
 const about = document.getElementById("about");
@@ -68,18 +75,37 @@ user.placeholder = userName.innerHTML;
 about.placeholder = "No about yet";
 
 user.nextElementSibling.addEventListener("click", () => {
-    user.parentElement.classList.toggle("edit_info-active");
+    user.id = "edit_info-active";
+    user.value = user.placeholder;
+    user.placeholder = "";
+    user.select();
+    user.nextElementSibling.style.display = "none";
+    user.nextElementSibling.nextElementSibling.style.display = "block";
 });
 
 about.nextElementSibling.addEventListener("click", () => {
-    about.parentElement.classList.toggle("edit_info-active");
+    about.id = ("edit_info-active");
+    about.value = about.placeholder;
+    about.placeholder = "";
+    about.select();
+    about.nextElementSibling.style.display = "none";
+    about.nextElementSibling.nextElementSibling.style.display = "block";
 });
 
-//link to profile by clicking on user image
-userImage.addEventListener("click", ()=>{
-    editProfile.classList.toggle("editp-active");
-    home.classList.remove("content-active");
-})
+user.nextElementSibling.nextElementSibling.addEventListener("click", () => {
+    user.id = "name";
+    user.placeholder = user.value;
+    user.nextElementSibling.style.display = "block";
+    user.nextElementSibling.nextElementSibling.style.display = "none";
+});
+
+about.nextElementSibling.nextElementSibling.addEventListener("click", () => {
+    about.id = "about";
+    about.placeholder = about.value;
+    about.nextElementSibling.style.display = "block";
+    about.nextElementSibling.nextElementSibling.style.display = "none";
+});
+
 
 //Uploading image 
 const uploadImage = document.getElementById("upload_image");
@@ -175,6 +201,30 @@ for (let i = 0; i < storyHeading.length; i++) {
     });
 }
 
+//userdashboard publish section, publish posts and scheduled posts headings
+const publishHeading = document.getElementsByClassName('publish_headings');
+const publishPost = document.getElementById('publish_post');
+const scheduledPost = document.getElementById('scheduled_post');
+for (let i = 0; i < publishHeading.length; i++) {
+    publishHeading[i].addEventListener("click", () => {
+        if (i === 0) {
+            publishHeading[1].classList.remove("publish_heading-active");
+            publishHeading[1].classList.add("publish_heading-unactive");
+            publishHeading[i].classList.add("publish_heading-active");
+            publishPost.style.display = "block";
+            scheduledPost.style.display = "none";
+        }
+        if (i === 1) {
+            publishHeading[0].classList.remove("publish_heading-active");
+            publishHeading[0].classList.add("publish_heading-unactive");
+            publishHeading[i].classList.remove("publish_heading-unactive")
+            publishHeading[i].classList.add("publish_heading-active");
+            publishPost.style.display = "none";
+            scheduledPost.style.display = "block";
+        }
+    });
+}
+
 //userdashboard user's engagements on post; likes, comments, bookmark
 const addComment = document.querySelectorAll(".add_comment");
 const sendComment = document.querySelectorAll(".send_comment");
@@ -212,22 +262,22 @@ for (let i = 0; i < regular.length; i++) {
             }
 
             //code for comments
-            if (regular[i] == comments[j]){
+            if (regular[i] == comments[j]) {
 
                 //adding comments
                 addComment[j].classList.toggle("add_comment-active");
-                for(let k = 0; k < addComment.length; k++){
-                    if(addComment[k] !== addComment[j] && addComment[k].classList.contains("add_comment-active")){
+                for (let k = 0; k < addComment.length; k++) {
+                    if (addComment[k] !== addComment[j] && addComment[k].classList.contains("add_comment-active")) {
                         addComment[k].classList.remove("add_comment-active");
                         comments[k].classList.remove("fa-solid");
                     }
                 }
-                
+
                 //sending comments
                 sendComment[j].addEventListener("click", () => {
                     const date = new Date();
                     const enUsDateFormatter = new Intl.DateTimeFormat('en-Us');
-                    if(commentInput[j].firstElementChild.value){
+                    if (commentInput[j].firstElementChild.value) {
                         userComment = actualComment[j].cloneNode(true)
                         userComment.classList.add("cloned")
                         userComment.lastElementChild.lastElementChild.classList.add("delete_cloned");
@@ -237,28 +287,28 @@ for (let i = 0; i < regular.length; i++) {
                         userComment.firstElementChild.nextElementSibling.innerHTML = commentInput[j].firstElementChild.value;
                         userComment.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.innerHTML = enUsDateFormatter.format(date);
                         commentInput[j].firstElementChild.value = "";
-                        let deleteComment = document.querySelectorAll(".delete_cloned");    
+                        let deleteComment = document.querySelectorAll(".delete_cloned");
                         let cloned = document.querySelectorAll(".cloned");
 
                         //deleting comments
-                        for(let k = 0; k < deleteComment.length; k++){ 
-                            deleteComment[k].addEventListener("click", () =>{
-                            cloned[k].remove();
+                        for (let k = 0; k < deleteComment.length; k++) {
+                            deleteComment[k].addEventListener("click", () => {
+                                cloned[k].remove();
                             });
-                        }  
+                        }
 
                     } else { //a little animation for when the inpt field is empty
                         var pos = 20;
                         const move = () => {
-                            pos= pos + 5
-                            commentInput[j].style.bottom = pos+"px";
-                            commentInput[j].style.bottom = pos+"px";
-                            if (pos >= 30){
+                            pos = pos + 5
+                            commentInput[j].style.bottom = pos + "px";
+                            commentInput[j].style.bottom = pos + "px";
+                            if (pos >= 30) {
                                 clearInterval(timer);
                                 commentInput[j].style.bottom = "10px";
                             }
                         }
-                        var timer = setInterval(move,500);
+                        var timer = setInterval(move, 500);
                     }
                 });
             }
@@ -271,7 +321,7 @@ const addReply = document.querySelectorAll(".add_reply");
 const commentReaction = document.querySelectorAll(".comment_reaction");
 const replies = document.querySelectorAll(".replies");
 const replyInput = document.querySelectorAll(".reply_input")
-for(let i = 0; i < replies.length; i++){
+for (let i = 0; i < replies.length; i++) {
     replies[i].addEventListener("click", () => {
         addReply[i].classList.toggle("add_reply-active");
         commentInput[i].style.display = "none";
@@ -285,7 +335,7 @@ for(let i = 0; i < replies.length; i++){
         addReply[i].classList.toggle("add_reply-active");
         commentInput[i].style.display = "none";
         replyInput[i].style.display = "flex";
-        if(!addReply[i].classList.contains("add_reply-active")){
+        if (!addReply[i].classList.contains("add_reply-active")) {
             replies[i].nextElementSibling.nextElementSibling.innerHTML = "Reply"
             commentInput[i].style.display = "flex";
         }
@@ -295,54 +345,54 @@ for(let i = 0; i < replies.length; i++){
 //userdashboard scheduler for scheduling posts
 const fixSchedule = document.getElementById("schedule");
 schedule.addEventListener("click", () => {
-  alert("Welcome, please set the date and time you wish to publish your post");
+    alert("Welcome, please set the date and time you wish to publish your post");
 });
 
 //custom function to replace the native alert box function
-window.alert = function(alert_message){
-    customAlert(alert_message) 
-  } 
+window.alert = function (alert_message) {
+    customAlert(alert_message)
+}
 
 //the custom function  
-function customAlert(alert_message){
-    let alertTitle = "BLOGGER SCHEDULER";  //title of alert box
-    let alertButtonText1 = "SET DATE";           //text for the alert box button1
-    let alertButtonText2 = "EXIT";           //text for the alert box button2
+function customAlert(alert_message) {
+    let alertTitle = "BLOGGER SCHEDULER"; //title of alert box
+    let alertButtonText1 = "SET DATE"; //text for the alert box button1
+    let alertButtonText2 = "EXIT"; //text for the alert box button2
     let alertexist = document.getElementById("alert_container"); //checking if the alert_container id exists
-    
-    if(alertexist){
+
+    if (alertexist) {
         return;
     }
 
-//creating a div for the alert message and adding it to the body and setting it's class and id name 
+    //creating a div for the alert message and adding it to the body and setting it's class and id name 
     let body = document.querySelector("body");
     let divForAlertContainer = document.createElement("div");
     let alertContainer = body.appendChild(divForAlertContainer);
     alertContainer.id = "alert_container";
     alertContainer.className = "alert_container";
 
-//creating the actual alert box and appending it to the alert_container
+    //creating the actual alert box and appending it to the alert_container
     let divForAlertBox = document.createElement("div");
     let scheduler = alertContainer.appendChild(divForAlertBox);
     scheduler.className = "scheduler";
 
-//creating the title element h1 for the alert message
+    //creating the title element h1 for the alert message
     let alertHeaderTag = document.createElement("h1");
     let schedulerTitle = scheduler.appendChild(alertHeaderTag);
-    let alertTitleText = document.createTextNode(alertTitle); 
+    let alertTitleText = document.createTextNode(alertTitle);
     schedulerTitle.appendChild(alertTitleText);
 
-//creating the actual alert message   
+    //creating the actual alert message   
     let alertWelcomeElement = document.createElement("p");
     let alertWelcome = scheduler.appendChild(alertWelcomeElement);
     alertWelcome.textContent = alert_message;
 
-//creating the input and label fields to enable users set date and time to schedule posts  
+    //creating the input and label fields to enable users set date and time to schedule posts  
     let labelElement1 = document.createElement("label");
     let inputFieldElement1 = document.createElement("input");
     let labelElement2 = document.createElement("label");
     let inputFieldElement2 = document.createElement("input");
-    
+
     scheduler.appendChild(labelElement1);
     scheduler.appendChild(inputFieldElement1);
     scheduler.appendChild(labelElement2);
@@ -353,8 +403,8 @@ function customAlert(alert_message){
     inputFieldElement1.type = "date";
     inputFieldElement2.type = "time";
 
-//creating the buttons for the alert message  
-    let buttonElementContainer = document.createElement("div")   
+    //creating the buttons for the alert message  
+    let buttonElementContainer = document.createElement("div")
     let buttonElement1 = document.createElement("button");
     let buttonElement2 = document.createElement("button");
 
@@ -368,7 +418,7 @@ function customAlert(alert_message){
 
     buttonElementText1 = document.createTextNode(alertButtonText1);
     buttonElementText2 = document.createTextNode(alertButtonText2);
-    
+
     buttonElement1.appendChild(buttonElementText1);
     buttonElement2.appendChild(buttonElementText2);
 

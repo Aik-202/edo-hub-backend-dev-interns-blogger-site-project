@@ -108,6 +108,7 @@ h2 {
   margin-left: 10px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
 }
 
 .side_bar1>div>div {
@@ -238,65 +239,79 @@ content>div>button:focus {
   padding-bottom: 20px;
 }
 
-.edit-name{
+.edit-name {
   display: flex;
   flex-direction: row;
   max-width: 100%;
+  margin: 10px;
 }
 
-.edit-about{
+.edit-about {
   display: flex;
   flex-direction: row;
   max-width: 100%;
+  margin: 10px;
 }
 
-.edit-name > label{
+.edit-name>label {
   align-self: center;
   padding-right: 20px;
   font-size: 18px;
   font-weight: 600;
 }
 
-#name{
+#name {
   align-self: center;
+  margin: 0;
   padding: 5px;
   padding-top: 12px;
   font-size: 16px;
   font-weight: 530;
   cursor: none;
+  pointer-events: none;
   border: none;
   outline: none;
   background-color: transparent;
 }
 
-.edit-name > i{
+.edit-name>i {
   align-self: center;
   padding-left: 20px;
   cursor: pointer;
 }
 
-.edit-about > label{
+.edit-name>i:last-child {
+  display: none;
+}
+
+.edit-about>label {
   align-self: center;
   padding-right: 20px;
   font-size: 18px;
   font-weight: 600;
 }
 
-#about{
+#about {
   align-self: center;
+  margin: 0;
   padding: 10px;
   font-size: 16px;
   font-weight: 530;
   cursor: none;
+  pointer-events: none;
   border: none;
   outline: none;
   background-color: transparent;
 }
 
-.edit-about > i{
+.edit-about>i {
   align-self: center;
   padding-left: 20px;
   cursor: pointer;
+}
+
+.edit-about>i:last-child {
+  display: none;
 }
 
 #image_options {
@@ -1048,7 +1063,7 @@ p {
   font-weight: 900;
 }
 
-.write-post>h1{
+.write-post>h1 {
   font-weight: 500;
   font-size: 30px;
 }
@@ -1092,18 +1107,18 @@ p {
   justify-content: flex-start;
 }
 
-.alert_container{
+.alert_container {
   display: flex;
   flex-direction: column;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 150%;
-  background-color: #0000004d;  
+  background-color: #0000004d;
   position: absolute;
 }
 
-.scheduler{
+.scheduler {
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -1119,7 +1134,7 @@ p {
   color: #0d0d0d;
 }
 
-.scheduler>h1{
+.scheduler>h1 {
   align-self: center;
   margin-bottom: 30px;
   margin-right: 0;
@@ -1132,7 +1147,7 @@ p {
   margin-right: 0;
 }
 
-.scheduler>label{
+.scheduler>label {
   margin-bottom: -5px;
   font-size: 15px;
   margin-top: 20px;
@@ -1140,7 +1155,7 @@ p {
   margin-left: 35px;
 }
 
-.scheduler>input{
+.scheduler>input {
   margin-left: 30px;
   width: 100%;
   max-width: 80%;
@@ -1149,7 +1164,7 @@ p {
   margin-right: 0;
 }
 
-.button_container{
+.button_container {
   align-self: flex-end;
   display: flex;
   flex-direction: row;
@@ -1157,7 +1172,7 @@ p {
   width: 38%;
 }
 
-.button_container>button{
+.button_container>button {
   background-color: #be8673;
   border: 1px solid #be8673;
   margin-right: 10%;
@@ -1393,12 +1408,22 @@ p {
   display: flex;
 }
 
-.edit_info-active > input{
-  color: red;
-  cursor: pointer;
-  border: 1px solid #ef9273;
-  outline: 1px solid #ef9273;
-  background-color: white;
+#edit_info-active {
+  cursor: text;
+  border: none;
+  padding: 0;
+  padding-bottom: 5px;
+  border-radius: 1px;
+  border-bottom: 1px solid #ef9273;
+  outline: none;
+  background-color: transparent;
+}
+
+#edit_info-active:focus {
+  border: none;
+  border-radius: 1px;
+  border-bottom: 1px solid black;
+  outline: none;
 }
 
 .cloned>div:last-child>i:last-child {
@@ -1494,11 +1519,41 @@ p {
   color: #757575;
 }
 
-.dark_theme .edit-name > input::placeholder{
+.dark_theme .edit-name>input::placeholder {
   color: white;
 }
 
-.dark_theme .edit-about > input::placeholder{
+.dark_theme .edit-about>input::placeholder {
+  color: white;
+}
+
+.dark_theme #name {
+  color: white;
+}
+
+.dark_theme #about {
+  color: white;
+}
+
+.dark_theme #name:placeholder {
+  color: white;
+}
+
+.dark_theme #about:placeholder {
+  color: white;
+}
+
+.dark_theme #edit_info-active {
+  border-bottom: 1px solid #ef9273;
+  color: white;
+}
+
+.dark_theme #edit_info-active::placeholder {
+  color: white;
+}
+
+.dark_theme #edit_info-active:focus {
+  border-bottom: 1px solid white;
   color: white;
 }
 
@@ -1663,13 +1718,13 @@ p {
   border: none;
 }
 
-.dark_theme .scheduler{
+.dark_theme .scheduler {
   color: white;
   background-color: #1b1b1b;
   border: 1px solid #1b1b1b;
 }
 
-.dark_theme .button_container>button{
+.dark_theme .button_container>button {
   border: 1px solid #353839;
   background-color: #353839;
 }
@@ -1784,6 +1839,49 @@ p {
     margin-top: -6%;
     margin-left: -3.5%;
   }
+
+  .scheduler {
+    margin-top: 200px;
+    margin-left: 100px;
+    width: 60%;
+    padding: 20px;
+    padding-right: 0;
+  }
+
+  .scheduler>h1 {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  .scheduler>p {
+    margin-left: 30px;
+    font-size: 16px;
+  }
+
+  .scheduler>label {
+    font-size: 15px;
+    margin-left: 30px;
+  }
+
+  .scheduler>input {
+    font-size: 15px;
+  }
+
+  .button_container {
+    margin-top: 5%;
+    width: 38%;
+  }
+
+  .button_container>button {
+    font-size: 12px;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #set_date {
+    margin-right: 50px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -1893,6 +1991,55 @@ p {
   .content {
     margin: 10px;
     margin-bottom: 25%;
+  }
+
+  #editp>div>output {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+  }
+
+  .fa-camera {
+    font-size: 40px;
+    margin-top: -40px;
+    margin-left: 100px;
+  }
+
+  #editp>div>input {
+    font-size: 12px;
+  }
+
+  #image_options>button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  #editp>div>ul>li {
+    font-size: 12px;
+  }
+
+  .edit-name>label {
+    font-size: 15px;
+  }
+
+  .edit-about>label {
+    font-size: 15px;
+  }
+
+  #name {
+    font-size: 12px;
+  }
+
+  #about {
+    font-size: 12px;
+  }
+
+  .edit-name>i {
+    font-size: 12px;
+  }
+
+  .edit-about>i {
+    font-size: 12px;
   }
 
   .headings {
@@ -2130,12 +2277,14 @@ p {
     font-size: 18px;
   }
 
-  .publish_options>button {
-    font-size: 8px;
+  .publish_post {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
-  .Publish {
-    flex-direction: column-reverse;
+  .publish_options>button {
+    font-size: 10px;
+    margin-bottom: 20px;
   }
 
   .Login_section {
@@ -2146,5 +2295,55 @@ p {
 
   .Login_content {
     margin: 0;
+  }
+
+  .scheduler {
+    align-self: flex-start;
+    margin-top: 120px;
+    margin-left: 20px;
+    width: 85%;
+    padding: 10px;
+    padding-right: 0;
+  }
+
+  .scheduler>h1 {
+    margin-bottom: 20px;
+    margin-right: 0;
+    font-size: 18px;
+  }
+
+  .scheduler>p {
+    margin-left: 10px;
+    font-size: 12px;
+    line-height: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .scheduler>label {
+    font-size: 11px;
+    margin-left: 12px;
+  }
+
+  .scheduler>input {
+    align-self: flex-start;
+    font-size: 11px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .button_container {
+    margin-top: 5%;
+    width: 50%;
+  }
+
+  .button_container>button {
+    font-size: 10px;
+    padding: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  #set_date {
+    margin-right: 30px;
   }
 }
