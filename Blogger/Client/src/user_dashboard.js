@@ -7,8 +7,14 @@ const show = document.getElementById("show");
 for (let i = 0; i < nav.length; i++) {
     nav[i].addEventListener("click", () => {
         if (i == 0) {
-            nav[i].classList.add("editp-active");
-            content[i].classList.add("content-active");
+            if(window.width <= 400){
+                nav[i].classList.add("editp-active");
+                content[i].classList.add("content-active");
+                console.log(window.width);
+            } else{
+                nav[i].classList.add("editp-active");
+                content[i].classList.add("content-active");
+            }     
         } else {
             nav[i].classList.add("nav-active");
             content[i].classList.add("content-active");
