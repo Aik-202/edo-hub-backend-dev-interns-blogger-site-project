@@ -686,6 +686,7 @@ button:focus {
     padding-bottom: -10px;
     margin-top: 18px;
     margin-right: 5px;
+    cursor: pointer;
   }
 
   #xmark {
@@ -695,6 +696,7 @@ button:focus {
     padding-bottom: -10px;
     margin-top: 18px;
     margin-right: 5px;
+    cursor: pointer;
   }
 
   .first_insider {
