@@ -179,6 +179,10 @@ button:focus {
   font-weight: 1000;
 }
 
+.hamburger_menu>li:hover {
+  color: #fef9f8;
+}
+
 #focus {
   color: #fef9f8;
   font-weight: 1000;
@@ -556,6 +560,68 @@ button:focus {
   background-color: #353535;
 }
 
+.dark_theme #bars {
+  color: white;
+}
+
+.dark_theme #xmark {
+  color: white;
+}
+
+.dark_theme .hamburger_menu {
+  background-color: #353839;
+  border: 1px solid #353839;
+}
+
+.dark_theme .hamburger_menu>li>a {
+  color: white;
+}
+
+.dark_theme #focus {
+  color: #ef9273;
+}
+
+.dark_theme #focus>a {
+  color: #ef9273;
+}
+
+.dark_theme .hamburger_menu>li:hover {
+  color: #ef9273;
+}
+
+.dark_theme   .dark_theme #bars {
+  color: white;
+}
+
+.dark_theme #xmark {
+  color: white;
+}
+
+.dark_theme .hamburger_menu {
+  background-color: #353839;
+  border: 1px solid #353839;
+}
+
+.dark_theme .hamburger_menu>li>a {
+  color: white;
+}
+
+.dark_theme #focus {
+  color: #ef9273;
+}
+
+.dark_theme #focus>a {
+  color: #ef9273;
+}
+
+.dark_theme .hamburger_menu>li:hover {
+  color: #ef9273;
+}
+
+.dark_theme .hamburger_menu>li>a:hover {
+  color: #ef9273;
+}
+
 @media only screen and (max-width: 1280px) {
 
   .first_insider {
@@ -897,35 +963,5 @@ button:focus {
 
   .socials>img:first-child {
     margin-left: 10%;
-  }
-
-  .dark_theme #bars {
-    color: white;
-  }
-
-  .dark_theme #xmark {
-    color: white;
-  }
-
-  .dark_theme .hamburger_menu {
-    background-color: #353839;
-    border: 1px solid #353839;
-  }
-
-  .dark_theme .hamburger_menu>li>a {
-    color: white;
-  }
-
-  .dark_theme #focus {
-    color: #ef9273;
-  }
-
-  .dark_theme #focus>a {
-    color: #ef9273;
-  }
-
-  .dark_theme .hamburger_menu>li:hover,
-  .hamburger_menu>li>a:hover {
-    color: #ef9273;
   }
 }
