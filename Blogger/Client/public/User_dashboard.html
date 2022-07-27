@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1-web/css/all.css">
   <script src="./src/scripts.js" defer></script>
   <script src="./src/user_dashboard.js" defer></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js" defer></script>
 </head>
 
 <body>
@@ -4102,10 +4103,29 @@
     <section class="Bookmarks" id="Bookmarks" style="display: none;"></section>
   </section>
 
+  <!--html for account summary section-->
   <section class="content stat">
     <h1>Account Summary</h1>
-    <h2>Created account 21st of June 2021</h2>
-    <div class="stat_row">
+    <h2>Created account 21st of January 2021</h2>
+    <ul class="charts-options">
+      <li>Jan 2022 - Dec 2022
+        <ul class="charts-display-options">
+          <li>Jan 2022</li>
+          <li>Feburary 2022</li>
+          <li>March 2022</li>
+          <li>April 2022</li>
+          <li>May 2022</li>
+          <li>June 2022</li>
+          <li>July 2022</li>
+          <li>August 2022</li>
+          <li>September 2022</li>
+          <li>October 2022</li>
+          <li>November 2022</li>
+          <li>December 2022</li>
+        </ul>
+      </li>
+    </ul>
+    <!-- <div class="stat_row">
       <div>
         <h4>26</h4>
         <h3>Stories</h3>
@@ -4122,7 +4142,7 @@
     <div class="stat_row">
       <div>
         <h4>16</h4>
-        <h3>Bookmarks</h3>
+        <h3>Views</h3>
       </div>
       <div>
         <h4>16</h4>
@@ -4132,15 +4152,19 @@
         <h4>15</h4>
         <h3>Comments</h3>
       </div>
-    </div>
+    </div> -->
   </section>
+  <!--end of account summary section-->
 
+  <!--html for followers section-->
   <section class="content followers">
     <h1>Assurance Ikogwe</h1>
     <ul>
       <li>2 Followers</li>
       <li>4 Following</li>
     </ul>
+
+    <!--html for user's followers section-->
     <div class="follow">
       <h3>Followers</h3>
       <div>
@@ -4176,6 +4200,9 @@
         </div>
       </div>
     </div>
+    <!--end  of user's followers section-->
+
+    <!--html for who user's follow section-->
     <div class="following">
       <h3>Following</h3>
       <div>
@@ -4199,6 +4226,9 @@
         <button>Unfollow</button>
       </div>
     </div>
+    <!--end of who user's follow section-->
+
+    <!--html for user's recommended followers section-->
     <div class="recommend">
       <h3>Recommended For You</h3>
       <div>
@@ -4227,8 +4257,11 @@
         <button>Follow</button>
       </div>
     </div>
+    <!--end of user's recommended followers section-->
   </section>
+  <!--end of followers section-->
 
+  <!--html for publish section-->
   <section class="content Publish">
     <div class="publish_heading">
       <a class="publish_headings publish_heading-active">Publish Post</a>
@@ -4255,10 +4288,10 @@
 
     <section class="scheduled_post" id="scheduled_post"></section>
 
-
-
   </section>
+  <!--end of publish section-->
 
+  <!--html for sign out section-->
   <section class="content">
     <section class="Login_section">
       <div class="Login_content">
@@ -4273,7 +4306,7 @@
       <img src="./images/i10.png" alt="" width="250px" height="450px" />
     </section>
   </section>
-
+  <!--end of sign out section-->
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="../src/UserdashRoute.js"></script>
