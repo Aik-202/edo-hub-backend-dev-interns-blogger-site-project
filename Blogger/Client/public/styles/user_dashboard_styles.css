@@ -994,15 +994,16 @@ p {
   font-size: 20px;
 }
 
-.charts-options{
+.charts-options {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-right: 10%;
 }
 
 .charts-options>li {
+  display: flex;
+  flex-direction: row;
   list-style-type: none;
   border: 1px solid #ef9273;
   padding: 5px;
@@ -1013,18 +1014,31 @@ p {
   font-size: 15px;
   font-weight: 700;
 }
-.charts-options>li>i{
-  padding-left: 5px;
+
+.charts-options>li>i {
+  align-self: center;
+  padding-left: 8px;
 }
 
-.charts-display-options{
-  display: flex;
+#change-year {
+  font-size: 13px;
+  border: none;
+  margin-left: 10px;
+  margin-right: 3%;
+}
+
+#angle-up {
+  display: none;
+}
+
+.charts-display-options {
+  display: none;
   flex-direction: column;
   min-width: 14%;
   height: fit-content;
   top: 38%;
   bottom: 0;
-  right: 85px;
+  right: 10%;
   border: 1px solid #ef9273;
   background-color: #ef9273;
   border-radius: 2px;
@@ -1033,8 +1047,12 @@ p {
 }
 
 .charts-display-options>li {
+  align-self: center;
   list-style-type: none;
   padding: 10px;
+  color: #0d0d0d;
+  font-weight: 540;
+  margin: 5px;
 }
 
 /* .stat_row {
@@ -1799,6 +1817,19 @@ p {
   box-shadow: none;
   background-color: transparent;
   border: none;
+}
+
+.dark_theme .charts-options>li {
+  border: 1px solid #353839;
+}
+
+.dark_theme .charts-display-options {
+  border: 1px solid #1b1b1bd8;
+  background-color: #1b1b1bd8;
+}
+
+.dark_theme .charts-display-options>li {
+  color: white;
 }
 
 .dark_theme .scheduler {

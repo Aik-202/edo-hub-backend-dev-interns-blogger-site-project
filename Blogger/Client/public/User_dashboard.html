@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js" defer></script>
+  <script src="./src/user_dashboard.js" defer></script>
+  <script src="./src/scripts.js" defer></script>
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/Login_page_styles.css">
   <link rel="stylesheet" href="./styles/user_dashboard_styles.css">
   <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1-web/css/all.css">
-  <script src="./src/scripts.js" defer></script>
-  <script src="./src/user_dashboard.js" defer></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js" defer></script>
 </head>
 
 <body>
@@ -4108,8 +4108,9 @@
     <h1>Account Summary</h1>
     <h2>Created account 21st of January 2021</h2>
     <ul class="charts-options">
-      <li>Jan 2022 - Dec 2022 <i class="fa-solid fa-angle-down"></i></li>
-      <ul class="charts-display-options">
+      <li>Jan 2022 - Dec 2022 <i class="fa-solid fa-angle-down" id="angle-down"></i> <i class="fa-solid fa-angle-up" id="angle-up"></i></li>
+      <li id="change-year">Change year</li>
+      <ul class="charts-display-options" id="charts-display-options">
         <li>January 2022</li>
         <li>Feburary 2022</li>
         <li>March 2022</li>
@@ -4124,6 +4125,23 @@
         <li>December 2022</li>
       </ul>
     </ul>
+    
+    <div class="general">
+      <h2>General</h2>
+      <h4>Personals</h4>
+      <canvas id="generalPersonalChart"></canvas>
+      <h4>Engagements</h4>
+      <div id="generalEngageChart"></div>
+    </div>
+    
+
+    <div class="relationships">
+      <h2>Relationships</h2>
+      <h4>Personals</h4>
+      <div></div>
+      <h4>Engagements</h4>
+      <div></div>
+    </div>
     <!-- <div class="stat_row">
       <div>
         <h4>26</h4>

@@ -350,6 +350,32 @@ for (let i = 0; i < replies.length; i++) {
     });
 }
 
+//userdashboard drop down dates for account summary section
+const up = document.getElementById("angle-up");
+const down = document.getElementById("angle-down");
+const chartsDate = document.getElementById("charts-display-options");
+down.addEventListener("click", () => {
+    up.style.display = "block";
+    down.style.display = "none";
+    chartsDate.style.display = "flex";
+});
+
+up.addEventListener("click", () => {
+    up.style.display = "none";
+    down.style.display = "block";
+    chartsDate.style.display = "none";
+});
+
+//userdashboard charts for account summary section
+let data1 = {
+    labels : ['Stories','Drafts', 'Bookmarks'],
+    y : [26,6,16],
+}
+new Chart ('generalPersonalChart', {
+    type : 'bar',
+    datasets : [data1]
+});
+
 //userdashboard scheduler for scheduling posts
 const fixSchedule = document.getElementById("schedule");
 schedule.addEventListener("click", () => {
