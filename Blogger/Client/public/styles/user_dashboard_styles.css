@@ -116,6 +116,7 @@ h2 {
   margin-left: 10px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
   cursor: pointer;
 }
 
@@ -254,6 +255,7 @@ content>div>button:focus {
   border-radius: 5px;
   color: #333;
   padding: 10px;
+  cursor: pointer;
 }
 
 #image_options>button:first-child {
@@ -283,10 +285,11 @@ content>div>button:focus {
 }
 
 #editp>div>ul {
+  align-self: flex-end;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: -50px;
+  margin-right: 80px;
 }
 
 #editp>div>ul>li {
@@ -1846,7 +1849,121 @@ p {
 /* end of dark theme section css  */
 
 /* increase font section css  */
+.increase_font .logo>img {
+  width: 50px;
+  height: 50px;
+}
 
+.increase_font .logo>span {
+  font-size: 30px;
+}
+
+.increase_font .fa-xmark {
+  font-size: 29px;
+  top: 22px;
+}
+
+.increase_font #show {
+  font-size: 25px;
+}
+
+.increase_font h1>i {
+  font-size: 30px;
+}
+
+.increase_font h1 {
+  font-size: 35px;
+}
+
+.increase_font h2 {
+  font-size: 28px;
+}
+
+.increase_font .side_bar1{
+  width: 23%;
+}
+
+.increase_font .side_bar1>div>div>h6{
+  font-size: 18px;
+}
+
+.increase_font .side_bar1>div>div>a {
+  font-size: 16px;
+}
+
+.increase_font .welcome>div>h6 {
+  font-size: 10px;
+}
+
+.increase_font .navigation>li {
+  font-size: 22px;
+  margin-bottom: 22px;
+}
+
+.increase_font .navigation>li>a {
+  font-size: 22px;
+  padding-left: 15px;
+}
+
+.increase_font .content {
+  margin-left: 25%;
+}
+
+.increase_font .content>div>button {
+  font-size: 18px;
+}
+
+.increase_font #image_options>button {
+  font-size: 20px;
+  font-weight: 540;
+}
+
+.increase_font #image_options>button:first-child {
+  margin-right: 30px;
+}
+
+.increase_font #editp>h1 {
+  margin-left: 2%;
+}
+
+.increase_font #editp>div>ul {
+  margin-right: 50px;
+}
+.increase_font #editp>div>ul>li {
+  font-size: 22px;
+}
+
+.increase_font #editp>div>h3>span {
+  font-size: 20px;
+}
+
+.increase_font #editp>div>h3>i {
+  font-size: 20px;
+}
+
+.increase_font .edit-name>label {
+  font-size: 24px;
+}
+
+.increase_font #name {
+  font-size: 22px;
+}
+
+.increase_font .edit-name>i {
+  font-size: 20px;
+}
+
+.increase_font .edit-about>label {
+  font-size: 24px;
+}
+
+.increase_font #about {
+  font-size: 22px;
+}
+
+.increase_font .edit-about>i {
+  font-size: 20px;
+}
 
 @media only screen and (max-width: 1200px) {
   #collapse {

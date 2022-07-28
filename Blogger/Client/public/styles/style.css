@@ -631,23 +631,25 @@ button:focus {
 }
 
 .increase_font #login {
-  font-size: 15px;
+  font-size: 18px;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .increase_font #sign_up {
-  font-size: 15px;
+  font-size: 18px;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .increase_font #accessibility {
+  font-size: 18px;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .increase_font #accessibility2 {
+  font-size: 18px;
   padding-left: 15px;
   padding-right: 15px;
 }
