@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js" defer></script>
   <script src="./src/user_dashboard.js" defer></script>
   <script src="./src/scripts.js" defer></script>
   <link rel="stylesheet" href="./styles/style.css">
@@ -4129,7 +4129,9 @@
     <div class="general">
       <h2>General</h2>
       <h4>Personals</h4>
-      <canvas id="generalPersonalChart"></canvas>
+      <canvas id="generalPersonalChart" style="width: 900px; max-width: 900px;">
+        <p>General Personal chart</p>
+      </canvas>
       <h4>Engagements</h4>
       <div id="generalEngageChart"></div>
     </div>

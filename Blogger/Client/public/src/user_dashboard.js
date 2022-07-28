@@ -367,13 +367,36 @@ up.addEventListener("click", () => {
 });
 
 //userdashboard charts for account summary section
-let data1 = {
-    labels : ['Stories','Drafts', 'Bookmarks'],
-    y : [26,6,16],
-}
-new Chart ('generalPersonalChart', {
+let x = ['Stories','Drafts', 'Bookmarks'];
+let y = [26,6,16];
+new Chart('generalPersonalChart', {
     type : 'bar',
-    datasets : [data1]
+    data : {
+        labels : x,
+        datasets: [{ 
+            data : y,
+            label : "Jan 2022 - Dec 2022",
+            backgroundColor : ["red", "blue", "green"],
+            borderColor : ["red", "blue", "green"],
+            borderWidth : 1
+        }],
+    },
+    options : {
+        legend : {display : false},
+        title : {
+            display : true,
+            text : 'Stories, Drafts, Bookmarks from Jan 2022 - Dec 2022'
+        },
+        scales : {
+            xAxes : {
+                barThicknesss : 23,
+                maxBarThicknesss : 23,
+            },
+            yAxes : {
+                beginAtZero : true
+            }
+        }
+    }
 });
 
 //userdashboard scheduler for scheduling posts
