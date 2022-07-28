@@ -90,3 +90,23 @@ let getTheme = JSON.parse(localStorage.getItem("pageTheme"));
 if (getTheme === "DARK") {
   element.classList.toggle("dark_theme");
 }
+
+
+//increase font mode
+const increaseFontMode = () => {
+  element.classList.toggle("increase_font");
+  //set theme
+  var font
+  if (element.classList == "increase_font") {
+    font = "BIG"
+  } else {
+    font = "NORMAL"
+  }
+  localStorage.setItem("pageFont", JSON.stringify(font));
+}
+
+let getFont = JSON.parse(localStorage.getItem("pageFont"));
+
+if (getFont === "BIG") {
+  element.classList.toggle("increase_font");
+}

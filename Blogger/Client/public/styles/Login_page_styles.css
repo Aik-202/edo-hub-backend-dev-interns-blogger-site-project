@@ -1,5 +1,6 @@
 #home {
   border: none;
+  text-transform: capitalize;
 }
 
 .Login_section {
@@ -169,6 +170,28 @@ p {
 
 .dark_theme #home {
   border-bottom: none;
+}
+
+.increase_font .Login_content>h2{
+  font-size: 25px;
+}
+
+.increase_font .Login_content>h6{
+  font-size: 20px;
+}
+
+.increase_font input{
+  font-size: 20px;
+}
+
+.increase_font .Login_content>form>label{
+  font-size: 20px;
+}
+
+.increase_font .Login_content>form>a {
+  margin-left: 40%;
+  font-size: 20px;
+  max-width: 50%;
 }
 
 @media only screen and (max-width: 1200px) {
