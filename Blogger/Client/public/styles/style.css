@@ -625,7 +625,7 @@ button:focus {
 }
 
 .increase_font .headers_list>li>a {
-  font-size: 15px;
+  font-size: 18px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -662,7 +662,7 @@ button:focus {
   position: absolute;
   content: 'Decrease Font';
   top: 0;
-  left: 3px;
+  left: 4px;
   right: 0;
   width: 150%;
 }

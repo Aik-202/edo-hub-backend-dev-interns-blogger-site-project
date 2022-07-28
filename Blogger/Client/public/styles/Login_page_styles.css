@@ -172,26 +172,67 @@ p {
   border-bottom: none;
 }
 
+.increase_font .Login_section>img{
+  width: 530px;
+}
+
 .increase_font .Login_content>h2{
-  font-size: 25px;
+  font-size: 28px;
+  margin-bottom: -20px;
 }
 
 .increase_font .Login_content>h6{
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .increase_font input{
-  font-size: 20px;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.increase_font #username {
+  margin-bottom: 40px;
 }
 
 .increase_font .Login_content>form>label{
-  font-size: 20px;
+  font-size: 22px;
+  margin-bottom: 5px;
 }
 
 .increase_font .Login_content>form>a {
   margin-left: 40%;
-  font-size: 20px;
+  margin-top: 20px;
+  font-size: 22px;
   max-width: 50%;
+}
+
+.increase_font .user_admin_option>label {
+  font-size: 22px;
+}
+
+.increase_font .user_admin_option>input[type=radio]{
+  margin-top: 28px;
+}
+
+.increase_font .Login_content>form>button{
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.increase_font p {
+  font-size: 22px;
+  margin-left: 18%;
+}
+
+.increase_font .Login_content>p>a {
+  font-size: 22px;
+}
+
+.increase_font .Login_content>h5 {
+  font-size: 22px;
+  line-height: 1.8rem;
 }
 
 @media only screen and (max-width: 1200px) {
