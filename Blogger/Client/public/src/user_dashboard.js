@@ -9,7 +9,7 @@ for (let i = 0; i < nav.length; i++) {
         if (i == 0) {
             nav[i].classList.add("editp-active");
             content[i].classList.add("content-active");
-            
+
         } else {
             nav[i].classList.add("nav-active");
             content[i].classList.add("content-active");
@@ -29,11 +29,11 @@ for (let i = 0; i < nav.length; i++) {
     // link to profile by clicking on user image
     userImage.addEventListener("click", () => {
         if (i == 0) {
-            if(window.innerWidth <= 400){
+            if (window.innerWidth <= 400) {
                 nav[i].classList.add("editp-active");
                 content[i].classList.add("content-active");
                 content[4].classList.add("content-active");
-            } else{
+            } else {
                 nav[i].classList.add("editp-active");
                 content[i].classList.add("content-active");
             }
@@ -367,34 +367,49 @@ up.addEventListener("click", () => {
 });
 
 //userdashboard charts for account summary section
-let x = ['Stories','Drafts', 'Bookmarks'];
-let y = [26,6,16];
+let x = ['Stories', 'Drafts', 'Bookmarks'];
+let y = [26, 6, 16];
 new Chart('generalPersonalChart', {
-    type : 'bar',
-    data : {
-        labels : x,
-        datasets: [{ 
-            data : y,
-            label : "Jan 2022 - Dec 2022",
-            backgroundColor : ["red", "blue", "green"],
-            borderColor : ["red", "blue", "green"],
-            borderWidth : 1
+    type: 'bar',
+    data: {
+        labels: x,
+        datasets: [{
+            data: y,
+            label: "Jan 2022 - Dec 2022",
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)'
+            ],
+            borderWidth: 1
         }],
     },
-    options : {
-        legend : {display : false},
-        title : {
-            display : true,
-            text : 'Stories, Drafts, Bookmarks from Jan 2022 - Dec 2022'
+    options: {
+        legend: {
+            display: false
         },
-        scales : {
-            xAxes : {
-                barThicknesss : 23,
-                maxBarThicknesss : 23,
-            },
-            yAxes : {
-                beginAtZero : true
-            }
+        title: {
+            display: true,
+            text: 'Stories, Drafts, Bookmarks from Jan 2022 - Dec 2022'
+        },
+        scales: {
+            xAxes: [{
+                barThicknesss: 3,
+                maxBarThicknesss: 3,
+                barPercentage: 0.5
+            }],
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+                barThicknesss: 3,
+                maxBarThicknesss: 3
+            }]
         }
     }
 });
