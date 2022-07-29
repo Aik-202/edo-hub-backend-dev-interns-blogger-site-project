@@ -538,18 +538,18 @@ p {
   margin-left: 5px;
 }
 
-.followers_story_engage_icons>i>span {
-  font-size: 15px;
-  padding-left: 10px;
-  cursor: context-menu;
-}
-
 .followers_story_engage_icons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 50%;
   margin-left: 20%;
+}
+
+.followers_story_engage_icons>i>span {
+  font-size: 15px;
+  padding-left: 10px;
+  cursor: context-menu;
 }
 
 .descriptions {
@@ -1880,7 +1880,7 @@ p {
 }
 
 .increase_font .side_bar1{
-  width: 23%;
+  width: 22.5%;
 }
 
 .increase_font .side_bar1>div>div>h6{
@@ -1903,10 +1903,6 @@ p {
 .increase_font .navigation>li>a {
   font-size: 22px;
   padding-left: 15px;
-}
-
-.increase_font .content {
-  margin-left: 25%;
 }
 
 .increase_font .content>div>button {
@@ -1962,6 +1958,78 @@ p {
 }
 
 .increase_font .edit-about>i {
+  font-size: 20px;
+}
+
+.increase_font .Home>input {
+  font-size: 20px;
+}
+
+.increase_font .home_heading {
+  width: 98%;
+}
+
+.increase_font .headings  {
+  font-size: 20px;
+}
+
+.increase_font .followers_post_card {
+  max-width: 90%;
+}
+
+.increase_font .followers_data {
+  max-width: 70%;
+}
+
+.increase_font .followers_data>img {
+  width: 50px;
+  height: 50px;
+}
+
+.increase_font .followers_data>h5 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.increase_font .followers_story_info {
+  max-width: 90%;
+}
+
+.increase_font .followers_story_info>img{
+  width: 180px;
+  height: 150px;
+}
+
+.increase_font .followers_story_info>div {
+  margin-bottom: 50px;
+}
+
+.increase_font .followers_story_engage {
+  max-width: 90%;
+}
+
+.increase_font p {
+  font-size: 22px;
+}
+
+.increase_font .views {
+  max-width: 50%;
+  width: 35%;
+  font-size: 22px;
+  margin-left: 50px;
+}
+
+.increase_font .followers_story_engage_icons {
+  width: 60%;
+  margin-left: 5%;
+  border: 1px solid red;
+}
+
+.increase_font .followers_story_engage_icons>i {
+  font-size: 22px;
+}
+
+.increase_font .followers_story_engage_icons>i>span {
   font-size: 20px;
 }
 
