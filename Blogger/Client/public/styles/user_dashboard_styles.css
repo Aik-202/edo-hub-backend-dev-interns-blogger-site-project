@@ -2138,7 +2138,6 @@ p {
   font-size: 20px;
 }
 
-
 .increase_font .story>input {
   font-size: 20px;
 }
@@ -2203,6 +2202,26 @@ p {
   font-size: 20px;
 }
 
+.increase_font .charts-options>li {
+  font-size: 20px;
+}
+
+.increase_font #change-year {
+  font-size: 18px;
+}
+
+.increase_font .charts-display-options {
+  top: 45%;
+  right: 14%;
+}
+
+.increase_font .charts-display-options>li {
+  font-size: 20px;
+}
+
+.increase_font .follow>div>p{
+  margin-left: 0;
+}
 
 @media only screen and (max-width: 1200px) {
   #collapse {
