@@ -2070,18 +2070,75 @@ p {
   height: 45px;
 }
 
-.increase_font #users_comment {
-  font-size: 18px;
-}
-
-/* .increase_font .comment_reaction {
-  justify-content: flex-start;
-  align-items: flex-start;
-} */
-
-.increase_font .comment_reaction>p {
+.increase_font h5 {
   font-size: 20px;
 }
+
+.increase_font #users_comment {
+  font-size: 20px;
+  margin-bottom: 30px;
+  line-height: 1.8rem;
+}
+
+.increase_font .comment_reaction>p {
+  margin-left: 0;
+  font-size: 22px;
+}
+
+.increase_font .comment_reaction>i {
+  font-size: 22px;
+}
+
+.increase_font .comment_reaction>i>span {
+  font-size: 20px;
+}
+
+.increase_font .comment_input>textarea {
+  font-size: 22px;
+}
+
+
+.increase_font .comment_input>button {
+  font-size: 22px;
+}
+
+.increase_font .reply>div>img{
+  width: 40px;
+  height: 40px;
+}
+
+.increase_font h5 {
+  font-size: 20px;
+}
+
+.increase_font #users_comment {
+  font-size: 20px;
+  margin-bottom: 30px;
+  line-height: 1.8rem;
+}
+
+.increase_font .comment_reaction>p {
+  margin-left: 0;
+  font-size: 22px;
+}
+
+.increase_font .comment_reaction>i {
+  font-size: 22px;
+}
+
+.increase_font .comment_reaction>i>span {
+  font-size: 20px;
+}
+
+.increase_font .comment_input>textarea {
+  font-size: 22px;
+}
+
+
+.increase_font .comment_input>button {
+  font-size: 22px;
+}
+
 
 .increase_font .story>input {
   font-size: 20px;
