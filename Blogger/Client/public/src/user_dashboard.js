@@ -56,7 +56,7 @@ collapse.addEventListener("click", () => {
     show.style.display = "block";
     show.style.marginLeft = "-165px";
     for (let i = 0; i < content.length; i++) {
-        content[i].style.marginLeft = "10%"
+        content[i].classList.add("collapse_content");
     }
 });
 
@@ -71,7 +71,7 @@ show.addEventListener("click", () => {
     logoText.previousElementSibling.style.marginLeft = "0"
     show.style.display = "none"
     for (let i = 0; i < content.length; i++) {
-        content[i].style.marginLeft = "23%"
+        content[i].classList.remove("collapse_content");
     }
 });
 

@@ -1,4 +1,5 @@
 body {
+  overflow-x: hidden;
   overflow-y: scroll;
   box-sizing: border-box;
   background-color: #ffebe7b0;
@@ -1102,6 +1103,154 @@ p {
 
 /* end of summary section css  */
 
+/* followers, following and recommended followers section css  */
+.followers>ul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: end;
+  margin-right: 10%;
+  font-size: 14px;
+  font-weight: 550;
+}
+
+.followers>ul>li {
+  margin: 10px;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+.follow {
+  border-bottom: 1px solid #ef9273;
+}
+
+.follow>h3 {
+  font-weight: 500;
+}
+
+.follow>div {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px;
+  padding-right: 20px;
+}
+
+.follow>div>img {
+  align-items: flex-start;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 2%;
+}
+
+.follow>div>p {
+  align-self: center;
+  margin-right: 2%;
+  width: 100%;
+}
+
+.follow>div>div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.follow>div>div>button {
+  align-self: center;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 550;
+}
+
+.follow>div>button:first-child {
+  margin-right: 5%;
+}
+
+.following {
+  padding: 10px;
+  border-bottom: 1px solid #ef9273;
+}
+
+.following>h3 {
+  font-weight: 500;
+}
+
+.following>div {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px;
+  padding-right: 20px;
+}
+
+.following>div>img {
+  align-items: flex-start;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 2%;
+}
+
+.following>div>p {
+  align-self: center;
+  margin-right: 2%;
+  width: 100%;
+}
+
+.following>div>button {
+  align-self: center;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 550;
+}
+
+.recommend>h3 {
+  font-weight: 500;
+}
+
+.recommend {
+  padding: 10px;
+}
+
+.recommend>div {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px;
+  padding-right: 20px;
+}
+
+.recommend>div>img {
+  align-items: flex-start;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 2%;
+}
+
+.recommend>div>p {
+  align-self: center;
+  margin-right: 2%;
+  width: 100%;
+}
+
+.recommend>div>button {
+  align-self: center;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 550;
+}
+
+/* end of followers, following and recommended followers section css  */
+
 /* publish section css  */
 .publish_heading {
   display: flex;
@@ -1279,11 +1428,6 @@ p {
   margin-right: 50px;
 }
 
-/* .scheduler>div {
-  display: flex;
-  flex-direction: column;
-} */
-
 ::placeholder {
   color: #333
 }
@@ -1297,154 +1441,6 @@ p {
 }
 
 /* end of publish section css  */
-
-/* followers, following and recommended followers section css  */
-.followers>ul {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: end;
-  margin-right: 10%;
-  font-size: 14px;
-  font-weight: 550;
-}
-
-.followers>ul>li {
-  margin: 10px;
-  margin-top: 0;
-  list-style-type: none;
-}
-
-.follow {
-  border-bottom: 1px solid #ef9273;
-}
-
-.follow>h3 {
-  font-weight: 500;
-}
-
-.follow>div {
-  display: flex;
-  flex-direction: row;
-  margin: 10px;
-  padding: 10px;
-  padding-right: 20px;
-}
-
-.follow>div>img {
-  align-items: flex-start;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-right: 2%;
-}
-
-.follow>div>p {
-  align-self: center;
-  margin-right: 2%;
-  width: 100%;
-}
-
-.follow>div>div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 30%;
-}
-
-.follow>div>div>button {
-  align-self: center;
-  border-radius: 5px;
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-weight: 550;
-}
-
-.follow>div>button:first-child {
-  margin-right: 5%;
-}
-
-.following {
-  padding: 10px;
-  border-bottom: 1px solid #ef9273;
-}
-
-.following>h3 {
-  font-weight: 500;
-}
-
-.following>div {
-  display: flex;
-  flex-direction: row;
-  margin: 10px;
-  padding: 10px;
-  padding-right: 20px;
-}
-
-.following>div>img {
-  align-items: flex-start;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-right: 2%;
-}
-
-.following>div>p {
-  align-self: center;
-  margin-right: 2%;
-  width: 100%;
-}
-
-.following>div>button {
-  align-self: center;
-  border-radius: 5px;
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-weight: 550;
-}
-
-.recommend>h3 {
-  font-weight: 500;
-}
-
-.recommend {
-  padding: 10px;
-}
-
-.recommend>div {
-  display: flex;
-  flex-direction: row;
-  margin: 10px;
-  padding: 10px;
-  padding-right: 20px;
-}
-
-.recommend>div>img {
-  align-items: flex-start;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-right: 2%;
-}
-
-.recommend>div>p {
-  align-self: center;
-  margin-right: 2%;
-  width: 100%;
-}
-
-.recommend>div>button {
-  align-self: center;
-  border-radius: 5px;
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-weight: 550;
-}
-
-/* end of followers, following and recommended followers section css  */
 
 /* sign out section css  */
 .Login_section {
@@ -1465,7 +1461,7 @@ p {
 }
 
 .Login_content>form>button {
-  width: 95%;
+  max-width: 79%;
 }
 
 .Login_content>form>button:focus {
@@ -1576,6 +1572,10 @@ p {
   overflow: hidden;
   word-wrap: nowrap;
   text-overflow: ellipsis;
+}
+
+.collapse_content {
+  margin-left: 10%;
 }
 
 /* end of collapse nav section css  */
@@ -1869,7 +1869,7 @@ p {
 
 .increase_font .content {
   margin-left: 25%;
-} 
+}
 
 .increase_font h1>i {
   font-size: 30px;
@@ -1883,11 +1883,11 @@ p {
   font-size: 29px;
 }
 
-.increase_font .side_bar1{
+.increase_font .side_bar1 {
   width: 23%;
 }
 
-.increase_font .side_bar1>div>div>h6{
+.increase_font .side_bar1>div>div>h6 {
   font-size: 18px;
 }
 
@@ -1929,6 +1929,7 @@ p {
 .increase_font #editp>div>ul {
   margin-right: 50px;
 }
+
 .increase_font #editp>div>ul>li {
   font-size: 22px;
 }
@@ -1973,7 +1974,7 @@ p {
   width: 98%;
 }
 
-.increase_font .headings  {
+.increase_font .headings {
   font-size: 20px;
 }
 
@@ -2003,7 +2004,7 @@ p {
   margin-left: 2%;
 }
 
-.increase_font .followers_story_info>img{
+.increase_font .followers_story_info>img {
   width: 180px;
   height: 150px;
 }
@@ -2049,7 +2050,7 @@ p {
   margin-left: 1%;
 }
 
-.increase_font #bookmarks{
+.increase_font #bookmarks {
   margin-left: -4.2%;
 }
 
@@ -2102,7 +2103,7 @@ p {
   font-size: 22px;
 }
 
-.increase_font .reply>div>img{
+.increase_font .reply>div>img {
   width: 40px;
   height: 40px;
 }
@@ -2111,7 +2112,7 @@ p {
   font-size: 18px;
 }
 
-.increase_font #users_reply{
+.increase_font #users_reply {
   font-size: 18px;
   margin-bottom: 20px;
   line-height: 1.6rem;
@@ -2138,6 +2139,10 @@ p {
   font-size: 20px;
 }
 
+.increase_font .story {
+  max-width: 80%;
+}
+
 .increase_font .story>input {
   font-size: 20px;
 }
@@ -2146,7 +2151,7 @@ p {
   width: 98%;
 }
 
-.increase_font .story_headings  {
+.increase_font .story_headings {
   font-size: 20px;
 }
 
@@ -2176,7 +2181,7 @@ p {
   margin-left: 2%;
 }
 
-.increase_font .story_info>img{
+.increase_font .story_info>img {
   width: 180px;
   height: 150px;
 }
@@ -2219,8 +2224,156 @@ p {
   font-size: 20px;
 }
 
-.increase_font .follow>div>p{
+.increase_font .followers {
+  max-width: 80%;
+}
+
+.increase_font .followers>ul {
+  font-size: 20px;
+}
+
+.increase_font .follow>h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.increase_font .follow>div {
+  margin-bottom: 20px;
+}
+
+.increase_font .follow>div>img {
+  width: 45px;
+  height: 45px;
+}
+
+.increase_font .follow>div>p {
   margin-left: 0;
+}
+
+.increase_font .follow>div>div {
+  width: 45%;
+}
+
+.increase_font .follow>div>div>button {
+  font-size: 20px;
+}
+
+.increase_font .follow>div>button:first-child {
+  margin-right: 15%;
+}
+
+.increase_font .following>h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.increase_font .following>div {
+  margin-bottom: 20px;
+}
+
+.increase_font .following>div>img {
+  width: 45px;
+  height: 45px;
+}
+
+.increase_font .following>div>p {
+  margin-left: 0;
+}
+
+.increase_font .following>div>button {
+  font-size: 20px;
+}
+
+.increase_font .recommend>div {
+  margin-bottom: 20px;
+}
+
+.increase_font .recommend>h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.increase_font .recommend>div>img {
+  width: 45px;
+  height: 45px;
+}
+
+.increase_font .recommend>div>p {
+  margin-left: 0;
+}
+
+.increase_font .recommend>div>button {
+  font-size: 20px;
+}
+
+.increase_font .Publish {
+  margin-top: 1%;
+}
+
+.increase_font .publish_headings {
+  font-size: 20px;
+}
+
+.increase_font .publish_options>button {
+  font-size: 18px;
+}
+
+.increase_font .write-post>h1 {
+  font-size: 35px;
+}
+
+.increase_font .write-post-title>input {
+  font-size: 3.3rem;
+}
+
+.increase_font .write-post-body>textarea {
+  font-size: 2.3rem;
+}
+
+.increase_font .scheduler {
+  margin-left: 120px;
+  width: 56%;
+}
+
+.increase_font .scheduler>h1 {
+  font-size: 28px;
+}
+
+.increase_font .scheduler>p {
+  font-size: 22px;
+}
+
+.increase_font .scheduler>label {
+  font-size: 20px;
+}
+
+.increase_font .scheduler>input {
+  font-size: 20px;
+}
+
+.increase_font .button_container {
+  width: 40%;
+}
+
+.increase_font .button_container>button {
+  font-size: 18px;
+}
+
+.increase_font .Login_section>img {
+  width: 430px;
+}
+
+.increase_font .Login_content>h2 {
+  margin-top: 1.5%;
+  font-size: 28px;
+}
+
+.increase_font .collapse {
+  width: 6%;
+}
+
+.increase_font .collapse_content {
+  margin-left: 12%;
 }
 
 @media only screen and (max-width: 1200px) {
