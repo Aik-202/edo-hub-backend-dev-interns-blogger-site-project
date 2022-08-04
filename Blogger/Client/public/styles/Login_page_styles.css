@@ -248,6 +248,13 @@ p {
   .Login_content>form>button {
     max-width: 100%;
   }
+  
+  .increase_font .Login_section>img{
+   width: 430px;
+  }
+  .increase_font .Login_content>form>a {
+  margin-left: 50%;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -312,4 +319,33 @@ p {
   .Login_content>h5 {
     font-size: 11px;
   }
+  
+  .increase_font .Login_section>img{
+   width: 350px;
+  }
+  
+ .increase_font .Login_content>h2{
+  margin-bottom: -30px;
+  line-height: 1.3em;
+ }
+  .increase_font .Login_section>input {
+    margin-top: 10px;
+  }
+  
+  .increase_font .Login_content>form>a {
+  margin-left: 45%;
+  max-width: 100%;
+  font-size: 18px;
+  }
+  .increase_font p {
+  font-size: 20px;
+  margin-left: 0%;
+ }
+ .increase_font .Login_content>p>a {
+  font-size: 18px;
+}
+.increase_font .Login_content>h5 {
+  font-size: 19px;
+  max-width: 100%;
+}
 }

@@ -313,7 +313,11 @@ for (let i = 0; i < regular.length; i++) {
                             commentInput[j].style.bottom = pos + "px";
                             if (pos >= 30) {
                                 clearInterval(timer);
-                                commentInput[j].style.bottom = "10px";
+                                if(window.innerWidth <= 400) {
+                                  commentInput[j].style.bottom = "10%";
+                                } else {
+                                  commentInput[j].style.bottom = "10px";
+                                }
                             }
                         }
                         var timer = setInterval(move, 500);
@@ -368,13 +372,13 @@ up.addEventListener("click", () => {
 
 //userdashboard charts for account summary section
 let x = ['Stories', 'Drafts', 'Bookmarks'];
-let y = [26, 6, 16];
+let y1 = [16, 6, 6];
 new Chart('generalPersonalChart', {
-    type: 'bar',
+    type : 'bar',
     data: {
         labels: x,
         datasets: [{
-            data: y,
+            data: y1,
             label: "Jan 2022 - Dec 2022",
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -401,7 +405,72 @@ new Chart('generalPersonalChart', {
             xAxes: [{
                 barThicknesss: 3,
                 maxBarThicknesss: 3,
-                barPercentage: 0.5
+                barPercentage: 1,
+                categoryPercentage: 0.7
+            }],
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+                barThicknesss: 3,
+                maxBarThicknesss: 3,
+            }]
+        },
+        barValueSpacing : 0
+    }
+});
+
+let a = ['Views', 'Likes', 'Comments'];
+let b1 = [6, 10, 5];
+let b2 = [10, 6, 10];
+new Chart('generalEngageChart', {
+    type: 'bar',
+    data: {
+        labels: a,
+        datasets: [{
+            data: b1,
+            label: "Jan 2022 - Dec 2022",
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)'
+            ],
+            borderWidth: 1
+        }, {
+            data: b2,
+            label: "Jan 2022 - Dec 2022",
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)'
+            ],
+            borderWidth: 1
+        }],
+    },
+    options: {
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: 'Views, Likes, Comments from Jan 2022 - Dec 2022'
+        },
+        scales: {
+            xAxes: [{
+                barThicknesss: 3,
+                maxBarThicknesss: 3,
+                barPercentage: 1,
+                categoryPercentage: 0.7
             }],
             yAxes: [{
                 ticks: {
@@ -413,6 +482,52 @@ new Chart('generalPersonalChart', {
         }
     }
 });
+
+
+// new Chart('relationshipPersonalChart', {
+//     type: 'bar',
+//     data: {
+//         labels: x,
+//         datasets: [{
+//             data: y,
+//             label: "Jan 2022 - Dec 2022",
+//             backgroundColor: [
+//                 'rgba(255, 99, 132, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(255, 99, 132, 1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(255, 206, 86, 1)'
+//             ],
+//             borderWidth: 1
+//         }],
+//     },
+//     options: {
+//         legend: {
+//             display: false
+//         },
+//         title: {
+//             display: true,
+//             text: 'Stories, Drafts, Bookmarks from Jan 2022 - Dec 2022'
+//         },
+//         scales: {
+//             xAxes: [{
+//                 barThicknesss: 3,
+//                 maxBarThicknesss: 3,
+//                 barPercentage: 0.5
+//             }],
+//             yAxes: [{
+//                 ticks: {
+//                     beginAtZero: true
+//                 },
+//                 barThicknesss: 3,
+//                 maxBarThicknesss: 3
+//             }]
+//         }
+//     }
+// });
 
 //userdashboard scheduler for scheduling posts
 const fixSchedule = document.getElementById("schedule");

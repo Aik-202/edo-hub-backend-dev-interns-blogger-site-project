@@ -21,9 +21,9 @@
       <ul class="headers_list">
         <h1 class="logo" id="logo"><img src="./images/logo2.png" alt="" width="30px" height="30px"><span
             id="logo_text">BLOGGER</span></h1>
-        <li><a id="accessibility" class="header_link" onclick="darkMode()"> <i class="fas fa-moon"></i> <span
+        <li id="dark"><a id="accessibility" class="header_link" onclick="darkMode()"> <i class="fas fa-moon"></i> <span
               id="mode">Dark Mode</span> </a> </li>
-              <li><a id="accessibility2" class="header_link" onclick="increaseFontMode()"><b>tT</b><span> Increase
+              <li id="increase"><a id="accessibility2" class="header_link" onclick="increaseFontMode()"><b>tT</b><span> Increase
                 Font</span></a></li>
       </ul>
     </div>
@@ -4130,20 +4130,26 @@
     <div class="general">
       <h2>General</h2>
       <h4>Personals</h4>
-      <canvas id="generalPersonalChart" style="width: 900px; max-width: 900px; margin-left: 30px;">
+      <canvas id="generalPersonalChart">
         <p>General Personal chart</p>
       </canvas>
       <h4>Engagements</h4>
-      <div id="generalEngageChart"></div>
+      <canvas id="generalEngageChart">
+        <p>General Engage chart</p>
+      </canvas>
     </div>
     
 
     <div class="relationships">
       <h2>Relationships</h2>
       <h4>Personals</h4>
-      <div></div>
+      <canvas id="relationshipPersonalChart">
+        <p>Relationship Personal chart</p>
+      </canvas>
       <h4>Engagements</h4>
-      <div></div>
+      <canvas id="relationshipEngageChart">
+        <p>Relationship Engage chart</p>
+      </canvas>
     </div>
     <!-- <div class="stat_row">
       <div>

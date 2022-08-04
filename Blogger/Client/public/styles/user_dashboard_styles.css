@@ -1059,6 +1059,18 @@ p {
   margin: 5px;
 }
 
+#generalPersonalChart {
+  width: 900px;
+  max-width: 900px;
+  margin-left: 30px;
+}
+
+#generalEngageChart {
+  width: 900px;
+  max-width: 900px;
+  margin-left: 30px;
+}
+
 /* .stat_row {
   display: flex;
   flex-direction: row;
@@ -1324,9 +1336,13 @@ p {
   font-size: 2.8rem;
   outline: none;
   background-color: inherit;
-
+  text-transform: uppercase;
   border: none;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.write-post-title>input::placeholder {
+  text-transform: capitalize;
 }
 
 .write-post-body>textarea {
@@ -2225,7 +2241,7 @@ p {
 }
 
 .increase_font .followers {
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .increase_font .followers>ul {
@@ -2255,11 +2271,11 @@ p {
 }
 
 .increase_font .follow>div>div>button {
-  font-size: 20px;
+  font-size: 18px;
 }
 
-.increase_font .follow>div>button:first-child {
-  margin-right: 15%;
+.increase_font .follow>div>div>button:first-child {
+  margin-right: 10%;
 }
 
 .increase_font .following>h3 {
@@ -2281,7 +2297,7 @@ p {
 }
 
 .increase_font .following>div>button {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .increase_font .recommend>div {
@@ -2303,7 +2319,7 @@ p {
 }
 
 .increase_font .recommend>div>button {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .increase_font .Publish {
@@ -2375,6 +2391,7 @@ p {
 .increase_font .collapse_content {
   margin-left: 12%;
 }
+
 
 @media only screen and (max-width: 1200px) {
   #collapse {
@@ -2481,6 +2498,36 @@ p {
     margin-top: -6%;
     margin-left: -3.5%;
   }
+ 
+ .comment>div>h5 {
+   font-size: 15px;
+ } 
+ 
+  #users_comment {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  .comment_input {
+    bottom: 15%;
+  }
+  
+  .reply>div>h5{
+    font-size: 12px;
+  }
+  
+  #users_reply {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .reply_input {
+    bottom: 15%;
+  }
+  
+  .charts-display-options {
+    top: 16%;
+    right: 13%;
+  }
 
   .scheduler {
     margin-top: 200px;
@@ -2524,6 +2571,93 @@ p {
   #set_date {
     margin-right: 50px;
   }
+  
+  .Login_content>form>button {
+    max-width: 100%;
+  }
+  
+  .increase_font .side_bar1{
+    width: 10%;
+  }
+  
+  .increase_font .logo>img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .increase_font .welcome {
+    margin-bottom: 15%;
+  }
+  
+  .increase_font .welcome>img {
+    width: 75px;
+    height: 75px;
+  }
+  
+  .increase_font .navigation>li {
+    font-size: 30px;
+    margin-bottom: 80%;
+  }
+  
+  .increase_font .content {
+    margin-left: 14%;
+  }  
+  
+  .increase_font .followers_data>h5 {
+    font-size: 22px;
+  }
+  
+  .increase_font .descriptions {
+    margin-top: -7%;
+    margin-left: -5%;
+  }
+  
+  .increase_font #like {
+    margin-left: -2%;
+  }
+  
+  .increase_font #bookmarks {
+    margin-left: -5.5%;
+  }
+  
+  .increase_font .comment>div>h5 {
+    font-size: 20px;
+  }
+  
+  .increase_font #users_comment {
+    margin-left: 0;
+    font-size: 13px;
+    line-height: 1.8rem;
+  }
+  
+  .increase_font #users_reply {
+    margin-left: 0;
+    font-size: 12px;
+  }
+  
+  .increase_font .user_data>h5 {
+    font-size: 22px;
+  }
+  
+  .increase_font .charts-display-options {
+    top: 20%;
+    right: 17%;
+  }
+  
+  .increase_font .scheduler {
+    width: 65%;
+    margin-right: 100px;
+    margin-top: 250px;
+  }
+  
+  .increase_font .Login_section>img {
+    width: 380px;
+  }
+  
+  .increase_font .Login_content {
+    padding-left: 60px;
+  }
+  
 }
 
 @media only screen and (max-width: 400px) {
@@ -2711,13 +2845,19 @@ p {
     height: 35px;
     margin-top: 15px;
   }
+  
+  .followers_data>h5 {
+    align-self: center;
+    font-size: 15px;
+    margin-top: 20px;
+  }
 
   .followers_story_info {
     max-width: 100%;
   }
 
   .followers_story_info>img {
-    width: 80px;
+    width: 80px; 
     height: 80px;
   }
 
@@ -2760,6 +2900,53 @@ p {
 
   #bookmarks {
     margin-left: -9%;
+  }
+  
+  .add_comment{
+    align-self: flex-start;
+    max-width: 100%;
+  }
+  
+  .comment>div>img{
+    width: 25px;
+    height: 25px;
+  }
+  
+  .comment>div>h5 {
+    font-size: 12px;
+  }
+  
+  .comment>div>p {
+    font-size: 12px;
+  }
+  
+  .comment>div>i {
+    font-size: 15px;
+  }
+  
+  .comment>div>i>span {
+    font-size: 12px;
+  }
+  
+  .comment_input {
+    bottom: 10%;
+    width: 80%;
+    max-width: 80%;
+  }
+  
+  .reply>div>img{
+    width: 22px;
+    height: 22px;
+  }
+  
+  .reply>div>h5 {
+    font-size: 10px;
+  }
+  
+  .reply_input {
+    bottom: 10%;
+    width: 70%;
+    max-width: 70%;
   }
 
   .story_card {
@@ -2818,6 +3005,36 @@ p {
     width: 90%;
     padding: 10px;
   }
+  
+  .charts-options>li {
+    font-size: 10px;
+  }
+  
+  #change-year{
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  
+  .charts-display-options {
+    top: 31%;
+    right: 30%;
+    padding: 5px;
+  }
+  .charts-display-options>li {
+    font-size: 10px;
+    padding: 5px;
+  }
+  #generalPersonalChart {
+    width: 350px;
+    max-width: 350px;
+    margin-left: 0;
+  }
+  
+  #generalEngageChart {
+    width: 350px;
+    max-width: 350px;
+    margin-left: 0;
+  }  
 
   .stat>h1 {
     font-size: 18px;
@@ -3041,4 +3258,527 @@ p {
     border-left: none;
     background-color: transparent;
   }
+
+  .increase_font #logo {
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: 15px;
+    padding: 10px;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+  
+  .increase_font #logo>img {
+    width: 40px;
+    height: 35px;
+    margin-left: 0;
+  }
+  
+  .increase_font .content {
+    margin-left: 10px;
+  }
+  .increase_font .headers_list {
+    overflow-x: hidden;
+  }
+  .increase_font .headers_list>li {
+    padding-left: 0;
+  }
+  .increase_font #dark{
+    margin-left: 0px;
+    margin-right: 2px;
+    padding-left: 5px;
+  }
+  .increase_font #accessibility {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .increase_font #accessibility2 {
+    margin-left: 0px;
+    margin-right: 5px;
+  }
+  .increase_font #increase {
+    margin-left: -5px;
+    margin-right: 8px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  
+  .increase_font .Home>input {
+    margin-top: -3%;
+    margin-bottom: 6%;
+    font-size: 18px;
+  }
+  
+  .increase_font .side_bar1 {
+    width: 100%;
+    height: 8%;
+  }
+  
+  .increase_font .side_bar1>div>img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .increase_font .navigation>li {
+    font-size: 18px;
+  }
+  
+  .increase_font .edit-name {
+    margin-left: -5px;
+  }
+  
+  .increase_font .edit-name>label {
+    font-size: 18px;
+    padding-right: 5px;
+    margin-left: 0;
+  }
+  
+  .increase_font #name {
+    font-size: 15px;
+  }
+  
+  .increase_font .edit-name>i {
+    font-size: 15px;
+  }
+  
+  .increase_font .edit-about {
+    margin-left: -5px;
+  }
+  
+  .increase_font .edit-about>label {
+    font-size: 18px;
+    padding-right: 5px;
+    margin-left: 0;
+  }
+  
+  .increase_font #about {
+    font-size: 15px;
+  }
+  
+  .increase_font .edit-about>i {
+    font-size: 15px;
+  }
+  
+.increase_font .home_heading {
+  width: 98%;
+}
+
+.increase_font .headings {
+  font-size: 18px;
+}
+
+.increase_font .followers_post_card {
+  max-width: 100%;
+}
+
+.increase_font .followers_data {
+  max-width: 100%;
+}
+
+.increase_font .followers_data>img {
+  width: 40px;
+  height: 40px;
+}
+
+.increase_font .followers_data>h5 {
+  font-size: 20px;
+  margin-top: 18px;
+}
+
+.increase_font .followers_story_info {
+  max-width: 100%;
+}
+
+.increase_font .followers_story_info>div>h2 {
+  font-size: 18px;
+}
+
+.increase_font .followers_story_info>div>p {
+  font-size: 16px;
+  margin-left: 0;
+}
+
+.increase_font .followers_story_info>img {
+  width: 90px;
+  height: 90px;
+}
+
+.increase_font .followers_story_info>div {
+  margin-bottom: 50px;
+}
+
+.increase_font .followers_story_engage {
+  max-width: 100%;
+  width: 100%;
+}
+
+.increase_font p {
+  font-size: 14px;
+  margin-left: 0;
+}
+
+.increase_font .views {
+  max-width: 80%;
+  width: 60%;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.increase_font .followers_story_engage_icons {
+  width: 85%;
+  margin-left: 0;
+  justify-content: space-between;
+}
+
+.increase_font .followers_story_engage_icons>i {
+  font-size: 15px;
+}
+
+.increase_font .followers_story_engage_icons>i>span {
+  font-size: 13px;
+  margin-right: 1%;
+}
+
+.increase_font .descriptions {
+  margin-top: -15%;
+  margin-left: -9%;
+}
+
+.increase_font .descriptions>p {
+  margin-left: 1%;
+}
+
+.increase_font #like {
+  margin-left: -4%;
+}
+.increase_font #bookmarks {
+  margin-left: -10.2%;
+}
+
+.increase_font #report {
+  margin-left: -20px;
+}
+
+.increase_font #block {
+  margin-left: -18px;
+}
+
+.increase_font #delete {
+  margin-left: -20px;
+}
+
+.increase_font .comment>div>img {
+  width: 30px;
+  height: 30px;
+}
+
+.increase_font .comment>div>h5 {
+  font-size: 16px;
+}
+
+.increase_font #users_comment {
+  font-size: 13px;
+  margin-bottom: 30px;
+  line-height: 1.8rem;
+}
+
+.increase_font .comment_reaction>p {
+  margin-left: 0;
+  font-size: 15px;
+}
+
+.increase_font .comment_reaction>i {
+  font-size: 16px;
+}
+
+.increase_font .comment_reaction>i>span {
+  font-size: 13px;
+}
+
+.increase_font .comment_input>textarea {
+  font-size: 18px;
+}
+
+
+.increase_font .comment_input>button {
+  font-size: 18px;
+}
+
+.increase_font .reply>div>img {
+  width: 25px;
+  height: 25px;
+}
+
+.increase_font .reply>div>h5 {
+  font-size: 14px;
+}
+
+.increase_font #users_reply {
+  font-size: 13px;
+  margin-bottom: 20px;
+  line-height: 1.6rem;
+}
+
+.increase_font .reply_reaction>p {
+  margin-left: 0;
+  font-size: 13px;
+}
+
+.increase_font .reply_reaction>i {
+  font-size: 14px;
+}
+
+.increase_font .reply_reaction>i>span {
+  font-size: 12px;
+}
+
+.increase_font .reply_input>textarea {
+  font-size: 16px;
+}
+
+.increase_font .reply_input>button {
+  font-size: 16px;
+}
+
+.increase_font .story {
+  max-width: 100%;
+}
+
+.increase_font .story>input {
+  font-size: 18px;
+}
+
+.increase_font .story_heading {
+  width: 98%;
+}
+
+.increase_font .story_headings {
+  font-size: 18px;
+}
+
+.increase_font .story_card {
+  max-width: 100%;
+}
+
+.increase_font .user_data {
+  max-width: 100%;
+}
+
+.increase_font .user_data>img {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.increase_font .user_data>h5 {
+  font-size: 18px;
+  margin-top: 18px;
+}
+
+.increase_font .story_info {
+  max-width: 100%;
+}
+
+.increase_font .story_info>div>h2 {
+  font-size: 18px;
+  margin-left: 0;
+}
+
+.increase_font .story_info>div>p {
+  font-size: 16px;
+  margin-left: 0;
+}
+
+.increase_font .story_info>img {
+  width: 90px;
+  height: 90px;
+}
+
+.increase_font .story_info>div {
+  margin-bottom: 50px;
+}
+
+.increase_font .story_engage {
+  max-width: 100%;
+}
+
+.increase_font .story_engage_icons {
+  width: 100%;
+  margin-left: 0;
+}
+
+.increase_font .story_engage_icons>i {
+  font-size: 15px;
+}
+
+.increase_font .story_engage_icons>i>span {
+  font-size: 13px;
+}
+
+.increase_font .charts-options>li {
+  font-size: 15px;
+}
+
+.increase_font #change-year {
+  font-size: 13px;
+}
+
+.increase_font .charts-display-options {
+  top: 32.5%;
+  right: 40%;
+}
+
+.increase_font .charts-display-options>li {
+  font-size: 13px;
+}
+
+.increase_font .followers {
+  max-width: 100%;
+}
+
+.increase_font .followers>ul>li {
+  font-size: 18px;
+}
+
+.increase_font .follow>h3 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.increase_font .follow>div {
+  margin-bottom: 20px;
+}
+
+.increase_font .follow>div>img {
+  width: 40px;
+  height: 40px;
+}
+
+.increase_font .follow>div>p {
+  margin-left: 0;
+}
+
+.increase_font .follow>div>div {
+  width: 150%;
+}
+
+.increase_font .follow>div>div>button {
+  font-size: 15px;
+}
+
+.increase_font .follow>div>button:first-child {
+  margin-right: 120px;
+}
+
+.increase_font .following>h3 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.increase_font .following>div {
+  margin-bottom: 20px;
+}
+
+.increase_font .following>div>img {
+  width: 40px;
+  height: 40px;
+}
+
+.increase_font .following>div>p {
+  margin-left: 0;
+}
+
+.increase_font .following>div>button {
+  font-size: 15px;
+}
+
+.increase_font .recommend>div {
+  margin-bottom: 20px;
+}
+
+.increase_font .recommend>h3 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.increase_font .recommend>div>img {
+  width: 40px;
+  height: 40px;
+}
+
+.increase_font .recommend>div>p {
+  margin-left: 0;
+}
+
+.increase_font .recommend>div>button {
+  font-size: 15px;
+}
+
+.increase_font .Publish {
+  margin-top: 1%;
+}
+
+.increase_font .publish_headings {
+  font-size: 18px;
+}
+
+.increase_font .publish_options>button {
+  font-size: 15px;
+}
+
+.increase_font .write-post>h1 {
+  font-size: 30px;
+}
+
+.increase_font .write-post-title>input {
+  font-size: 30px;
+}
+
+.increase_font .write-post-body>textarea {
+  font-size: 22px;
+}
+
+.increase_font .scheduler {
+  margin-top: 120px;
+  margin-left: 20px;
+  width: 86%;
+}
+
+.increase_font .scheduler>h1 {
+  font-size: 20px;
+}
+
+.increase_font .scheduler>p {
+  font-size: 15px;
+}
+
+.increase_font .scheduler>label {
+  font-size: 15px;
+}
+
+.increase_font .scheduler>input {
+  font-size: 15px;
+}
+
+.increase_font .button_container {
+  width: 60%;
+}
+
+.increase_font .button_container>button {
+  font-size: 15px;
+}
+
+.increase_font .Login_section>img {
+  width: 330px;
+}
+
+.increase_font .Login_content {
+  padding-left: 0;
+}
+
+.increase_font .Login_content>h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
 }
