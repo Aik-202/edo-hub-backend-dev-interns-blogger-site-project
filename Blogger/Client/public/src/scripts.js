@@ -110,3 +110,4 @@ let getFont = JSON.parse(localStorage.getItem("pageFont"));
 if (getFont === "BIG") {
   element.classList.toggle("increase_font");
 }
+
