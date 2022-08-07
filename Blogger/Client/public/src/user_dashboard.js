@@ -371,14 +371,16 @@ up.addEventListener("click", () => {
 });
 
 //userdashboard charts for account summary section
+let generalEngageChart = document.getElementById("generalEngageChart").getContext('2d');
+let generalPersonalChart = document.getElementById("generalPersonalChart").getContext('2d');
 let x = ['Stories', 'Drafts', 'Bookmarks'];
-let y1 = [16, 6, 6];
-new Chart('generalPersonalChart', {
+let stb1 = [26, 6, 16];
+new Chart(generalPersonalChart, {
     type : 'bar',
     data: {
         labels: x,
         datasets: [{
-            data: y1,
+            data: stb1,
             label: "Jan 2022 - Dec 2022",
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -390,6 +392,8 @@ new Chart('generalPersonalChart', {
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)'
             ],
+            barPercentage: 1,
+            categoryPercentage: 0.4,
             borderWidth: 1
         }],
     },
@@ -405,8 +409,6 @@ new Chart('generalPersonalChart', {
             xAxes: [{
                 barThicknesss: 3,
                 maxBarThicknesss: 3,
-                barPercentage: 1,
-                categoryPercentage: 0.7
             }],
             yAxes: [{
                 ticks: {
@@ -421,14 +423,13 @@ new Chart('generalPersonalChart', {
 });
 
 let a = ['Views', 'Likes', 'Comments'];
-let b1 = [6, 10, 5];
-let b2 = [10, 6, 10];
-new Chart('generalEngageChart', {
+let vlc1 = [16, 16, 15];
+new Chart(generalEngageChart, {
     type: 'bar',
     data: {
         labels: a,
         datasets: [{
-            data: b1,
+            data: vlc1,
             label: "Jan 2022 - Dec 2022",
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -440,20 +441,8 @@ new Chart('generalEngageChart', {
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)'
             ],
-            borderWidth: 1
-        }, {
-            data: b2,
-            label: "Jan 2022 - Dec 2022",
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)'
-            ],
+            barPercentage: 1,
+            categoryPercentage: 0.4,
             borderWidth: 1
         }],
     },
@@ -469,65 +458,57 @@ new Chart('generalEngageChart', {
             xAxes: [{
                 barThicknesss: 3,
                 maxBarThicknesss: 3,
-                barPercentage: 1,
-                categoryPercentage: 0.7
+                // gridLines : {
+                //     color: 'rgba(0,0,0,.4)'
+                // }
             }],
             yAxes: [{
                 ticks: {
                     beginAtZero: true
                 },
                 barThicknesss: 3,
-                maxBarThicknesss: 3
+                maxBarThicknesss: 3,
             }]
         }
     }
 });
 
+let storiesJan = [4, 3, 1, 2, 3];
+let jan = ['Jan 1st - Jan 7th', 'Jan 8th - Jan 14th', 'Jan 15th - Jan 21st', 'Jan 22nd - Jan 28th', 'Jan 29th - Jan 31st'];
+let feb = ['Feb 1st - Feb 7th', 'Feb 8th - Feb 14th', 'Feb 15th - Feb 21st', 'Feb 22nd - Feb 28th'];
+let mar = ['Mar 1st - Mar 7th', 'Mar 8th - Mar 14th', 'Mar 15th - Mar 21st', 'Mar 22nd - Mar 28th', 'Mar 29th - Jan 31st'];
 
-// new Chart('relationshipPersonalChart', {
-//     type: 'bar',
-//     data: {
-//         labels: x,
-//         datasets: [{
-//             data: y,
-//             label: "Jan 2022 - Dec 2022",
-//             backgroundColor: [
-//                 'rgba(255, 99, 132, 0.2)',
-//                 'rgba(54, 162, 235, 0.2)',
-//                 'rgba(255, 206, 86, 0.2)'
-//             ],
-//             borderColor: [
-//                 'rgba(255, 99, 132, 1)',
-//                 'rgba(54, 162, 235, 1)',
-//                 'rgba(255, 206, 86, 1)'
-//             ],
-//             borderWidth: 1
-//         }],
-//     },
-//     options: {
-//         legend: {
-//             display: false
-//         },
-//         title: {
-//             display: true,
-//             text: 'Stories, Drafts, Bookmarks from Jan 2022 - Dec 2022'
-//         },
-//         scales: {
-//             xAxes: [{
-//                 barThicknesss: 3,
-//                 maxBarThicknesss: 3,
-//                 barPercentage: 0.5
-//             }],
-//             yAxes: [{
-//                 ticks: {
-//                     beginAtZero: true
-//                 },
-//                 barThicknesss: 3,
-//                 maxBarThicknesss: 3
-//             }]
-//         }
-//     }
-// });
+new Chart('storiesChart', {
+    type: 'line',
+    data: {
+        labels: jan,
+        datasets: [{
+            data: storiesJan,
+            label: "Stories",
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            fill : 'origin',
+            pointBorderRadius : 5,
+            borderWidth: 1
+        }],
+    },
+    options: {
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: 'Stories for Jan 2022'
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+            }]
+        }
+    }
+});
 
 //userdashboard scheduler for scheduling posts
 const fixSchedule = document.getElementById("schedule");

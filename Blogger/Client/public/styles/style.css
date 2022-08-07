@@ -64,10 +64,22 @@ button:focus {
 
 #bars {
   display: none;
+  font-size: 45px;
+  color: #ef9273;
+  padding-bottom: -10px;
+  margin-top: 18px;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
 #xmark {
   display: none;
+  font-size: 45px;
+  color: #ef9273;
+  padding-bottom: -10px;
+  margin-top: 18px;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
 .headers_list {
@@ -914,22 +926,10 @@ button:focus {
   
  .increase_font #bars {
     display: block;
-    font-size: 45px;
-    color: #ef9273;
-    padding-bottom: -10px;
-    margin-top: 18px;
-    margin-right: 15px;
-    cursor: pointer;
   }
 
  .increase_font #xmark {
     display: none;
-    font-size: 45px;
-    color: #ef9273;
-    padding-bottom: -10px;
-    margin-top: 18px;
-    margin-right: 15px;
-    cursor: pointer;
   }
   
   .increase_font .headers_list>li>a {
@@ -1299,6 +1299,7 @@ button:focus {
 
 .increase_font .main_content>img {
   width: 350px;
+  padding-right: 5px;
 }
 
 .increase_font .main_content>div>h3 {
