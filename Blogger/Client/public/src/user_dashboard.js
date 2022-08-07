@@ -476,7 +476,16 @@ new Chart(generalEngageChart, {
 let storiesJan = [4, 3, 1, 2, 3];
 let jan = ['Jan 1st - Jan 7th', 'Jan 8th - Jan 14th', 'Jan 15th - Jan 21st', 'Jan 22nd - Jan 28th', 'Jan 29th - Jan 31st'];
 let feb = ['Feb 1st - Feb 7th', 'Feb 8th - Feb 14th', 'Feb 15th - Feb 21st', 'Feb 22nd - Feb 28th'];
-let mar = ['Mar 1st - Mar 7th', 'Mar 8th - Mar 14th', 'Mar 15th - Mar 21st', 'Mar 22nd - Mar 28th', 'Mar 29th - Jan 31st'];
+let mar = ['Mar 1st - Mar 7th', 'Mar 8th - Mar 14th', 'Mar 15th - Mar 21st', 'Mar 22nd - Mar 28th', 'Mar 29th - Mar 31st'];
+let apr = ['Apr 1st - Apr 7th', 'Apr 8th - Apr 14th', 'Apr 15th - Apr 21st', 'Apr 22nd - Apr 28th', 'Apr 29th - Apr 30th'];
+let may = ['May 1st - May 7th', 'May 8th - May 14th', 'May 15th - May 21st', 'May 22nd - May 28th', 'May 29th - May 31st'];
+let jun = ['Jun 1st - Jun 7th', 'Jun 8th - Jun 14th', 'Jun 15th - Jun 21st', 'Jun 22nd - Jun 28th', 'Jun 29th - Jun 30th'];
+let jul = ['Jul 1st - Jul 7th', 'Jul 8th - Jul 14th', 'Jul 15th - Jul 21st', 'Jul 22nd - Jul 28th', 'Jul 29th - Jul 31st'];
+let aug = ['Aug 1st - Aug 7th', 'Aug 8th - Aug 14th', 'Aug 15th - Aug 21st', 'Aug 22nd - Aug 28th', 'Aug 29th - Aug 31st'];
+let sep = ['Sep 1st - Sep 7th', 'Sep 8th - Sep 14th', 'Sep 15th - Sep 21st', 'Sep 22nd - Sep 28th', 'Sep 29th - Sep 30th'];
+let oct = ['Oct 1st - Oct 7th', 'Oct 8th - Oct 14th', 'Oct 15th - Oct 21st', 'Oct 22nd - Oct 28th', 'Oct 29th - Oct 31st'];
+let nov = ['Nov 1st - Nov 7th', 'Nov 8th - Nov 14th', 'Nov 15th - Nov 21st', 'Nov 22nd - Nov 28th', 'Nov 29th - Nov 30th'];
+let dec = ['Dec 1st - Dec 7th', 'Dec 8th - Dec 14th', 'Dec 15th - Dec 21st', 'Dec 22nd - Dec 28th', 'Dec 29th - Dec 31st'];
 
 new Chart('storiesChart', {
     type: 'line',
