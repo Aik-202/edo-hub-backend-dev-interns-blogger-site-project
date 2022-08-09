@@ -371,15 +371,15 @@ up.addEventListener("click", () => {
 });
 
 //userdashboard charts for account summary section
-let personalChart = document.getElementById("personalChart").getContext('2d');
-let engageChart = document.getElementById("engageChart").getContext('2d');
-let generalChart = document.getElementById("generalChart").getContext('2d');
-let storiesChart = document.getElementById("storiesChart").getContext('2d');
-let draftsChart = document.getElementById("draftsChart").getContext('2d');
-let bookmarksChart = document.getElementById("bookmarksChart").getContext('2d');
-let viewsChart = document.getElementById("viewsChart").getContext('2d');
-let likesChart = document.getElementById("likesChart").getContext('2d');
-let commentsChart = document.getElementById("commentsChart").getContext('2d');
+let personalChart = document.getElementById("personal_chart").getContext('2d');
+let engageChart = document.getElementById("engage_chart").getContext('2d');
+let generalChart = document.getElementById("general_chart").getContext('2d');
+let storiesChart = document.getElementById("stories_chart").getContext('2d');
+let draftsChart = document.getElementById("drafts_chart").getContext('2d');
+let bookmarksChart = document.getElementById("bookmarks_chart").getContext('2d');
+let viewsChart = document.getElementById("views_chart").getContext('2d');
+let likesChart = document.getElementById("likes_chart").getContext('2d');
+let commentsChart = document.getElementById("comments_chart").getContext('2d');
 
 let jan = ['Jan 1st - Jan 7th', 'Jan 8th - Jan 14th', 'Jan 15th - Jan 21st', 'Jan 22nd - Jan 28th', 'Jan 29th - Jan 31st'];
 let feb = ['Feb 1st - Feb 7th', 'Feb 8th - Feb 14th', 'Feb 15th - Feb 21st', 'Feb 22nd - Feb 28th'];
@@ -404,16 +404,16 @@ yearTotalLabel = [...x, ...a];
 
 let storiesJan = [4, 3, 1, 2, 3];
 let storiesFeb = [2, 4, 3, 5];
-let storiesMar = [4, 3, 1, 2, 3];
-let storiesApr = [2, 4, 3, 5];
-let storiesMay = [4, 3, 1, 2, 3];
-let storiesJun = [2, 4, 3, 5];
-let storiesJul = [4, 3, 1, 2, 3];
-let storiesAug = [2, 4, 3, 5];
-let storiesSep = [4, 3, 1, 2, 3];
-let storiesOct = [2, 4, 3, 5];
-let storiesNov = [4, 3, 1, 2, 3];
-let storiesDec = [2, 4, 3, 5];
+let storiesMar = [2, 1, 1, 2, 3];
+let storiesApr = [6, 3, 3, 5, 2];
+let storiesMay = [5, 7, 1, 2, 3];
+let storiesJun = [3, 9, 3, 5, 1];
+let storiesJul = [9, 3, 1, 2, 3];
+let storiesAug = [7, 5, 3, 5, 0];
+let storiesSep = [5, 2, 1, 2, 3];
+let storiesOct = [9, 7, 4, 8, 6];
+let storiesNov = [3, 4, 6, 5, 3];
+let storiesDec = [6, 2, 1, 1, 0];
 
 
 new Chart( personalChart, {
