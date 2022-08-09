@@ -313,10 +313,10 @@ for (let i = 0; i < regular.length; i++) {
                             commentInput[j].style.bottom = pos + "px";
                             if (pos >= 30) {
                                 clearInterval(timer);
-                                if(window.innerWidth <= 400) {
-                                  commentInput[j].style.bottom = "10%";
+                                if (window.innerWidth <= 400) {
+                                    commentInput[j].style.bottom = "10%";
                                 } else {
-                                  commentInput[j].style.bottom = "10px";
+                                    commentInput[j].style.bottom = "10px";
                                 }
                             }
                         }
@@ -373,13 +373,30 @@ up.addEventListener("click", () => {
     chartsDate.style.display = "none";
 });
 
-for(let i = 0; i < months.length; i++) {
+for (let i = 0; i < months.length; i++) {
     months[i].addEventListener("click", () => {
-        monthChosen.innerHTML = months[i].innerHTML;      
+        monthChosen.innerHTML = months[i].innerHTML;
         months[i].style.display = "none";
         monthYear.style.display = "flex";
-    })
-}
+        for (let j = 0; j < months.length; j++) {
+            months[j].addEventListener("click", () => {
+                if (i != j) {
+                    months[i].style.display = "flex";
+                    months[j].style.display = "none";
+                }
+            });
+        }
+    });
+};
+
+monthYear.addEventListener("click", () => {
+    monthYear.style.display = "none";
+    for (let i = 0; i < months.length; i++) {
+        months[i].style.display = "flex";
+        monthYear.style.display = "none";
+        monthChosen.innerHTML = monthYear.innerHTML;
+    }
+});
 
 //userdashboard charts for account summary section
 let personalChart = document.getElementById("personal_chart").getContext('2d');
@@ -427,7 +444,7 @@ let storiesNov = [3, 4, 6, 5, 3];
 let storiesDec = [6, 2, 1, 1, 0];
 
 
-new Chart( personalChart, {
+new Chart(personalChart, {
     type: 'bar',
     data: {
         labels: x,
@@ -450,7 +467,7 @@ new Chart( personalChart, {
         }],
     },
 
-    options : {
+    options: {
         legend: {
             display: false
         },
@@ -465,7 +482,7 @@ new Chart( personalChart, {
                 },
             }]
         }
-    }    
+    }
 });
 
 new Chart(engageChart, {
@@ -563,8 +580,8 @@ let stories = new Chart(storiesChart, {
             label: "Stories",
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgba(255, 99, 132, 1)',
-            fill : 'origin',
-            pointBorderRadius : 5,
+            fill: 'origin',
+            pointBorderRadius: 5,
             borderWidth: 1
         }],
     },
