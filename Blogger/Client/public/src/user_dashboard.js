@@ -355,11 +355,12 @@ for (let i = 0; i < replies.length; i++) {
 }
 
 //userdashboard drop down dates for account summary section
-const months = document.querySelectorAll(".month")
+const months = document.querySelectorAll(".month");
 const up = document.getElementById("angle-up");
 const down = document.getElementById("angle-down");
 const chartsDate = document.getElementById("charts-display-options");
 const monthChosen = document.getElementById("month_chosen");
+const monthYear = document.getElementById("year")
 down.addEventListener("click", () => {
     up.style.display = "block";
     down.style.display = "none";
@@ -374,7 +375,9 @@ up.addEventListener("click", () => {
 
 for(let i = 0; i < months.length; i++) {
     months[i].addEventListener("click", () => {
-        monthChosen.innerHTML = months[i].innerHTML;
+        monthChosen.innerHTML = months[i].innerHTML;      
+        months[i].style.display = "none";
+        monthYear.style.display = "flex";
     })
 }
 
