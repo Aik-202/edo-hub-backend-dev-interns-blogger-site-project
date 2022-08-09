@@ -365,6 +365,10 @@ let viewsChart = document.getElementById("views_chart").getContext('2d');
 let likesChart = document.getElementById("likes_chart").getContext('2d');
 let commentsChart = document.getElementById("comments_chart").getContext('2d');
 
+let x = ['Stories', 'Drafts', 'Bookmarks'];
+let a = ['Views', 'Likes', 'Comments'];
+
+
 let jan = ['Jan 1st - Jan 7th', 'Jan 8th - Jan 14th', 'Jan 15th - Jan 21st', 'Jan 22nd - Jan 28th', 'Jan 29th - Jan 31st'];
 let feb = ['Feb 1st - Feb 7th', 'Feb 8th - Feb 14th', 'Feb 15th - Feb 21st', 'Feb 22nd - Feb 28th'];
 let mar = ['Mar 1st - Mar 7th', 'Mar 8th - Mar 14th', 'Mar 15th - Mar 21st', 'Mar 22nd - Mar 28th', 'Mar 29th - Mar 31st'];
@@ -377,9 +381,6 @@ let sep = ['Sep 1st - Sep 7th', 'Sep 8th - Sep 14th', 'Sep 15th - Sep 21st', 'Se
 let oct = ['Oct 1st - Oct 7th', 'Oct 8th - Oct 14th', 'Oct 15th - Oct 21st', 'Oct 22nd - Oct 28th', 'Oct 29th - Oct 31st'];
 let nov = ['Nov 1st - Nov 7th', 'Nov 8th - Nov 14th', 'Nov 15th - Nov 21st', 'Nov 22nd - Nov 28th', 'Nov 29th - Nov 30th'];
 let dec = ['Dec 1st - Dec 7th', 'Dec 8th - Dec 14th', 'Dec 15th - Dec 21st', 'Dec 22nd - Dec 28th', 'Dec 29th - Dec 31st'];
-
-let x = ['Stories', 'Drafts', 'Bookmarks'];
-let a = ['Views', 'Likes', 'Comments'];
 
 let stb1 = [26, 6, 16];
 let vlc1 = [16, 16, 15];
@@ -399,88 +400,9 @@ let storiesOct = [9, 7, 4, 8, 6];
 let storiesNov = [3, 4, 6, 5, 3];
 let storiesDec = [6, 2, 1, 1, 0];
 
+//actual charts
 
-new Chart(personalChart, {
-    type: 'bar',
-    data: {
-        labels: x,
-        datasets: [{
-            data: stb1,
-            label: "Jan 2022 - Dec 2022",
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)'
-            ],
-            borderWidth: 1,
-            barPercentage: 0.2,
-            categoryPercentage: 0.2
-        }],
-    },
-
-    options: {
-        legend: {
-            display: false
-        },
-        title: {
-            display: true,
-            text: 'Stories, Drafts, Bookmarks from Jan 2022 - Dec 2022'
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                },
-            }]
-        }
-    }
-});
-
-new Chart(engageChart, {
-    type: 'bar',
-    data: {
-        labels: a,
-        datasets: [{
-            data: vlc1,
-            label: "Jan 2022 - Dec 2022",
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)'
-            ],
-            borderWidth: 1,
-            barPercentage: 0.2,
-            categoryPercentage: 0.2
-        }]
-    },
-    options: {
-        legend: {
-            display: false
-        },
-        title: {
-            display: true,
-            text: 'Views, Likes, Comments from Jan 2022 - Dec 2022'
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                },
-            }]
-        }
-    }
-});
-
+//general chart
 new Chart(generalChart, {
     type: 'doughnut',
     data: {
@@ -527,6 +449,90 @@ new Chart(generalChart, {
     }
 });
 
+//general chart for stories, drafts and bookmarks
+new Chart(personalChart, {
+    type: 'bar',
+    data: {
+        labels: x,
+        datasets: [{
+            data: stb1,
+            label: "Jan 2022 - Dec 2022",
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)'
+            ],
+            borderWidth: 1,
+            barPercentage: 0.2,
+            categoryPercentage: 0.2
+        }],
+    },
+
+    options: {
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: 'Stories, Drafts, Bookmarks from Jan 2022 - Dec 2022'
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+            }]
+        }
+    }
+});
+
+//general chart for views, likes, comments
+new Chart(engageChart, {
+    type: 'bar',
+    data: {
+        labels: a,
+        datasets: [{
+            data: vlc1,
+            label: "Jan 2022 - Dec 2022",
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)'
+            ],
+            borderWidth: 1,
+            barPercentage: 0.2,
+            categoryPercentage: 0.2
+        }]
+    },
+    options: {
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: 'Views, Likes, Comments from Jan 2022 - Dec 2022'
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+            }]
+        }
+    }
+});
+
+//stories chart
 let stories = new Chart(storiesChart, {
     type: 'line',
     data: {
@@ -559,6 +565,170 @@ let stories = new Chart(storiesChart, {
     }
 });
 
+//drafts chart
+let drafts = new Chart(draftsChart, {
+    type: 'line',
+    data: {
+        labels: jan,
+        datasets: [{
+            data: storiesJan,
+            label: "Stories",
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            fill: 'origin',
+            pointBorderRadius: 5,
+            borderWidth: 1
+        }],
+    },
+    options: {
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: 'Stories for Jan 2022'
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+            }]
+        }
+    }
+});
+
+//bookmarks chart
+let bookmark = new Chart(bookmarksChart, {
+    type: 'line',
+    data: {
+        labels: jan,
+        datasets: [{
+            data: storiesJan,
+            label: "Stories",
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            fill: 'origin',
+            pointBorderRadius: 5,
+            borderWidth: 1
+        }],
+    },
+    options: {
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: 'Stories for Jan 2022'
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+            }]
+        }
+    }
+});
+
+//views chart
+let views = new Chart(viewsChart, {
+    type: 'line',
+    data: {
+        labels: jan,
+        datasets: [{
+            data: storiesJan,
+            label: "Stories",
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            fill: 'origin',
+            pointBorderRadius: 5,
+            borderWidth: 1
+        }],
+    },
+    options: {
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: 'Stories for Jan 2022'
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+            }]
+        }
+    }
+});
+
+//likes chart
+let like = new Chart(likesChart, {
+    type: 'line',
+    data: {
+        labels: jan,
+        datasets: [{
+            data: storiesJan,
+            label: "Stories",
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            fill: 'origin',
+            pointBorderRadius: 5,
+            borderWidth: 1
+        }],
+    },
+    options: {
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: 'Stories for Jan 2022'
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+            }]
+        }
+    }
+});
+
+//comment chart
+let comment = new Chart(commentsChart, {
+    type: 'line',
+    data: {
+        labels: jan,
+        datasets: [{
+            data: storiesJan,
+            label: "Stories",
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            fill: 'origin',
+            pointBorderRadius: 5,
+            borderWidth: 1
+        }],
+    },
+    options: {
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: 'Stories for Jan 2022'
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+            }]
+        }
+    }
+});
 
 //userdashboard drop down dates for account summary section
 const months = document.querySelectorAll(".month");
@@ -590,8 +760,10 @@ for (let i = 0; i < months.length; i++) {
         monthYear.style.display = "flex";
         displayGeneralSummary.style.display = "none";
         displayMonthlySummary.style.display = "block";
+
         if(i == 1) {
             stories.data.labels = feb;
+            console.log(stories.data.labels)
             stories.data.datasets[0].data = storiesFeb;
             stories.options.title.text = 'Stories for Feb 2022';
         }

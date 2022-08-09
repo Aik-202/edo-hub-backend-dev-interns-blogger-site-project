@@ -1070,6 +1070,7 @@ p {
   width: 900px;
   height: 900px;
   max-width: 900px;
+  max-height: 1000px;
   margin-left: 30px;
 }
 
@@ -1077,6 +1078,15 @@ p {
   width: 900px;
   height: 900px;
   max-width: 900px;
+  max-height: 1000px;
+  margin-left: 30px;
+}
+
+#monthly > canvas {
+  width: 900px;
+  height: 900px;
+  max-width: 900px;
+  max-height: 1000px;
   margin-left: 30px;
 }
 
