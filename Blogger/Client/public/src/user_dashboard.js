@@ -355,9 +355,11 @@ for (let i = 0; i < replies.length; i++) {
 }
 
 //userdashboard drop down dates for account summary section
+const months = document.querySelectorAll(".month")
 const up = document.getElementById("angle-up");
 const down = document.getElementById("angle-down");
 const chartsDate = document.getElementById("charts-display-options");
+const monthChosen = document.getElementById("month_chosen");
 down.addEventListener("click", () => {
     up.style.display = "block";
     down.style.display = "none";
@@ -369,6 +371,12 @@ up.addEventListener("click", () => {
     down.style.display = "block";
     chartsDate.style.display = "none";
 });
+
+for(let i = 0; i < months.length; i++) {
+    months[i].addEventListener("click", () => {
+        monthChosen.innerHTML = months[i].innerHTML;
+    })
+}
 
 //userdashboard charts for account summary section
 let personalChart = document.getElementById("personal_chart").getContext('2d');
@@ -453,9 +461,7 @@ new Chart( personalChart, {
                     beginAtZero: true
                 },
             }]
-        },
-        responsive: true,
-        maintainAspectRatio: false
+        }
     }    
 });
 
@@ -495,9 +501,7 @@ new Chart(engageChart, {
                     beginAtZero: true
                 },
             }]
-        },
-        responsive: true,
-        maintainAspectRatio: false
+        }
     }
 });
 

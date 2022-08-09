@@ -1051,13 +1051,19 @@ p {
 }
 
 .charts-display-options>li {
-  align-self: center;
+  width: inherit;
   list-style-type: none;
   padding: 10px;
   color: #0d0d0d;
   font-weight: 540;
   margin: 5px;
+  margin-left: 0;
+  margin-right: 0;
   cursor: pointer;
+}
+
+.charts-display-options>li:hover {
+  background-color: #be8673;
 }
 
 #personalChart {
