@@ -559,10 +559,6 @@ let stories = new Chart(storiesChart, {
     }
 });
 
-stories.data.labels = feb;
-stories.data.datasets[0].data = storiesFeb;
-stories.options.title.text = 'Stories for Feb 2022';
-
 
 //userdashboard drop down dates for account summary section
 const months = document.querySelectorAll(".month");
@@ -572,6 +568,7 @@ const chartsDate = document.getElementById("charts-display-options");
 const monthChosen = document.getElementById("month_chosen");
 const monthYear = document.getElementById("year");
 const displayGeneralSummary = document.getElementById("year_ended");
+const displayMonthlySummary = document.getElementById("monthly");
 
 down.addEventListener("click", () => {
     up.style.display = "block";
@@ -592,8 +589,11 @@ for (let i = 0; i < months.length; i++) {
         months[i].style.display = "none";
         monthYear.style.display = "flex";
         displayGeneralSummary.style.display = "none";
-        if(i = 0) {
-            //
+        displayMonthlySummary.style.display = "block";
+        if(i == 1) {
+            stories.data.labels = feb;
+            stories.data.datasets[0].data = storiesFeb;
+            stories.options.title.text = 'Stories for Feb 2022';
         }
         for (let j = 0; j < months.length; j++) {
             months[j].addEventListener("click", () => {
@@ -613,7 +613,8 @@ monthYear.addEventListener("click", () => {
         months[i].style.display = "flex";
         monthYear.style.display = "none";
         monthChosen.innerHTML = monthYear.innerHTML;
-        displayGeneralSummary.style.display = "flex";
+        displayMonthlySummary.style.display = "none";
+        displayGeneralSummary.style.display = "block";
     }
 });
 
