@@ -400,6 +400,71 @@ let storiesOct = [9, 7, 4, 8, 6];
 let storiesNov = [3, 4, 6, 5, 3];
 let storiesDec = [6, 2, 1, 1, 0];
 
+let draftsJan = [4, 3, 1, 2, 3];
+let draftsFeb = [2, 4, 3, 5];
+let draftsMar = [2, 1, 1, 2, 3];
+let draftsApr = [6, 3, 3, 5, 2];
+let draftsMay = [5, 7, 1, 2, 3];
+let draftsJun = [3, 9, 3, 5, 1];
+let draftsJul = [9, 3, 1, 2, 3];
+let draftsAug = [7, 5, 3, 5, 0];
+let draftsSep = [5, 2, 1, 2, 3];
+let draftsOct = [9, 7, 4, 8, 6];
+let draftsNov = [3, 4, 6, 5, 3];
+let draftsDec = [6, 2, 1, 1, 0];
+
+let bookmarksJan = [4, 3, 1, 2, 3];
+let bookmarksFeb = [2, 4, 3, 5];
+let bookmarksMar = [2, 1, 1, 2, 3];
+let bookmarksApr = [6, 3, 3, 5, 2];
+let bookmarksMay = [5, 7, 1, 2, 3];
+let bookmarksJun = [3, 9, 3, 5, 1];
+let bookmarksJul = [9, 3, 1, 2, 3];
+let bookmarksAug = [7, 5, 3, 5, 0];
+let bookmarksSep = [5, 2, 1, 2, 3];
+let bookmarksOct = [9, 7, 4, 8, 6];
+let bookmarksNov = [3, 4, 6, 5, 3];
+let bookmarksDec = [6, 2, 1, 1, 0];
+
+let viewsJan = [4, 3, 1, 2, 3];
+let viewsFeb = [2, 4, 3, 5];
+let viewsMar = [2, 1, 1, 2, 3];
+let viewsApr = [6, 3, 3, 5, 2];
+let viewsMay = [5, 7, 1, 2, 3];
+let viewsJun = [3, 9, 3, 5, 1];
+let viewsJul = [9, 3, 1, 2, 3];
+let viewsAug = [7, 5, 3, 5, 0];
+let viewsSep = [5, 2, 1, 2, 3];
+let viewsOct = [9, 7, 4, 8, 6];
+let viewsNov = [3, 4, 6, 5, 3];
+let viewsDec = [6, 2, 1, 1, 0];
+
+let likesJan = [4, 3, 1, 2, 3];
+let likesFeb = [2, 4, 3, 5];
+let likesMar = [2, 1, 1, 2, 3];
+let likesApr = [6, 3, 3, 5, 2];
+let likesMay = [5, 7, 1, 2, 3];
+let likesJun = [3, 9, 3, 5, 1];
+let likesJul = [9, 3, 1, 2, 3];
+let likesAug = [7, 5, 3, 5, 0];
+let likesSep = [5, 2, 1, 2, 3];
+let likesOct = [9, 7, 4, 8, 6];
+let likesNov = [3, 4, 6, 5, 3];
+let likesDec = [6, 2, 1, 1, 0];
+
+let commentsJan = [4, 3, 1, 2, 3];
+let commentsFeb = [2, 4, 3, 5];
+let commentsMar = [2, 1, 1, 2, 3];
+let commentsApr = [6, 3, 3, 5, 2];
+let commentsMay = [5, 7, 1, 2, 3];
+let commentsJun = [3, 9, 3, 5, 1];
+let commentsJul = [9, 3, 1, 2, 3];
+let commentsAug = [7, 5, 3, 5, 0];
+let commentsSep = [5, 2, 1, 2, 3];
+let commentsOct = [9, 7, 4, 8, 6];
+let commentsNov = [3, 4, 6, 5, 3];
+let commentsDec = [6, 2, 1, 1, 0];
+
 //actual charts
 
 //general chart
@@ -571,8 +636,8 @@ let drafts = new Chart(draftsChart, {
     data: {
         labels: jan,
         datasets: [{
-            data: storiesJan,
-            label: "Stories",
+            data: draftsJan,
+            label: "Drafts",
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgba(255, 99, 132, 1)',
             fill: 'origin',
@@ -586,7 +651,7 @@ let drafts = new Chart(draftsChart, {
         },
         title: {
             display: true,
-            text: 'Stories for Jan 2022'
+            text: 'Drafts for Jan 2022'
         },
         scales: {
             yAxes: [{
@@ -604,8 +669,8 @@ let bookmark = new Chart(bookmarksChart, {
     data: {
         labels: jan,
         datasets: [{
-            data: storiesJan,
-            label: "Stories",
+            data: bookmarksJan,
+            label: "Bookmarks",
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgba(255, 99, 132, 1)',
             fill: 'origin',
@@ -619,7 +684,7 @@ let bookmark = new Chart(bookmarksChart, {
         },
         title: {
             display: true,
-            text: 'Stories for Jan 2022'
+            text: 'Bookmarks for Jan 2022'
         },
         scales: {
             yAxes: [{
@@ -637,8 +702,8 @@ let views = new Chart(viewsChart, {
     data: {
         labels: jan,
         datasets: [{
-            data: storiesJan,
-            label: "Stories",
+            data: viewsJan,
+            label: "Views",
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgba(255, 99, 132, 1)',
             fill: 'origin',
@@ -652,7 +717,7 @@ let views = new Chart(viewsChart, {
         },
         title: {
             display: true,
-            text: 'Stories for Jan 2022'
+            text: 'Views for Jan 2022'
         },
         scales: {
             yAxes: [{
@@ -670,8 +735,8 @@ let like = new Chart(likesChart, {
     data: {
         labels: jan,
         datasets: [{
-            data: storiesJan,
-            label: "Stories",
+            data: likesJan,
+            label: "Likes",
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgba(255, 99, 132, 1)',
             fill: 'origin',
@@ -685,7 +750,7 @@ let like = new Chart(likesChart, {
         },
         title: {
             display: true,
-            text: 'Stories for Jan 2022'
+            text: 'Likes for Jan 2022'
         },
         scales: {
             yAxes: [{
@@ -703,8 +768,8 @@ let comment = new Chart(commentsChart, {
     data: {
         labels: jan,
         datasets: [{
-            data: storiesJan,
-            label: "Stories",
+            data: commentsJan,
+            label: "Comments",
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgba(255, 99, 132, 1)',
             fill: 'origin',
@@ -718,7 +783,7 @@ let comment = new Chart(commentsChart, {
         },
         title: {
             display: true,
-            text: 'Stories for Jan 2022'
+            text: 'Comments for Jan 2022'
         },
         scales: {
             yAxes: [{
@@ -763,10 +828,30 @@ for (let i = 0; i < months.length; i++) {
 
         if(i == 1) {
             stories.data.labels = feb;
-            console.log(stories.data.labels)
             stories.data.datasets[0].data = storiesFeb;
             stories.options.title.text = 'Stories for Feb 2022';
+
+            drafts.data.labels = feb;
+            drafts.data.datasets[0].data = draftsFeb;
+            drafts.options.title.text = 'Drafts for Feb 2022';
+
+            bookmark.data.labels = feb;
+            bookmark.data.datasets[0].data = bookmarksFeb;
+            bookmark.options.title.text = 'Bookmarks for Feb 2022';
+
+            views.data.labels = feb;
+            views.data.datasets[0].data = viewsFeb;
+            views.options.title.text = 'Views for Feb 2022';
+
+            like.data.labels = feb;
+            like.data.datasets[0].data = likesFeb;
+            like.options.title.text = 'Likes for Feb 2022';
+
+            comment.data.labels = feb;
+            comment.data.datasets[0].data = commentsFeb;
+            comment.options.title.text = 'Comments for Feb 2022';
         }
+
         for (let j = 0; j < months.length; j++) {
             months[j].addEventListener("click", () => {
                 if (i != j) {
