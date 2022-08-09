@@ -1090,48 +1090,6 @@ p {
   margin-left: 30px;
 }
 
-/* .stat_row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px;
-  padding-right: 30px;
-  margin-top: 5%;
-}
-
-
-.stat_row>div {
-  display: flex;
-  flex-direction: column-reverse;
-  min-width: 30%;
-  min-height: 30%;
-  margin: 0;
-  margin-right: 2%;
-  padding: 10px;
-  padding-bottom: 0;
-  background-color: #ffebe7b0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
-
-.stat_row>div>h3 {
-  padding: 10px;
-  margin: 0;
-  font-size: 22px;
-  font-weight: 500;
-  color: #0d0d0d;
-}
-
-.stat_row>div>h4 {
-  align-self: flex-end;
-  font-size: 22px;
-  font-weight: 700;
-  color: #0d0d0d;
-  padding-bottom: 0;
-  margin-bottom: 5px;
-} */
-
 /* end of summary section css  */
 
 /* followers, following and recommended followers section css  */
@@ -1722,16 +1680,21 @@ p {
   color: white;
 }
 
-.dark_theme .stat_row>div {
-  background-color: #1b1b1bd8;
+.dark_theme .charts-options>li {
+  border: 1px solid #353839;
 }
 
-.dark_theme .stat_row>div>h3 {
+.dark_theme .charts-display-options {
+  border: 1px solid #1b1b1b;
+  background-color: #1b1b1b;
+}
+
+.dark_theme .charts-display-options>li {
   color: white;
 }
 
-.dark_theme .stat_row>div>h4 {
-  color: white;
+.dark_theme .charts-display-options>li:hover {
+  background-color: #333;
 }
 
 .dark_theme .publish_heading {
@@ -1855,19 +1818,6 @@ p {
   box-shadow: none;
   background-color: transparent;
   border: none;
-}
-
-.dark_theme .charts-options>li {
-  border: 1px solid #353839;
-}
-
-.dark_theme .charts-display-options {
-  border: 1px solid #1b1b1bd8;
-  background-color: #1b1b1bd8;
-}
-
-.dark_theme .charts-display-options>li {
-  color: white;
 }
 
 .dark_theme .scheduler {
