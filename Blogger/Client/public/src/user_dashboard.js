@@ -354,50 +354,6 @@ for (let i = 0; i < replies.length; i++) {
     });
 }
 
-//userdashboard drop down dates for account summary section
-const months = document.querySelectorAll(".month");
-const up = document.getElementById("angle-up");
-const down = document.getElementById("angle-down");
-const chartsDate = document.getElementById("charts-display-options");
-const monthChosen = document.getElementById("month_chosen");
-const monthYear = document.getElementById("year")
-down.addEventListener("click", () => {
-    up.style.display = "block";
-    down.style.display = "none";
-    chartsDate.style.display = "flex";
-});
-
-up.addEventListener("click", () => {
-    up.style.display = "none";
-    down.style.display = "block";
-    chartsDate.style.display = "none";
-});
-
-for (let i = 0; i < months.length; i++) {
-    months[i].addEventListener("click", () => {
-        monthChosen.innerHTML = months[i].innerHTML;
-        months[i].style.display = "none";
-        monthYear.style.display = "flex";
-        for (let j = 0; j < months.length; j++) {
-            months[j].addEventListener("click", () => {
-                if (i != j) {
-                    months[i].style.display = "flex";
-                    months[j].style.display = "none";
-                }
-            });
-        }
-    });
-};
-
-monthYear.addEventListener("click", () => {
-    monthYear.style.display = "none";
-    for (let i = 0; i < months.length; i++) {
-        months[i].style.display = "flex";
-        monthYear.style.display = "none";
-        monthChosen.innerHTML = monthYear.innerHTML;
-    }
-});
-
 //userdashboard charts for account summary section
 let personalChart = document.getElementById("personal_chart").getContext('2d');
 let engageChart = document.getElementById("engage_chart").getContext('2d');
@@ -606,6 +562,61 @@ let stories = new Chart(storiesChart, {
 stories.data.labels = feb;
 stories.data.datasets[0].data = storiesFeb;
 stories.options.title.text = 'Stories for Feb 2022';
+
+
+//userdashboard drop down dates for account summary section
+const months = document.querySelectorAll(".month");
+const up = document.getElementById("angle-up");
+const down = document.getElementById("angle-down");
+const chartsDate = document.getElementById("charts-display-options");
+const monthChosen = document.getElementById("month_chosen");
+const monthYear = document.getElementById("year");
+const displayGeneralSummary = document.getElementById("year_ended");
+
+down.addEventListener("click", () => {
+    up.style.display = "block";
+    down.style.display = "none";
+    chartsDate.style.display = "flex";
+});
+
+up.addEventListener("click", () => {
+    up.style.display = "none";
+    down.style.display = "block";
+    chartsDate.style.display = "none";
+});
+
+// on click on months
+for (let i = 0; i < months.length; i++) {
+    months[i].addEventListener("click", () => {
+        monthChosen.innerHTML = months[i].innerHTML;
+        months[i].style.display = "none";
+        monthYear.style.display = "flex";
+        displayGeneralSummary.style.display = "none";
+        if(i = 0) {
+            //
+        }
+        for (let j = 0; j < months.length; j++) {
+            months[j].addEventListener("click", () => {
+                if (i != j) {
+                    months[i].style.display = "flex";
+                    months[j].style.display = "none";
+                }
+            });
+        }
+    });
+};
+
+//on click on year ended
+monthYear.addEventListener("click", () => {
+    monthYear.style.display = "none";
+    for (let i = 0; i < months.length; i++) {
+        months[i].style.display = "flex";
+        monthYear.style.display = "none";
+        monthChosen.innerHTML = monthYear.innerHTML;
+        displayGeneralSummary.style.display = "flex";
+    }
+});
+
 
 //userdashboard scheduler for scheduling posts
 const fixSchedule = document.getElementById("schedule");
