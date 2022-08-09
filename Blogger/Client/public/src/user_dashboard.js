@@ -371,12 +371,53 @@ up.addEventListener("click", () => {
 });
 
 //userdashboard charts for account summary section
-let generalEngageChart = document.getElementById("generalEngageChart").getContext('2d');
-let generalPersonalChart = document.getElementById("generalPersonalChart").getContext('2d');
+let personalChart = document.getElementById("personalChart").getContext('2d');
+let engageChart = document.getElementById("engageChart").getContext('2d');
+let generalChart = document.getElementById("generalChart").getContext('2d');
+let storiesChart = document.getElementById("storiesChart").getContext('2d');
+let draftsChart = document.getElementById("draftsChart").getContext('2d');
+let bookmarksChart = document.getElementById("bookmarksChart").getContext('2d');
+let viewsChart = document.getElementById("viewsChart").getContext('2d');
+let likesChart = document.getElementById("likesChart").getContext('2d');
+let commentsChart = document.getElementById("commentsChart").getContext('2d');
+
+let jan = ['Jan 1st - Jan 7th', 'Jan 8th - Jan 14th', 'Jan 15th - Jan 21st', 'Jan 22nd - Jan 28th', 'Jan 29th - Jan 31st'];
+let feb = ['Feb 1st - Feb 7th', 'Feb 8th - Feb 14th', 'Feb 15th - Feb 21st', 'Feb 22nd - Feb 28th'];
+let mar = ['Mar 1st - Mar 7th', 'Mar 8th - Mar 14th', 'Mar 15th - Mar 21st', 'Mar 22nd - Mar 28th', 'Mar 29th - Mar 31st'];
+let apr = ['Apr 1st - Apr 7th', 'Apr 8th - Apr 14th', 'Apr 15th - Apr 21st', 'Apr 22nd - Apr 28th', 'Apr 29th - Apr 30th'];
+let may = ['May 1st - May 7th', 'May 8th - May 14th', 'May 15th - May 21st', 'May 22nd - May 28th', 'May 29th - May 31st'];
+let jun = ['Jun 1st - Jun 7th', 'Jun 8th - Jun 14th', 'Jun 15th - Jun 21st', 'Jun 22nd - Jun 28th', 'Jun 29th - Jun 30th'];
+let jul = ['Jul 1st - Jul 7th', 'Jul 8th - Jul 14th', 'Jul 15th - Jul 21st', 'Jul 22nd - Jul 28th', 'Jul 29th - Jul 31st'];
+let aug = ['Aug 1st - Aug 7th', 'Aug 8th - Aug 14th', 'Aug 15th - Aug 21st', 'Aug 22nd - Aug 28th', 'Aug 29th - Aug 31st'];
+let sep = ['Sep 1st - Sep 7th', 'Sep 8th - Sep 14th', 'Sep 15th - Sep 21st', 'Sep 22nd - Sep 28th', 'Sep 29th - Sep 30th'];
+let oct = ['Oct 1st - Oct 7th', 'Oct 8th - Oct 14th', 'Oct 15th - Oct 21st', 'Oct 22nd - Oct 28th', 'Oct 29th - Oct 31st'];
+let nov = ['Nov 1st - Nov 7th', 'Nov 8th - Nov 14th', 'Nov 15th - Nov 21st', 'Nov 22nd - Nov 28th', 'Nov 29th - Nov 30th'];
+let dec = ['Dec 1st - Dec 7th', 'Dec 8th - Dec 14th', 'Dec 15th - Dec 21st', 'Dec 22nd - Dec 28th', 'Dec 29th - Dec 31st'];
+
 let x = ['Stories', 'Drafts', 'Bookmarks'];
+let a = ['Views', 'Likes', 'Comments'];
+
 let stb1 = [26, 6, 16];
-new Chart(generalPersonalChart, {
-    type : 'bar',
+let vlc1 = [16, 16, 15];
+yearTotal = [...stb1, ...vlc1];
+yearTotalLabel = [...x, ...a];
+
+let storiesJan = [4, 3, 1, 2, 3];
+let storiesFeb = [2, 4, 3, 5];
+let storiesMar = [4, 3, 1, 2, 3];
+let storiesApr = [2, 4, 3, 5];
+let storiesMay = [4, 3, 1, 2, 3];
+let storiesJun = [2, 4, 3, 5];
+let storiesJul = [4, 3, 1, 2, 3];
+let storiesAug = [2, 4, 3, 5];
+let storiesSep = [4, 3, 1, 2, 3];
+let storiesOct = [2, 4, 3, 5];
+let storiesNov = [4, 3, 1, 2, 3];
+let storiesDec = [2, 4, 3, 5];
+
+
+new Chart( personalChart, {
+    type: 'bar',
     data: {
         labels: x,
         datasets: [{
@@ -392,12 +433,13 @@ new Chart(generalPersonalChart, {
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)'
             ],
-            barPercentage: 1,
-            categoryPercentage: 0.4,
-            borderWidth: 1
+            borderWidth: 1,
+            barPercentage: 0.2,
+            categoryPercentage: 0.2
         }],
     },
-    options: {
+
+    options : {
         legend: {
             display: false
         },
@@ -406,25 +448,18 @@ new Chart(generalPersonalChart, {
             text: 'Stories, Drafts, Bookmarks from Jan 2022 - Dec 2022'
         },
         scales: {
-            xAxes: [{
-                barThicknesss: 3,
-                maxBarThicknesss: 3,
-            }],
             yAxes: [{
                 ticks: {
                     beginAtZero: true
                 },
-                barThicknesss: 3,
-                maxBarThicknesss: 3,
             }]
         },
-        barValueSpacing : 0
-    }
+        responsive: true,
+        maintainAspectRatio: false
+    }    
 });
 
-let a = ['Views', 'Likes', 'Comments'];
-let vlc1 = [16, 16, 15];
-new Chart(generalEngageChart, {
+new Chart(engageChart, {
     type: 'bar',
     data: {
         labels: a,
@@ -441,10 +476,10 @@ new Chart(generalEngageChart, {
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)'
             ],
-            barPercentage: 1,
-            categoryPercentage: 0.4,
-            borderWidth: 1
-        }],
+            borderWidth: 1,
+            barPercentage: 0.2,
+            categoryPercentage: 0.2
+        }]
     },
     options: {
         legend: {
@@ -455,39 +490,64 @@ new Chart(generalEngageChart, {
             text: 'Views, Likes, Comments from Jan 2022 - Dec 2022'
         },
         scales: {
-            xAxes: [{
-                barThicknesss: 3,
-                maxBarThicknesss: 3,
-                // gridLines : {
-                //     color: 'rgba(0,0,0,.4)'
-                // }
-            }],
             yAxes: [{
                 ticks: {
                     beginAtZero: true
                 },
-                barThicknesss: 3,
-                maxBarThicknesss: 3,
             }]
-        }
+        },
+        responsive: true,
+        maintainAspectRatio: false
     }
 });
 
-let storiesJan = [4, 3, 1, 2, 3];
-let jan = ['Jan 1st - Jan 7th', 'Jan 8th - Jan 14th', 'Jan 15th - Jan 21st', 'Jan 22nd - Jan 28th', 'Jan 29th - Jan 31st'];
-let feb = ['Feb 1st - Feb 7th', 'Feb 8th - Feb 14th', 'Feb 15th - Feb 21st', 'Feb 22nd - Feb 28th'];
-let mar = ['Mar 1st - Mar 7th', 'Mar 8th - Mar 14th', 'Mar 15th - Mar 21st', 'Mar 22nd - Mar 28th', 'Mar 29th - Mar 31st'];
-let apr = ['Apr 1st - Apr 7th', 'Apr 8th - Apr 14th', 'Apr 15th - Apr 21st', 'Apr 22nd - Apr 28th', 'Apr 29th - Apr 30th'];
-let may = ['May 1st - May 7th', 'May 8th - May 14th', 'May 15th - May 21st', 'May 22nd - May 28th', 'May 29th - May 31st'];
-let jun = ['Jun 1st - Jun 7th', 'Jun 8th - Jun 14th', 'Jun 15th - Jun 21st', 'Jun 22nd - Jun 28th', 'Jun 29th - Jun 30th'];
-let jul = ['Jul 1st - Jul 7th', 'Jul 8th - Jul 14th', 'Jul 15th - Jul 21st', 'Jul 22nd - Jul 28th', 'Jul 29th - Jul 31st'];
-let aug = ['Aug 1st - Aug 7th', 'Aug 8th - Aug 14th', 'Aug 15th - Aug 21st', 'Aug 22nd - Aug 28th', 'Aug 29th - Aug 31st'];
-let sep = ['Sep 1st - Sep 7th', 'Sep 8th - Sep 14th', 'Sep 15th - Sep 21st', 'Sep 22nd - Sep 28th', 'Sep 29th - Sep 30th'];
-let oct = ['Oct 1st - Oct 7th', 'Oct 8th - Oct 14th', 'Oct 15th - Oct 21st', 'Oct 22nd - Oct 28th', 'Oct 29th - Oct 31st'];
-let nov = ['Nov 1st - Nov 7th', 'Nov 8th - Nov 14th', 'Nov 15th - Nov 21st', 'Nov 22nd - Nov 28th', 'Nov 29th - Nov 30th'];
-let dec = ['Dec 1st - Dec 7th', 'Dec 8th - Dec 14th', 'Dec 15th - Dec 21st', 'Dec 22nd - Dec 28th', 'Dec 29th - Dec 31st'];
+new Chart(generalChart, {
+    type: 'doughnut',
+    data: {
+        labels: yearTotalLabel,
+        datasets: [{
+            data: yearTotal,
+            label: "Jan 2022 - Dec 2022",
+            backgroundColor: [
+                'rgba(255, 89, 61, 0.4)',
+                'rgba(11, 156, 49, 0.4)',
+                'rgba(255, 206, 86, 0.4)',
+                'rgba(255, 99, 132, 0.4)',
+                'rgba(213, 184, 255, 0.4)',
+                'rgba(54, 162, 235, 0.4)'
+            ],
+            borderColor: [
+                'rgba(255, 89, 61, 1)',
+                'rgba(11, 156, 49, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(213, 184, 255, 1)',
+                'rgba(54, 162, 235, 1)'
+            ],
+            borderWidth: 1
+        }],
+    },
+    options: {
+        legend: {
+            display: true
+        },
+        title: {
+            display: true,
+            text: 'Stories, Drafts, Bookmarks, Views, Likes, Comments from Jan 2022 - Dec 2022'
+        },
+        scales: {
+            xAxes: [{
+                display: false
+            }],
+            yAxes: [{
+                display: false
+            }]
+        },
 
-new Chart('storiesChart', {
+    }
+});
+
+let stories = new Chart(storiesChart, {
     type: 'line',
     data: {
         labels: jan,
@@ -518,6 +578,10 @@ new Chart('storiesChart', {
         }
     }
 });
+
+stories.data.labels = feb;
+stories.data.datasets[0].data = storiesFeb;
+stories.options.title.text = 'Stories for Feb 2022';
 
 //userdashboard scheduler for scheduling posts
 const fixSchedule = document.getElementById("schedule");

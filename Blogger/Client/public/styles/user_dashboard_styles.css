@@ -1059,14 +1059,16 @@ p {
   margin: 5px;
 }
 
-#generalPersonalChart {
+#personalChart {
   width: 900px;
+  height: 900px;
   max-width: 900px;
   margin-left: 30px;
 }
 
-#generalEngageChart {
+#engageChart {
   width: 900px;
+  height: 900px;
   max-width: 900px;
   margin-left: 30px;
 }
@@ -3024,13 +3026,13 @@ p {
     font-size: 10px;
     padding: 5px;
   }
-  #generalPersonalChart {
+  #personalChart {
     width: 350px;
     max-width: 350px;
     margin-left: 0;
   }
   
-  #generalEngageChart {
+  #engageChart {
     width: 350px;
     max-width: 350px;
     margin-left: 0;
