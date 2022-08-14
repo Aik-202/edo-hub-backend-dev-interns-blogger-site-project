@@ -804,6 +804,8 @@ const monthChosen = document.getElementById("month_chosen");
 const monthYear = document.getElementById("year");
 const displayGeneralSummary = document.getElementById("year_ended");
 const displayMonthlySummary = document.getElementById("monthly");
+const yearlySummaryDate = document.getElementById("yearly_summary_date");
+const monthlySummaryDate = document.getElementById("monthly_summary_date");
 
 down.addEventListener("click", () => {
     up.style.display = "block";
@@ -821,6 +823,7 @@ up.addEventListener("click", () => {
 for (let i = 0; i < months.length; i++) {
     months[i].addEventListener("click", () => {
         monthChosen.innerHTML = months[i].innerHTML;
+        monthlySummaryDate.innerHTML = months[i].innerHTML;
         months[i].style.display = "none";
         monthYear.style.display = "flex";
         displayGeneralSummary.style.display = "none";
@@ -1216,6 +1219,7 @@ monthYear.addEventListener("click", () => {
         months[i].style.display = "flex";
         monthYear.style.display = "none";
         monthChosen.innerHTML = monthYear.innerHTML;
+        yearlySummaryDate.innerHTML = monthYear.innerHTML;
         displayMonthlySummary.style.display = "none";
         displayGeneralSummary.style.display = "block";
     }

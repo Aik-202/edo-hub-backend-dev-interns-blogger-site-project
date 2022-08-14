@@ -88,6 +88,12 @@ h2 {
   font-weight: 500;
 }
 
+h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
 /* nav bar section css  */
 .side_bar1 {
   top: 0;
@@ -1066,6 +1072,23 @@ p {
   background-color: #be8673;
 }
 
+#year_ended>h2 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#monthly>h2 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+canvas {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 #personalChart {
   width: 900px;
   height: 900px;
@@ -1866,6 +1889,10 @@ p {
 
 .increase_font h2 {
   font-size: 29px;
+}
+
+.increase_font h2 {
+  font-size: 22px;
 }
 
 .increase_font .side_bar1 {
