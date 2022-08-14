@@ -355,9 +355,10 @@ for (let i = 0; i < replies.length; i++) {
 }
 
 //userdashboard charts for account summary section
+let generalChart = document.getElementById("general_chart").getContext('2d');
 let personalChart = document.getElementById("personal_chart").getContext('2d');
 let engageChart = document.getElementById("engage_chart").getContext('2d');
-let generalChart = document.getElementById("general_chart").getContext('2d');
+let monthlyChart = document.getElementById("monthly_chart").getContext('2d');
 let storiesChart = document.getElementById("stories_chart").getContext('2d');
 let draftsChart = document.getElementById("drafts_chart").getContext('2d');
 let bookmarksChart = document.getElementById("bookmarks_chart").getContext('2d');
@@ -367,6 +368,18 @@ let commentsChart = document.getElementById("comments_chart").getContext('2d');
 
 let x = ['Stories', 'Drafts', 'Bookmarks'];
 let a = ['Views', 'Likes', 'Comments'];
+
+let janLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from January';
+let febLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from Febuary';
+let marLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from March';
+let aprLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from April';
+let mayLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from May';
+let julLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from July';
+let augLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from August';
+let sepLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from September';
+let octLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from October';
+let novLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from November';
+let decLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from December';
 
 
 let jan = ['Jan 1st - Jan 7th', 'Jan 8th - Jan 14th', 'Jan 15th - Jan 21st', 'Jan 22nd - Jan 28th', 'Jan 29th - Jan 31st'];
@@ -383,7 +396,7 @@ let nov = ['Nov 1st - Nov 7th', 'Nov 8th - Nov 14th', 'Nov 15th - Nov 21st', 'No
 let dec = ['Dec 1st - Dec 7th', 'Dec 8th - Dec 14th', 'Dec 15th - Dec 21st', 'Dec 22nd - Dec 28th', 'Dec 29th - Dec 31st'];
 
 let sumArray = (arr) => {
-    let sum = [];
+    let sum = 0;
     return sum = arr.reduce(function (a, b) {
         return a + b;
     });
@@ -731,6 +744,50 @@ new Chart(engageChart, {
                 },
             }]
         }
+    }
+});
+
+//monthly chart
+new Chart(monthlyChart, {
+    type: 'polarArea',
+    data: {
+        labels: jan,
+        datasets: [{
+            data: totalJan,
+            backgroundColor: [
+                'rgba(255, 89, 61, 0.4)',
+                'rgba(11, 156, 49, 0.4)',
+                'rgba(255, 206, 86, 0.4)',
+                'rgba(213, 184, 255, 0.4)',
+                'rgba(54, 162, 235, 0.4)'
+            ],
+            borderColor: [
+                'rgba(255, 89, 61, 1)',
+                'rgba(11, 156, 49, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(213, 184, 255, 1)',
+                'rgba(54, 162, 235, 1)'
+            ],
+            borderWidth: 1
+        }],
+    },
+    options: {
+        legend: {
+            display: true
+        },
+        title: {
+            display: true,
+            text: janLabel
+        },
+        scales: {
+            xAxes: [{
+                display: false
+            }],
+            yAxes: [{
+                display: false
+            }]
+        },
+
     }
 });
 
