@@ -382,14 +382,9 @@ let oct = ['Oct 1st - Oct 7th', 'Oct 8th - Oct 14th', 'Oct 15th - Oct 21st', 'Oc
 let nov = ['Nov 1st - Nov 7th', 'Nov 8th - Nov 14th', 'Nov 15th - Nov 21st', 'Nov 22nd - Nov 28th', 'Nov 29th - Nov 30th'];
 let dec = ['Dec 1st - Dec 7th', 'Dec 8th - Dec 14th', 'Dec 15th - Dec 21st', 'Dec 22nd - Dec 28th', 'Dec 29th - Dec 31st'];
 
-let stb1 = [26, 6, 16];
-let vlc1 = [16, 16, 15];
-yearTotal = [...stb1, ...vlc1];
-yearTotalLabel = [...x, ...a];
-
 let sumArray = (arr) => {
     let sum = [];
-    return sum = arr.reduce(function(a,b){
+    return sum = arr.reduce(function (a, b) {
         return a + b;
     });
 }
@@ -484,6 +479,128 @@ let totalBookmarksJan = sumArray(bookmarksJan);
 let totalViewsJan = sumArray(viewsJan);
 let totalLikesJan = sumArray(likesJan);
 let totalCommentsJan = sumArray(commentsJan);
+let totalJan = [];
+totalJan.push(totalStoriesJan, totalDraftsJan, totalBookmarksJan, totalViewsJan, totalLikesJan, totalCommentsJan);
+
+
+let totalStoriesFeb = sumArray(storiesFeb);
+let totalDraftsFeb = sumArray(draftsFeb);
+let totalBookmarksFeb = sumArray(bookmarksFeb);
+let totalViewsFeb = sumArray(viewsFeb);
+let totalLikesFeb = sumArray(likesFeb);
+let totalCommentsFeb = sumArray(commentsFeb);
+let totalFeb = [];
+totalFeb.push(totalStoriesFeb, totalDraftsFeb, totalBookmarksFeb, totalViewsFeb, totalLikesFeb, totalCommentsFeb);
+
+let totalStoriesMar = sumArray(storiesMar);
+let totalDraftsMar = sumArray(draftsMar);
+let totalBookmarksMar = sumArray(bookmarksMar);
+let totalViewsMar = sumArray(viewsMar);
+let totalLikesMar = sumArray(likesMar);
+let totalCommentsMar = sumArray(commentsMar);
+let totalMar = [];
+totalMar.push(totalStoriesMar, totalDraftsMar, totalBookmarksMar, totalViewsMar, totalLikesMar, totalCommentsMar);
+
+let totalStoriesApr = sumArray(storiesApr);
+let totalDraftsApr = sumArray(draftsApr);
+let totalBookmarksApr = sumArray(bookmarksApr);
+let totalViewsApr = sumArray(viewsApr);
+let totalLikesApr = sumArray(likesApr);
+let totalCommentsApr = sumArray(commentsApr);
+let totalApr = [];
+totalApr.push(totalStoriesApr, totalDraftsApr, totalBookmarksApr, totalViewsApr, totalLikesApr, totalCommentsApr);
+
+let totalStoriesMay = sumArray(storiesMay);
+let totalDraftsMay = sumArray(draftsMay);
+let totalBookmarksMay = sumArray(bookmarksMay);
+let totalViewsMay = sumArray(viewsMay);
+let totalLikesMay = sumArray(likesMay);
+let totalCommentsMay = sumArray(commentsMay);
+let totalMay = [];
+totalMay.push(totalStoriesMay, totalDraftsMay, totalBookmarksMay, totalViewsMay, totalLikesMay, totalCommentsMay);
+
+let totalStoriesJun = sumArray(storiesJun);
+let totalDraftsJun = sumArray(draftsJun);
+let totalBookmarksJun = sumArray(bookmarksJun);
+let totalViewsJun = sumArray(viewsJun);
+let totalLikesJun = sumArray(likesJun);
+let totalCommentsJun = sumArray(commentsJun);
+let totalJun = [];
+totalJun.push(totalStoriesJun, totalDraftsJun, totalBookmarksJun, totalViewsJun, totalLikesJun, totalCommentsJun);
+
+let totalStoriesJul = sumArray(storiesJul);
+let totalDraftsJul = sumArray(draftsJul);
+let totalBookmarksJul = sumArray(bookmarksJul);
+let totalViewsJul = sumArray(viewsJul);
+let totalLikesJul = sumArray(likesJul);
+let totalCommentsJul = sumArray(commentsJul);
+let totalJul = [];
+totalJul.push(totalStoriesJul, totalDraftsJul, totalBookmarksJul, totalViewsJul, totalLikesJul, totalCommentsJul);
+
+let totalStoriesAug = sumArray(storiesAug);
+let totalDraftsAug = sumArray(draftsAug);
+let totalBookmarksAug = sumArray(bookmarksAug);
+let totalViewsAug = sumArray(viewsAug);
+let totalLikesAug = sumArray(likesAug);
+let totalCommentsAug = sumArray(commentsAug);
+let totalAug = [];
+totalAug.push(totalStoriesAug, totalDraftsAug, totalBookmarksAug, totalViewsAug, totalLikesAug, totalCommentsAug);
+
+let totalStoriesSep = sumArray(storiesSep);
+let totalDraftsSep = sumArray(draftsSep);
+let totalBookmarksSep = sumArray(bookmarksSep);
+let totalViewsSep = sumArray(viewsSep);
+let totalLikesSep = sumArray(likesSep);
+let totalCommentsSep = sumArray(commentsSep);
+let totalSep = [];
+totalSep.push(totalStoriesSep, totalDraftsSep, totalBookmarksSep, totalViewsSep, totalLikesSep, totalCommentsSep);
+
+let totalStoriesOct = sumArray(storiesOct);
+let totalDraftsOct = sumArray(draftsOct);
+let totalBookmarksOct = sumArray(bookmarksOct);
+let totalViewsOct = sumArray(viewsOct);
+let totalLikesOct = sumArray(likesOct);
+let totalCommentsOct = sumArray(commentsOct);
+let totalOct = [];
+totalOct.push(totalStoriesOct, totalDraftsOct, totalBookmarksOct, totalViewsOct, totalLikesOct, totalCommentsOct);
+
+let totalStoriesNov = sumArray(storiesNov);
+let totalDraftsNov = sumArray(draftsNov);
+let totalBookmarksNov = sumArray(bookmarksNov);
+let totalViewsNov = sumArray(viewsNov);
+let totalLikesNov = sumArray(likesNov);
+let totalCommentsNov = sumArray(commentsNov);
+let totalNov = [];
+totalNov.push(totalStoriesNov, totalDraftsNov, totalBookmarksNov, totalViewsNov, totalLikesNov, totalCommentsNov);
+
+let totalStoriesDec = sumArray(storiesDec);
+let totalDraftsDec = sumArray(draftsDec);
+let totalBookmarksDec = sumArray(bookmarksDec);
+let totalViewsDec = sumArray(viewsDec);
+let totalLikesDec = sumArray(likesDec);
+let totalCommentsDec = sumArray(commentsDec);
+let totalDec = [];
+totalDec.push(totalStoriesDec, totalDraftsDec, totalBookmarksDec, totalViewsDec, totalLikesDec, totalCommentsDec);
+
+let totalStories = totalStoriesJan + totalStoriesFeb + totalStoriesMar + totalStoriesApr + totalStoriesMay +
+    totalStoriesJun + totalStoriesJul + totalStoriesAug + totalStoriesSep + totalStoriesOct + totalStoriesNov + totalStoriesDec;
+let totalDrafts = totalDraftsJan + totalDraftsFeb + totalDraftsMar + totalDraftsApr + totalDraftsMay +
+    totalDraftsJun + totalDraftsJul + totalDraftsAug + totalDraftsSep + totalDraftsOct + totalDraftsNov + totalDraftsDec;
+let totalBookmarks = totalBookmarksJan + totalBookmarksFeb + totalBookmarksMar + totalBookmarksApr + totalBookmarksMay +
+    totalBookmarksJun + totalBookmarksJul + totalBookmarksAug + totalBookmarksSep + totalBookmarksOct + totalBookmarksNov + totalBookmarksDec;
+let totalViews = totalViewsJan + totalViewsFeb + totalViewsMar + totalViewsApr + totalViewsMay +
+    totalViewsJun + totalViewsJul + totalViewsAug + totalViewsSep + totalViewsOct + totalViewsNov + totalViewsDec;
+let totalLikes = totalLikesJan + totalLikesFeb + totalLikesMar + totalLikesApr + totalLikesMay +
+    totalLikesJun + totalLikesJul + totalLikesAug + totalLikesSep + totalLikesOct + totalLikesNov + totalLikesDec;
+let totalComments = totalCommentsJan + totalCommentsFeb + totalCommentsMar + totalCommentsApr + totalCommentsMay +
+    totalCommentsJun + totalCommentsJul + totalCommentsAug + totalCommentsSep + totalCommentsOct + totalCommentsNov + totalCommentsDec;
+
+let sdb = [];
+sdb.push(totalStories, totalDrafts, totalBookmarks);
+let vlc = [];
+vlc.push(totalViews, totalLikes, totalComments)
+yearTotal = [...sdb, ...vlc];
+yearTotalLabel = [...x, ...a];
 
 //actual charts
 
@@ -540,7 +657,7 @@ new Chart(personalChart, {
     data: {
         labels: x,
         datasets: [{
-            data: stb1,
+            data: sdb,
             label: "Jan 2022 - Dec 2022",
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -582,7 +699,7 @@ new Chart(engageChart, {
     data: {
         labels: a,
         datasets: [{
-            data: vlc1,
+            data: vlc,
             label: "Jan 2022 - Dec 2022",
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
