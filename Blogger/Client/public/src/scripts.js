@@ -95,7 +95,7 @@ if (getTheme === "DARK") {
 //increase font mode
 const increaseFontMode = () => {
   element.classList.toggle("increase_font");
-  //set theme
+  //set font
   var font
   if (element.classList == "increase_font") {
     font = "BIG"

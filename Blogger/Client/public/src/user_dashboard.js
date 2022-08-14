@@ -387,83 +387,103 @@ let vlc1 = [16, 16, 15];
 yearTotal = [...stb1, ...vlc1];
 yearTotalLabel = [...x, ...a];
 
+let sumArray = (arr) => {
+    let sum = [];
+    return sum = arr.reduce(function(a,b){
+        return a + b;
+    });
+}
+
 let storiesJan = [4, 3, 1, 2, 3];
+let draftsJan = [3, 2, 0, 2, 2];
+let bookmarksJan = [3, 4, 0, 3, 1];
+let viewsJan = [1, 2, 0, 3, 1];
+let likesJan = [1, 2, 3, 4, 2];
+let commentsJan = [2, 2, 2, 3, 2];
+
 let storiesFeb = [2, 4, 3, 5];
+let draftsFeb = [1, 2, 1, 1];
+let bookmarksFeb = [3, 1, 2, 2];
+let viewsFeb = [2, 1, 1, 3];
+let likesFeb = [3, 5, 2, 5];
+let commentsFeb = [3, 2, 4, 2];
+
 let storiesMar = [2, 1, 1, 2, 3];
+let draftsMar = [1, 2, 2, 1, 2];
+let bookmarksMar = [2, 3, 2, 1, 0];
+let viewsMar = [3, 1, 2, 1, 1];
+let likesMar = [2, 3, 3, 2, 1];
+let commentsMar = [3, 2, 2, 1, 1];
+
 let storiesApr = [6, 3, 3, 5, 2];
+let draftsApr = [2, 2, 3, 6, 5];
+let bookmarksApr = [3, 2, 6, 5, 2];
+let viewsApr = [2, 5, 2, 6, 1];
+let likesApr = [2, 3, 2, 5, 6];
+let commentsApr = [1, 3, 6, 5, 3];
+
 let storiesMay = [5, 7, 1, 2, 3];
+let draftsMay = [1, 5, 1, 5, 3];
+let bookmarksMay = [2, 1, 3, 7, 3];
+let viewsMay = [1, 5, 2, 2, 3];
+let likesMay = [3, 2, 5, 7, 3];
+let commentsMay = [3, 5, 7, 6, 4];
+
 let storiesJun = [3, 9, 3, 5, 1];
+let draftsJun = [4, 3, 3, 9, 2];
+let bookmarksJun = [4, 2, 4, 9, 5];
+let viewsJun = [2, 4, 2, 9, 5];
+let likesJun = [6, 9, 7, 5, 3];
+let commentsJun = [2, 9, 6, 5, 4];
+
 let storiesJul = [9, 3, 1, 2, 3];
+let draftsJul = [2, 3, 4, 2, 8];
+let bookmarksJul = [5, 6, 2, 2, 3];
+let viewsJul = [2, 3, 9, 2, 1];
+let likesJul = [8, 3, 4, 2, 5];
+let commentsJul = [8, 3, 5, 2, 6];
+
 let storiesAug = [7, 5, 3, 5, 0];
+let draftsAug = [5, 5, 4, 5, 6];
+let bookmarksAug = [3, 2, 5, 0, 4];
+let viewsAug = [2, 4, 6, 5, 6];
+let likesAug = [3, 5, 4, 6, 7];
+let commentsAug = [2, 5, 3, 2, 3];
+
 let storiesSep = [5, 2, 1, 2, 3];
+let draftsSep = [1, 2, 5, 2, 3];
+let bookmarksSep = [3, 1, 4, 1, 2];
+let viewsSep = [1, 2, 1, 3, 1];
+let likesSep = [2, 5, 5, 2, 3];
+let commentsSep = [1, 3, 1, 5, 3];
+
 let storiesOct = [9, 7, 4, 8, 6];
+let draftsOct = [6, 3, 4, 8, 5];
+let bookmarksOct = [2, 6, 4, 3, 7];
+let viewsOct = [5, 7, 6, 8, 9];
+let likesOct = [3, 6, 7, 8, 5];
+let commentsOct = [1, 3, 5, 8, 6];
+
 let storiesNov = [3, 4, 6, 5, 3];
+let draftsNov = [1, 3, 4, 2, 3];
+let bookmarksNov = [2, 4, 3, 6, 1];
+let viewsNov = [2, 1, 5, 6, 4];
+let likesNov = [2, 1, 6, 4, 2];
+let commentsNov = [1, 3, 2, 5, 6];
+
 let storiesDec = [6, 2, 1, 1, 0];
+let draftsDec = [3, 4, 1, 2, 1];
+let bookmarksDec = [3, 2, 1, 1, 2];
+let viewsDec = [2, 0, 6, 4, 3];
+let likesDec = [2, 4, 5, 3, 6];
+let commentsDec = [3, 0, 6, 1, 3];
 
-let draftsJan = [4, 3, 1, 2, 3];
-let draftsFeb = [2, 4, 3, 5];
-let draftsMar = [2, 1, 1, 2, 3];
-let draftsApr = [6, 3, 3, 5, 2];
-let draftsMay = [5, 7, 1, 2, 3];
-let draftsJun = [3, 9, 3, 5, 1];
-let draftsJul = [9, 3, 1, 2, 3];
-let draftsAug = [7, 5, 3, 5, 0];
-let draftsSep = [5, 2, 1, 2, 3];
-let draftsOct = [9, 7, 4, 8, 6];
-let draftsNov = [3, 4, 6, 5, 3];
-let draftsDec = [6, 2, 1, 1, 0];
-
-let bookmarksJan = [4, 3, 1, 2, 3];
-let bookmarksFeb = [2, 4, 3, 5];
-let bookmarksMar = [2, 1, 1, 2, 3];
-let bookmarksApr = [6, 3, 3, 5, 2];
-let bookmarksMay = [5, 7, 1, 2, 3];
-let bookmarksJun = [3, 9, 3, 5, 1];
-let bookmarksJul = [9, 3, 1, 2, 3];
-let bookmarksAug = [7, 5, 3, 5, 0];
-let bookmarksSep = [5, 2, 1, 2, 3];
-let bookmarksOct = [9, 7, 4, 8, 6];
-let bookmarksNov = [3, 4, 6, 5, 3];
-let bookmarksDec = [6, 2, 1, 1, 0];
-
-let viewsJan = [4, 3, 1, 2, 3];
-let viewsFeb = [2, 4, 3, 5];
-let viewsMar = [2, 1, 1, 2, 3];
-let viewsApr = [6, 3, 3, 5, 2];
-let viewsMay = [5, 7, 1, 2, 3];
-let viewsJun = [3, 9, 3, 5, 1];
-let viewsJul = [9, 3, 1, 2, 3];
-let viewsAug = [7, 5, 3, 5, 0];
-let viewsSep = [5, 2, 1, 2, 3];
-let viewsOct = [9, 7, 4, 8, 6];
-let viewsNov = [3, 4, 6, 5, 3];
-let viewsDec = [6, 2, 1, 1, 0];
-
-let likesJan = [4, 3, 1, 2, 3];
-let likesFeb = [2, 4, 3, 5];
-let likesMar = [2, 1, 1, 2, 3];
-let likesApr = [6, 3, 3, 5, 2];
-let likesMay = [5, 7, 1, 2, 3];
-let likesJun = [3, 9, 3, 5, 1];
-let likesJul = [9, 3, 1, 2, 3];
-let likesAug = [7, 5, 3, 5, 0];
-let likesSep = [5, 2, 1, 2, 3];
-let likesOct = [9, 7, 4, 8, 6];
-let likesNov = [3, 4, 6, 5, 3];
-let likesDec = [6, 2, 1, 1, 0];
-
-let commentsJan = [4, 3, 1, 2, 3];
-let commentsFeb = [2, 4, 3, 5];
-let commentsMar = [2, 1, 1, 2, 3];
-let commentsApr = [6, 3, 3, 5, 2];
-let commentsMay = [5, 7, 1, 2, 3];
-let commentsJun = [3, 9, 3, 5, 1];
-let commentsJul = [9, 3, 1, 2, 3];
-let commentsAug = [7, 5, 3, 5, 0];
-let commentsSep = [5, 2, 1, 2, 3];
-let commentsOct = [9, 7, 4, 8, 6];
-let commentsNov = [3, 4, 6, 5, 3];
-let commentsDec = [6, 2, 1, 1, 0];
+let totalStoriesJan = sumArray(storiesJan);
+let totalDraftsJan = sumArray(draftsJan);
+let totalBookmarksJan = sumArray(bookmarksJan);
+let totalViewsJan = sumArray(viewsJan);
+let totalLikesJan = sumArray(likesJan);
+let totalCommentsJan = sumArray(commentsJan);
 
 //actual charts
 
@@ -824,6 +844,9 @@ for (let i = 0; i < months.length; i++) {
     months[i].addEventListener("click", () => {
         monthChosen.innerHTML = months[i].innerHTML;
         monthlySummaryDate.innerHTML = months[i].innerHTML;
+        up.style.display = "none";
+        down.style.display = "block";
+        chartsDate.style.display = "none";
         months[i].style.display = "none";
         monthYear.style.display = "flex";
         displayGeneralSummary.style.display = "none";
@@ -897,7 +920,7 @@ for (let i = 0; i < months.length; i++) {
             comment.data.datasets[0].data = commentsFeb;
             comment.options.title.text = 'Comments for Feburary 2022';
             comment.update();
-        } 
+        }
         if (i == 2) {
             stories.data.labels = mar;
             stories.data.datasets[0].data = storiesMar;
@@ -928,7 +951,7 @@ for (let i = 0; i < months.length; i++) {
             comment.data.datasets[0].data = commentsMar;
             comment.options.title.text = 'Comments for March 2022';
             comment.update();
-        } 
+        }
         if (i == 3) {
             stories.data.labels = apr;
             stories.data.datasets[0].data = storiesApr;
@@ -1052,7 +1075,7 @@ for (let i = 0; i < months.length; i++) {
             comment.data.datasets[0].data = commentsJul;
             comment.options.title.text = 'Comments for July 2022';
             comment.update();
-        } 
+        }
         if (i == 7) {
             stories.data.labels = aug;
             stories.data.datasets[0].data = storiesAug;
@@ -1114,7 +1137,7 @@ for (let i = 0; i < months.length; i++) {
             comment.data.datasets[0].data = commentsSep;
             comment.options.title.text = 'Comments for September 2022';
             comment.update();
-        } 
+        }
         if (i == 9) {
             stories.data.labels = oct;
             stories.data.datasets[0].data = storiesOct;
@@ -1145,7 +1168,7 @@ for (let i = 0; i < months.length; i++) {
             comment.data.datasets[0].data = commentsOct;
             comment.options.title.text = 'Comments for October 2022';
             comment.update();
-        } 
+        }
         if (i == 10) {
             stories.data.labels = nov;
             stories.data.datasets[0].data = storiesNov;
@@ -1176,7 +1199,7 @@ for (let i = 0; i < months.length; i++) {
             comment.data.datasets[0].data = commentsNov;
             comment.options.title.text = 'Comments for November 2022';
             comment.update();
-        } 
+        }
         if (i == 11) {
             stories.data.labels = dec;
             stories.data.datasets[0].data = storiesDec;
@@ -1216,10 +1239,13 @@ for (let i = 0; i < months.length; i++) {
 monthYear.addEventListener("click", () => {
     monthYear.style.display = "none";
     for (let i = 0; i < months.length; i++) {
-        months[i].style.display = "flex";
-        monthYear.style.display = "none";
         monthChosen.innerHTML = monthYear.innerHTML;
         yearlySummaryDate.innerHTML = monthYear.innerHTML;
+        up.style.display = "none";
+        down.style.display = "block";
+        chartsDate.style.display = "none";
+        months[i].style.display = "flex";
+        monthYear.style.display = "none";
         displayMonthlySummary.style.display = "none";
         displayGeneralSummary.style.display = "block";
     }
