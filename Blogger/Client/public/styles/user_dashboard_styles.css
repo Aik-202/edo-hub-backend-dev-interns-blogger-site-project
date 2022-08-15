@@ -1085,32 +1085,19 @@ p {
 }
 
 canvas {
+  align-self: center;
+  width: 600px;
+  height: 600px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-#personalChart {
-  width: 900px;
-  height: 900px;
-  max-width: 900px;
-  max-height: 1000px;
-  margin-left: 30px;
+#general_chart {
+  margin-left: 200px;
 }
 
-#engageChart {
-  width: 900px;
-  height: 900px;
-  max-width: 900px;
-  max-height: 1000px;
-  margin-left: 30px;
-}
-
-#monthly > canvas {
-  width: 900px;
-  height: 900px;
-  max-width: 900px;
-  max-height: 1000px;
-  margin-left: 30px;
+#monthly_chart {
+  margin-left: 200px;
 }
 
 /* end of summary section css  */

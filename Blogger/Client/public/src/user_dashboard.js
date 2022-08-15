@@ -356,6 +356,7 @@ for (let i = 0; i < replies.length; i++) {
 
 //userdashboard charts for account summary section
 let generalChart = document.getElementById("general_chart").getContext('2d');
+let monthsChart = document.getElementById("month_chart").getContext('2d');
 let personalChart = document.getElementById("personal_chart").getContext('2d');
 let engageChart = document.getElementById("engage_chart").getContext('2d');
 let monthlyChart = document.getElementById("monthly_chart").getContext('2d');
@@ -381,7 +382,6 @@ let sepLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from Septembe
 let octLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from October';
 let novLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from November';
 let decLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from December';
-
 
 let jan = ['Jan 1st - Jan 7th', 'Jan 8th - Jan 14th', 'Jan 15th - Jan 21st', 'Jan 22nd - Jan 28th', 'Jan 29th - Jan 31st'];
 let feb = ['Feb 1st - Feb 7th', 'Feb 8th - Feb 14th', 'Feb 15th - Feb 21st', 'Feb 22nd - Feb 28th'];
@@ -649,19 +649,130 @@ new Chart(generalChart, {
         legend: {
             display: true
         },
-        title: {
-            display: true,
-            text: 'Stories, Drafts, Bookmarks, Views, Likes, Comments from Jan 2022 - Dec 2022'
+        plugins: {
+            title: {
+                display: true,
+                text: 'Stories, Drafts, Bookmarks, Views, Likes, Comments from Jan 2022 - Dec 2022'
+            }
         },
-        scales: {
-            xAxes: [{
-                display: false
-            }],
-            yAxes: [{
-                display: false
-            }]
-        },
+        responsive : false
+    }
+});
 
+let totalMonthChart = new Chart(monthsChart, {
+    type: 'radar',
+    data: {
+        labels: yearTotalLabel,
+        datasets: [
+            {
+                label : 'January',
+                data: totalJan,
+                backgroundColor: 'rgba(255, 89, 61, 0.4)',
+                strokeColor:'rgba(255, 89, 61, 1)',
+                pointColor:'rgba(255, 89, 61, 1)',
+                borderWidth: 1
+            },
+            {
+                label : 'Febuary',
+                data: totalFeb,
+                backgroundColor: 'rgba(11, 156, 49, 0.4)',
+                strokeColor:'rgba(11, 156, 49, 1)',
+                pointColor:'rgba(11, 156, 49, 1)',
+                borderWidth: 1  
+            },
+            {
+                label : 'March',
+                data: totalMar,
+                backgroundColor: 'rgba(255, 206, 86, 0.4)',
+                strokeColor:'rgba(255, 206, 86, 1)',
+                pointColor:'rgba(255, 206, 86, 1)',
+                borderWidth: 1
+            },
+            {
+                label : 'April', 
+                data: totalApr,
+                backgroundColor: 'rgba(255, 99, 132, 0.4)',
+                strokeColor:'rgba(255, 99, 132, 1)',
+                pointColor:'rgba(255, 99, 132, 1)',
+                borderWidth: 1  
+            },
+            {
+                label : 'May',
+                data: totalMay,
+                backgroundColor: 'rgba(213, 184, 255, 0.4)',
+                strokeColor:'rgba(213, 184, 255, 1)',
+                pointColor:'rgba(213, 184, 255, 1)',
+                borderWidth: 1
+            },
+            {
+                label : 'June',
+                data: totalJun,
+                backgroundColor: 'rgba(54, 162, 235, 0.4)',
+                strokeColor:'rgba(54, 162, 235, 1)',
+                pointColor:'rgba(54, 162, 235, 1)',
+                borderWidth: 1  
+            },
+            {
+                label : 'July',
+                data: totalJul,
+                backgroundColor: 'rgba(255, 69, 0, 0.4)',
+                strokeColor:'rgba(255, 69, 0, 1)',
+                pointColor:'rgba(255, 69, 0, 1)',
+                borderWidth: 1
+            },
+            {
+                label : 'August',
+                data: totalAug,
+                backgroundColor: 'rgba(238, 232, 170, 0.4)',
+                strokeColor:'rgba(238, 232, 170, 1)',
+                pointColor:'rgba(238, 232, 170, 1)',
+                borderWidth: 1  
+            },
+            {
+                label : 'September',
+                data: totalSep,
+                backgroundColor: 'rgba(189, 183, 107, 0.4)',
+                strokeColor:'rgba(189, 183, 107, 1)',
+                pointColor:'rgba(189, 183, 107, 1)',
+                borderWidth: 1
+            },
+            {
+                label : 'October',
+                data: totalOct,
+                backgroundColor: 'rgba(107, 142, 35, 0.4)',
+                strokeColor:'rgba(107, 142, 35, 1)',
+                pointColor:'rgba(107, 142, 35, 1)',
+                borderWidth: 1  
+            },
+            {
+                label : 'November',
+                data: totalNov,
+                backgroundColor: 'rgba(173, 216, 230, 0.4)',
+                strokeColor:'rgba(173, 216, 230, 1)',
+                pointColor:'rgba(173, 216, 230, 1)',
+                borderWidth: 1
+            },
+            {
+                label : 'December',
+                data: totalDec,
+                backgroundColor: 'rgba(106, 90, 205, 0.4)',
+                strokeColor:'rgba(106, 90, 205, 1)',
+                pointColor:'rgba(106, 90, 205, 1)',
+                borderWidth: 1  
+            },
+
+        ],
+    },
+    options: {
+        legend: {
+            display: true
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: janLabel
+            }
+        }
     }
 });
 
@@ -684,8 +795,8 @@ new Chart(personalChart, {
                 'rgba(255, 206, 86, 1)'
             ],
             borderWidth: 1,
-            barPercentage: 0.2,
-            categoryPercentage: 0.2
+            barPercentage: 0.6,
+            categoryPercentage: 0.6
         }],
     },
 
@@ -693,16 +804,11 @@ new Chart(personalChart, {
         legend: {
             display: false
         },
-        title: {
+        plugins: {
+            title: {
             display: true,
             text: 'Stories, Drafts, Bookmarks from Jan 2022 - Dec 2022'
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                },
-            }]
+            }
         }
     }
 });
@@ -726,24 +832,19 @@ new Chart(engageChart, {
                 'rgba(255, 206, 86, 1)'
             ],
             borderWidth: 1,
-            barPercentage: 0.2,
-            categoryPercentage: 0.2
+            barPercentage: 0.6,
+            categoryPercentage: 0.6
         }]
     },
     options: {
         legend: {
             display: false
         },
-        title: {
-            display: true,
-            text: 'Views, Likes, Comments from Jan 2022 - Dec 2022'
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                },
-            }]
+        plugins: {
+            title: {
+                display: true,
+                text: 'Views, Likes, Comments from Jan 2022 - Dec 2022'
+            }
         }
     }
 });
@@ -782,6 +883,7 @@ let monthChart = new Chart(monthlyChart, {
             display: true,
             text: janLabel
         },
+        responsive : false,
     }
 });
 
@@ -804,16 +906,11 @@ let stories = new Chart(storiesChart, {
         legend: {
             display: false
         },
-        title: {
-            display: true,
-            text: 'Stories for Jan 2022'
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                },
-            }]
+        plugins: {
+            title: {
+                display: true,
+                text: 'Stories for Jan 2022'
+            }
         }
     }
 });
@@ -837,16 +934,11 @@ let drafts = new Chart(draftsChart, {
         legend: {
             display: false
         },
-        title: {
-            display: true,
-            text: 'Drafts for Jan 2022'
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                },
-            }]
+        plugins: {
+            title: {
+                display: true,
+                text: 'Drafts for Jan 2022'
+            }
         }
     }
 });
@@ -874,13 +966,13 @@ let bookmark = new Chart(bookmarksChart, {
             display: true,
             text: 'Bookmarks for Jan 2022'
         },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                },
-            }]
-        }
+        // scales: {
+        //     yAxes: [{
+        //         ticks: {
+        //             beginAtZero: true
+        //         },
+        //     }]
+        // }
     }
 });
 
@@ -907,13 +999,13 @@ let views = new Chart(viewsChart, {
             display: true,
             text: 'Views for Jan 2022'
         },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                },
-            }]
-        }
+        // scales: {
+        //     yAxes: [{
+        //         ticks: {
+        //             beginAtZero: true
+        //         },
+        //     }]
+        // }
     }
 });
 
@@ -940,13 +1032,13 @@ let like = new Chart(likesChart, {
             display: true,
             text: 'Likes for January 2022'
         },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                },
-            }]
-        }
+        // scales: {
+        //     yAxes: [{
+        //         ticks: {
+        //             beginAtZero: true
+        //         },
+        //     }]
+        // }
     }
 });
 
@@ -973,13 +1065,13 @@ let comment = new Chart(commentsChart, {
             display: true,
             text: 'Comments for Jan 2022'
         },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                },
-            }]
-        }
+        // scales: {
+        //     yAxes: [{
+        //         ticks: {
+        //             beginAtZero: true
+        //         },
+        //     }]
+        // }
     }
 });
 

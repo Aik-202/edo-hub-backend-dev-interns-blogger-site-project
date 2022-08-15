@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
   <script src="./src/user_dashboard.js" defer></script>
   <script src="./src/scripts.js" defer></script>
   <link rel="stylesheet" href="./styles/style.css">
@@ -4133,6 +4133,9 @@
       <canvas id="general_chart">
         <p>General chart</p>
       </canvas>
+      <canvas id="month_chart">
+        <p>Month Chart</p>
+      </canvas>
       <canvas id="personal_chart">
         <p>General Personal chart</p>
       </canvas>
@@ -4143,7 +4146,7 @@
 
     <div id="monthly" style="display: none;">
       <h2>Summary for <span id="monthly_summary_date"></span> </h2>
-      <canvas id="monthly_chart">
+      <canvas id="monthly_chart" style="width: 600px; height: 600px;">
         <p>Monthly Chart</p>
       </canvas>
       <canvas id="stories_chart">
