@@ -1096,6 +1096,12 @@ canvas {
   margin-left: 200px;
 }
 
+#month_chart {
+  width: 800px;
+  height: 800px;
+  margin-left: 100px;
+}
+
 #monthly_chart {
   margin-left: 200px;
 }

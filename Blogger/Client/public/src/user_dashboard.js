@@ -646,10 +646,10 @@ new Chart(generalChart, {
         }],
     },
     options: {
-        legend: {
-            display: true
-        },
         plugins: {
+            legend: {
+                display: true
+            },
             title: {
                 display: true,
                 text: 'Stories, Drafts, Bookmarks, Views, Likes, Comments from Jan 2022 - Dec 2022'
@@ -764,15 +764,16 @@ let totalMonthChart = new Chart(monthsChart, {
         ],
     },
     options: {
-        legend: {
-            display: true
-        },
         plugins: {
+            legend: {
+                display: true
+            },
             title: {
                 display: true,
-                text: janLabel
+                text: 'Stories, Drafts, Bookmarks, Views, Likes, Comments per month'
             }
-        }
+        },
+        responsive : false
     }
 });
 
@@ -801,10 +802,10 @@ new Chart(personalChart, {
     },
 
     options: {
-        legend: {
-            display: false
-        },
         plugins: {
+            legend: {
+                display: false
+            },
             title: {
             display: true,
             text: 'Stories, Drafts, Bookmarks from Jan 2022 - Dec 2022'
@@ -837,10 +838,10 @@ new Chart(engageChart, {
         }]
     },
     options: {
-        legend: {
-            display: false
-        },
         plugins: {
+            legend: {
+                display: false
+            },
             title: {
                 display: true,
                 text: 'Views, Likes, Comments from Jan 2022 - Dec 2022'
@@ -876,13 +877,15 @@ let monthChart = new Chart(monthlyChart, {
         }],
     },
     options: {
-        legend: {
-            display: true
-        },
-        title: {
-            display: true,
-            text: janLabel
-        },
+        plugins: {
+            legend: {
+                display: false
+            },
+            title: {
+                display: true,
+                text: janLabel
+            }
+        },       
         responsive : false,
     }
 });
@@ -903,10 +906,10 @@ let stories = new Chart(storiesChart, {
         }],
     },
     options: {
-        legend: {
-            display: false
-        },
         plugins: {
+            legend: {
+                display: false
+            },
             title: {
                 display: true,
                 text: 'Stories for Jan 2022'
@@ -931,10 +934,10 @@ let drafts = new Chart(draftsChart, {
         }],
     },
     options: {
-        legend: {
-            display: false
-        },
         plugins: {
+            legend: {
+                display: false
+            },
             title: {
                 display: true,
                 text: 'Drafts for Jan 2022'
@@ -959,10 +962,10 @@ let bookmark = new Chart(bookmarksChart, {
         }],
     },
     options: {
-        legend: {
-            display: false
-        },
         plugins: {
+            legend: {
+                display: false
+            },
             title: {
                 display: true,
                 text: 'Bookmarks for Jan 2022'
@@ -987,10 +990,10 @@ let views = new Chart(viewsChart, {
         }],
     },
     options: {
-        legend: {
-            display: false
-        },
         plugins: {
+            legend: {
+                display: false
+            },
             title: {
                 display: true,
                 text: 'Views for Jan 2022'
@@ -1015,10 +1018,10 @@ let like = new Chart(likesChart, {
         }],
     },
     options: {
-        legend: {
-            display: false
-        },
         plugins: {
+            legend: {
+                display: false
+            },
             title: {
                 display: true,
                 text: 'Likes for January 2022'
@@ -1043,10 +1046,10 @@ let comment = new Chart(commentsChart, {
         }],
     },
     options: {
-        legend: {
-            display: false
-        },
         plugins: {
+            legend: {
+                display: false
+            },
             title: {
                 display: true,
                 text: 'Comments for Jan 2022'
