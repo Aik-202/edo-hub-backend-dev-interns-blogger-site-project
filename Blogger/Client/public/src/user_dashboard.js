@@ -962,17 +962,12 @@ let bookmark = new Chart(bookmarksChart, {
         legend: {
             display: false
         },
-        title: {
-            display: true,
-            text: 'Bookmarks for Jan 2022'
-        },
-        // scales: {
-        //     yAxes: [{
-        //         ticks: {
-        //             beginAtZero: true
-        //         },
-        //     }]
-        // }
+        plugins: {
+            title: {
+                display: true,
+                text: 'Bookmarks for Jan 2022'
+            }
+        }
     }
 });
 
@@ -995,17 +990,12 @@ let views = new Chart(viewsChart, {
         legend: {
             display: false
         },
-        title: {
-            display: true,
-            text: 'Views for Jan 2022'
-        },
-        // scales: {
-        //     yAxes: [{
-        //         ticks: {
-        //             beginAtZero: true
-        //         },
-        //     }]
-        // }
+        plugins: {
+            title: {
+                display: true,
+                text: 'Views for Jan 2022'
+            }
+        }
     }
 });
 
@@ -1028,17 +1018,12 @@ let like = new Chart(likesChart, {
         legend: {
             display: false
         },
-        title: {
-            display: true,
-            text: 'Likes for January 2022'
-        },
-        // scales: {
-        //     yAxes: [{
-        //         ticks: {
-        //             beginAtZero: true
-        //         },
-        //     }]
-        // }
+        plugins: {
+            title: {
+                display: true,
+                text: 'Likes for January 2022'
+            }
+        }
     }
 });
 
@@ -1061,17 +1046,12 @@ let comment = new Chart(commentsChart, {
         legend: {
             display: false
         },
-        title: {
-            display: true,
-            text: 'Comments for Jan 2022'
-        },
-        // scales: {
-        //     yAxes: [{
-        //         ticks: {
-        //             beginAtZero: true
-        //         },
-        //     }]
-        // }
+        plugins: {
+            title: {
+                display: true,
+                text: 'Comments for Jan 2022'
+            }
+        }
     }
 });
 
@@ -1121,422 +1101,422 @@ for (let i = 0; i < months.length; i++) {
 
         if (i == 0) {
             monthChart.data.datasets[0].data = totalJan;
-            monthChart.options.title.text = janLabel;
+            monthChart.options.plugins.title.text = janLabel;
             monthChart.update();
 
             stories.data.labels = jan;
             stories.data.datasets[0].data = storiesJan;
-            stories.options.title.text = 'Stories for January 2022';
+            stories.options.plugins.title.text  = 'Stories for January 2022';
             stories.update();
 
             drafts.data.labels = jan;
             drafts.data.datasets[0].data = draftsJan;
-            drafts.options.title.text = 'Drafts for January 2022';
+            drafts.options.plugins.title.text = 'Drafts for January 2022';
             drafts.update();
 
             bookmark.data.labels = jan;
             bookmark.data.datasets[0].data = bookmarksJan;
-            bookmark.options.title.text = 'Bookmarks for January 2022';
+            bookmark.options.plugins.title.text  = 'Bookmarks for January 2022';
             bookmark.update();
 
             views.data.labels = jan;
             views.data.datasets[0].data = viewsJan;
-            views.options.title.text = 'Views for January 2022';
+            views.options.plugins.title.text = 'Views for January 2022';
             views.update();
 
             like.data.labels = jan;
             like.data.datasets[0].data = likesJan;
-            like.options.title.text = 'Likes for January 2022';
+            like.options.plugins.title.text  = 'Likes for January 2022';
             like.update();
 
             comment.data.labels = jan;
             comment.data.datasets[0].data = commentsJan;
-            comment.options.title.text = 'Comments for January 2022';
+            comment.options.plugins.title.text  = 'Comments for January 2022';
             comment.update();
         }
         if (i == 1) {
             monthChart.data.datasets[0].data = totalFeb;
-            monthChart.options.title.text = febLabel;
+            monthChart.options.plugins.title.text  = febLabel;
             monthChart.update();
 
             stories.data.labels = feb;
             stories.data.datasets[0].data = storiesFeb;
-            stories.options.title.text = 'Stories for Feburary 2022';
+            stories.options.plugins.title.text  = 'Stories for Feburary 2022';
             stories.update();
 
             drafts.data.labels = feb;
             drafts.data.datasets[0].data = draftsFeb;
-            drafts.options.title.text = 'Drafts for Feburary 2022';
+            drafts.options.plugins.title.text  = 'Drafts for Feburary 2022';
             drafts.update();
 
             bookmark.data.labels = feb;
             bookmark.data.datasets[0].data = bookmarksFeb;
-            bookmark.options.title.text = 'Bookmarks for Feburary 2022';
+            bookmark.options.plugins.title.text  = 'Bookmarks for Feburary 2022';
             bookmark.update();
 
             views.data.labels = feb;
             views.data.datasets[0].data = viewsFeb;
-            views.options.title.text = 'Views for Feburary 2022';
+            views.options.plugins.title.text  = 'Views for Feburary 2022';
             views.update();
 
             like.data.labels = feb;
             like.data.datasets[0].data = likesFeb;
-            like.options.title.text = 'Likes for Feburary 2022';
+            like.options.plugins.title.text  = 'Likes for Feburary 2022';
             like.update();
 
             comment.data.labels = feb;
             comment.data.datasets[0].data = commentsFeb;
-            comment.options.title.text = 'Comments for Feburary 2022';
+            comment.options.plugins.title.text  = 'Comments for Feburary 2022';
             comment.update();
         }
         if (i == 2) {
             monthChart.data.datasets[0].data = totalMar;
-            monthChart.options.title.text = marLabel;
+            monthChart.options.plugins.title.text = marLabel;
             monthChart.update();
 
             stories.data.labels = mar;
             stories.data.datasets[0].data = storiesMar;
-            stories.options.title.text = 'Stories for March 2022';
+            stories.options.plugins.title.text  = 'Stories for March 2022';
             stories.update();
 
             drafts.data.labels = mar;
             drafts.data.datasets[0].data = draftsMar;
-            drafts.options.title.text = 'Drafts for March 2022';
+            drafts.options.plugins.title.text  = 'Drafts for March 2022';
             drafts.update();
 
             bookmark.data.labels = mar;
             bookmark.data.datasets[0].data = bookmarksMar;
-            bookmark.options.title.text = 'Bookmarks for March 2022';
+            bookmark.options.plugins.title.text  = 'Bookmarks for March 2022';
             bookmark.update();
 
             views.data.labels = mar;
             views.data.datasets[0].data = viewsMar;
-            views.options.title.text = 'Views for March 2022';
+            views.options.plugins.title.text = 'Views for March 2022';
             views.update();
 
             like.data.labels = mar;
             like.data.datasets[0].data = likesMar;
-            like.options.title.text = 'Likes for March 2022';
+            like.options.plugins.title.text  = 'Likes for March 2022';
             like.update();
 
             comment.data.labels = mar;
             comment.data.datasets[0].data = commentsMar;
-            comment.options.title.text = 'Comments for March 2022';
+            comment.options.plugins.title.text  = 'Comments for March 2022';
             comment.update();
         }
         if (i == 3) {
             monthChart.data.datasets[0].data = totalApr;
-            monthChart.options.title.text = aprLabel;
+            monthChart.options.plugins.title.text  = aprLabel;
             monthChart.update();
 
             stories.data.labels = apr;
             stories.data.datasets[0].data = storiesApr;
-            stories.options.title.text = 'Stories for April 2022';
+            stories.options.plugins.title.text = 'Stories for April 2022';
             stories.update();
 
             drafts.data.labels = apr;
             drafts.data.datasets[0].data = draftsApr;
-            drafts.options.title.text = 'Drafts for April 2022';
+            drafts.options.plugins.title.text  = 'Drafts for April 2022';
             drafts.update();
 
             bookmark.data.labels = apr;
             bookmark.data.datasets[0].data = bookmarksApr;
-            bookmark.options.title.text = 'Bookmarks for April 2022';
+            bookmark.options.plugins.title.text  = 'Bookmarks for April 2022';
             bookmark.update();
 
             views.data.labels = apr;
             views.data.datasets[0].data = viewsApr;
-            views.options.title.text = 'Views for April 2022';
+            views.options.plugins.title.text  = 'Views for April 2022';
             views.update();
 
             like.data.labels = apr;
             like.data.datasets[0].data = likesApr;
-            like.options.title.text = 'Likes for April 2022';
+            like.options.plugins.title.text  = 'Likes for April 2022';
             like.update();
 
             comment.data.labels = apr;
             comment.data.datasets[0].data = commentsApr;
-            comment.options.title.text = 'Comments for April 2022';
+            comment.options.plugins.title.text  = 'Comments for April 2022';
             comment.update();
         }
         if (i == 4) {
             monthChart.data.datasets[0].data = totalMay;
-            monthChart.options.title.text = mayLabel;
+            monthChart.options.plugins.title.text  = mayLabel;
             monthChart.update();
 
             stories.data.labels = may;
             stories.data.datasets[0].data = storiesMay;
-            stories.options.title.text = 'Stories for May 2022';
+            stories.options.plugins.title.text  = 'Stories for May 2022';
             stories.update();
 
             drafts.data.labels = may;
             drafts.data.datasets[0].data = draftsMay;
-            drafts.options.title.text = 'Drafts for May 2022';
+            drafts.options.plugins.title.text  = 'Drafts for May 2022';
             drafts.update();
 
             bookmark.data.labels = may;
             bookmark.data.datasets[0].data = bookmarksMay;
-            bookmark.options.title.text = 'Bookmarks for May 2022';
+            bookmark.options.plugins.title.text  = 'Bookmarks for May 2022';
             bookmark.update();
 
             views.data.labels = may;
             views.data.datasets[0].data = viewsMay;
-            views.options.title.text = 'Views for May 2022';
+            views.options.plugins.title.text  = 'Views for May 2022';
             views.update();
 
             like.data.labels = may;
             like.data.datasets[0].data = likesMay;
-            like.options.title.text = 'Likes for May 2022';
+            like.options.plugins.title.text  = 'Likes for May 2022';
             like.update();
 
             comment.data.labels = may;
             comment.data.datasets[0].data = commentsMay;
-            comment.options.title.text = 'Comments for May 2022';
+            comment.options.plugins.title.text  = 'Comments for May 2022';
             comment.update();
         }
         if (i == 5) {
             monthChart.data.datasets[0].data = totalJun;
-            monthChart.options.title.text = junLabel;
+            monthChart.options.plugins.title.text  = junLabel;
             monthChart.update();
 
             stories.data.labels = jun;
             stories.data.datasets[0].data = storiesJun;
-            stories.options.title.text = 'Stories for June 2022';
+            stories.options.plugins.title.text  = 'Stories for June 2022';
             stories.update();
 
             drafts.data.labels = jun;
             drafts.data.datasets[0].data = draftsJun;
-            drafts.options.title.text = 'Drafts for June 2022';
+            drafts.options.plugins.title.text  = 'Drafts for June 2022';
             drafts.update();
 
             bookmark.data.labels = jun;
             bookmark.data.datasets[0].data = bookmarksJun;
-            bookmark.options.title.text = 'Bookmarks for June 2022';
+            bookmark.options.plugins.title.text  = 'Bookmarks for June 2022';
             bookmark.update();
 
             views.data.labels = jun;
             views.data.datasets[0].data = viewsJun;
-            views.options.title.text = 'Views for June 2022';
+            views.options.plugins.title.text  = 'Views for June 2022';
             views.update();
 
             like.data.labels = jun;
             like.data.datasets[0].data = likesJun;
-            like.options.title.text = 'Likes for June 2022';
+            like.options.plugins.title.text  = 'Likes for June 2022';
             like.update();
 
             comment.data.labels = jun;
             comment.data.datasets[0].data = commentsJun;
-            comment.options.title.text = 'Comments for June 2022';
+            comment.options.plugins.title.text  = 'Comments for June 2022';
             comment.update();
         }
         if (i == 6) {
             monthChart.data.datasets[0].data = totalJul;
-            monthChart.options.title.text = julLabel;
+            monthChart.options.plugins.title.text  = julLabel;
             monthChart.update();
 
             stories.data.labels = jul;
             stories.data.datasets[0].data = storiesJul;
-            stories.options.title.text = 'Stories for July 2022';
+            stories.options.plugins.title.text  = 'Stories for July 2022';
             stories.update();
 
             drafts.data.labels = jul;
             drafts.data.datasets[0].data = draftsJul;
-            drafts.options.title.text = 'Drafts for July 2022';
+            drafts.options.plugins.title.text  = 'Drafts for July 2022';
             drafts.update();
 
             bookmark.data.labels = jul;
             bookmark.data.datasets[0].data = bookmarksJul;
-            bookmark.options.title.text = 'Bookmarks for July 2022';
+            bookmark.options.plugins.title.text  = 'Bookmarks for July 2022';
             bookmark.update();
 
             views.data.labels = jul;
             views.data.datasets[0].data = viewsJul;
-            views.options.title.text = 'Views for July 2022';
+            views.options.plugins.title.text  = 'Views for July 2022';
             views.update();
 
             like.data.labels = jul;
             like.data.datasets[0].data = likesJul;
-            like.options.title.text = 'Likes for July 2022';
+            like.options.plugins.title.text  = 'Likes for July 2022';
             like.update();
 
             comment.data.labels = jul;
             comment.data.datasets[0].data = commentsJul;
-            comment.options.title.text = 'Comments for July 2022';
+            comment.options.plugins.title.text  = 'Comments for July 2022';
             comment.update();
         }
         if (i == 7) {
             monthChart.data.datasets[0].data = totalAug;
-            monthChart.options.title.text = augLabel;
+            monthChart.options.plugins.title.text  = augLabel;
             monthChart.update();
 
             stories.data.labels = aug;
             stories.data.datasets[0].data = storiesAug;
-            stories.options.title.text = 'Stories for August 2022';
+            stories.options.plugins.title.text  = 'Stories for August 2022';
             stories.update();
 
             drafts.data.labels = aug;
             drafts.data.datasets[0].data = draftsAug;
-            drafts.options.title.text = 'Drafts for August 2022';
+            drafts.options.plugins.title.text  = 'Drafts for August 2022';
             drafts.update();
 
             bookmark.data.labels = aug;
             bookmark.data.datasets[0].data = bookmarksAug;
-            bookmark.options.title.text = 'Bookmarks for August 2022';
+            bookmark.options.plugins.title.text  = 'Bookmarks for August 2022';
             bookmark.update();
 
             views.data.labels = aug;
             views.data.datasets[0].data = viewsAug;
-            views.options.title.text = 'Views for August 2022';
+            views.options.plugins.title.text  = 'Views for August 2022';
             views.update();
 
             like.data.labels = aug;
             like.data.datasets[0].data = likesAug;
-            like.options.title.text = 'Likes for August 2022';
+            like.options.plugins.title.text  = 'Likes for August 2022';
             like.update();
 
             comment.data.labels = aug;
             comment.data.datasets[0].data = commentsAug;
-            comment.options.title.text = 'Comments for August 2022';
+            comment.options.plugins.title.text  = 'Comments for August 2022';
             comment.update();
         }
         if (i == 8) {
             monthChart.data.datasets[0].data = totalSep;
-            monthChart.options.title.text = sepLabel;
+            monthChart.options.plugins.title.text  = sepLabel;
             monthChart.update();
 
             stories.data.labels = sep;
             stories.data.datasets[0].data = storiesSep;
-            stories.options.title.text = 'Stories for September 2022';
+            stories.options.plugins.title.text  = 'Stories for September 2022';
             stories.update();
 
             drafts.data.labels = sep;
             drafts.data.datasets[0].data = draftsSep;
-            drafts.options.title.text = 'Drafts for September 2022';
+            drafts.options.plugins.title.text  = 'Drafts for September 2022';
             drafts.update();
 
             bookmark.data.labels = sep;
             bookmark.data.datasets[0].data = bookmarksSep;
-            bookmark.options.title.text = 'Bookmarks for September 2022';
+            bookmark.options.plugins.title.text  = 'Bookmarks for September 2022';
             bookmark.update();
 
             views.data.labels = sep;
             views.data.datasets[0].data = viewsSep;
-            views.options.title.text = 'Views for September 2022';
+            views.options.plugins.title.text  = 'Views for September 2022';
             views.update();
 
             like.data.labels = sep;
             like.data.datasets[0].data = likesSep;
-            like.options.title.text = 'Likes for September 2022';
+            like.options.plugins.title.text  = 'Likes for September 2022';
             like.update();
 
             comment.data.labels = sep;
             comment.data.datasets[0].data = commentsSep;
-            comment.options.title.text = 'Comments for September 2022';
+            comment.options.plugins.title.text  = 'Comments for September 2022';
             comment.update();
         }
         if (i == 9) {
             monthChart.data.datasets[0].data = totalOct;
-            monthChart.options.title.text = octLabel;
+            monthChart.options.plugins.title.text  = octLabel;
             monthChart.update();
 
             stories.data.labels = oct;
             stories.data.datasets[0].data = storiesOct;
-            stories.options.title.text = 'Stories for October 2022';
+            stories.options.plugins.title.text  = 'Stories for October 2022';
             stories.update();
 
             drafts.data.labels = oct;
             drafts.data.datasets[0].data = draftsOct;
-            drafts.options.title.text = 'Drafts for October 2022';
+            drafts.options.plugins.title.text  = 'Drafts for October 2022';
             drafts.update();
 
             bookmark.data.labels = oct;
             bookmark.data.datasets[0].data = bookmarksOct;
-            bookmark.options.title.text = 'Bookmarks for October 2022';
+            bookmark.options.plugins.title.text  = 'Bookmarks for October 2022';
             bookmark.update();
 
             views.data.labels = oct;
             views.data.datasets[0].data = viewsOct;
-            views.options.title.text = 'Views for October 2022';
+            views.options.plugins.title.text  = 'Views for October 2022';
             views.update();
 
             like.data.labels = oct;
             like.data.datasets[0].data = likesOct;
-            like.options.title.text = 'Likes for October 2022';
+            like.options.plugins.title.text  = 'Likes for October 2022';
             like.update();
 
             comment.data.labels = oct;
             comment.data.datasets[0].data = commentsOct;
-            comment.options.title.text = 'Comments for October 2022';
+            comment.options.plugins.title.text  = 'Comments for October 2022';
             comment.update();
         }
         if (i == 10) {
             monthChart.data.datasets[0].data = totalNov;
-            monthChart.options.title.text = novLabel;
+            monthChart.options.plugins.title.text  = novLabel;
             monthChart.update();
 
             stories.data.labels = nov;
             stories.data.datasets[0].data = storiesNov;
-            stories.options.title.text = 'Stories for November 2022';
+            stories.options.plugins.title.text  = 'Stories for November 2022';
             stories.update();
 
             drafts.data.labels = nov;
             drafts.data.datasets[0].data = draftsNov;
-            drafts.options.title.text = 'Drafts for November 2022';
+            drafts.options.plugins.title.text  = 'Drafts for November 2022';
             drafts.update();
 
             bookmark.data.labels = nov;
             bookmark.data.datasets[0].data = bookmarksNov;
-            bookmark.options.title.text = 'Bookmarks for November 2022';
+            bookmark.options.plugins.title.text  = 'Bookmarks for November 2022';
             bookmark.update();
 
             views.data.labels = nov;
             views.data.datasets[0].data = viewsNov;
-            views.options.title.text = 'Views for November 2022';
+            views.options.plugins.title.text  = 'Views for November 2022';
             views.update();
 
             like.data.labels = nov;
             like.data.datasets[0].data = likesNov;
-            like.options.title.text = 'Likes for November 2022';
+            like.options.plugins.title.text  = 'Likes for November 2022';
             like.update();
 
             comment.data.labels = nov;
             comment.data.datasets[0].data = commentsNov;
-            comment.options.title.text = 'Comments for November 2022';
+            comment.options.plugins.title.text  = 'Comments for November 2022';
             comment.update();
         }
         if (i == 11) {
             monthChart.data.datasets[0].data = totalDec;
-            monthChart.options.title.text = decLabel;
+            monthChart.options.plugins.title.text  = decLabel;
             monthChart.update();
 
             stories.data.labels = dec;
             stories.data.datasets[0].data = storiesDec;
-            stories.options.title.text = 'Stories for December 2022';
+            stories.options.plugins.title.text  = 'Stories for December 2022';
             stories.update();
 
             drafts.data.labels = dec;
             drafts.data.datasets[0].data = draftsDec;
-            drafts.options.title.text = 'Drafts for December 2022';
+            drafts.options.plugins.title.text  = 'Drafts for December 2022';
             drafts.update();
 
             bookmark.data.labels = dec;
             bookmark.data.datasets[0].data = bookmarksDec;
-            bookmark.options.title.text = 'Bookmarks for December 2022';
+            bookmark.options.plugins.title.text  = 'Bookmarks for December 2022';
             bookmark.update();
 
             views.data.labels = dec;
             views.data.datasets[0].data = viewsDec;
-            views.options.title.text = 'Views for December 2022';
+            views.options.plugins.title.text  = 'Views for December 2022';
             views.update();
 
             like.data.labels = dec;
             like.data.datasets[0].data = likesDec;
-            like.options.title.text = 'Likes for December 2022';
+            like.options.plugins.title.text  = 'Likes for December 2022';
             like.update();
 
             comment.data.labels = dec;
             comment.data.datasets[0].data = commentsDec;
-            comment.options.title.text = 'Comments for December 2022';
+            comment.options.plugins.title.text  = 'Comments for December 2022';
             comment.update();
         }
 
