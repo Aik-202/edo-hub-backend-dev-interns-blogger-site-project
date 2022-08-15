@@ -374,6 +374,7 @@ let febLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from Febuary'
 let marLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from March';
 let aprLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from April';
 let mayLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from May';
+let junLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from June';
 let julLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from July';
 let augLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from August';
 let sepLabel = 'Stories, Drafts, Bookmarks, Views, Likes, Comments from September';
@@ -403,7 +404,7 @@ let sumArray = (arr) => {
 }
 
 let storiesJan = [4, 3, 1, 2, 3];
-let draftsJan = [3, 2, 0, 2, 2];
+let draftsJan = [1, 2, 0, 2, 2];
 let bookmarksJan = [3, 4, 0, 3, 1];
 let viewsJan = [1, 2, 0, 3, 1];
 let likesJan = [1, 2, 3, 4, 2];
@@ -424,63 +425,63 @@ let likesMar = [2, 3, 3, 2, 1];
 let commentsMar = [3, 2, 2, 1, 1];
 
 let storiesApr = [6, 3, 3, 5, 2];
-let draftsApr = [2, 2, 3, 6, 5];
+let draftsApr = [2, 2, 1, 0, 1];
 let bookmarksApr = [3, 2, 6, 5, 2];
 let viewsApr = [2, 5, 2, 6, 1];
 let likesApr = [2, 3, 2, 5, 6];
 let commentsApr = [1, 3, 6, 5, 3];
 
 let storiesMay = [5, 7, 1, 2, 3];
-let draftsMay = [1, 5, 1, 5, 3];
+let draftsMay = [1, 2, 1, 1, 1];
 let bookmarksMay = [2, 1, 3, 7, 3];
 let viewsMay = [1, 5, 2, 2, 3];
 let likesMay = [3, 2, 5, 7, 3];
 let commentsMay = [3, 5, 7, 6, 4];
 
 let storiesJun = [3, 9, 3, 5, 1];
-let draftsJun = [4, 3, 3, 9, 2];
+let draftsJun = [1, 1, 0, 2, 1];
 let bookmarksJun = [4, 2, 4, 9, 5];
 let viewsJun = [2, 4, 2, 9, 5];
 let likesJun = [6, 9, 7, 5, 3];
 let commentsJun = [2, 9, 6, 5, 4];
 
 let storiesJul = [9, 3, 1, 2, 3];
-let draftsJul = [2, 3, 4, 2, 8];
+let draftsJul = [2, 1, 1, 2, 1];
 let bookmarksJul = [5, 6, 2, 2, 3];
 let viewsJul = [2, 3, 9, 2, 1];
 let likesJul = [8, 3, 4, 2, 5];
 let commentsJul = [8, 3, 5, 2, 6];
 
 let storiesAug = [7, 5, 3, 5, 0];
-let draftsAug = [5, 5, 4, 5, 6];
+let draftsAug = [2, 1, 2, 0, 1];
 let bookmarksAug = [3, 2, 5, 0, 4];
 let viewsAug = [2, 4, 6, 5, 6];
 let likesAug = [3, 5, 4, 6, 7];
 let commentsAug = [2, 5, 3, 2, 3];
 
 let storiesSep = [5, 2, 1, 2, 3];
-let draftsSep = [1, 2, 5, 2, 3];
+let draftsSep = [1, 2, 1, 1, 1];
 let bookmarksSep = [3, 1, 4, 1, 2];
 let viewsSep = [1, 2, 1, 3, 1];
 let likesSep = [2, 5, 5, 2, 3];
 let commentsSep = [1, 3, 1, 5, 3];
 
 let storiesOct = [9, 7, 4, 8, 6];
-let draftsOct = [6, 3, 4, 8, 5];
+let draftsOct = [1, 1, 0, 1, 1];
 let bookmarksOct = [2, 6, 4, 3, 7];
 let viewsOct = [5, 7, 6, 8, 9];
 let likesOct = [3, 6, 7, 8, 5];
 let commentsOct = [1, 3, 5, 8, 6];
 
 let storiesNov = [3, 4, 6, 5, 3];
-let draftsNov = [1, 3, 4, 2, 3];
+let draftsNov = [1, 2, 1, 0, 2];
 let bookmarksNov = [2, 4, 3, 6, 1];
 let viewsNov = [2, 1, 5, 6, 4];
 let likesNov = [2, 1, 6, 4, 2];
 let commentsNov = [1, 3, 2, 5, 6];
 
 let storiesDec = [6, 2, 1, 1, 0];
-let draftsDec = [3, 4, 1, 2, 1];
+let draftsDec = [1, 1, 0, 0, 1];
 let bookmarksDec = [3, 2, 1, 1, 2];
 let viewsDec = [2, 0, 6, 4, 3];
 let likesDec = [2, 4, 5, 3, 6];
@@ -748,16 +749,17 @@ new Chart(engageChart, {
 });
 
 //monthly chart
-new Chart(monthlyChart, {
+let monthChart = new Chart(monthlyChart, {
     type: 'polarArea',
     data: {
-        labels: jan,
+        labels: yearTotalLabel,
         datasets: [{
             data: totalJan,
             backgroundColor: [
                 'rgba(255, 89, 61, 0.4)',
                 'rgba(11, 156, 49, 0.4)',
                 'rgba(255, 206, 86, 0.4)',
+                'rgba(255, 99, 132, 0.4)',
                 'rgba(213, 184, 255, 0.4)',
                 'rgba(54, 162, 235, 0.4)'
             ],
@@ -765,6 +767,7 @@ new Chart(monthlyChart, {
                 'rgba(255, 89, 61, 1)',
                 'rgba(11, 156, 49, 1)',
                 'rgba(255, 206, 86, 1)',
+                'rgba(255, 99, 132, 1)',
                 'rgba(213, 184, 255, 1)',
                 'rgba(54, 162, 235, 1)'
             ],
@@ -779,15 +782,6 @@ new Chart(monthlyChart, {
             display: true,
             text: janLabel
         },
-        scales: {
-            xAxes: [{
-                display: false
-            }],
-            yAxes: [{
-                display: false
-            }]
-        },
-
     }
 });
 
@@ -799,8 +793,8 @@ let stories = new Chart(storiesChart, {
         datasets: [{
             data: storiesJan,
             label: "Stories",
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 89, 61, 0.4)',
+            borderColor: 'rgba(255, 89, 61, 1)',
             fill: 'origin',
             pointBorderRadius: 5,
             borderWidth: 1
@@ -832,8 +826,8 @@ let drafts = new Chart(draftsChart, {
         datasets: [{
             data: draftsJan,
             label: "Drafts",
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(11, 156, 49, 0.4)',
+            borderColor: 'rgba(11, 156, 49, 1)',
             fill: 'origin',
             pointBorderRadius: 5,
             borderWidth: 1
@@ -865,8 +859,8 @@ let bookmark = new Chart(bookmarksChart, {
         datasets: [{
             data: bookmarksJan,
             label: "Bookmarks",
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 206, 86, 0.4)',
+            borderColor: 'rgba(255, 206, 86, 1)',
             fill: 'origin',
             pointBorderRadius: 5,
             borderWidth: 1
@@ -898,7 +892,7 @@ let views = new Chart(viewsChart, {
         datasets: [{
             data: viewsJan,
             label: "Views",
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            backgroundColor: 'rgba(255, 99, 132, 0.4)',
             borderColor: 'rgba(255, 99, 132, 1)',
             fill: 'origin',
             pointBorderRadius: 5,
@@ -931,8 +925,8 @@ let like = new Chart(likesChart, {
         datasets: [{
             data: likesJan,
             label: "Likes",
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(213, 184, 255, 0.4)',
+            borderColor: 'rgba(213, 184, 255, 1)',
             fill: 'origin',
             pointBorderRadius: 5,
             borderWidth: 1
@@ -964,8 +958,8 @@ let comment = new Chart(commentsChart, {
         datasets: [{
             data: commentsJan,
             label: "Comments",
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(54, 162, 235, 0.4)',
+            borderColor: 'rgba(54, 162, 235, 1)',
             fill: 'origin',
             pointBorderRadius: 5,
             borderWidth: 1
@@ -1034,6 +1028,10 @@ for (let i = 0; i < months.length; i++) {
         }
 
         if (i == 0) {
+            monthChart.data.datasets[0].data = totalJan;
+            monthChart.options.title.text = janLabel;
+            monthChart.update();
+
             stories.data.labels = jan;
             stories.data.datasets[0].data = storiesJan;
             stories.options.title.text = 'Stories for January 2022';
@@ -1065,6 +1063,10 @@ for (let i = 0; i < months.length; i++) {
             comment.update();
         }
         if (i == 1) {
+            monthChart.data.datasets[0].data = totalFeb;
+            monthChart.options.title.text = febLabel;
+            monthChart.update();
+
             stories.data.labels = feb;
             stories.data.datasets[0].data = storiesFeb;
             stories.options.title.text = 'Stories for Feburary 2022';
@@ -1096,6 +1098,10 @@ for (let i = 0; i < months.length; i++) {
             comment.update();
         }
         if (i == 2) {
+            monthChart.data.datasets[0].data = totalMar;
+            monthChart.options.title.text = marLabel;
+            monthChart.update();
+
             stories.data.labels = mar;
             stories.data.datasets[0].data = storiesMar;
             stories.options.title.text = 'Stories for March 2022';
@@ -1127,6 +1133,10 @@ for (let i = 0; i < months.length; i++) {
             comment.update();
         }
         if (i == 3) {
+            monthChart.data.datasets[0].data = totalApr;
+            monthChart.options.title.text = aprLabel;
+            monthChart.update();
+
             stories.data.labels = apr;
             stories.data.datasets[0].data = storiesApr;
             stories.options.title.text = 'Stories for April 2022';
@@ -1158,6 +1168,10 @@ for (let i = 0; i < months.length; i++) {
             comment.update();
         }
         if (i == 4) {
+            monthChart.data.datasets[0].data = totalMay;
+            monthChart.options.title.text = mayLabel;
+            monthChart.update();
+
             stories.data.labels = may;
             stories.data.datasets[0].data = storiesMay;
             stories.options.title.text = 'Stories for May 2022';
@@ -1189,6 +1203,10 @@ for (let i = 0; i < months.length; i++) {
             comment.update();
         }
         if (i == 5) {
+            monthChart.data.datasets[0].data = totalJun;
+            monthChart.options.title.text = junLabel;
+            monthChart.update();
+
             stories.data.labels = jun;
             stories.data.datasets[0].data = storiesJun;
             stories.options.title.text = 'Stories for June 2022';
@@ -1220,6 +1238,10 @@ for (let i = 0; i < months.length; i++) {
             comment.update();
         }
         if (i == 6) {
+            monthChart.data.datasets[0].data = totalJul;
+            monthChart.options.title.text = julLabel;
+            monthChart.update();
+
             stories.data.labels = jul;
             stories.data.datasets[0].data = storiesJul;
             stories.options.title.text = 'Stories for July 2022';
@@ -1251,6 +1273,10 @@ for (let i = 0; i < months.length; i++) {
             comment.update();
         }
         if (i == 7) {
+            monthChart.data.datasets[0].data = totalAug;
+            monthChart.options.title.text = augLabel;
+            monthChart.update();
+
             stories.data.labels = aug;
             stories.data.datasets[0].data = storiesAug;
             stories.options.title.text = 'Stories for August 2022';
@@ -1282,6 +1308,10 @@ for (let i = 0; i < months.length; i++) {
             comment.update();
         }
         if (i == 8) {
+            monthChart.data.datasets[0].data = totalSep;
+            monthChart.options.title.text = sepLabel;
+            monthChart.update();
+
             stories.data.labels = sep;
             stories.data.datasets[0].data = storiesSep;
             stories.options.title.text = 'Stories for September 2022';
@@ -1313,6 +1343,10 @@ for (let i = 0; i < months.length; i++) {
             comment.update();
         }
         if (i == 9) {
+            monthChart.data.datasets[0].data = totalOct;
+            monthChart.options.title.text = octLabel;
+            monthChart.update();
+
             stories.data.labels = oct;
             stories.data.datasets[0].data = storiesOct;
             stories.options.title.text = 'Stories for October 2022';
@@ -1344,6 +1378,10 @@ for (let i = 0; i < months.length; i++) {
             comment.update();
         }
         if (i == 10) {
+            monthChart.data.datasets[0].data = totalNov;
+            monthChart.options.title.text = novLabel;
+            monthChart.update();
+
             stories.data.labels = nov;
             stories.data.datasets[0].data = storiesNov;
             stories.options.title.text = 'Stories for November 2022';
@@ -1375,6 +1413,10 @@ for (let i = 0; i < months.length; i++) {
             comment.update();
         }
         if (i == 11) {
+            monthChart.data.datasets[0].data = totalDec;
+            monthChart.options.title.text = decLabel;
+            monthChart.update();
+
             stories.data.labels = dec;
             stories.data.datasets[0].data = storiesDec;
             stories.options.title.text = 'Stories for December 2022';
