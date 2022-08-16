@@ -660,7 +660,7 @@ let genChart = new Chart(generalChart, {
 });
 
 let totalMonthChart = new Chart(monthsChart, {
-    type: 'radar',
+    type: 'line',
     data: {
         labels: yearTotalLabel,
         datasets: [{
@@ -668,7 +668,8 @@ let totalMonthChart = new Chart(monthsChart, {
                 data: totalJan,
                 backgroundColor: 'rgba(255, 89, 61, 0.5)',
                 strokeColor: 'rgba(255, 89, 61, 1)',
-                pointColor: 'rgba(255, 89, 61, 1)',
+                pointBackgroundColor: 'rgba(255, 89, 61, 1)',
+                pointRadius : 5,
                 borderWidth: 1
             },
             {
@@ -676,7 +677,8 @@ let totalMonthChart = new Chart(monthsChart, {
                 data: totalFeb,
                 backgroundColor: 'rgba(11, 156, 49, 0.5)',
                 strokeColor: 'rgba(11, 156, 49, 1)',
-                pointColor: 'rgba(11, 156, 49, 1)',
+                pointBackgroundColor: 'rgba(11, 156, 49, 1)',
+                pointRadius : 5,
                 borderWidth: 1
             },
             {
@@ -684,7 +686,8 @@ let totalMonthChart = new Chart(monthsChart, {
                 data: totalMar,
                 backgroundColor: 'rgba(255, 206, 86, 0.5)',
                 strokeColor: 'rgba(255, 206, 86, 1)',
-                pointColor: 'rgba(255, 206, 86, 1)',
+                pointBackgroundColor: 'rgba(255, 206, 86, 1)',
+                pointRadius : 5,
                 borderWidth: 1
             },
             {
@@ -692,7 +695,8 @@ let totalMonthChart = new Chart(monthsChart, {
                 data: totalApr,
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
                 strokeColor: 'rgba(255, 99, 132, 1)',
-                pointColor: 'rgba(255, 99, 132, 1)',
+                pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+                pointRadius : 5,
                 borderWidth: 1
             },
             {
@@ -700,7 +704,8 @@ let totalMonthChart = new Chart(monthsChart, {
                 data: totalMay,
                 backgroundColor: 'rgba(213, 184, 255, 0.5)',
                 strokeColor: 'rgba(213, 184, 255, 1)',
-                pointColor: 'rgba(213, 184, 255, 1)',
+                pointBackgroundColor: 'rgba(213, 184, 255, 1)',
+                pointRadius : 5,
                 borderWidth: 1
             },
             {
@@ -708,7 +713,8 @@ let totalMonthChart = new Chart(monthsChart, {
                 data: totalJun,
                 backgroundColor: 'rgba(54, 162, 235, 0.5)',
                 strokeColor: 'rgba(54, 162, 235, 1)',
-                pointColor: 'rgba(54, 162, 235, 1)',
+                pointBackgroundColor: 'rgba(54, 162, 235, 1)',
+                pointRadius : 5,
                 borderWidth: 1
             },
             {
@@ -716,7 +722,8 @@ let totalMonthChart = new Chart(monthsChart, {
                 data: totalJul,
                 backgroundColor: 'rgba(255, 69, 0, 0.5)',
                 strokeColor: 'rgba(255, 69, 0, 1)',
-                pointColor: 'rgba(255, 69, 0, 1)',
+                pointBackgroundColor: 'rgba(255, 69, 0, 1)',
+                pointRadius : 5,
                 borderWidth: 1
             },
             {
@@ -724,7 +731,8 @@ let totalMonthChart = new Chart(monthsChart, {
                 data: totalAug,
                 backgroundColor: 'rgba(238, 232, 170, 0.5)',
                 strokeColor: 'rgba(238, 232, 170, 1)',
-                pointColor: 'rgba(238, 232, 170, 1)',
+                pointBackgroundColor: 'rgba(238, 232, 170, 1)',
+                pointRadius : 5,
                 borderWidth: 1
             },
             {
@@ -732,7 +740,8 @@ let totalMonthChart = new Chart(monthsChart, {
                 data: totalSep,
                 backgroundColor: 'rgba(189, 183, 107, 0.5)',
                 strokeColor: 'rgba(189, 183, 107, 1)',
-                pointColor: 'rgba(189, 183, 107, 1)',
+                pointBackgroundColor: 'rgba(189, 183, 107, 1)',
+                pointRadius : 5,
                 borderWidth: 1
             },
             {
@@ -740,7 +749,8 @@ let totalMonthChart = new Chart(monthsChart, {
                 data: totalOct,
                 backgroundColor: 'rgba(107, 142, 35, 0.5)',
                 strokeColor: 'rgba(107, 142, 35, 1)',
-                pointColor: 'rgba(107, 142, 35, 1)',
+                pointBackgroundColor: 'rgba(107, 142, 35, 1)',
+                pointRadius : 5,
                 borderWidth: 1
             },
             {
@@ -748,7 +758,8 @@ let totalMonthChart = new Chart(monthsChart, {
                 data: totalNov,
                 backgroundColor: 'rgba(173, 216, 230, 0.5)',
                 strokeColor: 'rgba(173, 216, 230, 1)',
-                pointColor: 'rgba(173, 216, 230, 1)',
+                pointBackgroundColor: 'rgba(173, 216, 230, 1)',
+                pointRadius : 5,
                 borderWidth: 1
             },
             {
@@ -756,7 +767,8 @@ let totalMonthChart = new Chart(monthsChart, {
                 data: totalDec,
                 backgroundColor: 'rgba(106, 90, 205, 0.5)',
                 strokeColor: 'rgba(106, 90, 205, 1)',
-                pointColor: 'rgba(106, 90, 205, 1)',
+                pointBackgroundColor: 'rgba(106, 90, 205, 1)',
+                pointRadius : 5,
                 borderWidth: 1
             },
 
@@ -772,7 +784,7 @@ let totalMonthChart = new Chart(monthsChart, {
                 text: 'Stories, Drafts, Bookmarks, Views, Likes, Comments per month'
             }
         },
-        responsive: false
+        responsive: true
     }
 });
 
@@ -898,6 +910,7 @@ let stories = new Chart(storiesChart, {
             data: storiesJan,
             label: "Stories",
             backgroundColor: 'rgba(255, 89, 61, 0.4)',
+            pointBackgroundColor: 'rgba(255, 89, 61, 1)',
             borderColor: 'rgba(255, 89, 61, 1)',
             fill: 'origin',
             pointBorderRadius: 5,
@@ -926,6 +939,7 @@ let drafts = new Chart(draftsChart, {
             data: draftsJan,
             label: "Drafts",
             backgroundColor: 'rgba(11, 156, 49, 0.4)',
+            pointBackgroundColor: 'rgba(11, 156, 49, 1)',
             borderColor: 'rgba(11, 156, 49, 1)',
             fill: 'origin',
             pointBorderRadius: 5,
@@ -954,6 +968,7 @@ let bookmark = new Chart(bookmarksChart, {
             data: bookmarksJan,
             label: "Bookmarks",
             backgroundColor: 'rgba(255, 206, 86, 0.4)',
+            pointBackgroundColor: 'rgba(255, 206, 86, 0.4)',
             borderColor: 'rgba(255, 206, 86, 1)',
             fill: 'origin',
             pointBorderRadius: 5,
@@ -982,6 +997,7 @@ let views = new Chart(viewsChart, {
             data: viewsJan,
             label: "Views",
             backgroundColor: 'rgba(255, 99, 132, 0.4)',
+            pointBackgroundColor: 'rgba(255, 99, 132, 1)',
             borderColor: 'rgba(255, 99, 132, 1)',
             fill: 'origin',
             pointBorderRadius: 5,
@@ -1010,6 +1026,7 @@ let like = new Chart(likesChart, {
             data: likesJan,
             label: "Likes",
             backgroundColor: 'rgba(213, 184, 255, 0.4)',
+            pointBackgroundColor: 'rgba(213, 184, 255, 1)',
             borderColor: 'rgba(213, 184, 255, 1)',
             fill: 'origin',
             pointBorderRadius: 5,
@@ -1038,6 +1055,7 @@ let comment = new Chart(commentsChart, {
             data: commentsJan,
             label: "Comments",
             backgroundColor: 'rgba(54, 162, 235, 0.4)',
+            pointBackgroundColor: 'rgba(54, 162, 235, 1)',
             borderColor: 'rgba(54, 162, 235, 1)',
             fill: 'origin',
             pointBorderRadius: 5,
@@ -1057,8 +1075,8 @@ let comment = new Chart(commentsChart, {
     }
 });
 
-if(window.innerWidth <= 400){
-    totalMonthChart.options.responsive = "true";
+if(window.innerWidth <= 400 ){
+    // totalMonthChart.options.responsive = "true";
     monthChart.options.responsive = "true";
 }
 
@@ -1069,8 +1087,9 @@ let getTheme2 = JSON.parse(localStorage.getItem("pageTheme"));
 
 themeButton.addEventListener("click", () => {
     if (window.getComputedStyle(actualMode).visibility === 'hidden') {
-        totalMonthChart.options.scales.r.grid.color = ['rgba(0,0,0, 0.1)', 'rgba(0,0,0, 0.1)', 'rgba(0,0,0, 0.1)', 'rgba(0,0,0, 0.1)'];
-        totalMonthChart.options.scales.r.ticks.color = '#666'
+        totalMonthChart.options.scales.x.grid.borderColor = 'rgba(0,0,0, 0.05)',
+        totalMonthChart.options.scales.y.grid.borderColor = 'rgba(0,0,0, 0.05)';
+        totalMonthChart.options.elements.line.borderColor = 'rgba(0,0,0, 0.06)';
         totalMonthChart.update();
     
         personal.options.scales.x.grid.borderColor = 'rgba(0,0,0, 0.05)',
@@ -1080,11 +1099,11 @@ themeButton.addEventListener("click", () => {
         engage.options.scales.x.grid.borderColor = 'rgba(0,0,0, 0.05)';
         engage.options.scales.y.grid.borderColor = 'rgba(0,0,0, 0.05)';
         engage.update();
-
+    
         monthChart.options.scales.r.grid.color = ['rgba(0,0,0, 0.1)', 'rgba(0,0,0, 0.1)', 'rgba(0,0,0, 0.1)', 'rgba(0,0,0, 0.1)'];
-        monthChart.options.scales.r.ticks.color = '#666'
+        monthChart.options.scales.r.ticks.color = '#666';
         monthChart.update();
-
+    
         stories.options.scales.x.grid.borderColor = 'rgba(0,0,0, 0.05)';
         stories.options.scales.y.grid.borderColor = 'rgba(0,0,0, 0.05)';
         stories.update();
@@ -1109,51 +1128,53 @@ themeButton.addEventListener("click", () => {
         comment.options.scales.y.grid.borderColor = 'rgba(0,0,0, 0.05)';
         comment.update();
     }else {
-        totalMonthChart.options.scales.r.grid.color = ['rgba(255,255,255)', 'rgba(255,255,255)', 'rgba(255,255,255)', 'rgba(255,255,255)'];
-        totalMonthChart.options.scales.r.ticks.color = 'black';
-        totalMonthChart.update();
-    
-        personal.options.scales.x.grid.borderColor = 'rgba(255,255,255)',
-        personal.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
-        personal.update();
-    
-        engage.options.scales.x.grid.borderColor = 'rgba(255,255,255)';
-        engage.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
-        engage.update();
-    
-        monthChart.options.scales.r.grid.color = ['rgba(255,255,255)', 'rgba(255,255,255)', 'rgba(255,255,255)', 'rgba(255,255,255)'];
-        monthChart.options.scales.r.ticks.color = 'black';
-        monthChart.update();
-    
-        stories.options.scales.x.grid.borderColor = 'rgba(255,255,255)';
-        stories.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
-        stories.update();
-    
-        drafts.options.scales.x.grid.borderColor = 'rgba(255,255,255)';
-        drafts.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
-        drafts.update();
-    
-        bookmark.options.scales.x.grid.borderColor = 'rgba(255,255,255)';
-        bookmark.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
-        bookmark.update();
-    
-        views.options.scales.x.grid.borderColor = 'rgba(255,255,255)';
-        views.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
-        views.update();
-    
-        like.options.scales.x.grid.borderColor = 'rgba(255,255,255)';
-        like.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
-        like.update();
-    
-        comment.options.scales.x.grid.borderColor = 'rgba(255,255,255)';
-        comment.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
-        comment.update();
+    totalMonthChart.options.scales.x.grid.borderColor = 'rgba(255,255,255)',
+    totalMonthChart.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
+    totalMonthChart.options.elements.line.borderColor = 'rgba(255,255,255)';
+    totalMonthChart.update();
+
+    personal.options.scales.x.grid.borderColor = 'rgba(255,255,255)',
+    personal.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
+    personal.update();
+
+    engage.options.scales.x.grid.borderColor = 'rgba(255,255,255)';
+    engage.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
+    engage.update();
+
+    monthChart.options.scales.r.grid.color = ['rgba(255,255,255)', 'rgba(255,255,255)', 'rgba(255,255,255)', 'rgba(255,255,255)'];
+    monthChart.options.scales.r.ticks.color = 'black';
+    monthChart.update();
+
+    stories.options.scales.x.grid.borderColor = 'rgba(255,255,255)';
+    stories.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
+    stories.update();
+
+    drafts.options.scales.x.grid.borderColor = 'rgba(255,255,255)';
+    drafts.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
+    drafts.update();
+
+    bookmark.options.scales.x.grid.borderColor = 'rgba(255,255,255)';
+    bookmark.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
+    bookmark.update();
+
+    views.options.scales.x.grid.borderColor = 'rgba(255,255,255)';
+    views.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
+    views.update();
+
+    like.options.scales.x.grid.borderColor = 'rgba(255,255,255)';
+    like.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
+    like.update();
+
+    comment.options.scales.x.grid.borderColor = 'rgba(255,255,255)';
+    comment.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
+    comment.update();
     } 
 });
 
 if (getTheme2 === "DARK") {
-    totalMonthChart.options.scales.r.grid.color = ['rgba(255,255,255)', 'rgba(255,255,255)', 'rgba(255,255,255)', 'rgba(255,255,255)'];
-    totalMonthChart.options.scales.r.ticks.color = 'black';
+    totalMonthChart.options.scales.x.grid.borderColor = 'rgba(255,255,255)',
+    totalMonthChart.options.scales.y.grid.borderColor = 'rgba(255,255,255)';
+    totalMonthChart.options.elements.line.borderColor = 'rgba(255,255,255)';
     totalMonthChart.update();
 
     personal.options.scales.x.grid.borderColor = 'rgba(255,255,255)',
@@ -1193,8 +1214,9 @@ if (getTheme2 === "DARK") {
     comment.update();
 } 
 if (getTheme2 === "LIGHT") {
-    totalMonthChart.options.scales.r.grid.color = ['rgba(0,0,0, 0.1)', 'rgba(0,0,0, 0.1)', 'rgba(0,0,0, 0.1)', 'rgba(0,0,0, 0.1)'];
-    totalMonthChart.options.scales.r.ticks.color = '#666'
+    totalMonthChart.options.scales.x.grid.borderColor = 'rgba(0,0,0, 0.05)',
+    totalMonthChart.options.scales.y.grid.borderColor = 'rgba(0,0,0, 0.05)';
+    totalMonthChart.options.elements.line.borderColor = 'rgba(0,0,0, 0.06)';
     totalMonthChart.update();
 
     personal.options.scales.x.grid.borderColor = 'rgba(0,0,0, 0.05)',
