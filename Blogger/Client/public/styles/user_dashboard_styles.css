@@ -1099,7 +1099,7 @@ canvas {
 #month_chart {
   width: 800px;
   height: 800px;
-  margin-left: 50px;
+  margin-left: 0px;
 }
 
 #monthly_chart {
@@ -3040,6 +3040,8 @@ canvas {
   }
   
   #month_chart {
+    width: 520px;
+    height: 520px;
     margin-left: 0px;
   }
   

@@ -1076,8 +1076,10 @@ let comment = new Chart(commentsChart, {
 });
 
 if(window.innerWidth <= 400 ){
-    // totalMonthChart.options.responsive = "true";
+    totalMonthChart.options.responsive = "false";
+    totalMonthChart.update();
     monthChart.options.responsive = "true";
+    monthChart.update();
 }
 
 
