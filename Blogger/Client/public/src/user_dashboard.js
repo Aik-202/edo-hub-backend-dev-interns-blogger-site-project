@@ -619,7 +619,7 @@ yearTotalLabel = [...x, ...a];
 //actual charts
 
 //general chart
-new Chart(generalChart, {
+let genChart = new Chart(generalChart, {
     type: 'doughnut',
     data: {
         labels: yearTotalLabel,
@@ -1057,6 +1057,11 @@ let comment = new Chart(commentsChart, {
     }
 });
 
+if(window.innerWidth <= 400){
+    totalMonthChart.options.responsive = "true";
+    monthChart.options.responsive = "true";
+}
+
 
 const themeButton = document.getElementById("accessibility");
 const actualMode = document.getElementById("mode")
@@ -1228,7 +1233,6 @@ if (getTheme2 === "LIGHT") {
     comment.options.scales.y.grid.borderColor = 'rgba(0,0,0, 0.05)';
     comment.update();
 }
-
 
 //userdashboard drop down dates for account summary section
 const months = document.querySelectorAll(".month");

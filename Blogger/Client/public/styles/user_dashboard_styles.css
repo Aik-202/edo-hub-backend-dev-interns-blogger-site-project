@@ -2518,6 +2518,20 @@ canvas {
     right: 13%;
   }
 
+  #general_chart {
+    width: 650px;
+    height: 650px;
+    margin-left: 60px;
+  }
+  
+  #month_chart {
+    margin-left: 10px;
+  }
+  
+  #monthly_chart {
+    margin-left: 20px;
+  }
+
   .scheduler {
     margin-top: 200px;
     margin-left: 100px;
@@ -3013,17 +3027,25 @@ canvas {
     font-size: 10px;
     padding: 5px;
   }
-  #personalChart {
-    width: 350px;
-    max-width: 350px;
-    margin-left: 0;
+
+  canvas {
+    width: 320px;
+    height: 320px;
+  }
+
+  #general_chart {
+    width: 320px;
+    height: 320px;
+    margin-left: 5px;
   }
   
-  #engageChart {
-    width: 350px;
-    max-width: 350px;
-    margin-left: 0;
-  }  
+  #month_chart {
+    margin-left: 0px;
+  }
+  
+  #monthly_chart {
+    margin-left: 0px;
+  }
 
   .stat>h1 {
     font-size: 18px;
