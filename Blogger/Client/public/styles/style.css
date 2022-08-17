@@ -31,6 +31,11 @@ button:focus {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+a > button{
+  text-decoration: none;
+  color: #333;
+}
+
 .header {
   background-color: white;
 }
@@ -252,7 +257,7 @@ button:focus {
   max-width: 60%;
 }
 
-.main_content>div>button {
+.main_content>div>a>button {
   align-self: flex-start;
   padding: 12px;
   padding-left: 15px;
@@ -311,7 +316,7 @@ button:focus {
   line-height: 1.5em;
 }
 
-.inside_sub_contents_container>button {
+.inside_sub_contents_container>a>button {
   align-self: flex-start;
   padding: 10px;
   padding-left: 12px;
