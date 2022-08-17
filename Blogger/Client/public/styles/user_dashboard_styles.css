@@ -2521,7 +2521,7 @@ canvas {
   #general_chart {
     width: 650px;
     height: 650px;
-    margin-left: 60px;
+    margin-left: 70px;
   }
   
   #month_chart {
@@ -2529,7 +2529,7 @@ canvas {
   }
   
   #monthly_chart {
-    margin-left: 20px;
+    margin-left: 70px;
   }
 
   .scheduler {

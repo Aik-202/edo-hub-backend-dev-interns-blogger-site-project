@@ -80,34 +80,8 @@ input:focus {
   max-width: 25%;
 }
 
-.user_admin_option {
-  display: flex;
-  flex-direction: row;
-}
-
-.user_admin_option>label {
-  align-self: center;
-  font-size: 15px;
-  font-weight: 900;
-}
-
-.user_admin_option>input[type=radio] {
-  align-self: center;
-  margin-top: 18px;
-  margin-right: 1%;
-  accent-color: #ef9273;
-}
-
-#as_user {
-  margin-left: 10%;
-}
-
-#as_admin {
-  margin-left: 25%;
-}
-
 .Login_content>form>button {
-  max-width: 75%;
+  max-width: 77%;
   padding: 15px;
   font-size: 18px;
   background-color: #ef9273;
@@ -139,6 +113,20 @@ p {
   font-weight: 700;
 }
 
+.ad_content {
+  width: 40%;
+}
+
+#adtitle {
+  margin-bottom: -5px;
+}
+
+#admin_img {
+  width: 500px;
+  height: 450px;
+  pointer-events: none;
+}
+
 .dark_theme .Login_section {
   background-color: #1b1b1bd8;
   border: 1px solid #1b1b1bd8;
@@ -148,10 +136,6 @@ p {
   background-color: #353839;
   border: 1px solid #353839;
   color: white;
-}
-
-.dark_theme .user_admin_option>input[type=radio] {
-  accent-color: #353839;
 }
 
 .dark_theme .Login_content>form>a {
@@ -211,10 +195,6 @@ p {
   font-size: 22px;
 }
 
-.increase_font .user_admin_option>input[type=radio]{
-  margin-top: 28px;
-}
-
 .increase_font .Login_content>form>button{
   font-size: 22px;
   margin-top: 30px;
@@ -233,6 +213,10 @@ p {
 .increase_font .Login_content>h5 {
   font-size: 22px;
   line-height: 1.8rem;
+}
+
+.increase_font #adtitle {
+  margin-bottom: -25px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -271,6 +255,10 @@ p {
     height: 250px;
   }
 
+  #admin_img {
+    width: 350px;
+    height: 280px;
+  }
   .Login_content {
     padding-left: 0;
     width: 80%;

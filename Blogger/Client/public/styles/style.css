@@ -12,6 +12,10 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+img {
+  pointer-events: none;
+}
+
 p {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -627,7 +631,7 @@ button:focus {
   color: #ef9273;
 }
 
-.increase_font .logo>img {
+ .increase_font .logo>img {
   width: 60px;
   height: 60px;
 }
@@ -678,7 +682,7 @@ button:focus {
   top: 0;
   left: 4px;
   right: 0;
-  width: 150%;
+  width: 110%;
 }
 
 .increase_font #accessibility2>b {
@@ -812,7 +816,7 @@ button:focus {
   }
 
   .second_insider>div:first-child {
-    margin-left: -1px;
+    margin-left: 10px;
   }
 
   .inside_sub_contents_container {
@@ -841,11 +845,11 @@ button:focus {
   #bars {
     display: none;
   }
-  
+
   #xmark {
     display: none;
   }
-  
+
   .sub_contents {
     flex-direction: column;
     overflow-x: hidden;
@@ -886,7 +890,7 @@ button:focus {
     align-self: center;
     margin-left: 0;
   }
-  
+
   .inside_header>img {
     background-color: transparent;
     margin: 0;
@@ -923,68 +927,71 @@ button:focus {
   .inside_sub_contents_container>p {
     align-self: center;
   }
-  
- .increase_font #bars {
+
+  .increase_font #bars {
     display: block;
   }
 
- .increase_font #xmark {
+  .increase_font #xmark {
     display: none;
   }
-  
+
   .increase_font .headers_list>li>a {
     display: none;
   }
-  
+
   .increase_font #accessibility {
     display: block;
     margin-top: -5px;
     font-size: 20px;
   }
 
- .increase_font #accessibility2 {
+  .increase_font #accessibility2 {
     display: block;
     margin-top: -5px;
     font-size: 20px;
   }
-  
+
   .increase_font .hamburger_menu>li {
     padding: 20px;
   }
+
   .increase_font .hamburger_menu>li>a {
     font-size: 30px;
     padding: 20px;
   }
-  
+
   .increase_font .hamburger_menu>li>i {
     font-size: 30px;
-  }  
-  
+  }
+
   .increase_font .main_content>p {
     font-size: 20px;
     line-height: 2.8em;
   }
+
   .increase_font .main_content>img {
     width: 400px;
   }
-  
+
   .increase_font .first_insider {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
   }
-  
+
   .increase_font .second_insider {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  
+
   .increase_font .inside_sub_contents_container {
     max-width: 80%;
     margin-bottom: 40px;
   }
+
   .increase_font .inside_sub_contents_container>h3 {
     font-size: 40px;
     margin-top: 10px;
@@ -995,31 +1002,32 @@ button:focus {
     font-size: 18px;
     line-height: 2.8em;
   }
-  
+
   .increase_font .inside_sub_contents_container>button {
     font-size: 25px;
     margin-left: 10px;
     padding: 15px;
   }
+
   .increase_font .questions_answers>h4 {
     font-size: 35px;
   }
-  
+
   .increase_font .questions_answers_container {
     align-self: flex-start;
     margin-left: 70px;
     width: 80%;
   }
-  
+
   .increase_font .questions_answers_container>h6 {
     font-size: 25px;
   }
-  
-    .increase_font .answers_container {
+
+  .increase_font .answers_container {
     font-size: 12px;
     line-height: 3.8em;
   }
-  
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -1246,82 +1254,85 @@ button:focus {
   .socials>img:first-child {
     margin-left: 10%;
   }
-  
-  .increase_font .logo>img {
-  width: 40px;
-  height: 40px;
- }
 
-.increase_font .logo>span {
-  font-size: 15px;
-  display: none;
- }
-  
+  .increase_font .logo>img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .increase_font .logo>span {
+    font-size: 15px;
+    display: none;
+  }
+
   .increase_font #accessibility {
     margin-left: -10px;
     margin-right: 0px;
     margin-top: 1px;
     font-size: 12px;
   }
+
   .increase_font #accessibility2 {
     margin-left: 0px;
     margin-right: -5px;
     font-size: 12px;
     margin-top: 1px;
   }
-  
+
   .increase_font #bars {
     font-size: 25px;
     margin-right: 5px;
   }
-  
+
   .increase_font #xmark {
     font-size: 25px;
     margin-right: 5px;
   }
-  
+
   .increase_font .hamburger_menu>li {
     padding: 0px;
   }
+
   .increase_font .hamburger_menu>li>a {
     font-size: 18px;
     padding: 10px;
   }
-  
+
   .increase_font .hamburger_menu>li>i {
     font-size: 20px;
     margin-right: 5px;
-  }  
-  
+  }
+
   .increase_font .main_content {
-  margin-top: -25px;
-}
+    margin-top: -25px;
+  }
 
-.increase_font .main_content>img {
-  width: 350px;
-  padding-right: 5px;
-}
+  .increase_font .main_content>img {
+    width: 350px;
+    padding-right: 5px;
+  }
 
-.increase_font .main_content>div>h3 {
-  align-items: center;
-  font-size: 25px;
-}
+  .increase_font .main_content>div>h3 {
+    align-items: center;
+    font-size: 25px;
+  }
 
-.increase_font .main_content>div>p {
-  font-size: 16px;
-  line-height: 1.6em;
-  max-width: 90%;
-}
+  .increase_font .main_content>div>p {
+    font-size: 16px;
+    line-height: 1.6em;
+    max-width: 90%;
+  }
 
-.increase_font .main_content>div>button {
-  font-size: 18px;
-}
+  .increase_font .main_content>div>button {
+    font-size: 18px;
+  }
 
-.increase_font .sub_contents {
-  flex-direction: column;
-  margin-left: 10px;
-}
-  .increase_font  .first_insider {
+  .increase_font .sub_contents {
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .increase_font .first_insider {
     justify-content: flex-start;
     margin: 10px;
     margin-left: 20px;
@@ -1341,6 +1352,7 @@ button:focus {
     margin-left: -30px;
     margin-bottom: -15px;
   }
+
   .increase_font .inside_sub_contents_container>p {
     align-self: flex-start;
     font-size: 14px;
@@ -1359,50 +1371,53 @@ button:focus {
     width: 290px;
     height: 200px;
   }
-  
-  
-.increase_font .questions_answers>h4 {
-  font-size: 25px;
-  margin-bottom: 10px;
-}
 
-.increase_font .questions_answers_container {
-  width: 80%;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin-left: 10px;
-}
 
-.increase_font .questions_answers_container>h6 {
-  font-size: 14px;
-}
+  .increase_font .questions_answers>h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
 
-.increase_font .answers_container {
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.6rem
-}
+  .increase_font .questions_answers_container {
+    width: 80%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+  }
 
-.increase_font .footer>h5 {
-  font-size: 25px;
-}
-.increase_font .footer>ul {
-  align-self: flex-start;
-  justify-content: flex-start;
-  padding-right: 0;
-  margin-left: 10px;
-  width: 80%;
-  max-width: 100%;
-}
-.increase_font .footer>ul>li {
-  font-size: 16px;
-}
+  .increase_font .questions_answers_container>h6 {
+    font-size: 14px;
+  }
 
-.increase_font .footer>div>h5 {
-  margin-top: 20px;
-  font-size: 18px;
-}
-.increase_font  .socials {
+  .increase_font .answers_container {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.6rem
+  }
+
+  .increase_font .footer>h5 {
+    font-size: 25px;
+  }
+
+  .increase_font .footer>ul {
+    align-self: flex-start;
+    justify-content: flex-start;
+    padding-right: 0;
+    margin-left: 10px;
+    width: 80%;
+    max-width: 100%;
+  }
+
+  .increase_font .footer>ul>li {
+    font-size: 16px;
+  }
+
+  .increase_font .footer>div>h5 {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .increase_font .socials {
     margin-left: 5%;
     padding-left: 25%;
     width: 14%;
