@@ -315,6 +315,8 @@ for (let i = 0; i < regular.length; i++) {
                                 clearInterval(timer);
                                 if (window.innerWidth <= 400) {
                                     commentInput[j].style.bottom = "10%";
+                                } else if (window.innerWidth <= 1200) {
+                                    commentInput[j].style.bottom = "15%";
                                 } else {
                                     commentInput[j].style.bottom = "10px";
                                 }

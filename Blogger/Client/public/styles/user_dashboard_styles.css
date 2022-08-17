@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
 body {
   overflow-x: hidden;
   overflow-y: scroll;
   box-sizing: border-box;
   background-color: #ffebe7b0;
+}
+
+#user_image {
+  pointer-events: visible;
 }
 
 /* header section css  */
@@ -47,6 +57,7 @@ body {
 
 
 .logo {
+  margin-top: 25px;
   margin-bottom: 0;
 }
 
@@ -58,7 +69,7 @@ body {
 .logo>span {
   display: block;
   font-size: 20px;
-  margin-top: -4px;
+  margin-top: -10px;
 }
 
 
@@ -75,23 +86,36 @@ body {
 /* end of header section css  */
 
 h1>i {
+  font-family: 'Montserrat';
   font-size: 25px;
 }
 
 h1 {
+  font-family: 'Montserrat';
   font-size: 25px;
   font-weight: 500;
 }
 
 h2 {
+  font-family: 'Montserrat';
   font-size: 22px;
   font-weight: 500;
 }
 
 h4 {
+  font-family: 'Montserrat';
   font-size: 18px;
   font-weight: 500;
   margin-top: 30px;
+}
+
+h5 {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+p {
+  font-weight: 580;
 }
 
 /* nav bar section css  */
@@ -133,6 +157,7 @@ h4 {
 }
 
 .side_bar1>div>div>h6 {
+  font-family: 'Montserrat';
   align-self: center;
   font-size: 15px;
   margin: 0;
@@ -142,7 +167,7 @@ h4 {
 
 .side_bar1>div>div>a {
   align-self: center;
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
   text-decoration-color: none;
   color: #333;
@@ -429,7 +454,7 @@ content>div>button:focus {
 }
 
 .headings {
-  font-size: 15px;
+  font-size: 16px;
   margin: 10px;
   margin-bottom: 20px;
   text-decoration: none;
@@ -530,6 +555,10 @@ p {
   font-size: 18px;
   max-width: 60%;
   cursor: pointer;
+}
+
+.followers_story_engage>p {
+  font-weight: 600;
 }
 
 .views {
@@ -963,6 +992,10 @@ p {
   font-size: 18px;
   max-width: 60%;
   cursor: pointer;
+}
+
+.followers_story_engage {
+  font-weight: 600;
 }
 
 .views {

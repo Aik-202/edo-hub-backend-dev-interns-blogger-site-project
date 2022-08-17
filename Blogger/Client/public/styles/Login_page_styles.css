@@ -1,6 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+a {
+  font-family: 'Space Grotesk';
+}
+
 #home {
   border: none;
   text-transform: capitalize;
+}
+
+.headers_list {
+  margin-top: 12px;
 }
 
 .Login_section {
@@ -39,22 +53,29 @@ form {
 }
 
 .Login_content>h2 {
-  margin-bottom: -25px;
+  font-family: 'Montserrat';
+  margin-bottom: -10px;
   font-size: 20px;
 }
 
 .Login_content>h6 {
+  font-family: 'Montserrat';
   font-size: 15px;
   font-weight: 500;
 }
 
 input {
+  font-family: 'Space Grotesk';
   max-width: 70%;
   padding: 15px;
   margin-top: 15px;
   margin-bottom: 20px;
   border: 2px solid #ef9273;
   border-radius: 5px;
+}
+
+label {
+  font-family: 'Space Grotesk';
 }
 
 #username {
@@ -71,12 +92,13 @@ input:focus {
 }
 
 .Login_content>form>a {
+  font-family: 'Space Grotesk';
   text-decoration-color: #333;
   color: #333;
   font-style: italic;
   font-size: 15px;
   font-weight: 1000;
-  margin-left: 50%;
+  margin-left: 53%;
   max-width: 25%;
 }
 
@@ -94,9 +116,10 @@ input:focus {
 }
 
 p {
+  font-family: 'Montserrat';
   font-size: 15px;
-  font-weight: 500;
-  margin-left: 25%;
+  font-weight: 600;
+  margin-left: 20%;
 }
 
 .Login_content>p>a {
@@ -109,8 +132,11 @@ p {
 }
 
 .Login_content>h5 {
+  font-family: 'Montserrat';
   font-size: 15px;
   font-weight: 700;
+  max-width: 80%;
+  line-height: 1.2rem;
 }
 
 .ad_content {

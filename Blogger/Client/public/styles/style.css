@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 * {
   transition: 1s;
 }
@@ -17,10 +22,11 @@ img {
 }
 
 p {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Nunito';
 }
 
 button {
+  font-family: 'Poppins';
   background-color: #ef9273;
   border: 1px solid #ef9273;
   color: #333;
@@ -32,6 +38,7 @@ button:focus {
 }
 
 a > button{
+  font-weight: 600;
   text-decoration: none;
   color: #333;
 }
@@ -58,10 +65,12 @@ a > button{
 }
 
 .logo>span {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Oswald';
   margin: 0;
-  margin-top: -3px;
+  margin-top: -5px;
   margin-bottom: 20px;
+  margin-left: 2px;
+  font-size: 25px;
 }
 
 .logo {
@@ -98,6 +107,7 @@ a > button{
   justify-content: space-between;
   padding: 20px;
   padding-top: 10px;
+  margin-top: -2px;
 }
 
 .headers_list>li {
@@ -111,6 +121,7 @@ a > button{
 }
 
 .headers_list>li>a {
+  font-family: 'Poppins';
   font-size: 12px;
   font-weight: 500;
   text-decoration: none;
@@ -243,6 +254,7 @@ a > button{
 }
 
 .main_content>div>h3 {
+  font-family: 'Montserrat';
   font-size: 30px;
   font-weight: 1000;
   margin-bottom: 0;
@@ -252,12 +264,13 @@ a > button{
   margin-left: 10px;
   font-size: 15px;
   margin-bottom: 5%;
-  line-height: 1.5em;
+  line-height: 1.8em;
   font-weight: 700;
   max-width: 60%;
 }
 
 .main_content>div>a>button {
+  font-family: 'Poppins';
   align-self: flex-start;
   padding: 12px;
   padding-left: 15px;
@@ -300,6 +313,7 @@ a > button{
 }
 
 .inside_sub_contents_container>h3 {
+  font-family: 'Montserrat';
   font-weight: 900;
   padding: 10px;
   padding-left: 20px;
@@ -313,7 +327,7 @@ a > button{
   font-size: 12px;
   font-weight: 700;
   max-width: 100%;
-  line-height: 1.5em;
+  line-height: 1.8em;
 }
 
 .inside_sub_contents_container>a>button {
@@ -342,6 +356,7 @@ a > button{
 }
 
 .questions_answers>h4 {
+  font-family: 'Montserrat';
   align-self: center;
   font-size: 25px;
   font-weight: 700;
@@ -361,13 +376,14 @@ a > button{
 }
 
 .questions_answers_container>h6 {
+  font-family: 'Nunito';
   align-self: center;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: 15px;
-  font-weight: 900;
+  font-weight: 600;
   padding: 0;
   margin: 0;
   word-spacing: 0.05em;
@@ -382,13 +398,14 @@ a > button{
 }
 
 .answers_container {
+  font-family: 'Poppins';
   display: none;
   align-self: center;
   width: 100%;
   padding: 15px;
   border: 1px solid #fef9f8;
   background-color: #fef9f8;
-  line-height: 2.2em;
+  line-height: 2.5em;
   font-size: 13px;
   font-weight: 600;
 
@@ -402,6 +419,7 @@ a > button{
 }
 
 .footer>h5 {
+  font-family: 'Montserrat';
   font-size: 25px;
   margin-left: 1%;
 }
@@ -415,6 +433,7 @@ a > button{
 }
 
 .footer>ul>li {
+  font-family: 'Poppins';
   align-self: center;
   list-style-type: none;
   font-size: 15px;
@@ -429,6 +448,7 @@ a > button{
 }
 
 .footer>div>h5 {
+  font-family: 'Montserrat';
   align-self: flex-end;
   margin: 0;
   font-size: 18px;
@@ -722,7 +742,7 @@ a > button{
   max-width: 80%;
 }
 
-.increase_font .main_content>div>button {
+.increase_font .main_content>div>a>button {
   font-size: 22px;
 }
 
@@ -755,7 +775,7 @@ a > button{
   line-height: 1.7em;
 }
 
-.increase_font .inside_sub_contents_container>button {
+.increase_font .inside_sub_contents_container>a>button {
   align-self: center;
   font-size: 18px;
   font-weight: 600;
@@ -821,7 +841,7 @@ a > button{
   }
 
   .second_insider>div:first-child {
-    margin-left: 10px;
+    margin-left: -1px;
   }
 
   .inside_sub_contents_container {
@@ -842,6 +862,10 @@ a > button{
 
   .increase_font .second_insider {
     width: 100%;
+  }
+
+  .increase_font .second_insider>div:first-child {
+    margin-left: 10px;
   }
 
 }
