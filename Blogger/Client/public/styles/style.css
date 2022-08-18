@@ -37,7 +37,7 @@ button:focus {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-a > button{
+a>button {
   font-weight: 600;
   text-decoration: none;
   color: #333;
@@ -656,7 +656,7 @@ a > button{
   color: #ef9273;
 }
 
- .increase_font .logo>img {
+.increase_font .logo>img {
   width: 60px;
   height: 60px;
 }
@@ -888,10 +888,11 @@ a > button{
   .first_insider {
     margin-bottom: 5%;
     max-width: 100%;
+    margin-left: 2%;
   }
 
   .second_insider {
-    margin-left: 1%;
+    margin-left: 3%;
     margin-bottom: 2%;
     max-width: 100%;
     width: 100%;
@@ -915,9 +916,13 @@ a > button{
     width: 100%;
   }
 
-  .inside_sub_contents_container>button {
+  .inside_sub_contents_container>a {
     align-self: center;
-    margin-left: 0;
+  }
+
+  .inside_sub_contents_container>a>button {
+    align-self: center;
+    margin-right: 20px;
   }
 
   .inside_header>img {
@@ -931,21 +936,26 @@ a > button{
   }
 
   .logo>span {
-    margin-top: 2px;
+    margin-top: -6px;
   }
 
   .headers_list>li {
     padding: 12px;
-    margin-top: -12px;
+    margin-top: 0px;
     padding-bottom: 30px;
   }
 
   .main_content>img {
-    width: 380px;
+    width: 400px;
   }
 
   .main_content>div>h3 {
-    font-size: 30px;
+    font-size: 28px;
+  }
+
+  .main_content>div>p {
+    font-size: 13px;
+    max-width: 80%;
   }
 
   .inside_sub_contents_container>h3 {
@@ -955,6 +965,10 @@ a > button{
 
   .inside_sub_contents_container>p {
     align-self: center;
+  }
+
+  .answers_container {
+    font-weight: 500;
   }
 
   .increase_font #bars {
@@ -969,10 +983,15 @@ a > button{
     display: none;
   }
 
+  .increase_font .logo>span {
+    margin-top: -10px;
+  }
+
   .increase_font #accessibility {
     display: block;
     margin-top: -5px;
     font-size: 20px;
+    margin-right: 20;
   }
 
   .increase_font #accessibility2 {
@@ -994,13 +1013,20 @@ a > button{
     font-size: 30px;
   }
 
-  .increase_font .main_content>p {
+  .increase_font .main_content>div>h3 {
+    font-size: 30px;
+    line-height: 1.2em;
+  }
+
+  .increase_font .main_content>div>p {
     font-size: 20px;
-    line-height: 2.8em;
+    line-height: 1.8em;
   }
 
   .increase_font .main_content>img {
-    width: 400px;
+    width: 430px;
+    margin-bottom: 20px;
+    padding-left: 10px;
   }
 
   .increase_font .first_insider {
@@ -1008,12 +1034,14 @@ a > button{
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    margin-left: -3px;
   }
 
   .increase_font .second_insider {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: -3px;
   }
 
   .increase_font .inside_sub_contents_container {
@@ -1022,7 +1050,7 @@ a > button{
   }
 
   .increase_font .inside_sub_contents_container>h3 {
-    font-size: 40px;
+    font-size: 30px;
     margin-top: 10px;
     margin-bottom: 5px;
   }
@@ -1032,10 +1060,10 @@ a > button{
     line-height: 2.8em;
   }
 
-  .increase_font .inside_sub_contents_container>button {
-    font-size: 25px;
+  .increase_font .inside_sub_contents_container>a>button {
+    font-size: 28px;
     margin-left: 10px;
-    padding: 15px;
+    padding: 22px;
   }
 
   .increase_font .questions_answers>h4 {
@@ -1045,7 +1073,9 @@ a > button{
   .increase_font .questions_answers_container {
     align-self: flex-start;
     margin-left: 70px;
+    margin-top: 30px;
     width: 80%;
+    padding: 25px;
   }
 
   .increase_font .questions_answers_container>h6 {
@@ -1054,7 +1084,16 @@ a > button{
 
   .increase_font .answers_container {
     font-size: 12px;
-    line-height: 3.8em;
+    line-height: 4.8em;
+    font-weight: 300;
+  }
+
+  .increase_font .socials {
+    margin-right: 40px;
+  }
+
+  .increase_font .socials>img {
+    margin-right: 20px;
   }
 
 }
@@ -1114,7 +1153,7 @@ a > button{
   .logo>span {
     font-size: 15px;
     margin-left: 1px;
-    margin-top: -5px;
+    margin-top: -6px;
   }
 
   .headers_list {
@@ -1136,12 +1175,13 @@ a > button{
 
   #accessibility {
     display: block;
-    margin-top: -5px;
+    margin-top: -8px;
+    margin-right: 5px;
   }
 
   #accessibility2 {
     display: block;
-    margin-top: -5px;
+    margin-top: -8px;
   }
 
   .main_content {
@@ -1159,7 +1199,7 @@ a > button{
   }
 
   .main_content>div>h3 {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .main_content>div>p {
@@ -1169,7 +1209,7 @@ a > button{
     padding: 0;
   }
 
-  .main_content>div>button {
+  .main_content>div>a>button {
     align-self: center;
     font-size: 13px;
     margin-bottom: 10px;
@@ -1203,7 +1243,7 @@ a > button{
   .inside_sub_contents_container>h3 {
     align-self: center;
     margin-left: -5px;
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .inside_sub_contents_container>p {
@@ -1211,9 +1251,9 @@ a > button{
     font-size: 11px;
   }
 
-  .inside_sub_contents_container>button {
+  .inside_sub_contents_container>a>button {
     align-self: center;
-    margin-left: -10px;
+    margin-left: 10px;
     font-size: 12px;
   }
 
@@ -1235,6 +1275,7 @@ a > button{
 
   .questions_answers_container {
     width: 80%;
+    padding: 15px;
   }
 
   .questions_answers_container>h6 {
@@ -1247,6 +1288,7 @@ a > button{
   .answers_container {
     font-size: 11px;
     font-weight: 700;
+    width: 98%;
   }
 
   .footer>h5 {
@@ -1297,15 +1339,15 @@ a > button{
   .increase_font #accessibility {
     margin-left: -10px;
     margin-right: 0px;
-    margin-top: 1px;
-    font-size: 12px;
+    margin-top: 8px;
+    font-size: 11px;
   }
 
   .increase_font #accessibility2 {
     margin-left: 0px;
     margin-right: -5px;
-    font-size: 12px;
-    margin-top: 1px;
+    font-size: 11px;
+    margin-top: 8px;
   }
 
   .increase_font #bars {
@@ -1338,12 +1380,13 @@ a > button{
 
   .increase_font .main_content>img {
     width: 350px;
-    padding-right: 5px;
+    height: 250px;
+    padding-right: 0px;
   }
 
   .increase_font .main_content>div>h3 {
     align-items: center;
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .increase_font .main_content>div>p {
@@ -1352,7 +1395,7 @@ a > button{
     max-width: 90%;
   }
 
-  .increase_font .main_content>div>button {
+  .increase_font .main_content>div>a>button {
     font-size: 18px;
   }
 
@@ -1375,25 +1418,31 @@ a > button{
     width: 95%;
   }
 
+  .increase_font .second_insider>div:first-child {
+    margin-left: 18px;
+  }
+
   .increase_font .inside_sub_contents_container>h3 {
-    align-self: flex-start;
-    font-size: 17px;
+    align-self: center;
+    font-size: 16px;
     margin-left: -30px;
     margin-bottom: -15px;
+    line-height: 1.6em;
   }
 
   .increase_font .inside_sub_contents_container>p {
-    align-self: flex-start;
+    align-self: center;
     font-size: 14px;
     line-height: 1.5rem;
     margin-left: -30px;
     max-width: 100%;
   }
 
-  .increase_font .inside_sub_contents_container>button {
+  .increase_font .inside_sub_contents_container>a>button {
     align-self: center;
-    font-size: 17px;
-    margin-left: -10px;
+    font-size: 15px;
+    margin-left: 10px;
+    padding: 10px;
   }
 
   .increase_font .inside_sub_contents_container>img {
@@ -1403,15 +1452,16 @@ a > button{
 
 
   .increase_font .questions_answers>h4 {
-    font-size: 25px;
+    font-size: 22px;
     margin-bottom: 10px;
   }
 
   .increase_font .questions_answers_container {
-    width: 80%;
+    width: 86%;
     margin-top: 25px;
     margin-bottom: 25px;
     margin-left: 10px;
+    padding: 12px;
   }
 
   .increase_font .questions_answers_container>h6 {
@@ -1420,12 +1470,13 @@ a > button{
 
   .increase_font .answers_container {
     font-size: 13px;
-    font-weight: 600;
-    line-height: 1.6rem
+    font-weight: 500;
+    line-height: 1.6rem;
+    width: 94%;
   }
 
   .increase_font .footer>h5 {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .increase_font .footer>ul {
@@ -1447,8 +1498,13 @@ a > button{
   }
 
   .increase_font .socials {
-    margin-left: 5%;
+    margin-left: 3%;
     padding-left: 25%;
     width: 14%;
+    margin-right: 15px;
+  }
+
+  .increase_font .socials>img {
+    margin-right: 5px;
   }
 }
