@@ -39,6 +39,7 @@ body {
 }
 
 .fa-xmark {
+  cursor: pointer;
   top: 20px;
   left: 20%;
   position: fixed;
@@ -47,6 +48,7 @@ body {
 }
 
 #show {
+  cursor: pointer;
   display: none;
   top: 20px;
   left: 20%;
@@ -125,7 +127,7 @@ p {
   flex-direction: column;
   width: 22%;
   position: fixed;
-  background-color: #ef9273;
+  background-color: white;
   height: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -223,7 +225,7 @@ p {
 }
 
 .navigation>li:hover {
-  border-left: 3px solid #fef9f8;
+  border-left: 3px solid #eca38b;
   background-color: #be8673;
   color: #0d0d0d;
 }
@@ -1523,7 +1525,7 @@ canvas {
 }
 
 .nav-active {
-  border-left: 3px solid #fef9f8;
+  border-left: 3px solid #eca38b;
   background-color: #be8673;
   color: #0d0d0d;
 }
@@ -1614,6 +1616,10 @@ canvas {
   overflow: hidden;
   word-wrap: nowrap;
   text-overflow: ellipsis;
+}
+
+.collapse #general_chart {
+  margin-left: 300px;
 }
 
 .collapse_content {
@@ -1834,6 +1840,10 @@ canvas {
 }
 
 .dark_theme .story_heading-active {
+  color: white;
+}
+
+.dark_theme .nav-active>i {
   color: white;
 }
 
@@ -2555,7 +2565,7 @@ canvas {
   #general_chart {
     width: 650px;
     height: 650px;
-    margin-left: 70px;
+    margin-left: 80px;
   }
 
   #month_chart {
@@ -2563,7 +2573,7 @@ canvas {
   }
 
   #monthly_chart {
-    margin-left: 70px;
+    margin-left: 100px;
   }
 
   .scheduler {
@@ -2611,6 +2621,14 @@ canvas {
 
   .Login_content>form>button {
     max-width: 100%;
+  }
+
+  .nav>i {
+    color: gray;
+  }
+
+  .nav-active>i {
+    color: black;
   }
 
   .increase_font .side_bar1 {
@@ -2805,6 +2823,10 @@ canvas {
   .navigation>li:hover {
     border-left: none;
     background-color: transparent;
+  }
+
+  .nav>i {
+    color: gray;
   }
 
   #followers_list {
@@ -3301,11 +3323,11 @@ canvas {
   }
 
   .nav-active>i {
-    color: white;
+    color: black;
   }
 
   .dark_theme .nav-active>i {
-    color: #ef9273;
+    color: white;
   }
 
   .dark_theme .nav-active {
