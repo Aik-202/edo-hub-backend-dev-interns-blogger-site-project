@@ -41,7 +41,7 @@ body {
 .fa-xmark {
   cursor: pointer;
   top: 20px;
-  left: 20%;
+  left: 23%;
   position: fixed;
   font-size: 20px;
   color: #0d0d0d;
@@ -51,9 +51,9 @@ body {
   cursor: pointer;
   display: none;
   top: 20px;
-  left: 20%;
+  left: 22%;
   position: fixed;
-  font-size: 20px;
+  font-size: 22px;
   color: #0d0d0d;
 }
 
@@ -125,7 +125,7 @@ p {
   top: 0;
   display: flex;
   flex-direction: column;
-  width: 22%;
+  width: 25%;
   position: fixed;
   background-color: white;
   height: 100%;
@@ -156,6 +156,7 @@ p {
 .side_bar1>div>div {
   display: flex;
   flex-direction: column;
+  margin-left: 3%;
 }
 
 .side_bar1>div>div>h6 {
@@ -240,7 +241,7 @@ p {
 .content {
   display: none;
   flex-direction: column;
-  margin-left: 23%;
+  margin-left: 26%;
   margin-right: 0;
   margin-top: -2%;
   margin-bottom: 5%;
@@ -1572,17 +1573,26 @@ canvas {
 
 /* collapse nav section css  */
 .collapse {
-  width: 6%;
+  width: 8%;
   padding-top: -92%;
   padding-left: 5px;
+}
+
+.collapse .logo {
+  margin-left: 8%;
 }
 
 .collapse .logo>span {
   display: none;
 }
 
+.collapse .logo>img {
+  width: 50px;
+  height: 50px;
+}
+
 .collapse .welcome {
-  margin-left: -8%;
+  margin-left: 1%;
 }
 
 .collapse .welcome>div {
@@ -1596,7 +1606,7 @@ canvas {
 
 .collapse .navigation>li {
   flex-direction: column;
-  margin-left: -10px;
+  margin-left: -8px;
   font-size: 20px;
   margin-bottom: 60%;
 }
@@ -1618,12 +1628,16 @@ canvas {
   text-overflow: ellipsis;
 }
 
-.collapse #general_chart {
-  margin-left: 300px;
+.collapse_content {
+  margin-left: 12%;
 }
 
-.collapse_content {
-  margin-left: 10%;
+.collapse_content #general_chart {
+  margin-left: 250px;
+}
+
+.collapse_content #monthly_chart {
+  margin-left: 250px;
 }
 
 /* end of collapse nav section css  */
