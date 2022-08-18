@@ -629,7 +629,7 @@ let genChart = new Chart(generalChart, {
             data: yearTotal,
             label: "Jan 2022 - Dec 2022",
             backgroundColor: [
-                'rgba(255, 89, 61, 0.4)',
+                'rgba(192, 192, 192, 0.4)',
                 'rgba(11, 156, 49, 0.4)',
                 'rgba(255, 206, 86, 0.4)',
                 'rgba(255, 99, 132, 0.4)',
@@ -637,7 +637,7 @@ let genChart = new Chart(generalChart, {
                 'rgba(54, 162, 235, 0.4)'
             ],
             borderColor: [
-                'rgba(255, 89, 61, 1)',
+                'rgba(192, 192, 192, 1)',
                 'rgba(11, 156, 49, 1)',
                 'rgba(255, 206, 86, 1)',
                 'rgba(255, 99, 132, 1)',
@@ -668,9 +668,9 @@ let totalMonthChart = new Chart(monthsChart, {
         datasets: [{
                 label: 'January',
                 data: totalJan,
-                backgroundColor: 'rgba(255, 89, 61, 0.5)',
-                strokeColor: 'rgba(255, 89, 61, 1)',
-                pointBackgroundColor: 'rgba(255, 89, 61, 1)',
+                backgroundColor: 'rgba(192, 192, 192, 0.5)',
+                strokeColor: 'rgba(192, 192, 192, 1)',
+                pointBackgroundColor: 'rgba(192, 192, 192, 1)',
                 pointRadius : 5,
                 borderWidth: 1
             },
@@ -713,18 +713,18 @@ let totalMonthChart = new Chart(monthsChart, {
             {
                 label: 'June',
                 data: totalJun,
-                backgroundColor: 'rgba(54, 162, 235, 0.5)',
-                strokeColor: 'rgba(54, 162, 235, 1)',
-                pointBackgroundColor: 'rgba(54, 162, 235, 1)',
+                backgroundColor: 'rgba(104, 230, 235, 0.5)',
+                strokeColor: 'rgba(104, 230, 235, 1)',
+                pointBackgroundColor: 'rgba(104, 230, 235, 1)',
                 pointRadius : 5,
                 borderWidth: 1
             },
             {
                 label: 'July',
                 data: totalJul,
-                backgroundColor: 'rgba(255, 69, 0, 0.5)',
-                strokeColor: 'rgba(255, 69, 0, 1)',
-                pointBackgroundColor: 'rgba(255, 69, 0, 1)',
+                backgroundColor: 'rgba(192, 109, 0, 0.5)',
+                strokeColor: 'rgba(192, 109, 0, 1)',
+                pointBackgroundColor: 'rgba(192, 109, 0, 1)',
                 pointRadius : 5,
                 borderWidth: 1
             },
@@ -871,7 +871,7 @@ let monthChart = new Chart(monthlyChart, {
         datasets: [{
             data: totalJan,
             backgroundColor: [
-                'rgba(255, 89, 61, 0.4)',
+                'rgba(192, 192, 192, 0.4)',
                 'rgba(11, 156, 49, 0.4)',
                 'rgba(255, 206, 86, 0.4)',
                 'rgba(255, 99, 132, 0.4)',
@@ -879,7 +879,7 @@ let monthChart = new Chart(monthlyChart, {
                 'rgba(54, 162, 235, 0.4)'
             ],
             borderColor: [
-                'rgba(255, 89, 61, 1)',
+                'rgba(192, 192, 192, 1)',
                 'rgba(11, 156, 49, 1)',
                 'rgba(255, 206, 86, 1)',
                 'rgba(255, 99, 132, 1)',
@@ -892,7 +892,7 @@ let monthChart = new Chart(monthlyChart, {
     options: {
         plugins: {
             legend: {
-                display: false
+                display: true
             },
             title: {
                 display: true,
@@ -900,6 +900,7 @@ let monthChart = new Chart(monthlyChart, {
             }
         },
         responsive: false,
+
     }
 });
 
@@ -911,9 +912,9 @@ let stories = new Chart(storiesChart, {
         datasets: [{
             data: storiesJan,
             label: "Stories",
-            backgroundColor: 'rgba(255, 89, 61, 0.4)',
-            pointBackgroundColor: 'rgba(255, 89, 61, 1)',
-            borderColor: 'rgba(255, 89, 61, 1)',
+            backgroundColor: 'rgba(192, 192, 192, 0.5)',
+            pointBackgroundColor: 'rgba(192, 192, 192, 1)',
+            borderColor: 'rgba(192, 192, 192, 1)',
             fill: 'origin',
             pointBorderRadius: 5,
             borderWidth: 1
