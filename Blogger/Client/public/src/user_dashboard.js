@@ -1093,7 +1093,7 @@ themeButton.addEventListener("click", () => {
     if (window.getComputedStyle(actualMode).visibility === 'hidden') {
         totalMonthChart.options.scales.x.grid.borderColor = 'rgba(0,0,0, 0.05)',
         totalMonthChart.options.scales.y.grid.borderColor = 'rgba(0,0,0, 0.05)';
-        totalMonthChart.options.elements.line.borderColor = 'rgba(0,0,0, 0.06)';
+        totalMonthChart.options.elements.line.borderColor = 'rgba(0,0,0, 0.05)';
         totalMonthChart.update();
     
         personal.options.scales.x.grid.borderColor = 'rgba(0,0,0, 0.05)',
