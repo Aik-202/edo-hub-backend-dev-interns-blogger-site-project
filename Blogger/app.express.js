@@ -65,9 +65,15 @@ const UserDashBoardRouterFile=require(path.join(__dirname,'.','Router','UserDash
 
 const LogoutRouterFile=require(path.join(__dirname,'.','Router','LogoutRouter'));
 
-const ForgetRouterFile=require(path.join(__dirname,'.','Router','ForgotPasswordRouter'));
+const viewRouterFile=require(path.join(__dirname,'.','Router','viewRouter'));
+
+// const ForgetRouterFile=require(path.join(__dirname,'.','Router','ForgotPasswordRouter'));
 
 const AdminRouter=require(path.join(__dirname,'.','Router','AdminRouter'));
+
+const profileRouter=require(path.join(__dirname,'.','Router','userprofileRouter'));
+
+const {likeRouter}=require(path.join(__dirname,'.','Router','likeRouter'));
 
 expressApi.use(bodyParser.urlencoded({
     extended:true
@@ -90,9 +96,16 @@ expressApi.use('/Userdashboard',UserDashBoardRouterFile.userRouter);
 
 expressApi.use('/Logout',LogoutRouterFile.logOutRouter);
 
-expressApi.use('/Forgot',ForgetRouterFile.forgetPasswordRouter);
+// expressApi.use('/Forgot',ForgetRouterFile.forgetPasswordRouter);
 
 expressApi.use('/Admin',AdminRouter.adminRouter);
+
+expressApi.use('/users/profile',profileRouter.updateProfile);
+
+expressApi.use(likeRouter);
+
+expressApi.use('/views',viewRouterFile.viewRouter);
+
 
 
 
