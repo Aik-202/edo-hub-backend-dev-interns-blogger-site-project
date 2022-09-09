@@ -23,7 +23,7 @@ const totalLikeSchema=new mongoose.Schema({
 
 const Like=mongoose.model('Like',likeSchema);
 
-const Likes=mongoose.model('Like',totalLikeSchema);
+const Likes=mongoose.model('likeCount',totalLikeSchema);
 
 module.exports={
     Like,

@@ -1,8 +1,8 @@
 const path=require('path');
 
-const {Post}=require(path.join(__dirname,'.','Model','posts.model'));
+const {Post}=require(path.join(__dirname,'..','Model','posts.model'));
 
-const {register}=require(path.join(__dirname,'.','Model','userDetails.model'))
+const {register}=require(path.join(__dirname,'..','Model','userDetails.model'))
 
 // title:String,
 // slug:String,

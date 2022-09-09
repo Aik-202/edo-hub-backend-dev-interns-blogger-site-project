@@ -1,8 +1,8 @@
 const path=require('path');
 
-const {View,viewCount}=require(path.join(__dirname,'.','Model','view.model'));
+const {View,viewCount}=require(path.join(__dirname,'..','Model','view.model'));
 
-const {Post}=require(path.join(__dirname,'.','Model','posts.model.js'));
+const {Post}=require(path.join(__dirname,'..','Model','posts.model.js'));
 
 async function postView(req,res){
    try{

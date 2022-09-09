@@ -1,7 +1,7 @@
 const path=require('path');
 const multer=require('multer');
 
-const {storage}=require(__dirname,'..','Cloudinary','cloudinary.config.js');
+const {storage}=require(path.join(__dirname,'..','Cloudinary','cloudinary.config.js'));
 const upload=multer({storage:storage});
 
 
@@ -14,7 +14,7 @@ const express=require('express');
 
 const updateProfile=express.Router();
 
-UpdateProfile.post('/:id',AuthRoutes,uploadProfileDetails,upload.single('profileImage'));
+updateProfile.post('/',AuthRoutes,upload.single('profileImage'),uploadProfileDetails);
 
 module.exports={
     updateProfile

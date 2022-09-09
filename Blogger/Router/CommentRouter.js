@@ -1,8 +1,8 @@
 const path=require('path');
 
-const {createCommentUnderMainPost,createCommentUnderAComment}=require(path.join(__dirname,'.','Controller','Comment.Controller'));
+const {createCommentUnderMainPost,createCommentUnderAComment}=require(path.join(__dirname,'..','Controller','Comment.Controller'));
 
-const {AuthRoutes}=require(path.join(__dirname,'.','Authentication','AuthRoutes'));
+const {AuthRoutes}=require(path.join(__dirname,'..','Authentication','AuthRoutes'));
 
 
 const express=require('express');

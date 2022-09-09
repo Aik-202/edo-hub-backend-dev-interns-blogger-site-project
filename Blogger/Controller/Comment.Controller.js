@@ -1,10 +1,10 @@
 const path=require('path');
 
-const {Comment}=require(path.join(__dirname,'.','Model','comment.model'));
+const {Comment}=require(path.join(__dirname,'..','Model','comment.model'));
 
-const {register}=require(path.join(__dirname,'.','Model','userDetails.model'));
+const {register}=require(path.join(__dirname,'..','Model','userDetails.model'));
 
-const {Post}=require(path.join(__dirname,'.','Model','posts.model'));
+const {Post}=require(path.join(__dirname,'..','Model','posts.model'));
 
 async function createCommentUnderMainPost(req,res){
     try{

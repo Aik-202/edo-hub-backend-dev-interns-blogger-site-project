@@ -7,6 +7,7 @@ const express=require('express');
 
 const expressApi=express();
 
+
 const cookieParser=require('cookie-parser');
 
 
@@ -73,13 +74,16 @@ const AdminRouter=require(path.join(__dirname,'.','Router','AdminRouter'));
 
 const profileRouter=require(path.join(__dirname,'.','Router','userprofileRouter'));
 
-const {likeRouter}=require(path.join(__dirname,'.','Router','likeRouter'));
+const {likeRouter}=require(path.join(__dirname,'.','Router','LikeRouter'));
 
 expressApi.use(bodyParser.urlencoded({
     extended:true
 }));
 expressApi.use(express.json());
 expressApi.use(cookieParser());
+
+expressApi.set('view engine','ejs');
+expressApi.set('views',path.join(__dirname,'.','Client','public'));
 expressApi.use(express.static(path.join(__dirname,'.','Client','public')));
 
 
@@ -95,6 +99,7 @@ expressApi.use('/Register',RegisterRouterFile.RegisterRouter);
 expressApi.use('/Userdashboard',UserDashBoardRouterFile.userRouter);
 
 expressApi.use('/Logout',LogoutRouterFile.logOutRouter);
+
 
 // expressApi.use('/Forgot',ForgetRouterFile.forgetPasswordRouter);
 

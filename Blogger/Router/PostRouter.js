@@ -1,8 +1,8 @@
 const path=require('path');
 
-const {postNewPosts,getPosts}=require(path.join(__dirname,'.','Controller','Post.Controller'));
+const {postNewPosts,getPosts}=require(path.join(__dirname,'..','Controller','Post.Controller'));
 
-const {AuthRoutes}=require(path.join(__dirname,'.','Router','Authentication','AuthRoutes'));
+const {AuthRoutes}=require(path.join(__dirname,'..','Authentication','AuthRoutes'));
 
 const express=require('express');
 
