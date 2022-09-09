@@ -1744,6 +1744,14 @@ monthYear.addEventListener("click", () => {
     }
 });
 
+//userdashboard scheduler for adding post content
+const addContentOptions = document.getElementById("add_content_option");
+addContentOptions.parentElement.addEventListener("click", () => {
+    addContentOptions.style.display = "flex";
+    addContentOptions.parentElement.style.marginRight = "13%";
+    addContentOptions.parentElement.firstElementChild.nextElementSibling.className = "fa-solid fa-xmark fa-stack-1x";
+    addContentOptions.parentElement.firstElementChild.nextElementSibling.style.marginTop = "0%";
+});
 
 //userdashboard scheduler for scheduling posts
 const fixSchedule = document.getElementById("schedule");
