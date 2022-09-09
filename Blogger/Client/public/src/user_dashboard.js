@@ -1827,8 +1827,13 @@ function customAlert(alert_message) {
 
     buttonElement2.addEventListener("click", () => {
         body.removeChild(alertContainer);
-    })
+    });
 }
+
+// const setDate = document.getElementById("set_date");
+// setDate.addEventListener("click", () => {
+    
+// });
 
 
 

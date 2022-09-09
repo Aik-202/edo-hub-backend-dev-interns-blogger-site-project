@@ -1411,8 +1411,8 @@ canvas {
   width: 50%;
   padding: 20px;
   padding-right: 0;
-  background-color: #ef9273;
-  border: 1px solid #ef9273;
+  background-color: white;
+  border: 1px solid white;
   border-radius: 5px;
   color: #0d0d0d;
 }
@@ -1456,8 +1456,8 @@ canvas {
 }
 
 .button_container>button {
-  background-color: #be8673;
-  border: 1px solid #be8673;
+  background-color: #ef9273;
+  border: 1px solid #ef9273;
   margin-right: 10%;
   margin-top: 2%;
   border-radius: 10%;
