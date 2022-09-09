@@ -2,7 +2,7 @@ const path=require('path');
 
 const {Likes,Like}=require(path.join(__dirname,'..','Model','likeSchema.model'));
 
-const {Post}=require(path.join(__dirname,'.','Model','posts.model'));
+const {Post}=require(path.join(__dirname,'..','Model','posts.model'));
 
 const express=require('express');
 
@@ -61,4 +61,5 @@ likeRouter.post('/likes/post/:username/:slug',(req,res)=>{
 
 
 
-    module.exports=likeRouter;
+    module.exports={likeRouter
+    };

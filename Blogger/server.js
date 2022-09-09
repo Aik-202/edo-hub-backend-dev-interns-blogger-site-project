@@ -1,6 +1,6 @@
 const path=require('path');
 
-const apiExpress=require(path.join(__dirname,'.','./app.express'));
+const apiExpress=require(path.join(__dirname,'.','app.express'));
 
 const server=require('http').createServer(apiExpress.expressApi);
 
