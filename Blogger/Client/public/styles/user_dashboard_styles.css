@@ -1002,7 +1002,7 @@ p {
 }
 
 .views {
-  width: 20%;
+  width: 22%;
   margin-left: 5%;
   font-size: 15px;
 }
@@ -1387,6 +1387,17 @@ canvas {
   cursor: pointer;
 }
 
+#content_button {
+  margin: 0;
+  top: 0;
+}
+
+#content_cam {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
 .write-post-body>div>ul {
   display: none;
   flex-direction: row;
@@ -1406,6 +1417,68 @@ canvas {
 
 .write-post-body>div>ul>li { 
   margin: 0 0.5em;
+}
+
+.write-post-body>div>ul>li>div {
+  display: none;
+  width: max-content;
+  bottom: 120%;
+  position: absolute;
+  font-family: 'Poppins';
+  border: 1px solid #eca38b;
+  background-color: #eca38b;
+  padding: 0 8px;
+  border-radius: 5px;
+}
+
+#add_img {
+  left: -20%;
+}
+
+#add_sub {
+  left: -12%;
+}
+
+#add_para {
+  left: 15%;
+}
+
+#new_line {
+  left: 45%;
+}
+
+#img:hover #add_img{
+  display: block;
+}
+
+#sub:hover #add_sub{
+  display: block;
+}
+
+#para:hover #add_para{
+  display: block;
+}
+
+#new:hover #new_line{
+  display: block;
+}
+
+
+.write-post-body>div>ul>li>div>p { 
+  width: 100%;
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+#add_content_option>li>div>p::after {
+  content: '';
+  border-color: #eca38b transparent transparent transparent;
+  border-width: 5px;
+  border-style: solid;
+  top: 100%;
+  left: 50%;
+  position: absolute;
 }
 
 .write-post-body>textarea {

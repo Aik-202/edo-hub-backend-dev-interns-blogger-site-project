@@ -41,7 +41,7 @@
     <div class="welcome">
       <img src="./images/i11.png" alt="" width="80px" height="80px" class="edit" id="user_image">
       <div>
-        <h6>Welcome <span id="user_name"></span></h6>
+        <h6>Welcome <span id="user_name">Assurance</span></h6>
         <!--<p>Just starting web development, HTML and CSS</p>
             -->
         <a class="nav" id="edit_profile" a>Edit profile</a>
@@ -4303,12 +4303,33 @@
           <div class="write-post-body">
             <div class="fa-stack">
               <i class="fa-regular fa-circle fa-stack-2x"></i>
-              <i class="fa-solid fa-plus fa-stack-1x"></i>
+              <i class="fa-solid fa-plus fa-stack-1x" id="content_button"></i>
               <!-- <i class="fa-solid fa-xmark fa-stack-1x"></i> -->
               <ul id="add_content_option">
-                <li><i class="fa-solid fa-bookmark"></i></li>
-                <li><i class="fa-solid fa-pen-alt"></i></li>
-                <li><i class="fa-solid fa-edit"></i></li>
+                <li id="img"> 
+                  <i class="fa-solid fa-camera" id="content_cam"></i>
+                  <div id="add_img">
+                    <p>Add Image</p>
+                  </div>
+                </li>
+                <li id="sub">
+                  <i class="fa-solid fa-heading"></i>
+                  <div id="add_sub">
+                    <p>Add Sub-heading</p>
+                  </div>
+                </li>
+                <li id="para">
+                  <i class="fa-solid fa-paragraph"></i>
+                  <div id="add_para">
+                    <p>Add Paragraph</p>
+                  </div>
+                </li>
+                <li id="new">
+                  <i class="fa-solid fa-ellipsis"></i>
+                  <div id="new_line">
+                    <p>New Section</p>
+                  </div>
+                </li>
               </ul>
             </div>
             <!-- <input id="upload_image" type="file" accept="image/jpeg,image/png,image/jpg" multiple> -->
