@@ -41,7 +41,7 @@
     <div class="welcome">
       <img src="./images/i11.png" alt="" width="80px" height="80px" class="edit" id="user_image">
       <div>
-        <h6>Welcome <span id="user_name">Assurance</span></h6>
+        <h6>Welcome <span id="user_name"></span></h6>
         <!--<p>Just starting web development, HTML and CSS</p>
             -->
         <a class="nav" id="edit_profile" a>Edit profile</a>
@@ -63,10 +63,13 @@
     <h1>Edit Profile</h1>
     <div>
       <output></output>
-      <input id="upload_image" type="file" accept="image/jpeg,image/png,image/jpg" style="display: none;">
+     <!-- <form action="/users/profile" method="Post" enctype="multipart/form-data"> uncomment this when you are done, do not change any attribute -->
+      <input id="upload_image" type="file" accept="image/jpeg,image/png,image/jpg" name="profileImage" style="display: none;">
+      
       <div id="image_options" style="display: none;">
         <button class="options">Choose another image</button>
-        <button class="options">Upload image</button>
+        <button type="submit" class="options">Upload image</button>
+     
       </div>
       <i class="fa-solid fa-camera" id="camera"></i>
       <ul>
@@ -74,8 +77,8 @@
         <li>4 Following</li>
       </ul>
       <div class="edit-name">
-        <label for="name">Name : </label>
-        <input type="text" name="name" id="name" place />
+        <label for="name">Name :</label>
+        <input type="text" name="fullName" id="name" place />
         <i class="fa-solid fa-pen-alt"></i>
         <i class="fa-solid fa-save"></i>
       </div>
@@ -87,6 +90,7 @@
       </div>
 
     </div>
+    <!-- </form> -->
   </section>
 
   <!--html for home section-->
