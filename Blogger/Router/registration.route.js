@@ -10,7 +10,7 @@ registration.get('/',getRegistrationForm);
 
 registration.post('/',[
     body('name').trim().notEmpty().withMessage('The name field cannot be empty'),
-    body('email').trim().isEmail().withMessage('Invalid Email'),
+    body('email').trim().isEmail().withMessage('Must be an Email address'),
     body('user_password').trim().notEmpty().withMessage('The password field cannot be empty')
     .isLength({
         min:8,

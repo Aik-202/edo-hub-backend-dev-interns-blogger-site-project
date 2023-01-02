@@ -24,7 +24,39 @@ async function updateUserInfo(req,res){
 
 }
 
+async function deleteOwnDashboard(req,res){
+   try{
+     User.deleteOne({_id:req.session.userId})
+    .then(()=>{
+        res.status(200)
+        .json({
+            success:true,
+            error:[],
+            message:"Dashboard deleted successfully",
+            data:{}
+        })
+    })
+
+   }catch(error){
+    res.status(400)
+    .json({
+        success:false,
+        error:[
+            {
+                value:error.value,
+                error:error.name,
+                message:error.message
+            }
+        ],
+        message:"An error occurred while processing your request",
+        data:{}
+    })
+}
+
+}
+
 module.exports={
     userDashboard,
-    updateUserInfo
+    updateUserInfo,
+    deleteOwnDashboard
 }

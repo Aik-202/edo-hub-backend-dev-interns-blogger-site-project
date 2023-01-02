@@ -6,7 +6,7 @@ const { admin } = require('googleapis/build/src/apis/admin');
 
 const {getLoginForm,loginDashboard}=require(path.join(__dirname,'..','Controller','admin_login.controller'));
 
-const {notLoggedInForSevenOrMoreDays,blockedByAdmin,unblockByAdmin,deleteAUser,reportedPost,DeleteReportedPost,currentlyLoggedIn,loggedOutUsers,readAdminPost,adminsPost,getAdminPost}=require(path.join(__dirname,'..','Controller','admin_to_user_functions.controller'));
+const {notLoggedInForSevenOrMoreDays,blockedByAdmin,unblockByAdmin,deleteAUser,reportedPost,DeleteReportedPost,currentlyLoggedIn,loggedOutUsers,readAdminPost,adminsPost,getAdminPost,SuspendUser}=require(path.join(__dirname,'..','Controller','admin_to_user_functions.controller'));
 
 const adminRoute=require('express').Router();
 
@@ -33,6 +33,10 @@ adminRoute.delete('/posts/reported/:id',DeleteReportedPost);
 adminRoute.get('/users/loggedout',loggedOutUsers);
 
 adminRoute.get('/users/loggedin',currentlyLoggedIn);
+
+adminRoute.patch('/users/:id',[
+    body('date').trim().notEmpty().withMessage('The date field cannot be empty')
+],SuspendUser);
 
 adminRoute.post('/posts/create',[
     body('title').trim().notEmpty().withMessage('The field cannot be empty'),

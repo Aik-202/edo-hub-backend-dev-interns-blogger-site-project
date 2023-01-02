@@ -399,6 +399,42 @@ async function loggedOutUsers(req,res){
 
     }
 
+    
+    async function SuspendUser(req,res){
+     try{
+        const {id}=req.params;
+        const {date}=req.body;
+        const errors=validationResult(req);
+        if(errors.isEmpty()){
+            User.findOneAndUpdate({_id:id},{$set:{'suspended.isSuspended':true,'suspended.suspensionEnds':date}},{new:true})
+            .then(()=>{
+                res.status(200)
+                .json({
+                    success:true,
+                    error:[],
+                    message:"User Suspended Successfully"
+                })
+            })
+
+        }
+     }catch(error){
+        res.status(400)
+        .json({
+            success:false,
+            error:[
+                {
+                    value:error.value,
+                    error:error.name,
+                    message:error.message
+                }
+            ],
+            message:"An error occurred while processing your request",
+            data:{}
+        })
+    }
+
+    }
+
 
 module.exports={
     unblockByAdmin,
@@ -411,6 +447,7 @@ module.exports={
     readAdminPost,
     DeleteReportedPost,
     currentlyLoggedIn,
-    loggedOutUsers
+    loggedOutUsers,
+    SuspendUser
     
 }

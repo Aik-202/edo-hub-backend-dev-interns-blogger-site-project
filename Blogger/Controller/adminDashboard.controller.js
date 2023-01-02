@@ -12,8 +12,65 @@ async function adminDashboard(req,res){
                 message:"An error occurred while processing your request, please try again"
             })
         }else{
-            console.log(userDetails)
-            res.render('Admin_dashboard',{userDetails})
+            User.find({Admin:false}).populate({
+                path:'bookMark',
+                populate:{
+                    path:'Author',
+                    select:'-password',
+                },
+                populate:{
+                    path:'Comments',
+                    populate:{
+                        path:'commentor.commentorInfo',
+                        select:'-password'
+                    },
+                    populate:{
+                        path:'commentParent.commentedUnder'
+                    },
+                    populate:{
+                        path:'childCommentors',
+                        select:'-password'
+                    }
+
+
+                }
+            }).populate({
+                path:'following',
+                select:'-password'
+            }).populate({
+                path:'followers',
+                select:'-password'
+            })
+            .populate({
+                path:'post',
+                populate:{
+                    path:'Author',
+                    select:'-password',
+                },
+                populate:{
+                    path:'Comments',
+                    populate:{
+                        path:'commentor.commentorInfo',
+                        select:'-password'
+                    },
+                    populate:{
+                        path:'commentParent.commentedUnder'
+                    },
+                    populate:{
+                        path:'childCommentors',
+                        select:'-password'
+                    }
+
+
+                }
+            }).then((userInfo)=>{
+                res.render('Admin_dashboard',{  admin:userDetails,
+                users:userInfo
+                })
+                console.log(userDetails + 'jfm'+userInfo)
+            })
+
+           
 
         }
     })

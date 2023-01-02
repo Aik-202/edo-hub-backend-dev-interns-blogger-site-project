@@ -54,6 +54,8 @@ const { postRouter}=require(path.join(__dirname,'Router','post.route'));
 
 const { userRouter}=require(path.join(__dirname,'Router','users.route'));
 
+const { forgotPasswordRouter}=require(path.join(__dirname,'Router','forgot_password.route'));
+
 const {logoutRoute}=require(path.join(__dirname,'Router','logout.route'));
 
    setInterval(()=>{
@@ -84,6 +86,8 @@ app.use('/users', userRouter);
 app.use('/admin',adminRoute);
 
 app.use('/logout',logoutRoute);
+
+app.use('/',forgotPasswordRouter);
 
 
 

@@ -42,11 +42,15 @@
 
   <section class="Login_section">
     <div class="Login_content">
-      <h1 style="display: none;">The link has been sent SUCCESSFULLY <i class="fa-solid fa-check-circle"
-          style="color: greenss;"></i> </h1>
+          <% if(email){%>
+            <h1><%=email%><i class="fa-solid fa-check-circle"
+              style="color: green;"></i>
+            </h1>
+    
+         <% }%>
       <h2>EMAIL CONFIRMATION</h2>
       <h6>Please confirm your email to continue</h6>
-      <form action="" method="" accept-charset="utf-8">
+      <form action="/emailconfirmation" method="POST" accept-charset="utf-8">
         <label for="email">Enter Your Email</label>
         <input type="email" name="email" id="email" />
         <button type="submit">CONFIRM EMAIL</button>
