@@ -1,24 +1,41 @@
 const mongoose=require('mongoose');
 
-const commentSchema=new mongoose.Schema({
-    mainPost:{
-        id: mongoose.Types.ObjectId,
-        slug:String
+const commentSchema= new mongoose.Schema({
+    post:{
+            type:mongoose.Schema.Types.ObjectId,
+             ref:'Post'
     },
-    parentComment:{
-        id: mongoose.Types.ObjectId,
-        author:String
+    commentor:{
+       commentorInfo:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User'
+       },
+       commentContent:String
     },
-    childComment:{
-        date:Date,
-        commentor:String,
-        id: mongoose.Types.ObjectId,
-        content:String
-    }
-})
+    commentParent:{
+        originalPost:{
+            type:Boolean,
+            default:true
+        },
+        commentedUnder:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Comment'
+        }
+    },
+    childCommentors:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'User'
+
+        }
+    ]
+
+},
+{timestamps:true}
+);
 
 const Comment=mongoose.model('Comment',commentSchema);
 
-module.exports=Comment;
-
-
+module.exports={
+    Comment
+}

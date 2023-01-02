@@ -40,15 +40,19 @@
 
   <section class="Login_section">
     <div class="Login_content">
+      <% if(registrationInfo){%>
+        <h1><%=registrationInfo%></h1>
+
+     <% }%>
       <h2>GET STARTED WITH BLOGGER</h2>
       <h6>Please sign up to join BLOGGER</h6>
-      <form action="/Register" method="POST" accept-charset="utf-8">
+      <form action="/register" method="POST" accept-charset="utf-8">
         <label for="name">Enter Your Name</label>
         <input type="text" name="name" id="name" />
         <label for="email">Enter Your Email</label>
         <input type="email" name="email" id="email" />
         <label for="user_password">Create Your Password</label>
-        <input type="password" name="user_password" id="user's_password" />
+        <input type="password" name="user_password" id="user_password" />
         <label for="username">Your Username Is (auto-generated)</label>
         <input type="text" name="username" id="username" style="pointer-events:none" />
         <button type="submit">SIGN UP</button>

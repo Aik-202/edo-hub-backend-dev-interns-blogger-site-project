@@ -2,7 +2,7 @@ const path=require('path');
 
 const {User}=require(path.join(__dirname,'..','Model','user.model'));
 
-async function userDashboard(req,res){
+async function adminDashboard(req,res){
     const loggedIn=req.session.userId;
     User.findOne({_id:loggedIn},{password:0},function(error,userDetails){
         if(error){
@@ -13,18 +13,13 @@ async function userDashboard(req,res){
             })
         }else{
             console.log(userDetails)
-            res.render('User_dashboard',{userDetails})
+            res.render('Admin_dashboard',{userDetails})
 
         }
     })
 
 }
 
-async function updateUserInfo(req,res){
-
-}
-
 module.exports={
-    userDashboard,
-    updateUserInfo
+    adminDashboard
 }
