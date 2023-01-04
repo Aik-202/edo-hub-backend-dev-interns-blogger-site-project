@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLOGGER | Sign_Up Page</title>
   <link rel="icon" href="./images/logo2.png" type="image/png" sizes="40x40">
+  <title>BLOGGER | Email Confirmation Page</title>
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/Login_page_styles.css">
   <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1-web/css/all.css">
@@ -21,6 +21,7 @@
         <li><a href="index.html" id="home" class="header_link">Home</a></li>
         <li><a href="" class="header_link">Publications</a></li>
         <li><a href="Login_page.html" id="login" class="header_link">Login</a></li>
+        <li><a href="Register_page.html" id="sign_up" class="header_link">Sign Up</a></li>
         <li><a id="accessibility" class="header_link" onclick="darkMode()"> <i class="fas fa-moon"></i> <span
               id="mode">Dark Mode</span> </a> </li>
               <li><a id="accessibility2" class="header_link" onclick="increaseFontMode()"><b>tT</b><span> Increase
@@ -33,6 +34,7 @@
       <li><i class="fa-solid fa-home"></i><a href="index.html">Home</a></li>
       <li><i class="fa-solid fa-location-arrow"></i><a href="">Publications</a></li>
       <li><i class="fa-solid fa-sign-in"></i><a href="Login_page.html">Login</a></li>
+      <li><i class="fa-solid fa-rocket"></i><a href="Register_page.html">Sign Up</a></li>
       <li><i class="fa-solid fa-chalkboard-user"></i><a href="User_dashboard.html">User's Dashboard</a></li>
       <li><i class="fa-solid fa-user-pen"></i><a href="Admin_dashboard.html">Admin's Dashboard</a></li>
     </ul>
@@ -40,23 +42,22 @@
 
   <section class="Login_section">
     <div class="Login_content">
-      <h2>GET STARTED WITH BLOGGER</h2>
-      <h6>Please sign up to join BLOGGER</h6>
-      <form action="/Register" method="POST" accept-charset="utf-8">
-        <label for="name">Enter Your Name</label>
-        <input type="text" name="name" id="name" />
+          <% if(email){%>
+            <h1><%=email%><i class="fa-solid fa-check-circle"
+              style="color: green;"></i>
+            </h1>
+    
+         <% }%>
+      <h2>EMAIL CONFIRMATION</h2>
+      <h6>Please confirm your email to continue</h6>
+      <form action="/emailconfirmation" method="POST" accept-charset="utf-8">
         <label for="email">Enter Your Email</label>
         <input type="email" name="email" id="email" />
-        <label for="user_password">Create Your Password</label>
-        <input type="password" name="user_password" id="user's_password" />
-        <label for="username">Your Username Is (auto-generated)</label>
-        <input type="text" name="username" id="username" style="pointer-events:none" />
-        <button type="submit">SIGN UP</button>
+        <button type="submit">CONFIRM EMAIL</button>
       </form>
-      <p>Already Registered? <a href="Login_page.html">Login</a></p>
-      <h5>A user dashboard will be created for you immediately.</h5>
+      <h5>A link will be sent to your email, follow the link to change your password.</h5>
     </div>
-    <img src="./images/i12.png" alt="" width="450px" height="550px" />
+    <img src="./images/ev.png" alt="" width="450px" height="750px" />
   </section>
 
   <footer class="footer">

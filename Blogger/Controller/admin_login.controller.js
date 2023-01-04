@@ -4,7 +4,7 @@ const bcrypt=require('bcrypt');
 const { validationResult } = require('express-validator');
 
 async function getLoginForm(req,res){
-    return res.sendFile(path.join(__dirname,'..','Client','public','Login_page.html'));
+    return res.sendFile(path.join(__dirname,'..','Client','public','Admin_login_page.html'));
 
 }
 
@@ -12,11 +12,11 @@ async function loginDashboard(req,res){
     const errors=validationResult(req);
     if(errors.isEmpty()){
         const {username,user_password}=req.body;
-        User.findOne({username:username,Admin:false},async function(error,found){
+        User.findOne({username:username,Admin:true},async function(error,found){
             if(error){
                 res.status(500).json({
                     success:false,
-                    error:[error],
+                    error:[],
                     message:"An error occurred while processing your request, please try again",
                     data:{}
                 })
@@ -25,26 +25,15 @@ async function loginDashboard(req,res){
                 if (foundUser){
                     const today=new Date();
                     res.cookie('value',`${found._id}`,{maxAge:1000*60*60*24*6,httpOnly:true});
-                    User.findOne({_id:found._id,'loggedIn.isLoggedIn':true})
-                    .then((loggedin)=>{
-                        if(loggedin){
-                            req.session.userId=found._id;
-                            req.session.user_name=found.username;
-                            res.redirect('/userdashboard');
-
-                        }else{
-                    User.updateOne({_id:found._id},{$set:{'loggedIn.isLoggedIn':true,'loggedIn.date':today,'loggedOut.isLoggedOut':false,'loggedOut.date':''}})
+                    User.update({_id:found._id},{$set:{'loggedIn.isLoggedIn':true,'loggedIn.date':today,'loggedOut.isLoggedOut':false,'loggedOut.date':''}})
                     .then(()=>{
                     req.session.userId=found._id;
                     req.session.user_name=found.username;
-                    res.redirect('/userdashboard');
-
-                    })
-                        }
+                    res.redirect('/admindashboard');
 
                     })
                     
-                    
+                   
                 }else{
                     res.status(400).json({
                         success:false,
